@@ -31,7 +31,7 @@ function resetInactivityTimer() {
 
     inactivityTimer = setTimeout(() => {
         messageElement.style.display = "block"; // إظهار الرسالة
-    }, 2000); 
+    }, 3000); 
 }
 
 // الاستماع لأي نشاط على الصفحة
