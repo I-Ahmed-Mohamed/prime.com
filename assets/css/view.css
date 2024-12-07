@@ -1,0 +1,39 @@
+
+
+.btn_view  {
+    font-size: 18px;
+    background-color: #4CAF50;   
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: aliceblue;
+}
+
+.btn_view svg {
+    width: 25px;
+    height: 25px;
+}  
+
+
+#message {
+    display: none; /* إخفاء الرسالة افتراضيًا */
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: aliceblue;
+  
+}
+
