@@ -21,26 +21,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-const messageElement = document.getElementById("message");
-let inactivityTimer;
+    // الرسائل المتكررة
+    const messages = ["عليه الصلاة والسلام", "سبحان الله", "الله أكبر"];
+    let currentIndex = 0;
 
-function resetInactivityTimer() {
-    // إعادة ضبط العداد
-    clearTimeout(inactivityTimer);
-    messageElement.style.display = "none"; // إخفاء الرسالة إذا ظهرت مسبقًا
+    // تشغيل صوت التنبيه
+    const playSound = () => {
+        const audio = new Audio('https://www.soundjay.com/button/beep-07.wav'); // رابط صوت التنبيه
+        audio.play().catch(error => {
+            console.error("تعذر تشغيل الصوت:", error); // عرض الأخطاء إذا لم يعمل الصوت
+        });
+    };
 
-    inactivityTimer = setTimeout(() => {
-        messageElement.style.display = "block"; // إظهار الرسالة
-    }, 3000); 
-}
+    // عرض الإشعار
+    const showNotification = () => {
+        const notification = document.getElementById("notification");
+        notification.textContent = messages[currentIndex]; // تغيير النص
+        notification.classList.add("show");
+        playSound(); // تشغيل صوت التنبيه
 
-// الاستماع لأي نشاط على الصفحة
-window.onload = resetInactivityTimer; // عند تحميل الصفحة
-window.onmousemove = resetInactivityTimer; // عند تحريك الماوس
-window.onkeypress = resetInactivityTimer; // عند الضغط على لوحة المفاتيح
-window.onscroll = resetInactivityTimer; // عند التمرير
+        // إخفاء الإشعار بعد انتهاء الأنميشن
+        setTimeout(() => {
+            notification.classList.remove("show");
+        }, 3000);
 
+        // تحديث الرسالة التالية
+        currentIndex = (currentIndex + 1) % messages.length;
+    };
 
-
-
-
+    // تأكد من تشغيل الكود بعد تحميل الصفحة بالكامل
+    document.addEventListener("DOMContentLoaded", () => {
+        // تكرار الإشعار كل 3 ثوانٍ
+        setInterval(showNotification, 3000);
+    });
