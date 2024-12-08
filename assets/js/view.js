@@ -21,36 +21,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    // الرسائل المتكررة
-    const messages = ["عليه الصلاة والسلام", "سبحان الله", "الله أكبر"];
-    let currentIndex = 0;
 
-    // تشغيل صوت التنبيه
-    const playSound = () => {
-        const audio = new Audio('https://www.soundjay.com/button/beep-07.wav'); // رابط صوت التنبيه
-        audio.play().catch(error => {
-            console.error("تعذر تشغيل الصوت:", error); // عرض الأخطاء إذا لم يعمل الصوت
-        });
-    };
 
-    // عرض الإشعار
-    const showNotification = () => {
-        const notification = document.getElementById("notification");
-        notification.textContent = messages[currentIndex]; // تغيير النص
-        notification.classList.add("show");
-        playSound(); // تشغيل صوت التنبيه
+// اشعارات ذ
 
-        // إخفاء الإشعار بعد انتهاء الأنميشن
-        setTimeout(() => {
-            notification.classList.remove("show");
-        }, 3000);
+const messages = ["  صلي علي النبي", "سبحان الله", "الله أكبر"];
+let currentIndex = 0;
 
-        // تحديث الرسالة التالية
-        currentIndex = (currentIndex + 1) % messages.length;
-    };
+const playSound = () => {
+  const audio = new Audio('https://www.soundjay.com/button/beep-07.wav'); 
+  audio.play().catch(error => console.error("تعذر تشغيل الصوت:", error));
+};
 
-    // تأكد من تشغيل الكود بعد تحميل الصفحة بالكامل
-    document.addEventListener("DOMContentLoaded", () => {
-        // تكرار الإشعار كل 3 ثوانٍ
-        setInterval(showNotification, 3000);
-    });
+// وظيفة عرض الإشعار
+const showNotification = () => {
+  const notification = document.getElementById("notification");
+  notification.textContent = messages[currentIndex]; 
+  notification.style.display = "block";
+  playSound(); 
+
+
+
+  setTimeout(() => {
+    notification.style.display = "none";
+  }, 3000);
+
+  // التبديل إلى الرسالة التالية
+  currentIndex = (currentIndex + 1) % messages.length;
+};
+
+setInterval(showNotification, 2000);
+

@@ -20,45 +20,26 @@
 
 
 
-/* تصميم الإشعار */
 #notification {
-    display: none; /* إخفاء الإشعار افتراضيًا */
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    margin: 20px auto;
-    background-color: #4caf50;
-    color: white;
-    border-radius: 5px;
-    padding: 15px 20px;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    transform: translateY(-30px);
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-    z-index: 1000;
+  display: none; 
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  font-weight: bold;
+  z-index: 1000;
+  animation: fadeInOut 3s ease-in-out;
+  text-align: center;
 }
 
-/* الحركة */
+/* حركة الإشعار */
 @keyframes fadeInOut {
-    0% {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    10%, 90% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-}
-
-/* عند إظهار الإشعار */
-.show {
-    display: block;
-    animation: fadeInOut 3s ease-in-out; /* استمرار الإشعار لـ 3 ثوانٍ */
+  0% { opacity: 0; transform: translateY(-20px); }
+  10%, 90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-20px); }
 }
