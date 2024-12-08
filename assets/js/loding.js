@@ -19,6 +19,6 @@ document.body.appendChild(loadingOverlay);
 // إخفاء اللودينج بعد 3 ثوانٍ
 setTimeout(() => {
   loadingOverlay.style.display = 'none';
-}, 2000);
+}, 1000);
 
 
