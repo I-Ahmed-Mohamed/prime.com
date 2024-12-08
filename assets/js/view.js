@@ -25,12 +25,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // اشعارات ذ
 
-const messages = ["  صلي علي النبي", "سبحان الله", "الله أكبر"];
+const messages = ["  صلي علي النبي",  "سبحان الله", "الله أكبر"];
 let currentIndex = 0;
 
 const playSound = () => {
-  const audio = new Audio('https://www.soundjay.com/button/beep-07.wav'); 
-  audio.play().catch(error => console.error("تعذر تشغيل الصوت:", error));
+    const audio = new Audio('https://www.soundjay.com/button/beep-07.wav'); // رابط صوت التنبيه
+    audio.play().catch(error => console.error("تعذر تشغيل الصوت:", error));
 };
 
 // وظيفة عرض الإشعار
@@ -50,5 +50,5 @@ const showNotification = () => {
   currentIndex = (currentIndex + 1) % messages.length;
 };
 
-setInterval(showNotification, 2000);
+setInterval(showNotification, 3000);
 
