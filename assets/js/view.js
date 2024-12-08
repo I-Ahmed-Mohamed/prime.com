@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // اشعارات ذ
 
-const messages = [ "مشاء الله" , "  صلي علي النبي", "سبحان الله", " استغفر الله" ];
+const messages = [ "ماشاء الله" , "  صلي علي النبي", "سبحان الله", " استغفر الله" ];
 let currentIndex = 0;
 
 const playSound = () => {
