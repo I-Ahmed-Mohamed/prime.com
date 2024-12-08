@@ -895,8 +895,9 @@ text-align: center;
   padding: 30px;
   background-color: #040b14;
   width: 100%;
-  box-shadow: 0 4px 6px rgba(11, 183, 236, 0.781);
-  border: 1px solid #149ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #fff;
 
 }
@@ -1214,7 +1215,9 @@ text-align: center;
 }
 
 .co5{
-  background-color: #149ddd;
+  background-color: #040b14;
+  border: 1px  solid #3498db;
+
   color: #fff;
   border-radius: 5px;
   width: 50%;
