@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // اشعارات ذ
 
-const messages = ["  صلي علي النبي",  "سبحان الله", "الله أكبر"];
+const messages = [ "مشاء الله" , "  صلي علي النبي", "سبحان الله", " استغفر الله" ];
 let currentIndex = 0;
 
 const playSound = () => {
@@ -50,5 +50,5 @@ const showNotification = () => {
   currentIndex = (currentIndex + 1) % messages.length;
 };
 
-setInterval(showNotification, 3000);
+setInterval(showNotification, 2000);
 
