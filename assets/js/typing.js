@@ -1,9 +1,9 @@
 
     const lines = [
       " I'm { Ahmed Mohamed }",
-      "Backend Developer specialized in ASP.NET and Business Intelligence (BI).",
-      "😎",
-      "Frontend Developer specialized in Angular and Business .",
+      "Frontend Developer specialized in Angular and Business.",
+      "Backend Developer specialized in ASP.NET .",
+      "Freelancer Frontend Or Backend .",
       "Let's build something amazing together!",
       
     ];

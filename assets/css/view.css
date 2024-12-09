@@ -3,7 +3,7 @@
 .btn_view  {
     font-size: 18px;
     background-color: #040b14;
-    box-shadow: 0 4px 6px rgba(2, 207, 71, 0.781);
+    box-shadow: 0 4px 6px rgba(11, 183, 236, 0.781);
 
     border: none;
     border-radius: 5px;
@@ -51,7 +51,7 @@
 .dzikr {
   background-color: #040b14;
   color: #fff;
-  box-shadow: 0 4px 6px rgba(2, 207, 71, 0.781);
+  box-shadow: 0 4px 6px rgba(11, 183, 236, 0.781);
 
   border: none;
   padding: 10px 20px;
