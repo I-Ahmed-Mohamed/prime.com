@@ -5,19 +5,23 @@
    }
    
    .terminal {
-      width: 300px;
-      height: 250px;
+    top: 5px;
+      width: 350px;
+      height: 300px;
       margin: 100px auto;
       padding: 20px;
       background-color: #040b14;
       color: #4CAF50;
       border-radius: 8px;
       box-shadow: 0 4px 6px rgba(2, 207, 71, 0.781);
-      font-size: 16px;
+      font-size: 18px;
       line-height: 1.6;
+      z-index: 99999;
     }
 
     #terminal-output {
       white-space: pre-wrap; /* للحفاظ على التنسيقات */
       word-wrap: break-word;
+      z-index: 99999;
+
     }

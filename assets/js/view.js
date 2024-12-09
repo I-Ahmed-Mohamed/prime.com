@@ -20,35 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-
-
-// اشعارات ذ
-
-const messages = [ "ماشاء الله" , "  صلي علي النبي", "سبحان الله", " استغفر الله" ];
-let currentIndex = 0;
-
-const playSound = () => {
-    const audio = new Audio('https://www.soundjay.com/button/beep-07.wav'); // رابط صوت التنبيه
-    audio.play().catch(error => console.error("تعذر تشغيل الصوت:", error));
-};
-
-// وظيفة عرض الإشعار
-const showNotification = () => {
-  const notification = document.getElementById("notification");
-  notification.textContent = messages[currentIndex]; 
-  notification.style.display = "block";
-  playSound(); 
-
-
-
-  setTimeout(() => {
-    notification.style.display = "none";
-  }, 5000);
-
-  // التبديل إلى الرسالة التالية
-  currentIndex = (currentIndex + 1) % messages.length;
-};
-
-setInterval(showNotification, 2000);
-
+const buttons = document.querySelectorAll('.dzikr');
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        const audio = new Audio('path-to-your-sound.mp3');
+        audio.play();
+    });
+});

@@ -2,7 +2,9 @@
 
 .btn_view  {
     font-size: 18px;
-    background-color: #4CAF50;   
+    background-color: #040b14;
+    box-shadow: 0 4px 6px rgba(2, 207, 71, 0.781);
+
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -20,23 +22,56 @@
 
 
 
-#notification {
-  display: none; 
+
+
+
+
+
+/* الحاوية الرئيسية */
+#notification-container {
   position: fixed;
-  top: 500px;
-  right: 10px;
-  background-color: #4caf50;
-  color: white;
-  padding: 5px 20px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  font-size: 18px;
-  z-index: 1000;
-  animation: fadeInOut 5s ease-in-out;
+  top: 550px; /* نقلها إلى أعلى الصفحة */
+  width: 100%;
+  overflow: hidden;
+      background-color: #040b14;
+  padding: 10px 0;
+  z-index: 0; /* للتأكد من أنها تظهر فوق أي عناصر أخرى */
 }
 
-@keyframes fadeInOut {
-    0% { opacity: 0; transform: translateY(-20px); }
-    10%, 90% { opacity: 1; transform: translateY(0); }
-    100% { opacity: 0; transform: translateY(-20px); }
+/* الشريط المتحرك */
+#notification {
+  display: flex;
+  white-space: nowrap;
+  animation: moveText 30s linear infinite;
+  align-items: center;
+  gap: 10px;
+}
+
+/* تصميم الأزرار */
+.dzikr {
+  background-color: #040b14;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(2, 207, 71, 0.781);
+
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.dzikr:hover {
+  background-color: #0056b3;
+}
+
+/* حركة النصوص */
+@keyframes moveText {
+  0% {
+      transform: translateX(100%);
   }
+  100% {
+      transform: translateX(-100%);
+  }
+}
