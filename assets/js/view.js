@@ -50,5 +50,5 @@ const showNotification = () => {
   currentIndex = (currentIndex + 1) % messages.length;
 };
 
-setInterval(showNotification, 3000);
+setInterval(showNotification, 2000);
 

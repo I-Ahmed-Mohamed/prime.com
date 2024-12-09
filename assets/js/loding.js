@@ -19,4 +19,4 @@ document.body.appendChild(loadingOverlay);
 setTimeout(() => {
   loadingOverlay.style.display = 'none'; // إخفاء اللودينج
   document.getElementById('main-content').style.display = 'block'; // إظهار المحتوى
-}, 3000);
+}, 2000);
