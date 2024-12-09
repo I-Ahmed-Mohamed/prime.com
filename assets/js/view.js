@@ -44,7 +44,7 @@ const showNotification = () => {
 
   setTimeout(() => {
     notification.style.display = "none";
-  }, 3000);
+  }, 5000);
 
   // التبديل إلى الرسالة التالية
   currentIndex = (currentIndex + 1) % messages.length;
