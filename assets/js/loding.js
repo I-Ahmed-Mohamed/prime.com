@@ -1,5 +1,4 @@
 
-// إنشاء عنصر اللودينج ديناميكيًا باستخدام JavaScript
 const loadingOverlay = document.createElement('div');
 loadingOverlay.className = 'loading-overlay';
 
@@ -16,9 +15,8 @@ for (let i = 0; i < 6; i++) {
 loadingOverlay.appendChild(skChase);
 document.body.appendChild(loadingOverlay);
 
-// إخفاء اللودينج بعد 3 ثوانٍ
+// إخفاء اللودينج وإظهار المحتوى
 setTimeout(() => {
-  loadingOverlay.style.display = 'none';
+  loadingOverlay.style.display = 'none'; // إخفاء اللودينج
+  document.getElementById('main-content').style.display = 'block'; // إظهار المحتوى
 }, 3000);
-
-
