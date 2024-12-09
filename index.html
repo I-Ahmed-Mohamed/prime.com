@@ -22,6 +22,7 @@
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/view.css" rel="stylesheet">
   <link href="assets/css/loding.css" rel="stylesheet">
+  <link href="assets/css/typing.css" rel="stylesheet">
   <head>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
@@ -31,13 +32,6 @@
     </script>
   </head>
 <body>
-
-
-  
-
-  
-
-
 
 
   <!--? ======= Mobile nav toggle button ======= -->
@@ -75,42 +69,36 @@
       </nav><!-- .nav-menu -->
     </div>
   </header>
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    
-   
-    <div class="hero-container" data-aos="fade-in">
-      <p>I'M <span class="typed" data-typed-items=" Ahmed Mohamed , Software  Freelancer , Frontend (Anglaur js) , Backend (ASP.NET)  "></span></p>
-    </div>
+ 
 
-  </section>
   <main id="main">
 
+ 
+
+    <section class="bg_typing">
+      <center>
+        <button class="btn_view " id="visitButton">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.522 5 12 5c4.478 0 8.268 2.943 9.542 7-.274.857-.685 1.664-1.208 2.378C19.53 16.1 15.897 19 12 19s-7.53-2.9-8.334-5.622A10.056 10.056 0 012.458 12z" />
+          </svg>
+           Profile Views: 0
+      </button>
+  
+      </center>
+      <div class="terminal">
+        <div id="terminal-output"></div>
+      </div>
+    </section>
    
+
     <div id="notification"></div>
 
-   
-    
-    
-  
-    
-     
-  
-
-   
     <!--! ======= Contact Section ============================================================ -->
     <section id="contact" class="contact co1">
       <div class="container">
 
-        <center>
-          <button class="btn_view " id="visitButton">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.522 5 12 5c4.478 0 8.268 2.943 9.542 7-.274.857-.685 1.664-1.208 2.378C19.53 16.1 15.897 19 12 19s-7.53-2.9-8.334-5.622A10.056 10.056 0 012.458 12z" />
-            </svg>
-             Profile Views: 0
-        </button>
-
-        </center>
+      
 
           <!-- -----------------------form ------------------------ -->
           <center >
@@ -122,16 +110,13 @@
            
 
               <div class="form-group" >
-                <center><label for="message" class="co">  Enter Message  </label></center>
-                <textarea  class="form-control co1 co" name="message" rows="10" required></textarea>
+           
               
               <div class="my-3">
              <center><div id="response-message" style="display:none ; color: green; ">Your message has been sent. Thank you!</div></center>   
                 <center><div id="error-message" style="display:none; color: red;"  >There was an error, please try again.</div></center>    
               </div>
-              <div class="text-center">
-                <button id="button" type="submit">Send Message</button>
-              </div>
+             
             </form>
           </div>
           </center>
@@ -164,6 +149,7 @@
   <script src="assets/js/main.js"></script>
   <script src="assets/js/view.js"></script>
   <script src="assets/js/loding.js"></script>
+  <script src="assets/js/typing.js"></script>
 
 </body>
 
