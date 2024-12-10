@@ -1008,7 +1008,9 @@ text-align: center;
 .contact .php-email-form .sent-message {
   display: none;
   color: #fff;
-  background: #18d26e;
+  background: #040b14;
+  border-bottom: 3px solid #149ddd;
+
   text-align: center;
   padding: 15px;
   font-weight: 600;
@@ -1069,7 +1071,9 @@ text-align: center;
 }
 
 .contact .php-email-form button[type=submit] {
-  background: #149ddd;
+  background: #040b14;
+  box-shadow: 0 4px 6px rgba(11, 183, 236, 0.781);
+
   border: 0;
   padding: 10px 24px;
   color: #fff;
@@ -1078,7 +1082,7 @@ text-align: center;
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: #37b3ed;
+  background: #012130;
 }
 
 @keyframes animate-loading {
@@ -1216,8 +1220,9 @@ text-align: center;
 }
 
 .co5{
-  background-color: #040b14;
-  border: 1px  solid #3498db;
+ 
+  background: #040b14;
+  box-shadow: 0 4px 6px rgba(11, 183, 236, 0.781);
 
   color: #fff;
   border-radius: 5px;
