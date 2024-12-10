@@ -24,16 +24,13 @@
 
 
 
-
-
-
 /* الحاوية الرئيسية */
 #notification-container {
   position: fixed;
   top: 550px; /* نقلها إلى أعلى الصفحة */
   width: 100%;
   overflow: hidden;
-      background-color: #040b14;
+  background-color: #040b14;     
   padding: 10px 0;
   z-index: 0; /* للتأكد من أنها تظهر فوق أي عناصر أخرى */
 }
@@ -42,9 +39,10 @@
 #notification {
   display: flex;
   white-space: nowrap;
-  animation: moveText 25s linear infinite;
+  animation: moveText 19s linear forwards;
   align-items: center;
   gap: 10px;
+  font-size: 20px;
 }
 
 /* تصميم الأزرار */
@@ -52,26 +50,40 @@
   background-color: #040b14;
   color: #fff;
   box-shadow: 0 4px 6px rgba(11, 183, 236, 0.781);
-
   border: none;
-  padding: 10px 20px;
+  padding: 8px 20px;
   font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.10s ease;
 }
 
 .dzikr:hover {
   background-color: #0056b3;
 }
 
+/* تأثير التكسير */
+.breaking-button {
+  display: inline-block;
+  opacity: 5;
+  transition: transform 10s, opacity 20s;
+}
+
+.breaking-button.broken {
+  opacity: 0;
+  transform: scale(0) rotate(360deg) translateY(50px);
+}
+
 /* حركة النصوص */
 @keyframes moveText {
   0% {
-      transform: translateX(100%);
+    transform: translateX(100%);
   }
   100% {
-      transform: translateX(-100%);
+    transform: translateX(-100%);
   }
+
+
 }
+

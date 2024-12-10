@@ -346,3 +346,16 @@ document.getElementById('form').addEventListener('submit', function (event) {
   new PureCounter();
 
 })()
+
+
+
+
+
+
+
+
+
+
+
+
+

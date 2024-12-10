@@ -27,3 +27,22 @@ buttons.forEach((button) => {
         audio.play();
     });
 });
+
+
+
+
+
+window.onload = () => {
+    const buttons = document.querySelectorAll('.dzikr'); // تحديد جميع الأزرار
+    const text = document.getElementById('notification');
+
+    // الانتظار لمدة 10 ثواني ثم بدء تأثير التكسير
+    setTimeout(() => {
+        buttons.forEach((button, index) => {
+            setTimeout(() => {
+                button.classList.add('breaking-button');
+                button.classList.add('broken'); // إضافة فئة التكسير لتطبيق التأثير
+            }, index * 600); // التأثير يكون تدريجي حسب ترتيب الأزرار
+        });
+    }, 10000); // بعد 10 ثواني يبدأ التأثير
+};
