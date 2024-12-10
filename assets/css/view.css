@@ -42,7 +42,7 @@
 #notification {
   display: flex;
   white-space: nowrap;
-  animation: moveText 30s linear infinite;
+  animation: moveText 25s linear infinite;
   align-items: center;
   gap: 10px;
 }
