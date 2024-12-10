@@ -43,7 +43,7 @@ function viewCertificates() { // عدّلت اسم الدالة
 }
 
 
-// ===================cv=============================>
+// ====================seend============================>
   
 
 const btn = document.getElementById('button');
@@ -54,7 +54,7 @@ document.getElementById('form').addEventListener('submit', function (event) {
     event.preventDefault(); // منع إعادة تحميل الصفحة
 
     // تفعيل حالة التحميل
-    btn.innerHTML = 'Sending... <span class="spinner"></span>';
+    btn.innerHTML = '<span class="loader"></span>';
     btn.disabled = true;
 
     const serviceID = 'default_service';
@@ -349,7 +349,13 @@ document.getElementById('form').addEventListener('submit', function (event) {
 
 
 
-
+window.onload = () => {
+  // يمكنك تعديل هذا الوقت بناءً على التوقيت الذي تريده
+  setTimeout(() => {
+      const notification = document.getElementById('notification');
+      notification.style.animation = 'breakEffect 5s forwards';
+  }, 5000); // تبدأ عملية التكسير بعد 20 ثانية
+};
 
 
 
