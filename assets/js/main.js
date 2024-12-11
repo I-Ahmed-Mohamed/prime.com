@@ -63,7 +63,7 @@ document.getElementById('form').addEventListener('submit', function (event) {
     emailjs.sendForm(serviceID, templateID, this)
         .then(() => {
             // عند النجاح
-            btn.innerHTML = 'Sent ✔️ ';
+            btn.innerHTML = 'Sent  <span class="loaders"></span>';
             btn.disabled = false;
             responseMessage.style.display = 'none';
             errorMessage.style.display = 'none';
