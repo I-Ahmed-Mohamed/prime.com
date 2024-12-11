@@ -4,7 +4,7 @@
     "I'm { Ahmed Mohamed }",
       "Frontend Developer specialized in Angular and Business.",
       "Backend Developer specialized in ASP.NET .",
-      "Freelancer Frontend Or Backend" .,
+      "Freelancer Frontend Or Backend ." ,
       "Let's build something amazing together! ",
       
     ];
