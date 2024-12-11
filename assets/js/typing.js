@@ -1,6 +1,6 @@
 
     const lines = [
-      " 
+      
     "I'm { Ahmed Mohamed }",
       "Frontend Developer specialized in Angular and Business.",
       "Backend Developer specialized in ASP.NET .",
