@@ -65,7 +65,7 @@ document.getElementById('form').addEventListener('submit', function (event) {
             // عند النجاح
             btn.innerHTML = 'Sent ✔️ ';
             btn.disabled = false;
-            responseMessage.style.display = 'block';
+            responseMessage.style.display = 'none';
             errorMessage.style.display = 'none';
 
             // إعادة تعيين النموذج
