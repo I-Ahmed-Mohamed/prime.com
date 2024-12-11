@@ -1,10 +1,13 @@
 
     const lines = [
-      " I'm { Ahmed Mohamed }",
-      "Frontend Developer specialized in Angular and Business.",
-      "Backend Developer specialized in ASP.NET .",
-      "Freelancer Frontend Or Backend .",
-      "Let's build something amazing together!",
+      " 
+    I'm { Ahmed Mohamed }
+      Frontend Developer specialized in Angular and Business.
+      Backend Developer specialized in ASP.NET .
+      Freelancer Frontend Or Backend .
+      Let's build something amazing together!
+    
+    "
       
     ];
     const typingSpeed = 50; // سرعة الكتابة لكل حرف
