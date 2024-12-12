@@ -1,10 +1,5 @@
 
     const lines = [
-<<<<<<< HEAD
-=======
-      
-    "I'm { Ahmed Mohamed }",
->>>>>>> 7bc77b27964530f5a48773805105bd4e153d369d
       "Frontend Developer specialized in Angular and Business.",
       "Backend Developer specialized in ASP.NET .",
       "Freelancer Frontend Or Backend ." ,
