@@ -1,14 +1,13 @@
 
     const lines = [
-      " I'm { Ahmed Mohamed }",
       "Frontend Developer specialized in Angular and Business.",
       "Backend Developer specialized in ASP.NET .",
       "Freelancer Frontend Or Backend .",
       "Let's build something amazing together!",
       
     ];
-    const typingSpeed = 50; // سرعة الكتابة لكل حرف
-    const lineDelay = 2000;   // تأخير قبل بدء السطر الجديد
+    const typingSpeed = 70; // سرعة الكتابة لكل حرف
+    const lineDelay = 1;   // تأخير قبل بدء السطر الجديد
 
     let currentLine = 0;
     let currentChar = 0;
