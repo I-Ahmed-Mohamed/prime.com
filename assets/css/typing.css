@@ -1,8 +1,9 @@
 
    .bg_typing{
     background-color: #040b14;
+    
 
-   }
+   }   
    
    
    .terminal {
@@ -16,15 +17,14 @@
       border-radius: 10px;
       box-shadow: 0 1px 4px rgba(11, 183, 236, 0.781);
       border: 1px solid #0fbcf9; 
-
       font-size: 16px;
       line-height: 1.8;
-      z-index: 99999;
+      z-index: 0;
     }
 
     #terminal-output {
       white-space: pre-wrap; /* للحفاظ على التنسيقات */
       word-wrap: break-word;
-      z-index: 99999;
+      z-index: 0;
 
     }

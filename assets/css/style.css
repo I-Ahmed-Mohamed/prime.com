@@ -3,6 +3,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
+  
 }
 
  
@@ -515,6 +516,10 @@ text-align: center;
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
+
+
+
+
  .portfolio .portfolio-item {
   margin-bottom: 30px;
 }

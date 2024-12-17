@@ -4,7 +4,7 @@
     font-size: 18px;
     background-color: #040b14;
     box-shadow: 0 4px 6px rgba(11, 183, 236, 0.781);
-
+z-index: 0;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -13,12 +13,13 @@
     align-items: center;
     gap: 10px;
     color: aliceblue;
+    
 }
 
 .btn_view svg {
     width: 25px;
     height: 25px;
-
+z-index: 0;
 }  
 
 
