@@ -21,13 +21,6 @@
 
 
 
-//playSound //
-
-
-function playSound() {
-    var audio = new Audio('follow-sound.mp3'); // مسار ملف الصوت
-    audio.play();
-}
 
 
 
