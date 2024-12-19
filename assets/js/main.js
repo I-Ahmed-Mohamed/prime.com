@@ -44,7 +44,6 @@ function viewCertificates() { // عدّلت اسم الدالة
 
 
 // ====================seend============================>
-  
 
 const btn = document.getElementById('button');
 const responseMessage = document.getElementById('response-message');
