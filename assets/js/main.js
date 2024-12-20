@@ -27,23 +27,36 @@
 
 
 // =======================CV===========================>
-  const cvPath = "assets/img/Ahmed Mohamed CV.pdf";
+  const cvPath = "assets/img/Ahmed Mohamed frontend CV.pdf";
+  const cvback = "assets/img/Ahmed Mohamed Backend CV.pdf";
+  
 const certificatesFilePath = "assets/img/certificatesPath.pdf"; // عدّلت اسم المتغير لتجنب التعارض
 
-function downloadCV() {
+function downloadCVFront() {
     const link = document.createElement("a");
     link.href = cvPath;
-    link.download = "assets/img/Ahmed Mohamed CV.pdf"; // اسم الملف عند الحفظ
+    link.download = "assets/img/Ahmed Mohamed frontend CV.pdf"; // اسم الملف عند الحفظ
+    link.click();
+}
+function downloadCVBack(){
+    const link = document.createElement("a");
+    link.href = cvback;
+    link.download = "assets/img/Ahmed Mohamed Backend CV.pdf"; // اسم الملف عند الحفظ
     link.click();
 }
 
-function viewCV() {
+function viewFrontCV() {
     window.open(cvPath, "_blank");
+}
+
+function viewBcakCV() {
+    window.open(cvback, "_blank");
 }
 
 function viewCertificates() { // عدّلت اسم الدالة
     window.open(certificatesFilePath, "_blank");
 }
+
 
 
 // ====================seend============================>
