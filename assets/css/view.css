@@ -2,7 +2,7 @@
 
 .btn_view  {
     font-size: 18px;
-    background-color: #040b14;
+  background-color: var(--bg-colore);
     box-shadow: 0 4px 6px rgba(11, 183, 236, 0.781);
 z-index: 0;
     border: none;
@@ -12,7 +12,7 @@ z-index: 0;
     display: flex;
     align-items: center;
     gap: 10px;
-    color: aliceblue;
+    color: var(--text-colore);
     
 }
 
@@ -31,7 +31,7 @@ z-index: 0;
   top: 550px; /* نقلها إلى أعلى الصفحة */
   width: 100%;
   overflow: hidden;
-  background-color: #040b14;  
+  background-color: var(--bg-colore);
      
   padding: 5px 0;
   z-index: 0; /* للتأكد من أنها تظهر فوق أي عناصر أخرى */
@@ -49,10 +49,10 @@ z-index: 0;
 
 /* تصميم الأزرار */
 .dzikr {
-  background-color: #040b14;
-  color: #fff;
-  box-shadow: 0 4px 6px rgba(11, 183, 236, 0.781);
-  border: 2px solid #0fbcf9; 
+  background-color: var(--bg-colore);
+  color: var(--text-colore);
+  box-shadow: 0 4px 6px hsla(194, 91%, 48%, 0.781);
+  border: 2px solid var(--bg-color); 
   border: none;
   padding: 5px 15px;
   font-size: 16px;
@@ -63,7 +63,7 @@ z-index: 0;
 }
 
 .dzikr:hover {
-  background-color: #0cabeb;
+  background: var(--bg-color);
 }
 
 /* تأثير التكسير */

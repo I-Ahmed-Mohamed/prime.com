@@ -1,6 +1,6 @@
 
    .bg_typing{
-    background-color: #040b14;
+    background-color: var(--bg-colore);
     
 
    }   
@@ -12,11 +12,11 @@
       height: 320px;
       margin: 100px auto;
       padding: 20px;
-      background-color: #040b14;
-      color: #e8ebec;
+      background-color: var(--bg-colore);
+      color: var(--text-colore);
       border-radius: 10px;
       box-shadow: 0 1px 4px rgba(11, 183, 236, 0.781);
-      border: 1px solid #0fbcf9; 
+      border: 1px solid var(--bg-color); 
       font-size: 16px;
       line-height: 1.8;
       z-index: 0;

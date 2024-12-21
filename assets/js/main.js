@@ -25,7 +25,6 @@
 
 
 
-
 // =======================CV===========================>
   const cvPath = "assets/img/Ahmed Mohamed frontend CV.pdf";
   const cvback = "assets/img/Ahmed Mohamed Backend CV.pdf";
