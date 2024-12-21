@@ -108,7 +108,7 @@ h6 {
   margin: 15px auto;
   display: block;
   width: 120px;
-  border: 8px solid #2c2f3f;
+  border: 3px solid var(--bg-color); 
 }
 
 #header .profile h1 {
