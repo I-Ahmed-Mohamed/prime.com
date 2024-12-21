@@ -21,6 +21,20 @@
 
 
 
+// light Moode And dark Moode>>>>>>>>>>>>>>
+
+// const teggleButton = document.getElementById('toggle-mode');
+// const body = document.body;
+
+// teggleButton.addEventListener('click', () =>{
+//     body.classList.toggle('light-mode');
+//     if(body.classList.contains('light-mode')){
+//         teggleButton.textContent = '🌃';
+//     }
+//     else{
+//         teggleButton.textContent = '🌄';
+//     }
+// });
 
 
 

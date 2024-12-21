@@ -8,6 +8,17 @@
 
 }
 
+.light-mode{
+  --bg-colore: #fff;
+  --text-colore: black;
+  --boxShaow: rgba(1, 16, 20, 0.781);
+
+
+}
+
+
+
+
 body {
   font-family: "Open Sans", sans-serif;
   background-color: var(--bg-colore);
