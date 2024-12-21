@@ -3,8 +3,8 @@
 .btn_view  {
     font-size: 18px;
   background-color: var(--bg-colore);
-    box-shadow: 0 4px 6px rgba(11, 183, 236, 0.781);
-z-index: 0;
+  box-shadow: 0 4px 6px var(--boxShaow);
+  z-index: 0;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -51,7 +51,7 @@ z-index: 0;
 .dzikr {
   background-color: var(--bg-colore);
   color: var(--text-colore);
-  box-shadow: 0 4px 6px hsla(194, 91%, 48%, 0.781);
+  box-shadow: 0 4px 6px var(--boxShaow);
   border: 2px solid var(--bg-color); 
   border: none;
   padding: 5px 15px;
