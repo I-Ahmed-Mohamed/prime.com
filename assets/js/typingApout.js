@@ -3,7 +3,7 @@ const lines = [
 
 
   ];
-  const typingSpeed = 1; // سرعة الكتابة لكل حرف
+  const typingSpeed = 10; // سرعة الكتابة لكل حرف
   const lineDelay = 1;   // تأخير قبل بدء السطر الجديد
 
   let currentLine = 0;
