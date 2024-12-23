@@ -6,7 +6,7 @@
       "Let's build something amazing together! ",
       
     ];
-    const typingSpeed = 70; // سرعة الكتابة لكل حرف
+    const typingSpeed = 50; // سرعة الكتابة لكل حرف
     const lineDelay = 1;   // تأخير قبل بدء السطر الجديد
 
     let currentLine = 0;
@@ -33,3 +33,21 @@
     }
 
     typeLine();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

@@ -1,30 +1,31 @@
 
-   .bg_typing{
-    background-color: var(--bg-colore);
-    
 
-   }   
-   
-   
-   .terminal {
-    top: 5px;
-      width: 320px;
-      height: 320px;
-      margin: 100px auto;
-      padding: 20px;
+    .bg_typing{
       background-color: var(--bg-colore);
-      color: var(--text-colore);
-      border-radius: 10px;
-      box-shadow: 0 4px 6px var(--boxShaow);
-      border: 1px solid var(--bg-color); 
-      font-size: 16px;
-      line-height: 1.8;
-      z-index: 0;
-    }
-
-    #terminal-output {
-      white-space: pre-wrap; /* للحفاظ على التنسيقات */
-      word-wrap: break-word;
-      z-index: 0;
-
-    }
+      
+  
+     }   
+     
+     
+     .terminal {
+      top: 5px;
+        width: 320px;
+        height: 320px;
+        margin: 100px auto;
+        padding: 20px;
+        background-color: var(--bg-colore);
+        color: var(--text-colore);
+        border-radius: 10px;
+        box-shadow: 0 4px 6px var(--boxShaow);
+        border: 1px solid var(--bg-color); 
+        font-size: 16px;
+        line-height: 1.8;
+        z-index: 0;
+      }
+  
+      #terminal-output {
+        white-space: pre-wrap; /* للحفاظ على التنسيقات */
+        word-wrap: break-word;
+        z-index: 0;
+  
+      }
