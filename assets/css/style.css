@@ -367,46 +367,97 @@ section {
 # About
 --------------------------------------------------------------*/
 
-.about .content h3 {
-  font-weight: 700;
-  font-size: 26px;
-  color: var(--bg-color);
+
+      
+    
+.profile-card {
+  background-color: balck;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--boxShaow); 
+
+  padding: 20px;
+  max-width: 900px;
+  width: 100%;
+
 }
 
-.about .content ul {
-  list-style: none;
-  padding: 0;
-  color: var(--text-colore);
-
-}
-
-.about .content ul li {
-  margin-bottom: 20px;
+.profile-content {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  color: var(--text-colore);
+  justify-content: space-between;
+  box-shadow: var(--boxShaow);
 
 }
 
-.about .content ul strong {
-  margin-right: 10px;
-  color: var(--text-colore);
+.profile-content img {
+  border-radius: 20px;
+  max-width: 100%;
+  width: 350px;
+  box-shadow: var(--boxShaow);
+}
+
+.profile-info {
+  flex: 1;
+  padding: 20px;
+  box-shadow: var(--boxShaow);
 
 }
 
-.about .content ul i {
-  font-size: 16px;
-  margin-right: 5px;
-  line-height: 0;
+.profile-info p {
+  max-width: 100%; /* لا يتجاوز عرض النص العرض المتاح */
+  word-wrap: break-word; /* إذا كان النص طويلًا يتم تقسيمه إلى أسطر */
+  line-height: 1.9; /* تحسين المسافات بين السطور */
+}
+
+
+
+
+
+.social-icons a {
+  margin: 0 10px;
+  color: var(--text-colore);
+  font-size: 1.5rem;
+  transition: color 0.3s;
+  
+}
+
+.social-icons a:hover {
   color: var(--bg-color);
-
 }
 
-.about .content p:last-child {
-  margin-bottom: 0;
+.btn-group a {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin: 10px 5px;
+  display: inline-block;
+}
+
+.btn-view-more {
+  background: linear-gradient(to right, #070707, #2575fc);
+  color: var(--text-colore);
+}
+
+.btn-view-more:hover {
+  background: linear-gradient(to right, #0e254d, #111111);
+  color: var(--text-colore);
+}
+
+
+.btn-vote {
+  background: linear-gradient(to right, #2575fc , #070707 );
+  color: var(--text-colore);
+}
+
+.btn-vote:hover {
+  background: linear-gradient(to right, #0e254d, #121213);
   color: var(--text-colore);
 
 }
+
 
 
 /* Skills  --------------------------------------------------->
@@ -1229,96 +1280,4 @@ text-align: center;
 
 }
 
-
-
-/*-------------------------------------- About -----------------------------------------*/
-      
-    
-.profile-card {
-  background-color: balck;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: var(--boxShaow); 
-
-  padding: 20px;
-  max-width: 900px;
-  width: 100%;
-
-}
-
-.profile-content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: var(--boxShaow);
-
-}
-
-.profile-content img {
-  border-radius: 20px;
-  max-width: 100%;
-  width: 350px;
-  box-shadow: var(--boxShaow);
-}
-
-.profile-info {
-  flex: 1;
-  padding: 20px;
-  box-shadow: var(--boxShaow);
-
-}
-
-.profile-info p {
-  max-width: 100%; /* لا يتجاوز عرض النص العرض المتاح */
-  word-wrap: break-word; /* إذا كان النص طويلًا يتم تقسيمه إلى أسطر */
-  line-height: 1.9; /* تحسين المسافات بين السطور */
-}
-
-
-
-
-
-.social-icons a {
-  margin: 0 10px;
-  color: #fff;
-  font-size: 1.5rem;
-  transition: color 0.3s;
-  
-}
-
-.social-icons a:hover {
-  color: #12d1f3;
-}
-
-.btn-group a {
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-weight: bold;
-  margin: 10px 5px;
-  display: inline-block;
-}
-
-.btn-view-more {
-  background: linear-gradient(to right, #070707, #2575fc);
-  color: #fff;
-}
-
-.btn-view-more:hover {
-  background: linear-gradient(to right, #0e254d, #111111);
-  color: #fff;
-}
-
-
-.btn-vote {
-  background: linear-gradient(to right, #2575fc , #070707 );
-  color: #fff;
-}
-
-.btn-vote:hover {
-  background: linear-gradient(to right, #0e254d, #121213);
-  color: #fff;
-
-}
 
