@@ -115,7 +115,7 @@ h6 {
 #header .profile img {
   margin: 15px auto;
   display: block;
-  width: 100px;
+  width: 130px;
   border: 1px solid var(--bg-color); 
   box-shadow: 0 3px 6px var(--boxShaow);
 
@@ -157,6 +157,39 @@ h6 {
   color: var(--text-colore);
   text-decoration: none;
 }
+
+
+#navbar ul {
+  display: flex;
+  flex-wrap: wrap; 
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center; 
+}
+
+#navbar ul li {
+  flex: 0 0 50%; 
+  text-align: center;
+  margin-bottom: 20px; /* مسافة بين السطور */
+}
+
+#navbar ul li a {
+  text-decoration: none;
+  color: var(--text-colore);
+  background-color:var(--bg-colore); /* لون الخلفية */
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: block;
+}
+
+
+
+
+
+
+
+
 
 #main {
   margin-left: 300px;
