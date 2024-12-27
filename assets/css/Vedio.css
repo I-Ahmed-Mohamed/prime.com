@@ -62,7 +62,7 @@ h1 {
 }
 
 .progress-bar {
-    background: #ddd;
+    background: var(--text-colore);
     border-radius: 5px;
     overflow: hidden;
     height: 5px;
