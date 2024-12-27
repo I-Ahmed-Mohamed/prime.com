@@ -38,7 +38,7 @@ h1 {
 }
 
 .video-thumbnail {
-    width: 50%; /* تناسب الصورة مع عرض العنصر */
+    width: 30%; /* تناسب الصورة مع عرض العنصر */
     height: auto;
     border-radius: 10px;
     margin-bottom: 10px;

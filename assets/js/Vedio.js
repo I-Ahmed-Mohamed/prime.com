@@ -46,6 +46,6 @@ document.querySelectorAll('.video-card').forEach((card, index) => {
         const watchedPercentage = (video.currentTime / video.duration) * 100;
 
         progressBar.style.width = `${watchedPercentage}%`;
-        viewCountSpan.innerText = `Views: ${viewCount} | Progress: ${watchedPercentage.toFixed(0)}%`;
+        viewCountSpan.innerText = `Views: ${viewCount} `;
     });
 });

@@ -171,7 +171,7 @@ h6 {
 #navbar ul li {
   flex: 0 0 50%; 
   text-align: center;
-  margin-bottom: 20px; /* مسافة بين السطور */
+  margin-bottom: 10px; /* مسافة بين السطور */
 }
 
 #navbar ul li a {
