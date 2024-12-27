@@ -36,7 +36,7 @@ document.querySelectorAll('.video-card').forEach((card, index) => {
             localStorage.setItem(videoId, currentTime); // Store current time as last view
             localStorage.setItem(`${videoId}_viewCount`, viewCount); // Store view count
 
-            viewCountSpan.innerText = `Views: ${viewCount} | Progress: 0%`;
+            viewCountSpan.innerText = `Views: ${viewCount} `;
             video.dataset.viewed = true; // Mark as viewed
         }
     });
