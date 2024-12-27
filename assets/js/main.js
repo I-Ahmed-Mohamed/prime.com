@@ -3,12 +3,6 @@
 // إنشاء الـ Footer ديناميكيًا
 const footerHTML = `
 <footer id="footer" class="d-flex flex-column align-items-center justify-content-center text-center bg-black text-light py-3">
-  <div class="social-links mb-3">
-    <a href="https://www.facebook.com" class="facebook mx-2" style="color: rgb(25, 101, 199);"><i class="bx bxl-facebook"></i></a>
-    <a href="https://github.com" class="github mx-2" style="color: #fff;"><i class="bx bxl-github"></i></a>
-    <a href="https://www.linkedin.com" class="linkedin mx-2" style="color: rgb(5, 43, 94);"><i class="bx bxl-linkedin"></i></a>
-    <a href="https://wa.me/201070714002" class="whatsapp mx-2" style="color: #4CAF50;"><i class="bx bxl-whatsapp"></i></a>
-  </div>
   <p>&copy; 2024 Ahmed Mohamed. All Rights Reserved.</p>
 </footer>
 `;
