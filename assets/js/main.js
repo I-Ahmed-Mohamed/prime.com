@@ -1,6 +1,7 @@
 
 
 // إنشاء الـ Footer ديناميكيًا
+/*
 const footerHTML = `
 <footer id="footer" class="d-flex flex-column align-items-center justify-content-center text-center bg-black text-light py-3">
   <p>&copy; 2024 Ahmed Mohamed. All Rights Reserved.</p>
@@ -9,7 +10,7 @@ const footerHTML = `
 
 // إدخال الـ Footer داخل العنصر في الصفحة
 document.getElementById('footer-container').innerHTML = footerHTML;
-
+/*
 
 
 
