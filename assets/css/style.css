@@ -4,7 +4,8 @@
   --bg-colore: rgb(0, 0, 0);
   --bg-color: #149ddd;
   --text-colore: #fff;
-  --boxShaow: rgba(9, 196, 253, 0.555);
+  --boxShaow: rgba(5, 178, 231, 0.555);
+  
 
 }
 
@@ -811,7 +812,7 @@ text-align: center;
   width: 54px;
   height: 54px;
   background: var(--bg-color);
-  border-radius: 50%;
+  border-radius: 20%;
   transition: 0.5s;
   border: 1px solid var(--bg-color);
   gap: 5px;
