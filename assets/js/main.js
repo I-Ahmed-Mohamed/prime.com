@@ -1,24 +1,4 @@
 
-
-// إنشاء الـ Footer ديناميكيًا
-const footerHTML = `
-<footer id="footer" class="d-flex flex-column align-items-center justify-content-center text-center bg-black text-light py-3">
-
-</footer>
-`;
-
-// إدخال الـ Footer داخل العنصر في الصفحة
-document.getElementById('footer-container').innerHTML = footerHTML;
-
-
-
-
-
-
-
-
-
-
 // document.addEventListener("contextmenu", function (e) {
 //     e.preventDefault();
 // });
