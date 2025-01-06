@@ -2,7 +2,7 @@
 
 :root{
   --bg-colore: rgb(1, 7, 17);
-  --bg-color: #149ddd;
+  --bg-color: #02a9f7;
   --text-colore: #fff;
   --boxShaow: rgba(8, 173, 214, 0.555);
   
@@ -116,8 +116,9 @@ h6 {
 #header .profile img {
   margin: 15px auto;
   display: block;
-  width: 130px;
-  border: 1px solid var(--bg-color); 
+  width: 150px;
+  height: 150px;
+  border: 5px solid var(--bg-colore); 
   box-shadow: 0 3px 6px var(--boxShaow);
 
 }
