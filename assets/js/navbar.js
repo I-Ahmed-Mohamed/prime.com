@@ -24,7 +24,7 @@ const navbarHTML = `
         <li><a href="Projects.html" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Projects</span></a></li>
         <li><a href="Services.html" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
         <li><a href="Contact.html" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-      <li><a href="Convert-File.html" class="nav-link scrollto"><i class="bx bx-transfer"></i> <span>Convert File</span></a></li>//
+      <li><a href="Convert-File.html" class="nav-link scrollto"><i class="bx bx-transfer"></i> <span>Convert File</span></a></li>
       </ul>
     </nav>
   </div>
