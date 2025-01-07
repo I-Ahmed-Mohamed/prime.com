@@ -24,9 +24,7 @@ h3 {
     transition: background-color 0.3s ease;
   }
   
-  button:hover {
-    background-color: #45a049;
-  }
+
   
   button i {
     margin-right: 10px;
@@ -40,6 +38,7 @@ h3 {
   }
   
   .container {
+    top: 500;
     text-align: center;
     padding: 30px;
     border-radius: 8px;
