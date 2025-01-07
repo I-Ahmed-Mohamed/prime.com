@@ -63,6 +63,7 @@ h6 {
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
+
 .back-to-top {
   position: fixed;
   visibility: hidden;
@@ -76,6 +77,7 @@ h6 {
   border-radius: 50px;
   transition: all 0.4s;
 }
+
 
 .back-to-top i {
   font-size: 28px;
@@ -91,7 +93,7 @@ h6 {
 
 .back-to-top.active {
   visibility: visible;
-  opacity: 1;
+  opacity: 1; 
 }
 
 /*--------------------------------------------------------------

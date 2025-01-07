@@ -17,7 +17,7 @@ h3 {
     font-size: 16px;
     padding: 8px 15px;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -38,15 +38,13 @@ h3 {
   }
   
   .container {
-    top: 500;
     text-align: center;
     padding: 30px;
-    border-radius: 8px;
     width: 600px;
     background-color: rgba(17, 160, 189, 0.329); /* خلفية شفافة */
     backdrop-filter: blur(10px); /* تطبيق الضبابية */
     -webkit-backdrop-filter: blur(10px); /* دعم للمتصفحات القديمة */
-    border-radius: 10px; /* زوايا مستديرة اختيارية */
+    border-radius: 25px; /* زوايا مستديرة اختيارية */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* إضافة ظل اختياري */
     margin: 0 auto; /* توسيط العنصر */
   }
