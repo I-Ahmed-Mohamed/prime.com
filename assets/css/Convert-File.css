@@ -44,7 +44,7 @@ h2 {
     padding: 30px;
     border-radius: 8px;
     width: 600px;
-    background-color: rgba(255, 255, 255, 0.3); /* خلفية شفافة */
+    background-color: rgba(17, 160, 189, 0.329); /* خلفية شفافة */
     backdrop-filter: blur(10px); /* تطبيق الضبابية */
     -webkit-backdrop-filter: blur(10px); /* دعم للمتصفحات القديمة */
     border-radius: 10px; /* زوايا مستديرة اختيارية */
