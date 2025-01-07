@@ -1,4 +1,4 @@
-h2 {
+h3 {
     color: var(--text-colore);
     margin-bottom: 20px;
   }
@@ -64,8 +64,8 @@ h2 {
       padding: 6px 10px; /* تقليل حجم الأزرار */
     }
   
-    h2 {
-      font-size: 20px; /* تقليل حجم العناوين */
+    h3 {
+      font-size: 19px; /* تقليل حجم العناوين */
     }
   }
   
