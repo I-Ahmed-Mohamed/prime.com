@@ -59,6 +59,8 @@ h3 {
     button {
       font-size: 14px; /* تصغير حجم الخط للأزرار */
       padding: 6px 10px; /* تقليل حجم الأزرار */
+      border-radius: 15px;
+
     }
   
     h3 {
@@ -70,6 +72,7 @@ h3 {
     .container {
       width: 95%; /* عرض أكبر قليلاً للشاشات الصغيرة جدًا */
       padding: 15px;
+
     }
   
     h2 {
@@ -79,10 +82,14 @@ h3 {
     button {
       font-size: 12px; /* حجم أصغر للأزرار */
       padding: 5px 8px; /* تقليل الحشوة */
+      border-radius: 15px;
+
     }
   
     .button-container {
       gap: 5px; /* تقليل المسافات بين الأزرار */
+      border-radius: 15px;
+
     }
   }
   
