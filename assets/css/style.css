@@ -430,11 +430,13 @@ section {
   align-items: center;
   justify-content: space-between;
   box-shadow: var(--boxShaow);
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7), inset 0 0 10px rgba(5, 130, 233, 0.548); */
+
 
 }
 
 .profile-content img {
-  border-radius: 20px;
+  border-radius: 15px;
   max-width: 100%;
   width: 350px;
   box-shadow: var(--boxShaow);
@@ -444,6 +446,7 @@ section {
   flex: 1;
   padding: 20px;
   box-shadow: var(--boxShaow);
+
 
 }
 
@@ -643,6 +646,8 @@ text-align: center;
   text-align: center;
   background-color: var(--bg-colore);
   box-shadow: 0 4px 6px var(--boxShaow);
+  
+  
   border-radius: 30px;
   padding: 5px 20px;
 }
@@ -698,7 +703,7 @@ text-align: center;
 }
 
 .project-image {
-  border-radius: 10px;
+  border-radius: 5px;
   margin-top: 20px;
 }
 
