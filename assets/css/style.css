@@ -333,7 +333,7 @@ h6 {
   width: 100px;
   height: 100px;
   border-radius: 100%;
-  border: 2px solid rgb(2, 17, 29);
+  border: 2px solid var(--bg-color);
   margin-right: 20px;
   
 }
