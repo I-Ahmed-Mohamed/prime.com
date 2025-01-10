@@ -2,7 +2,7 @@
 
 :root{
   --bg-colore: rgb(1, 7, 17);
-  --bg-color: #02a9f7;
+  --bg-color: #037eb8;
   --text-colore: #fff;
   --boxShaow: rgba(8, 173, 214, 0.555);
   
@@ -457,7 +457,9 @@ section {
 }
 
 
-
+.text-info1{
+  color: var(--bg-color);
+}
 
 
 .social-icons a {
@@ -690,8 +692,7 @@ text-align: center;
 }
 
 .portfolio-wrap:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 6px var(--boxShaow);
+  transform: translateY(-2px);
 }
 
 .tech-stack i {
