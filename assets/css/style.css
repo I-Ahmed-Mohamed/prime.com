@@ -118,7 +118,7 @@ h6 {
   display: block;
   width: 120px;
   height: 120px;
-  border: 2px solid  rgb(32, 10, 1);
+  border: 2px soli  var(--bg-color);
   
 
 
@@ -459,6 +459,7 @@ section {
 
 .text-info1{
   color: var(--bg-color);
+
 }
 
 
