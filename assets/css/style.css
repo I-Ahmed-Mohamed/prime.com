@@ -907,7 +907,7 @@ text-align: center;
 }
 
 .services .title a {
-  color: var(--text-colore);
+  color: var(--bg-color);
 }
 
 .services .title a:hover {
