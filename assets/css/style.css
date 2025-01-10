@@ -1190,6 +1190,11 @@ text-align: center;
   
 }
 
+.border-info1{
+  border: 1px solid var(--bg-color);
+  border-radius: 50px;
+}
+
 .bgIn{
 
   background-color: var(--bg-colore);
