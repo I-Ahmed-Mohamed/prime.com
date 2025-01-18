@@ -471,7 +471,6 @@ section {
   background-color: balck;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: var(--boxShaow); 
 
   padding: 20px;
   max-width: 900px;
@@ -484,7 +483,6 @@ section {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  box-shadow: var(--boxShaow);
   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7), inset 0 0 10px rgba(5, 130, 233, 0.548); */
 
 
@@ -494,13 +492,13 @@ section {
   border-radius: 15px;
   max-width: 100%;
   width: 350px;
-  box-shadow: var(--boxShaow);
+  border: 2px solid  var(--bg-color);
+  
 }
 
 .profile-info {
   flex: 1;
   padding: 20px;
-  box-shadow: var(--boxShaow);
 
 
 }
@@ -576,16 +574,14 @@ section {
       background: var(--bg-colore);
       padding: 15px;
       border-radius: 10px;
-      box-shadow: 0 4px 6px var(--boxShaow);
       transition: transform 0.10s, box-shadow 0.5s, border 0.5s;
       border: 2px solid transparent; 
+      border: 1px solid  var(--bg-color);
     }
   
     .skill-item:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-      border: 2px solid var(--bg-color); 
-    }
+      transform: translateY(-80px);
+    } 
   
     .skill-item img {
       width: 50px;
@@ -742,8 +738,9 @@ text-align: center;
   color: var(--text-colore);
   border-radius: 15px;
   padding: 20px;
-  box-shadow: 0 4px 6px var(--boxShaow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid  var(--bg-color);
+
   
 }
 
@@ -859,7 +856,7 @@ text-align: center;
 .services .icon-box {
   margin-bottom: 20px;
   border-radius: 10px;
-  box-shadow: 0 1px 5px var(--boxShaow);
+  border: 2px solid  var(--bg-color);
   transition: transform 0.10s, box-shadow 0.5s, border 0.5s;
   border: 2px solid transparent; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* الظل */
@@ -1320,10 +1317,9 @@ text-align: center;
 }
 .co2{
   color: var(--text-colore);
-  margin: 6px;
+  margin: 4px;
   background-color: var(--bg-colore);
-  box-shadow: 0px 8px 8px var(--boxShaow);
-  border-radius: 5px;
+  border-radius: 4px;
 
 
 }
@@ -1339,7 +1335,7 @@ text-align: center;
 .co5{
  
   background-color: var(--bg-colore);
-  box-shadow: 0 4px 6px var(--boxShaow);
+  border: 2px solid  var(--bg-color);
 
   color: var(--text-colore);
   border-radius: 5px;
