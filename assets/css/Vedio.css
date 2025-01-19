@@ -28,7 +28,7 @@ h1 {
 .video-card {
     background: var(--bg-colore);
     border-radius: 20px;
-    border: 2px solid  var(--bg-color);
+    border: 1px solid  var(--bg-color);
     overflow: hidden;
     text-align: center;
     padding: 20px;
