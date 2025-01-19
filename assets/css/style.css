@@ -876,7 +876,6 @@ text-align: center;
   border: 1px solid var(--bg-color);
   gap: 5px;
   margin: 10px; /* إذا كنت تريد المسافة بين العناصر */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* الظل */
 }
 
 
@@ -916,6 +915,14 @@ text-align: center;
   line-height: 24px;
   font-size: 14px;
   
+}
+
+.border1{
+  text-align: center;
+background-color: var(--bg-color);
+width: 100%;border-radius: 70px;
+padding: 20px;
+
 }
 
 /*--------------------------------------------------------------
