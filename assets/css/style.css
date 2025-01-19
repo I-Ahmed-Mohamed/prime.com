@@ -918,9 +918,9 @@ text-align: center;
 }
 
 .border1{
-  text-align: center;
 background-color: var(--bg-color);
-width: 100%;border-radius: 70px;
+width: 100%;
+border-radius: 70px;
 padding: 20px;
 
 }
