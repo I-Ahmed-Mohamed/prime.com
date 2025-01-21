@@ -742,7 +742,6 @@ text-align: center;
 
 
 .portfolio-wrap {
-
   background-color: rgba(178, 218, 245, 0.068); /* لون شفاف */
   backdrop-filter: blur(90px); /* تأثير الضبابية */   
   color: var(--text-colore);
@@ -861,11 +860,13 @@ text-align: center;
 # Services
 --------------------------------------------------------------*/
 .services .icon-box {
+  width: 150%;
+  padding: 20px;
   margin-bottom: 20px;
-  border-radius: 10px;
-  border: 2px solid  var(--bg-color);
+  border-radius: 50px;
+  background-color: rgba(178, 218, 245, 0.068); /* لون شفاف */
+  backdrop-filter: blur(90px); /* تأثير الضبابية */ 
   transition: transform 0.10s, box-shadow 0.5s, border 0.5s;
-  border: 2px solid transparent; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* الظل */
 
 }
