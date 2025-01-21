@@ -472,10 +472,10 @@ section {
       
     
 .profile-card {
-  background-color: balck;
+  background-color: rgba(145, 202, 240, 0.2); /* لون شفاف */
+  backdrop-filter: blur(50px); /* تأثير الضبابية */  
   border-radius: 20px;
   overflow: hidden;
-
   padding: 20px;
   max-width: 900px;
   width: 100%;
@@ -579,12 +579,12 @@ section {
       margin: 15px;
       height: auto;
       text-align: center;
-      background: var(--bg-colore);
+      background-color: rgba(178, 218, 245, 0.068); /* لون شفاف */
+      backdrop-filter: blur(90px); /* تأثير الضبابية */        
       padding: 10px;
       border-radius: 10px;
       transition: transform 0.10s, box-shadow 0.5s, border 0.5s;
       border: 2px solid transparent; 
-      border: 1px solid  var(--bg-color);
     }
   
     .skill-item:hover {
@@ -596,7 +596,6 @@ section {
       height: 50px;
       object-fit: contain;
       margin-bottom: 10px;
-      background: var(--bg-colore);
       padding: 10px;
       border-radius: 50%;
     }
