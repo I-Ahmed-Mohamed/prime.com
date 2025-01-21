@@ -26,9 +26,9 @@ h1 {
 
 /* تصميم الفيديو */
 .video-card {
-    background: var(--bg-colore);
-    border-radius: 20px;
-    border: 1px solid  var(--bg-color);
+    background-color: rgba(145, 202, 240, 0.2); /* لون شفاف */
+    backdrop-filter: blur(50px); /* تأثير الضبابية */   
+     border-radius: 20px;
     overflow: hidden;
     text-align: center;
     padding: 20px;
