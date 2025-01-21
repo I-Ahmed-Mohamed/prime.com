@@ -580,7 +580,7 @@ section {
       height: auto;
       text-align: center;
       background-color: rgba(178, 218, 245, 0.068); /* لون شفاف */
-      backdrop-filter: blur(90px); /* تأثير الضبابية */        
+      backdrop-filter: blur(90px); /* تأثير الضبابية */         
       padding: 10px;
       border-radius: 10px;
       transition: transform 0.10s, box-shadow 0.5s, border 0.5s;
@@ -698,6 +698,7 @@ text-align: center;
 
  .portfolio .portfolio-item {
   margin-bottom: 30px;
+  
 }
 
 .portfolio #portfolio-flters {
@@ -725,6 +726,7 @@ text-align: center;
   color: var(--text-colore);
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
+  
 }
 
 
@@ -741,12 +743,13 @@ text-align: center;
 
 
 .portfolio-wrap {
-  background-color: var(--bg-colore);
+
+  background-color: rgba(178, 218, 245, 0.068); /* لون شفاف */
+  backdrop-filter: blur(90px); /* تأثير الضبابية */   
   color: var(--text-colore);
   border-radius: 15px;
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid  var(--bg-color);
 
   
 }
@@ -759,7 +762,6 @@ text-align: center;
   font-size: 20px;
   color: var(--text-colore);
   margin-right: 10px;
-  background-color: var(--bg-colore);
   
 }
 
@@ -773,7 +775,6 @@ text-align: center;
   color: var(--text-colore);
   font-size: 20px;
   transition: color 0.1s ease;
-  background-color: var(--bg-colore);
   border-radius: 50px;
 
 
@@ -1326,7 +1327,6 @@ text-align: center;
 .co2{
   color: var(--text-colore);
   margin: 4px;
-  background-color: var(--bg-colore);
   border-radius: 4px;
 
 
