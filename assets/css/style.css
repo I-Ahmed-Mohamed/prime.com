@@ -496,7 +496,7 @@ section {
   border-radius: 15px;
   max-width: 100%;
   width: 350px;
-  border: 2px solid  var(--bg-color);
+  border: 1px solid  var(--bg-color);
   
 }
 
