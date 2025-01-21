@@ -105,12 +105,13 @@ h6 {
   left: 0;
   bottom: 0;
   width: 300px;
+  height: 550px;
   transition: all ease-in-out 0.5s;
   z-index: 9997;
   transition: all 0.5s;
   padding: 0 15px;
   background-color: rgba(1, 4, 19, 0.2); /* لون شفاف */
-  backdrop-filter: blur(10px); /* تأثير الضبابية */
+  backdrop-filter: blur(30px); /* تأثير الضبابية */
   overflow-y: auto;
   border-radius: 70px;
 
@@ -148,7 +149,6 @@ h6 {
 #header .profile .social-links a {
   font-size: 20px;
   display: inline-block;
-  background-color: var(--bg-colore);
   color: var(--text-colore);
   line-height: 1;
   padding: 8px 0;
@@ -185,8 +185,6 @@ h6 {
 #navbar ul li a {
   text-decoration: none;
   color: var(--text-colore);
-  background-color: rgba(1, 4, 19, 0.2); /* لون شفاف */
-  backdrop-filter: blur(10px); /* تأثير الضبابية */
   padding: 10px 15px;
   border-radius: 5px;
   display: block;
