@@ -571,8 +571,9 @@ section {
     }
   
     .skill-item {
-      width: 120px;
+      width: 90px;
       margin: 15px;
+      height: auto;
       text-align: center;
       background: var(--bg-colore);
       padding: 15px;
