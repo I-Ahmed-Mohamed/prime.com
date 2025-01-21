@@ -4,6 +4,7 @@ const navbarHTML = `
   <div class="d-flex flex-column">
     <div class="profile">
       <h1 class="text-light"><a href="index.html">Ahmed Mohamed</a></h1>
+        <hr>
       <div class="social-links mt-3 text-center">
         <a href="https://www.facebook.com/share/wYBvM66s9ttqxrsm/?mibextid=LQQJ4d" class="facebook" style="background-color: rgb(25, 101, 199);"><i class="bx bxl-facebook"></i></a>
         <a href="https://github.com/I-Ahmed-Mohamed" class="bi-github" style="background-color: black;"><i class="bx"></i></a>
