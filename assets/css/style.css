@@ -24,7 +24,7 @@ body {
   color: var(--text-colore);
 }
 
- 
+
 
 a {
   color: var(--bg-color);
@@ -113,7 +113,7 @@ h6 {
   background-color: rgba(1, 4, 19, 0.2); /* لون شفاف */
   backdrop-filter: blur(50px); /* تأثير الضبابية */
   overflow-y: auto;
-  border-radius: 30px;
+  border-radius: 90cpx;
 
 }
 
