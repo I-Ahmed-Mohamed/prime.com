@@ -6,7 +6,7 @@
   --text-colore: #fff;
   --boxShaow: rgba(2, 109, 136, 0.555);
   
-
+  
 }
 
 .light-mode{
@@ -472,8 +472,7 @@ section {
       
     
 .profile-card {
-  background-color: rgba(145, 202, 240, 0.2); /* لون شفاف */
-  backdrop-filter: blur(50px); /* تأثير الضبابية */  
+   
   border-radius: 20px;
   overflow: hidden;
   padding: 20px;
