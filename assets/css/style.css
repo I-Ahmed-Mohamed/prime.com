@@ -569,7 +569,10 @@ section {
   .skills {
       padding: 50px 0;
     }
-  
+    .btn1{
+      color: var(--text-colore);
+      background-color: var(--bg-color);
+    }
     .skill-item {
       width: 90px;
       margin: 15px;
