@@ -576,7 +576,7 @@ section {
       height: auto;
       text-align: center;
       background: var(--bg-colore);
-      padding: 15px;
+      padding: 10px;
       border-radius: 10px;
       transition: transform 0.10s, box-shadow 0.5s, border 0.5s;
       border: 2px solid transparent; 
