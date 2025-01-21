@@ -111,9 +111,9 @@ h6 {
   transition: all 0.5s;
   padding: 0 15px;
   background-color: rgba(1, 4, 19, 0.2); /* لون شفاف */
-  backdrop-filter: blur(30px); /* تأثير الضبابية */
+  backdrop-filter: blur(40px); /* تأثير الضبابية */
   overflow-y: auto;
-  border-radius: 70px;
+  border-radius: 20px;
 
 }
 
