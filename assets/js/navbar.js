@@ -3,7 +3,6 @@ const navbarHTML = `
 <header id="header">
   <div class="d-flex flex-column">
     <div class="profile">
-      <img src="assets/img/Ahmed Mohamed.jpg" alt="" class="img-fluid rounded-circle">
       <h1 class="text-light"><a href="index.html">Ahmed Mohamed</a></h1>
       <div class="social-links mt-3 text-center">
         <a href="https://www.facebook.com/share/wYBvM66s9ttqxrsm/?mibextid=LQQJ4d" class="facebook" style="background-color: rgb(25, 101, 199);"><i class="bx bxl-facebook"></i></a>
