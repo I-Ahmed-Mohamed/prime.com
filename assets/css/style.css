@@ -99,6 +99,7 @@ h6 {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+
 #header {
   position: fixed;
   top: 0;
@@ -113,7 +114,7 @@ h6 {
   background-color: rgba(1, 4, 19, 0.2); /* لون شفاف */
   backdrop-filter: blur(50px); /* تأثير الضبابية */
   overflow-y: auto;
-  border-radius: 90cpx;
+  border-radius: 90px;
 
 }
 
