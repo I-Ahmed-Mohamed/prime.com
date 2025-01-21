@@ -322,7 +322,7 @@ h6 {
   margin: 0 auto;
   background-color: var(--bg-colore);
   border: 1px solid var(--bg-color);
-  border-radius: 80px;
+  border-radius: 40px;
   overflow: hidden;
 
 }
