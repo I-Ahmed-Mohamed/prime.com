@@ -71,7 +71,7 @@ h1 {
 }
 
 .progress-fill {
-    background: red;
+    background: var(--bg-color);
     height: 100%;
     width: 0%;
     transition: width 0.3s ease;
@@ -87,5 +87,5 @@ h1 {
 }
 
 .view-count i {
-    color: red;
+    color: var(--bg-color);
 }
