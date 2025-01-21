@@ -321,8 +321,9 @@ h6 {
   max-width: 700px;
   max-height: 800px;
   margin: 0 auto;
-  background-color: var(--bg-colore);
-  border: 1px solid var(--bg-color);
+
+  background-color: rgba(178, 218, 245, 0.068); /* لون شفاف */
+  backdrop-filter: blur(90px); /* تأثير الضبابية */ 
   border-radius: 40px;
   overflow: hidden;
 
@@ -687,6 +688,7 @@ button {
 .cent{
 text-align: center;
 }
+
 
 /*--------------------------------------------------------------
 # Portfolio
