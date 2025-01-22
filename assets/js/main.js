@@ -90,7 +90,7 @@ document.getElementById('form').addEventListener('submit', function (event) {
     event.preventDefault(); // منع إعادة تحميل الصفحة
 
     // تفعيل حالة التحميل
-    btn.innerHTML = '<span class="loader"></span>';
+    btn.innerHTML = 'Sened...';
     btn.disabled = true;
 
     const serviceID = 'default_service';
