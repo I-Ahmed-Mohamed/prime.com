@@ -1114,7 +1114,7 @@ text-align: center;
   padding: 30px;
   background-color: rgba(178, 218, 245, 0.068); /* لون شفاف */
   backdrop-filter: blur(90px); /* تأثير الضبابية */  
-  border-radius: 50px;
+  border-radius: 20px;
  
  }
 
