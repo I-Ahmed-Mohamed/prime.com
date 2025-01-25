@@ -1,8 +1,4 @@
-h1 {
-    text-align: center;
-    color: var(--text-colore);
-    margin-bottom: 40px;
-}
+
 
 .video-container {
     display: grid;
