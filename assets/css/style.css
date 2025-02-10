@@ -1350,7 +1350,7 @@ border-radius: 20px;
   position: absolute;
   width: 2px;
   height: 2px;
-  background: white;
+  background: var(--text-colore);
   border-radius: 50%;
   animation: twinkle 2s infinite;
 }
@@ -1359,7 +1359,7 @@ border-radius: 20px;
   position: absolute;
   width: 4px;
   height: 4px;
-  background: rgb(5, 184, 216);
+  background: var(--bg-color);
   border-radius: 50%;
   animation: sparkle 1.5s infinite;
 }
