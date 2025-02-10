@@ -114,22 +114,12 @@ h6 {
   background-color: rgba(1, 4, 19, 0.2); /* لون شفاف */
   backdrop-filter: blur(190px); /* تأثير الضبابية */
   overflow-y: auto;
-  border-radius: 60px;
+  border-radius: 20px;
 
 }
 
 
 
-/* #header .profile img {
-  margin: 15px auto;
-  display: block;
-  width: 120px;
-  height: 120px;
-  border: 2px soli  var(--bg-color);
-  
-
-
-} */
 
 #header .profile h1 {
   font-size: 20px;
@@ -153,7 +143,7 @@ h6 {
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
-  border-radius: 50%;
+  border-radius: 30%;
   text-align: center;
   width: 36px;
   height: 36px;
@@ -309,9 +299,8 @@ h6 {
 }
 
 .mobile-nav-active #header {
-  left: 50px;
-  top: 50px;
-
+  left: 0px;
+  top: 0px;
 }
 
 
@@ -325,7 +314,7 @@ h6 {
   margin: 0 auto;
   background-color: rgba(178, 218, 245, 0.068); /* لون شفاف */
   backdrop-filter: blur(90px); /* تأثير الضبابية */ 
-  border-radius: 40px;
+  border-radius: 10px;
   overflow: hidden;
 
 }
