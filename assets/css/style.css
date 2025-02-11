@@ -1346,7 +1346,7 @@ border-radius: 20px;
 
 
 
-.star {
+/* .star {
   position: absolute;
   width: 2px;
   height: 2px;
@@ -1372,4 +1372,4 @@ border-radius: 20px;
 @keyframes sparkle {
   0%, 100% { opacity: 0; transform: scale(0); }
   50% { opacity: 1; transform: scale(1.5); }
-}
+} */
