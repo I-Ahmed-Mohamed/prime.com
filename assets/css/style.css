@@ -139,7 +139,6 @@ h6 {
   backdrop-filter: blur(180px); /* تأثير الضبابية */
   overflow-y: auto;
   border-radius: 10px;
-    border: 1px solid var(--bg-color);
 
 
 }
