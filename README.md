@@ -11,6 +11,7 @@ A modern, professional portfolio website showcasing Ahmed Mohamed's work as a So
 ## ✨ Features
 
 ### 🎨 Design & UI
+
 - **Modern Glassmorphism Design** - Contemporary glass-effect cards and elements
 - **Gradient Effects** - Beautiful color gradients throughout the site
 - **Particle Background** - Interactive animated particle system
@@ -19,6 +20,7 @@ A modern, professional portfolio website showcasing Ahmed Mohamed's work as a So
 - **Dark/Light Mode** - Theme switcher with localStorage persistence
 
 ### 🚀 Performance
+
 - **Loading Screen** - Professional loading animation
 - **Lazy Loading** - Images load as needed for better performance
 - **Optimized Assets** - Minified CSS and JavaScript
@@ -26,6 +28,7 @@ A modern, professional portfolio website showcasing Ahmed Mohamed's work as a So
 - **Progress Bar** - Visual scroll progress indicator
 
 ### 💫 Interactive Elements
+
 - **Back to Top Button** - Quick navigation to page top
 - **Typing Effects** - Animated text typing
 - **Hover Animations** - Interactive card and button effects
@@ -33,6 +36,7 @@ A modern, professional portfolio website showcasing Ahmed Mohamed's work as a So
 - **Mobile Navigation** - Responsive hamburger menu
 
 ### 🎯 SEO Optimized
+
 - **Meta Tags** - Complete SEO meta information
 - **Open Graph** - Social media sharing optimization
 - **Semantic HTML** - Proper HTML5 structure
@@ -75,6 +79,7 @@ prime-software/
 ## 🛠️ Technologies Used
 
 ### Frontend
+
 - **HTML5** - Semantic markup
 - **CSS3** - Modern styling with variables
 - **JavaScript (ES6+)** - Modern JavaScript features
@@ -85,10 +90,12 @@ prime-software/
 - **Swiper** - Modern slider
 
 ### Backend & Services
+
 - **EmailJS** - Contact form handling
 - **PHP** - Server-side processing
 
 ### Icons & Fonts
+
 - **Bootstrap Icons** - Icon library
 - **Boxicons** - Additional icons
 - **Google Fonts** - Open Sans, Raleway, Poppins
@@ -96,6 +103,7 @@ prime-software/
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Modern web browser (Chrome, Firefox, Safari, Edge)
 - Local web server (optional for development)
 - Text editor (VS Code recommended)
@@ -103,6 +111,7 @@ prime-software/
 ### Installation
 
 1. **Clone or Download the Repository**
+
    ```bash
    git clone https://github.com/yourusername/portfolio.git
    cd portfolio
@@ -119,6 +128,7 @@ prime-software/
 ### Configuration
 
 #### EmailJS Setup
+
 1. Create account at [EmailJS](https://www.emailjs.com/)
 2. Get your User ID
 3. Update in HTML files:
@@ -127,6 +137,7 @@ prime-software/
    ```
 
 #### Customization
+
 - **Colors**: Edit CSS variables in `modern-enhancements.css`
 - **Content**: Update HTML files with your information
 - **Images**: Replace images in `assets/img/`
@@ -135,33 +146,43 @@ prime-software/
 ## 🎨 Key Features Explained
 
 ### Loading Screen
+
 Beautiful animated loader that appears while page loads:
+
 - 3 rotating circles with gradient colors
 - Animated "Loading..." text
 - Auto-hides when page is ready
 
 ### Scroll Progress Bar
+
 Visual indicator of scroll position:
+
 - Fixed at top of page
 - Gradient color animation
 - Smooth width transition
 
 ### Particle Background
+
 Interactive particle system:
+
 - 80 animated particles
 - Connection lines between nearby particles
 - Smooth canvas animation
 - Performance optimized
 
 ### Theme Switcher
+
 Toggle between dark and light modes:
+
 - Floating button in top-right corner
 - Smooth color transitions
 - Settings saved to localStorage
 - Animated icon change
 
 ### Back to Top Button
+
 Quick navigation tool:
+
 - Appears after scrolling 100px
 - Smooth scroll to top
 - Gradient background
@@ -170,6 +191,7 @@ Quick navigation tool:
 ## 📱 Responsive Design
 
 The website is fully responsive and tested on:
+
 - ✅ Desktop (1920px+)
 - ✅ Laptop (1366px - 1920px)
 - ✅ Tablet (768px - 1024px)
@@ -193,17 +215,20 @@ The website is fully responsive and tested on:
 ## 🔧 Development
 
 ### Adding New Pages
+
 1. Create new HTML file
 2. Copy structure from existing page
 3. Include required CSS/JS files:
    ```html
-   <link href="assets/css/style.css" rel="stylesheet">
-   <link href="assets/css/modern-enhancements.css" rel="stylesheet">
+   <link href="assets/css/style.css" rel="stylesheet" />
+   <link href="assets/css/modern-enhancements.css" rel="stylesheet" />
    <script src="assets/js/modern-features.js"></script>
    ```
 
 ### Customizing Colors
+
 Edit CSS variables in `modern-enhancements.css`:
+
 ```css
 :root {
   --primary-blue: #037eb8;
@@ -214,16 +239,17 @@ Edit CSS variables in `modern-enhancements.css`:
 ```
 
 ### Adding Animations
+
 Use AOS attributes in HTML:
+
 ```html
-<div data-aos="fade-up" data-aos-duration="1000">
-  Your content here
-</div>
+<div data-aos="fade-up" data-aos-duration="1000">Your content here</div>
 ```
 
 ## 📝 Updates & Changelog
 
 ### Version 2.0 (2026)
+
 - ✨ Added modern loading screen
 - ✨ Implemented scroll progress bar
 - ✨ Added back-to-top button
@@ -235,6 +261,7 @@ Use AOS attributes in HTML:
 - ✨ Mobile responsiveness improvements
 
 ### Version 1.0 (Original)
+
 - Initial release
 - Basic portfolio structure
 - Contact form
@@ -243,6 +270,7 @@ Use AOS attributes in HTML:
 ## 🤝 Contributing
 
 Contributions are welcome! Please:
+
 1. Fork the repository
 2. Create your feature branch
 3. Commit your changes
@@ -256,6 +284,7 @@ This project is open source and available for personal and commercial use.
 ## 👤 Author
 
 **Ahmed Mohamed**
+
 - Portfolio: [Your Website URL]
 - GitHub: [@yourusername]
 - LinkedIn: [Your LinkedIn]

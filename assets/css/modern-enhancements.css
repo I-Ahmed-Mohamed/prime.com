@@ -8,27 +8,32 @@
   /* Primary Colors - Dark Blue Theme */
   --primary-blue: #003d5c;
   --primary-blue-light: #005a8d;
-  --primary-gradient: linear-gradient(135deg, #001a2e 0%, #003d5c 50%, #001a2e 100%);
+  --primary-gradient: linear-gradient(
+    135deg,
+    #001a2e 0%,
+    #003d5c 50%,
+    #001a2e 100%
+  );
   --accent-cyan: #00a8d8;
   --accent-purple: #6a4c93;
-  
+
   /* Background Colors - Very Dark */
   --bg-dark: #000f1a;
   --bg-darker: #000814;
   --bg-card: rgba(0, 93, 141, 0.08);
   --bg-card-hover: rgba(0, 93, 141, 0.15);
-  
+
   /* Text Colors */
   --text-primary: #ffffff;
   --text-secondary: #b0d4e3;
   --text-muted: #7a8fa0;
-  
+
   /* Effects */
   --glow-blue: 0 0 20px rgba(0, 168, 216, 0.4);
   --glow-cyan: 0 0 30px rgba(0, 168, 216, 0.6);
   --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.8);
   --blur-glass: blur(10px);
-  
+
   /* Transitions */
   --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -46,7 +51,9 @@
   justify-content: center;
   align-items: center;
   z-index: 99999;
-  transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+  transition:
+    opacity 0.3s ease-out,
+    visibility 0.3s ease-out;
 }
 
 #loading-screen.hidden {
@@ -94,8 +101,12 @@
 }
 
 @keyframes rotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .loading-text {
@@ -113,22 +124,37 @@
 }
 
 @keyframes gradient-shift {
-  0%, 100% { background-position: 0% center; }
-  50% { background-position: 100% center; }
+  0%,
+  100% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
 }
 
 .loading-text .dots::after {
-  content: '';
+  content: "";
   animation: dots 0.8s steps(4, end) infinite;
   display: inline-block;
   width: 1.2em;
 }
 
 @keyframes dots {
-  0%, 10% { content: ''; }
-  30% { content: '.'; }
-  60% { content: '..'; }
-  90%, 100% { content: '...'; }
+  0%,
+  10% {
+    content: "";
+  }
+  30% {
+    content: ".";
+  }
+  60% {
+    content: "..";
+  }
+  90%,
+  100% {
+    content: "...";
+  }
 }
 
 /* ===== Scroll Progress Bar ===== */
@@ -154,8 +180,13 @@
 }
 
 @keyframes gradient-flow {
-  0%, 100% { background-position: 0% center; }
-  50% { background-position: 100% center; }
+  0%,
+  100% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
 }
 
 /* ===== Back to Top Button ===== */
@@ -177,7 +208,7 @@
 }
 
 .back-to-top::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -186,7 +217,9 @@
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.3);
   transform: translate(-50%, -50%);
-  transition: width 0.6s, height 0.6s;
+  transition:
+    width 0.6s,
+    height 0.6s;
 }
 
 .back-to-top:hover::before {
@@ -255,8 +288,13 @@
 
 /* ===== Floating Animation ===== */
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 .float-animation {
@@ -265,8 +303,15 @@
 
 /* ===== Pulse Animation ===== */
 @keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.8; transform: scale(1.05); }
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
 }
 
 .pulse-animation {
@@ -280,13 +325,17 @@
 }
 
 .glow-effect::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -50%;
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(0, 217, 255, 0.2) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(0, 217, 255, 0.2) 0%,
+    transparent 70%
+  );
   animation: glow-rotate 6s linear infinite;
   opacity: 0;
   transition: opacity 0.5s;
@@ -297,8 +346,12 @@
 }
 
 @keyframes glow-rotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* ===== Enhanced Profile Section ===== */
@@ -308,26 +361,36 @@
 }
 
 .profile-container::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -50%;
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(0, 168, 216, 0.1) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(0, 168, 216, 0.1) 0%,
+    transparent 70%
+  );
   animation: profile-glow 8s ease-in-out infinite;
   pointer-events: none;
 }
 
 @keyframes profile-glow {
-  0%, 100% { transform: translate(0, 0); }
-  50% { transform: translate(30px, 30px); }
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(30px, 30px);
+  }
 }
 
 .profile-header img {
   border: 4px solid transparent;
-  background: linear-gradient(var(--bg-dark), var(--bg-dark)) padding-box,
-              linear-gradient(135deg, #00a8d8, #005a8d, #6a4c93) border-box;
+  background:
+    linear-gradient(var(--bg-dark), var(--bg-dark)) padding-box,
+    linear-gradient(135deg, #00a8d8, #005a8d, #6a4c93) border-box;
   transition: var(--transition-smooth);
   box-shadow: 0 10px 40px rgba(0, 168, 216, 0.4);
   border-radius: 50%;
@@ -340,7 +403,7 @@
 
 /* ===== Enhanced Terminal Output ===== */
 #terminal-output {
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   position: relative;
   padding: 20px;
   background: rgba(0, 93, 141, 0.05);
@@ -386,22 +449,22 @@
     bottom: 20px;
     right: 20px;
   }
-  
+
   .theme-switcher {
     width: 40px;
     height: 40px;
     top: 15px;
     left: 15px;
   }
-  
+
   .theme-switcher i {
     font-size: 18px;
   }
-  
+
   .loading-text {
     font-size: 1.2rem;
   }
-  
+
   .loader {
     width: 80px;
     height: 80px;
@@ -454,7 +517,7 @@ a {
 }
 
 a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -2px;
   left: 0;
@@ -509,13 +572,18 @@ a:hover::after {
 }
 
 .btn-modern::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
   transition: left 0.5s;
 }
 
@@ -545,7 +613,8 @@ a:hover::after {
   transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
