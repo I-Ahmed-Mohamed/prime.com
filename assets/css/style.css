@@ -1,15 +1,11 @@
-                      
-
-:root{
+:root {
   --bg-colore: rgb(1, 7, 17);
   --bg-color: #037eb8;
   --text-colore: #fff;
   --boxShaow: rgba(2, 109, 136, 0.555);
-  
-  
 }
 
-.light-mode{
+.light-mode {
   --bg-colore: #fff;
   --text-colore: black;
   --boxShaow: rgba(1, 16, 20, 0.781);
@@ -17,16 +13,18 @@
 
 /* ===== خلفية متحركة بنقاط مضيئة (Stars Effect) ===== */
 body::before {
-  
   content: "";
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: radial-gradient(2px 2px at 20px 30px, #fff, transparent),
-              radial-gradient(2px 2px at 80% 60%, #0af, transparent),
-              radial-gradient(2px 2px at 50% 90%, #fff, transparent),
-              radial-gradient(1.5px 1.5px at 70% 20%, #0ff, transparent),
-              radial-gradient(1px 1px at 40% 40%, #09f, transparent);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(2px 2px at 20px 30px, #fff, transparent),
+    radial-gradient(2px 2px at 80% 60%, #0af, transparent),
+    radial-gradient(2px 2px at 50% 90%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 70% 20%, #0ff, transparent),
+    radial-gradient(1px 1px at 40% 40%, #09f, transparent);
   background-repeat: repeat;
   background-size: 200px 200px;
   animation: moveStars 60s linear infinite;
@@ -35,20 +33,29 @@ body::before {
 }
 
 @keyframes moveStars {
-  from { background-position: 0 0, 0 0, 0 0, 0 0, 0 0; }
-  to { background-position: -1000px 1000px, 1000px -1000px, -1000px 1000px, 1000px -1000px, 500px 500px; }
+  from {
+    background-position:
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      0 0;
+  }
+  to {
+    background-position:
+      -1000px 1000px,
+      1000px -1000px,
+      -1000px 1000px,
+      1000px -1000px,
+      500px 500px;
+  }
 }
-
-
-
 
 body {
   font-family: "Open Sans", sans-serif;
   background-color: var(--bg-colore);
   color: var(--text-colore);
 }
-
-
 
 a {
   color: var(--bg-color);
@@ -83,7 +90,6 @@ h6 {
   object-fit: cover; /* لضمان تغطية الصورة بالكامل */
 }
 
-
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -102,7 +108,6 @@ h6 {
   transition: all 0.4s;
 }
 
-
 .back-to-top i {
   font-size: 28px;
   color: var(--text-colore);
@@ -114,10 +119,9 @@ h6 {
   color: var(--text-colore);
 }
 
-
 .back-to-top.active {
   visibility: visible;
-  opacity: 1; 
+  opacity: 1;
 }
 
 /*--------------------------------------------------------------
@@ -139,12 +143,7 @@ h6 {
   backdrop-filter: blur(180px); /* تأثير الضبابية */
   overflow-y: auto;
   border-radius: 10px;
-
-
 }
-
-
-
 
 #header .profile h1 {
   font-size: 20px;
@@ -181,18 +180,17 @@ h6 {
   text-decoration: none;
 }
 
-
 #navbar ul {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   list-style: none;
   padding: 0;
   margin: 0;
-  justify-content: center; 
+  justify-content: center;
 }
 
 #navbar ul li {
-  flex: 0 0 50%; 
+  flex: 0 0 50%;
   text-align: center;
   margin-bottom: 10px; /* مسافة بين السطور */
 }
@@ -205,19 +203,11 @@ h6 {
   display: block;
 }
 
-
 .nav-link.active {
   font-weight: bold;
   color: var(--bg-colore);
   border-bottom: 2px solid var(--bg-color);
 }
-
-
-
-
-
-
-
 
 #main {
   margin-left: 300px;
@@ -259,7 +249,7 @@ h6 {
   list-style: none;
 }
 
-.nav-menu>ul>li {
+.nav-menu > ul > li {
   position: relative;
   white-space: nowrap;
 }
@@ -285,7 +275,7 @@ h6 {
 .nav-menu a:hover,
 .nav-menu .active,
 .nav-menu .active:focus,
-.nav-menu li:hover>a {
+.nav-menu li:hover > a {
   text-decoration: none;
   color: var(--text-colore);
 }
@@ -293,7 +283,7 @@ h6 {
 .nav-menu a:hover i,
 .nav-menu .active i,
 .nav-menu .active:focus i,
-.nav-menu li:hover>a i {
+.nav-menu li:hover > a i {
   color: var(--bg-color);
 }
 
@@ -328,18 +318,14 @@ h6 {
   top: 0px;
 }
 
-
-
 /* Home ======================== */
 
- 
-.profile-container  {
+.profile-container {
   max-width: 700px;
   max-height: 800px;
   margin: 0 auto;
   border-radius: 10px;
   overflow: hidden;
-
 }
 
 .profile-header {
@@ -353,7 +339,6 @@ h6 {
   border-radius: 100%;
   border: 1px solid var(--bg-color);
   margin-right: 20px;
-  
 }
 .profile-header h1 {
   font-size: 28px;
@@ -377,19 +362,12 @@ h6 {
   color: var(--text-colore);
 }
 
-
-
-
-
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
   background-color: var(--bg-colore);
-  
 }
-
-
 
 #hero .hero-container {
   position: relative;
@@ -475,24 +453,18 @@ section {
 
 .section-title p {
   margin-bottom: 0;
-  
 }
 
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
 
-
-      
-    
 .profile-card {
-   
   border-radius: 20px;
   overflow: hidden;
   padding: 20px;
   max-width: 900px;
   width: 100%;
-
 }
 
 .profile-content {
@@ -501,23 +473,18 @@ section {
   align-items: center;
   justify-content: space-between;
   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7), inset 0 0 10px rgba(5, 130, 233, 0.548); */
-
-
 }
 
 .profile-content img {
   border-radius: 15px;
   max-width: 100%;
   width: 350px;
-  border: 1px solid  var(--bg-color);
-  
+  border: 1px solid var(--bg-color);
 }
 
 .profile-info {
   flex: 1;
   padding: 20px;
-
-
 }
 
 .profile-info p {
@@ -526,19 +493,15 @@ section {
   line-height: 1.9; /* تحسين المسافات بين السطور */
 }
 
-
-.text-info1{
+.text-info1 {
   color: var(--bg-color);
-
 }
-
 
 .social-icons a {
   margin: 0 10px;
   color: var(--text-colore);
   font-size: 1.5rem;
   transition: color 0.3s;
-  
 }
 
 .social-icons a:hover {
@@ -564,106 +527,103 @@ section {
   color: var(--text-colore);
 }
 
-
 .btn-vote {
-  background: linear-gradient(to right, #2575fc , #070707 );
+  background: linear-gradient(to right, #2575fc, #070707);
   color: var(--text-colore);
 }
 
 .btn-vote:hover {
   background: linear-gradient(to right, #0e254d, #121213);
   color: var(--text-colore);
-
 }
-
-
 
 /* -----------------   Skills  --------------------------------*/
 
-  .skills {
-      padding: 50px 0;
-    }
-    .btn1{
-      color: var(--text-colore);
-      background-color: var(--bg-color);
-    }
-    .skill-item {
-      width: 90px;
-      margin: 15px;
-      height: auto;
-      text-align: center;
-      background-color: rgba(178, 218, 245, 0.068); /* لون شفاف */
-      backdrop-filter: blur(90px); /* تأثير الضبابية */         
-      padding: 10px;
-      border-radius: 10px;
-      transition: transform 0.10s, box-shadow 0.5s, border 0.5s;
-      border: 2px solid transparent; 
-    }
-  
-    .skill-item:hover {
-      transform: translateY(-80px);
-    } 
-  
-    .skill-item img {
-      width: 50px;
-      height: 50px;
-      object-fit: contain;
-      margin-bottom: 10px;
-      padding: 10px;
-      border-radius: 50%;
-    }
-  
-    .skill-item p {
-      font-size: 14px;
-      margin: 0;
-      color: var(--text-colore);
-    }
-  
-    .section-bg {
-      background: var(--bg-color);
-      border-radius: 10px;
-    }
-  
-    /* Animation */
-    .animated-item {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 1s ease-out forwards;
-    }
-  
-    .animated-item:nth-child(1) {
-      animation-delay: 0.2s;
-    }
-  
-    .animated-item:nth-child(2) {
-      animation-delay: 0.4s;
-    }
-  
-    .animated-item:nth-child(3) {
-      animation-delay: 0.6s;
-    }
-  
-    .animated-item:nth-child(4) {
-      animation-delay: 0.8s;
-    }
-  
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+.skills {
+  padding: 50px 0;
+}
+.btn1 {
+  color: var(--text-colore);
+  background-color: var(--bg-color);
+}
+.skill-item {
+  width: 90px;
+  margin: 15px;
+  height: auto;
+  text-align: center;
+  background-color: rgba(178, 218, 245, 0.068); /* لون شفاف */
+  backdrop-filter: blur(90px); /* تأثير الضبابية */
+  padding: 10px;
+  border-radius: 10px;
+  transition:
+    transform 0.1s,
+    box-shadow 0.5s,
+    border 0.5s;
+  border: 2px solid transparent;
+}
 
+.skill-item:hover {
+  transform: translateY(-80px);
+}
+
+.skill-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.skill-item p {
+  font-size: 14px;
+  margin: 0;
+  color: var(--text-colore);
+}
+
+.section-bg {
+  background: var(--bg-color);
+  border-radius: 10px;
+}
+
+/* Animation */
+.animated-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.animated-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.animated-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.animated-item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.animated-item:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 /* 
 # Resume
---------------------------------------------------------------*/ 
+--------------------------------------------------------------*/
 
- 
 button {
   margin: 10px;
   padding: 10px 20px;
@@ -672,47 +632,37 @@ button {
   border-radius: 5px;
   border: none;
   text-align: center;
-  
 }
 
 .download-btn {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: var(--text-colore);
   text-align: center;
   /* box-shadow: 0 4px 6px rgba(11, 236, 97, 0.781); */
-
 }
 .view-btn {
   background: var(--bg-color);
   color: var(--text-colore);
   text-align: center;
-  
-  /* box-shadow: 0 4px 6px rgba(11, 183, 236, 0.781); */
 
+  /* box-shadow: 0 4px 6px rgba(11, 183, 236, 0.781); */
 }
-.certificates-btn{
+.certificates-btn {
   background-color: #f1b50d;
   color: var(--text-colore);
   text-align: center;
   /* box-shadow: 0 4px 6px rgba(236, 183, 11, 0.781); */
-
-
 }
-.cent{
-text-align: center;
+.cent {
+  text-align: center;
 }
-
 
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
 
-
-
-
- .portfolio .portfolio-item {
+.portfolio .portfolio-item {
   margin-bottom: 30px;
-  
 }
 
 .portfolio #portfolio-flters {
@@ -722,12 +672,10 @@ text-align: center;
   text-align: center;
   background-color: var(--bg-colore);
   box-shadow: 0 4px 6px var(--boxShaow);
-  
-  
+
   border-radius: 30px;
   padding: 5px 20px;
 }
-
 
 .portfolio #portfolio-flters li {
   cursor: pointer;
@@ -740,31 +688,26 @@ text-align: center;
   color: var(--text-colore);
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
-  
 }
-
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
   color: var(--bg-color);
 }
 
-
 .portfolio #portfolio-flters li:last-child {
   margin-right: 0;
 }
 
-
-
 .portfolio-wrap {
   background-color: rgba(178, 218, 245, 0.068); /* لون شفاف */
-  backdrop-filter: blur(90px); /* تأثير الضبابية */   
+  backdrop-filter: blur(90px); /* تأثير الضبابية */
   color: var(--text-colore);
   border-radius: 15px;
   padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .portfolio-wrap:hover {
@@ -775,7 +718,6 @@ text-align: center;
   font-size: 20px;
   color: var(--text-colore);
   margin-right: 10px;
-  
 }
 
 .project-image {
@@ -794,19 +736,11 @@ text-align: center;
   font-size: 20px;
   transition: color 0.1s ease;
   border-radius: 50px;
-
-
-
 }
 
 .portfolio-links a:hover {
   color: var(--bg-color);
 }
-
-
-
-
-
 
 /*--------------------------------------------------------------
 # Portfolio Details
@@ -824,7 +758,10 @@ text-align: center;
   position: relative;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: var(--text-colore);
@@ -832,7 +769,10 @@ text-align: center;
   border: 1px solid var(--bg-color);
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet-active {
   background: var(--bg-color);
 }
 
@@ -853,12 +793,10 @@ text-align: center;
   list-style: none;
   padding: 0;
   font-size: 15px;
-
 }
 
-.portfolio-details .portfolio-info ul li+li {
+.portfolio-details .portfolio-info ul li + li {
   margin-top: 10px;
-  
 }
 
 .portfolio-details .portfolio-description {
@@ -869,7 +807,6 @@ text-align: center;
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 20px;
-  
 }
 
 .portfolio-details .portfolio-description p {
@@ -885,10 +822,12 @@ text-align: center;
   margin-bottom: 20px;
   border-radius: 50px;
   background-color: rgba(178, 218, 245, 0.068); /* لون شفاف */
-  backdrop-filter: blur(90px); /* تأثير الضبابية */ 
-  transition: transform 0.10s, box-shadow 0.5s, border 0.5s;
+  backdrop-filter: blur(90px); /* تأثير الضبابية */
+  transition:
+    transform 0.1s,
+    box-shadow 0.5s,
+    border 0.5s;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* الظل */
-
 }
 
 .services .icon {
@@ -905,9 +844,6 @@ text-align: center;
   gap: 5px;
   margin: 10px; /* إذا كنت تريد المسافة بين العناصر */
 }
-
-
-
 
 .services .icon i {
   color: var(--text-colore);
@@ -942,10 +878,7 @@ text-align: center;
   margin-left: 80px;
   line-height: 24px;
   font-size: 14px;
-  
 }
-
-
 
 /*--------------------------------------------------------------
 # Testimonials
@@ -1044,7 +977,6 @@ text-align: center;
 --------------------------------------------------------------*/
 .contact {
   padding-bottom: 130px;
-  
 }
 
 .contact .info {
@@ -1055,7 +987,6 @@ text-align: center;
   justify-content: center;
   align-items: center;
   color: var(--text-colore);
-
 }
 
 .contact .info i {
@@ -1065,13 +996,12 @@ text-align: center;
   width: 50px;
   height: 50px;
   background-color: rgba(178, 218, 245, 0.068); /* لون شفاف */
-  backdrop-filter: blur(90px); /* تأثير الضبابية */    
+  backdrop-filter: blur(90px); /* تأثير الضبابية */
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50px;
   transition: all 0.3s ease-in-out;
-  
 }
 
 .contact .info h4 {
@@ -1092,7 +1022,6 @@ text-align: center;
 .contact .info .email p {
   padding-top: 5px;
   color: var(--text-colore);
-
 }
 
 .contact .info .social-links {
@@ -1130,15 +1059,12 @@ text-align: center;
   width: 100%;
   padding: 30px;
   background-color: rgba(178, 218, 245, 0.068); /* لون شفاف */
-  backdrop-filter: blur(90px); /* تأثير الضبابية */  
+  backdrop-filter: blur(90px); /* تأثير الضبابية */
   border-radius: 20px;
- 
- }
+}
 
 .contact .php-email-form .form-group {
   padding-bottom: 8px;
-    
-
 }
 
 .contact .php-email-form .validate {
@@ -1148,26 +1074,25 @@ text-align: center;
   font-weight: 400;
   font-size: 13px;
   background-color: rgba(178, 218, 245, 0.068); /* لون شفاف */
-  backdrop-filter: blur(90px); /* تأثير الضبابية */    
+  backdrop-filter: blur(90px); /* تأثير الضبابية */
 }
 
 .contact .php-email-form .error-message {
   display: none;
   color: var(--text-colore);
-    
+
   text-align: left;
   padding: 15px;
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br+br {
+.contact .php-email-form .error-message br + br {
   margin-top: 25px;
 }
 
 .contact .php-email-form .sent-message {
   display: none;
   color: var(--text-colore);
-  
 
   text-align: center;
   padding: 15px;
@@ -1211,26 +1136,25 @@ text-align: center;
   height: 44px;
 }
 
-.contact .php-email-form textarea  {
+.contact .php-email-form textarea {
   padding: 10px 15px;
   background-color: var(--bg-colore);
   color: var(--text-colore);
-border: none;
-border-radius: 20px;
-  
+  border: none;
+  border-radius: 20px;
 }
 
-.border-info1{
- border: none;
- border-radius: 20px;
+.border-info1 {
+  border: none;
+  border-radius: 20px;
 }
 
-.bgIn{
+.bgIn {
   background-color: var(--bg-colore);
   color: var(--text-colore);
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button[type="submit"] {
   background-color: var(--bg-colore);
   border: 0;
   padding: 10px 24px;
@@ -1239,7 +1163,7 @@ border-radius: 20px;
   border-radius: 20px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type="submit"]:hover {
   background-color: var(--bg-colore);
 }
 
@@ -1275,11 +1199,11 @@ border-radius: 20px;
   font-size: 15px;
 }
 
-.breadcrumbs ol li+li {
+.breadcrumbs ol li + li {
   padding-left: 10px;
 }
 
-.breadcrumbs ol li+li::before {
+.breadcrumbs ol li + li::before {
   display: inline-block;
   padding-right: 10px;
   color: #0e2442;
@@ -1334,45 +1258,35 @@ border-radius: 20px;
   }
 }
 
-
-
-.co{
+.co {
   color: var(--text-colore);
 }
-.co1{
+.co1 {
   background-color: var(--bg-colore);
-
 }
-.co2{
+.co2 {
   color: var(--text-colore);
   margin: 4px;
   border-radius: 4px;
-
-
 }
-.co3{
+.co3 {
   color: var(--bg-colore);
 }
 
-.co4{
+.co4 {
   background: var(--bg-color);
-
 }
 
-.co5{
- 
+.co5 {
   background-color: var(--bg-colore);
-  border: 2px solid  var(--bg-color);
+  border: 2px solid var(--bg-color);
 
   color: var(--text-colore);
   border-radius: 5px;
   width: 50%;
   text-align: center;
   padding: 2px;
-
 }
-
-
 
 /* .star {
   position: absolute;
