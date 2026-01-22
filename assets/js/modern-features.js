@@ -12,7 +12,7 @@
   window.addEventListener("load", function () {
     const loadingScreen = document.getElementById("loading-screen");
 
-    // Hide loading screen with smooth transition - faster
+    // Hide loading screen with smooth transition
     setTimeout(() => {
       if (loadingScreen) {
         loadingScreen.classList.add("hidden");
@@ -26,7 +26,7 @@
       // Trigger fade-in animations for page elements
       document.body.classList.add("loaded");
       animateOnScroll();
-    }, 300);
+    }, 1000); // Same as other pages - 1 second delay
   });
 
   // ===== Scroll Progress Bar =====

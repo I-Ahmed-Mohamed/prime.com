@@ -1,0 +1,479 @@
+/**
+ * Mobile Responsive Enhancements for AI Assistant
+ * تحسينات استجابة الموبايل للمساعد الذكي
+ */
+
+/* ===== Mobile Optimizations ===== */
+@media (max-width: 768px) {
+    
+    /* AI Chat Window - Mobile */
+    .ai-chat-window {
+        width: 100vw;
+        height: 100vh;
+        max-width: 100vw;
+        max-height: 100vh;
+        bottom: 0;
+        right: 0;
+        border-radius: 0;
+    }
+    
+    .ai-chat-window.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    
+    /* Header - Mobile */
+    .ai-chat-header {
+        border-radius: 0;
+        padding: 15px;
+    }
+    
+    .ai-header-text h4 {
+        font-size: 16px;
+    }
+    
+    .ai-header-text p {
+        font-size: 11px;
+    }
+    
+    .ai-action-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+    
+    /* Quick Actions - Mobile */
+    .ai-quick-actions {
+        padding: 10px;
+        gap: 8px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .ai-quick-actions::-webkit-scrollbar {
+        height: 4px;
+    }
+    
+    .ai-quick-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+    
+    /* Messages - Mobile */
+    .ai-messages {
+        padding: 15px;
+        gap: 12px;
+    }
+    
+    .ai-message-avatar {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+    }
+    
+    .ai-message-content {
+        max-width: 80%;
+        font-size: 13px;
+        padding: 10px 12px;
+    }
+    
+    .ai-message-content p {
+        font-size: 13px;
+    }
+    
+    .ai-message-time {
+        font-size: 10px;
+    }
+    
+    /* Input Area - Mobile */
+    .ai-input-area {
+        padding: 12px;
+    }
+    
+    .ai-input-wrapper {
+        padding: 6px 10px;
+    }
+    
+    .ai-input {
+        font-size: 14px;
+        padding: 6px;
+    }
+    
+    .ai-input-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+    }
+    
+    .ai-send-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+    
+    /* Toggle Button - Mobile */
+    .ai-toggle-btn {
+        width: 55px;
+        height: 55px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 24px;
+    }
+    
+    /* Settings Panel - Mobile */
+    .ai-settings-panel {
+        border-radius: 0;
+    }
+    
+    .ai-settings-header {
+        border-radius: 0;
+        padding: 15px;
+    }
+    
+    .ai-settings-content {
+        padding: 15px;
+    }
+    
+    .ai-setting-item {
+        margin-bottom: 15px;
+    }
+}
+
+/* ===== Tablet Optimizations ===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .ai-chat-window {
+        width: 400px;
+        height: 600px;
+    }
+    
+    .ai-toggle-btn {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* ===== Large Desktop ===== */
+@media (min-width: 1920px) {
+    .ai-chat-window {
+        width: 450px;
+        height: 700px;
+    }
+    
+    .ai-message-content {
+        font-size: 15px;
+    }
+}
+
+/* ===== Landscape Mobile ===== */
+@media (max-width: 768px) and (orientation: landscape) {
+    .ai-chat-window {
+        height: 100vh;
+    }
+    
+    .ai-messages {
+        flex: 1;
+        overflow-y: auto;
+    }
+}
+
+/* ===== Touch Optimizations ===== */
+@media (hover: none) and (pointer: coarse) {
+    /* Larger touch targets */
+    .ai-action-btn,
+    .ai-quick-btn,
+    .ai-input-btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .ai-send-btn {
+        min-height: 48px;
+        min-width: 48px;
+    }
+    
+    /* Better spacing for touch */
+    .ai-quick-actions {
+        gap: 12px;
+    }
+    
+    .ai-header-actions {
+        gap: 10px;
+    }
+    
+    /* Prevent zoom on input focus */
+    .ai-input {
+        font-size: 16px !important;
+    }
+}
+
+/* ===== RTL Mobile Support ===== */
+@media (max-width: 768px) {
+    [dir="rtl"] .ai-toggle-btn {
+        right: auto;
+        left: 20px;
+    }
+    
+    [dir="rtl"] .ai-chat-window {
+        right: auto;
+        left: 0;
+    }
+    
+    [dir="rtl"] .ai-quick-actions {
+        direction: rtl;
+    }
+}
+
+/* ===== iOS Specific ===== */
+@supports (-webkit-touch-callout: none) {
+    /* iOS Safari safe area */
+    .ai-chat-window {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+    
+    .ai-toggle-btn {
+        bottom: calc(20px + env(safe-area-inset-bottom));
+    }
+    
+    .ai-input-area {
+        padding-bottom: calc(15px + env(safe-area-inset-bottom));
+    }
+}
+
+/* ===== Android Specific ===== */
+@media (max-width: 768px) {
+    /* Fix for Android keyboard */
+    .ai-chat-window.keyboard-open {
+        height: calc(100vh - 250px);
+    }
+}
+
+/* ===== Small Mobile Devices ===== */
+@media (max-width: 375px) {
+    .ai-header-text h4 {
+        font-size: 14px;
+    }
+    
+    .ai-quick-btn {
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+    
+    .ai-message-content {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+    
+    .ai-toggle-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+    }
+}
+
+/* ===== Accessibility - High Contrast ===== */
+@media (prefers-contrast: high) {
+    .ai-chat-window {
+        border: 2px solid white;
+    }
+    
+    .ai-message-content {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    
+    .ai-input-wrapper {
+        border: 2px solid rgba(102, 126, 234, 0.5);
+    }
+}
+
+/* ===== Reduced Motion ===== */
+@media (prefers-reduced-motion: reduce) {
+    .ai-chat-window,
+    .ai-message,
+    .ai-toggle-btn,
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* ===== Dark Mode Adjustments ===== */
+@media (prefers-color-scheme: dark) {
+    @media (max-width: 768px) {
+        .ai-chat-window {
+            background: rgba(10, 10, 20, 0.98);
+        }
+        
+        .ai-message-content {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .ai-input-wrapper {
+            background: rgba(255, 255, 255, 0.05);
+        }
+    }
+}
+
+/* ===== Print Styles ===== */
+@media print {
+    .ai-assistant,
+    .ai-toggle-btn,
+    .ai-chat-window {
+        display: none !important;
+    }
+}
+
+/* ===== Foldable Devices ===== */
+@media (max-width: 768px) and (min-height: 600px) {
+    .ai-chat-window {
+        max-height: 90vh;
+    }
+}
+
+/* ===== Performance Optimizations ===== */
+@media (max-width: 768px) {
+    /* Disable heavy animations on mobile */
+    .particle-bg,
+    .cursor-trail,
+    .aurora-bg {
+        display: none !important;
+    }
+    
+    /* Simplify transitions */
+    * {
+        will-change: auto !important;
+    }
+    
+    /* Reduce blur for performance */
+    .ai-chat-window {
+        backdrop-filter: blur(10px) !important;
+    }
+    
+    .glass-effect {
+        backdrop-filter: blur(10px) !important;
+    }
+}
+
+/* ===== Swipe Gestures Support ===== */
+.ai-chat-window.swipe-down {
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+/* ===== Full Screen Mode ===== */
+.ai-chat-window.fullscreen {
+    width: 100vw !important;
+    height: 100vh !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    border-radius: 0 !important;
+}
+
+/* ===== Notification Badge ===== */
+.ai-toggle-btn .notification-badge {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 18px;
+    height: 18px;
+    background: #ef4444;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    border: 2px solid var(--bg-colore);
+}
+
+@media (max-width: 768px) {
+    .ai-toggle-btn .notification-badge {
+        width: 16px;
+        height: 16px;
+        font-size: 9px;
+        top: 3px;
+        right: 3px;
+    }
+}
+
+/* ===== Loading Skeleton Mobile ===== */
+@media (max-width: 768px) {
+    .skeleton-message {
+        height: 60px;
+        border-radius: 12px;
+        margin: 10px 0;
+    }
+}
+
+/* ===== Voice Recording Animation Mobile ===== */
+@media (max-width: 768px) {
+    .ai-voice-btn.recording {
+        animation: recordPulse 1s infinite;
+    }
+    
+    @keyframes recordPulse {
+        0%, 100% {
+            box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+        }
+        50% {
+            box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+        }
+    }
+}
+
+/* ===== Emoji Picker Mobile ===== */
+@media (max-width: 768px) {
+    .emoji-picker {
+        position: fixed;
+        bottom: 80px;
+        left: 10px;
+        right: 10px;
+        max-height: 300px;
+    }
+}
+
+/* ===== Suggestions Mobile ===== */
+@media (max-width: 768px) {
+    .ai-suggestions {
+        max-height: 150px;
+        overflow-y: auto;
+    }
+    
+    .ai-suggestion-item {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
+
+/* ===== Haptic Feedback (Vibration Support) ===== */
+@media (hover: none) and (pointer: coarse) {
+    .ai-send-btn:active,
+    .ai-quick-btn:active,
+    .ai-toggle-btn:active {
+        transform: scale(0.95);
+    }
+}
+
+/* ===== Network Status Indicator ===== */
+.network-status {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4ade80;
+}
+
+.network-status.offline {
+    background: #ef4444;
+}
+
+@media (max-width: 768px) {
+    .network-status {
+        width: 6px;
+        height: 6px;
+    }
+}
