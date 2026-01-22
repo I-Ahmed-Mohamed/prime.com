@@ -13,18 +13,21 @@ A cutting-edge, AI-powered portfolio website showcasing Ahmed Mohamed's work as 
 ## 🤖 NEW! AI Features (2026 Update)
 
 ### 🌍 Multilingual AI Assistant
+
 - **10+ Languages Supported**: Arabic, English, French, Spanish, German, Chinese, Japanese, Russian, Hindi, Portuguese
 - **Smart Responses**: Context-aware and intelligent conversations
 - **Auto Language Detection**: Automatically detects user's language
 - **Conversation History**: Saves and retrieves past conversations
 
 ### 🎤 Voice Control
+
 - **Voice Recognition**: Speak to the AI assistant
 - **Text-to-Speech**: Listen to AI responses
 - **Adjustable Speed**: Customize voice playback speed
 - **Multi-language Voice**: Supports all major languages
 
 ### 💬 Advanced Chat Interface
+
 - **Glassmorphism Design**: Modern 2026 UI/UX
 - **Quick Actions**: Fast access to portfolio sections
 - **Auto Suggestions**: Smart input predictions

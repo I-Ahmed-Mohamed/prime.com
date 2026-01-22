@@ -1,4 +1,5 @@
 # 🔌 دليل ربط المساعد الذكي بـ AI APIs
+
 # AI API Integration Guide
 
 ## 📋 نظرة عامة / Overview
@@ -24,7 +25,7 @@
 async getAIResponse(message) {
     const API_KEY = 'sk-your-api-key-here';
     const API_ENDPOINT = 'https://api.openai.com/v1/chat/completions';
-    
+
     try {
         const response = await fetch(API_ENDPOINT, {
             method: 'POST',
@@ -51,7 +52,7 @@ async getAIResponse(message) {
 
         const data = await response.json();
         return data.choices[0].message.content;
-        
+
     } catch (error) {
         console.error('OpenAI API Error:', error);
         return this.getErrorMessage();
@@ -60,6 +61,7 @@ async getAIResponse(message) {
 ```
 
 ### الأسعار / Pricing
+
 - GPT-4: $0.03 / 1K tokens (input), $0.06 / 1K tokens (output)
 - GPT-3.5-turbo: $0.0015 / 1K tokens (input), $0.002 / 1K tokens (output)
 
@@ -79,7 +81,7 @@ async getAIResponse(message) {
 async getAIResponse(message) {
     const API_KEY = 'your-gemini-api-key';
     const API_ENDPOINT = `https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=${API_KEY}`;
-    
+
     try {
         const response = await fetch(API_ENDPOINT, {
             method: 'POST',
@@ -89,9 +91,9 @@ async getAIResponse(message) {
             body: JSON.stringify({
                 contents: [{
                     parts: [{
-                        text: `You are a professional AI assistant for Ahmed Mohamed's portfolio website. 
+                        text: `You are a professional AI assistant for Ahmed Mohamed's portfolio website.
                         User message: ${message}
-                        
+
                         Please provide a helpful, friendly response. Support multiple languages and detect the user's language automatically.`
                     }]
                 }],
@@ -106,7 +108,7 @@ async getAIResponse(message) {
 
         const data = await response.json();
         return data.candidates[0].content.parts[0].text;
-        
+
     } catch (error) {
         console.error('Gemini API Error:', error);
         return this.getErrorMessage();
@@ -115,6 +117,7 @@ async getAIResponse(message) {
 ```
 
 ### الأسعار / Pricing
+
 - مجاني حتى 60 طلب/دقيقة
 - Free tier: 1 million tokens/month
 
@@ -134,7 +137,7 @@ async getAIResponse(message) {
 async getAIResponse(message) {
     const API_KEY = 'your-claude-api-key';
     const API_ENDPOINT = 'https://api.anthropic.com/v1/messages';
-    
+
     try {
         const response = await fetch(API_ENDPOINT, {
             method: 'POST',
@@ -156,7 +159,7 @@ async getAIResponse(message) {
 
         const data = await response.json();
         return data.content[0].text;
-        
+
     } catch (error) {
         console.error('Claude API Error:', error);
         return this.getErrorMessage();
@@ -181,7 +184,7 @@ async getAIResponse(message) {
     const API_TOKEN = 'your-hf-token';
     const MODEL = 'facebook/blenderbot-400M-distill'; // نموذج محادثة
     const API_ENDPOINT = `https://api-inference.huggingface.co/models/${MODEL}`;
-    
+
     try {
         const response = await fetch(API_ENDPOINT, {
             method: 'POST',
@@ -200,7 +203,7 @@ async getAIResponse(message) {
 
         const data = await response.json();
         return data[0].generated_text;
-        
+
     } catch (error) {
         console.error('HuggingFace API Error:', error);
         return this.getErrorMessage();
@@ -227,7 +230,7 @@ class AIController extends Controller
     public function chat(Request $request)
     {
         $message = $request->input('message');
-        
+
         $response = OpenAI::chat()->create([
             'model' => 'gpt-4',
             'messages' => [
@@ -261,7 +264,7 @@ async getAIResponse(message) {
 
         const data = await response.json();
         return data.response;
-        
+
     } catch (error) {
         console.error('Backend API Error:', error);
         return this.getErrorMessage();
@@ -276,16 +279,18 @@ async getAIResponse(message) {
 ### 1. حماية API Key
 
 **❌ خطأ:**
+
 ```javascript
-const API_KEY = 'sk-1234567890abcdef'; // لا تضع المفتاح في Frontend
+const API_KEY = "sk-1234567890abcdef"; // لا تضع المفتاح في Frontend
 ```
 
 **✅ صحيح:**
+
 ```javascript
 // استخدم Backend Proxy
-fetch('/api/ai-chat', {
-    method: 'POST',
-    body: JSON.stringify({ message })
+fetch("/api/ai-chat", {
+  method: "POST",
+  body: JSON.stringify({ message }),
 });
 ```
 
@@ -302,11 +307,11 @@ class RateLimiter {
     canMakeRequest() {
         const now = Date.now();
         this.requests = this.requests.filter(time => now - time < this.timeWindow);
-        
+
         if (this.requests.length >= this.maxRequests) {
             return false;
         }
-        
+
         this.requests.push(now);
         return true;
     }
@@ -319,7 +324,7 @@ async getAIResponse(message) {
     if (!limiter.canMakeRequest()) {
         return 'عذراً، لقد تجاوزت الحد المسموح من الطلبات. يرجى الانتظار.';
     }
-    
+
     // ... باقي الكود
 }
 ```
@@ -341,10 +346,10 @@ async getAIResponse(message) {
 
         const data = await response.json();
         return data.choices[0].message.content;
-        
+
     } catch (error) {
         console.error('AI API Error:', error);
-        
+
         // Fallback to local responses
         return this.getLocalResponses(message, this.detectLanguage());
     }
@@ -370,12 +375,12 @@ class ResponseCache {
     get(key) {
         const item = this.cache.get(key);
         if (!item) return null;
-        
+
         if (Date.now() - item.timestamp > this.ttl) {
             this.cache.delete(key);
             return null;
         }
-        
+
         return item.value;
     }
 }
@@ -386,14 +391,14 @@ const cache = new ResponseCache();
 async getAIResponse(message) {
     const cacheKey = message.toLowerCase().trim();
     const cached = cache.get(cacheKey);
-    
+
     if (cached) {
         return cached;
     }
-    
+
     const response = await this.callAPI(message);
     cache.set(cacheKey, response);
-    
+
     return response;
 }
 ```
@@ -402,27 +407,30 @@ async getAIResponse(message) {
 
 ## 📊 مقارنة الخدمات
 
-| الخدمة | السعر | الجودة | السرعة | دعم اللغات |
-|--------|-------|--------|---------|------------|
-| OpenAI GPT-4 | $$$ | ⭐⭐⭐⭐⭐ | ⚡⚡⚡ | 🌍🌍🌍🌍🌍 |
-| OpenAI GPT-3.5 | $ | ⭐⭐⭐⭐ | ⚡⚡⚡⚡⚡ | 🌍🌍🌍🌍🌍 |
-| Google Gemini | $ | ⭐⭐⭐⭐ | ⚡⚡⚡⚡ | 🌍🌍🌍🌍 |
-| Claude | $$ | ⭐⭐⭐⭐⭐ | ⚡⚡⚡ | 🌍🌍🌍🌍 |
-| HuggingFace | مجاني | ⭐⭐⭐ | ⚡⚡ | 🌍🌍🌍 |
+| الخدمة         | السعر | الجودة     | السرعة     | دعم اللغات |
+| -------------- | ----- | ---------- | ---------- | ---------- |
+| OpenAI GPT-4   | $$$   | ⭐⭐⭐⭐⭐ | ⚡⚡⚡     | 🌍🌍🌍🌍🌍 |
+| OpenAI GPT-3.5 | $     | ⭐⭐⭐⭐   | ⚡⚡⚡⚡⚡ | 🌍🌍🌍🌍🌍 |
+| Google Gemini  | $     | ⭐⭐⭐⭐   | ⚡⚡⚡⚡   | 🌍🌍🌍🌍   |
+| Claude         | $$    | ⭐⭐⭐⭐⭐ | ⚡⚡⚡     | 🌍🌍🌍🌍   |
+| HuggingFace    | مجاني | ⭐⭐⭐     | ⚡⚡       | 🌍🌍🌍     |
 
 ---
 
 ## 🎯 التوصيات
 
 ### للمشاريع الصغيرة
+
 - استخدم **Google Gemini** (مجاني حتى حد معين)
 - أو **HuggingFace** (مجاني تماماً)
 
 ### للمشاريع المتوسطة
+
 - استخدم **OpenAI GPT-3.5-turbo** (توازن بين السعر والأداء)
 - أو **Google Gemini Pro**
 
 ### للمشاريع الكبيرة
+
 - استخدم **OpenAI GPT-4** (أفضل جودة)
 - أو **Claude Opus** (ممتاز للمحادثات الطويلة)
 
@@ -441,6 +449,7 @@ async getAIResponse(message) {
 ## 📞 للمساعدة
 
 إذا واجهت أي مشاكل في التكامل، تواصل معي:
+
 - Email: your-email@example.com
 - GitHub: [Your GitHub]
 

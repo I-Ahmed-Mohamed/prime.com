@@ -5,6 +5,7 @@
 ### 🎯 الذكاء الاصطناعي / AI Features
 
 #### 1. **مساعد ذكي متعدد اللغات / Multilingual AI Assistant**
+
 - 🌍 دعم أكثر من 10 لغات (عربي، إنجليزي، فرنسي، إسباني، ألماني، صيني، ياباني، روسي، هندي، برتغالي)
 - 🎤 **التحكم الصوتي** - يمكنك التحدث مع المساعد
 - 🔊 **الردود الصوتية** - المساعد يرد صوتياً
@@ -18,6 +19,7 @@
 ### 🚀 تحديثات 2026 الاحترافية / 2026 Professional Updates
 
 #### تأثيرات بصرية متقدمة / Advanced Visual Effects
+
 - ✨ **Glassmorphism** - تأثير الزجاج الضبابي العصري
 - 🌈 **Holographic Text** - نصوص ثلاثية الأبعاد متحركة
 - 💫 **Neon Glow** - توهج نيون احترافي
@@ -30,6 +32,7 @@
 - 🎯 **Magnetic Buttons** - أزرار مغناطيسية تفاعلية
 
 #### مميزات تفاعلية / Interactive Features
+
 - 🖱️ **Cursor Trail** - أثر مخصص للماوس
 - 📜 **Parallax Scrolling** - تمرير بصري متعدد الطبقات
 - 🎬 **Scroll Animations** - رسوم متحركة عند التمرير
@@ -42,6 +45,7 @@
 ### 🛠️ التقنيات المستخدمة / Technologies Used
 
 #### Frontend
+
 - HTML5 (Semantic & Accessible)
 - CSS3 (Modern Features, Grid, Flexbox)
 - JavaScript ES6+ (Classes, Modules, Async/Await)
@@ -52,6 +56,7 @@
 - Swiper
 
 #### AI & Modern Features
+
 - Web Speech API (Voice Recognition)
 - Speech Synthesis API (Text-to-Speech)
 - Intersection Observer API
@@ -63,6 +68,7 @@
 - Backdrop Filter (Glassmorphism)
 
 ### 📱 استجابة كاملة / Fully Responsive
+
 - 💻 Desktop (1920px+)
 - 💼 Laptop (1366px - 1920px)
 - 📱 Tablet (768px - 1366px)
@@ -70,6 +76,7 @@
 - 🔄 RTL Support (دعم اللغة العربية)
 
 ### ♿ إمكانية الوصول / Accessibility
+
 - ⌨️ Keyboard Navigation
 - 🎯 Focus Visible
 - 📢 Screen Reader Support
@@ -80,42 +87,47 @@
 ### 🎨 التخصيص / Customization
 
 #### إعدادات الذكاء الاصطناعي / AI Settings
+
 ```javascript
 // يمكنك تخصيص إعدادات المساعد الذكي
 const aiSettings = {
-    language: 'auto',        // اللغة التلقائية
-    personality: 'professional', // الشخصية
-    voiceSpeed: 1.0,        // سرعة الصوت
-    autoTranslate: true,    // الترجمة التلقائية
-    voiceFeedback: true     // الردود الصوتية
+  language: "auto", // اللغة التلقائية
+  personality: "professional", // الشخصية
+  voiceSpeed: 1.0, // سرعة الصوت
+  autoTranslate: true, // الترجمة التلقائية
+  voiceFeedback: true, // الردود الصوتية
 };
 ```
 
 #### المتغيرات اللونية / Color Variables
+
 ```css
 :root {
-    --bg-colore: rgb(1, 7, 17);
-    --bg-color: #037eb8;
-    --text-colore: #fff;
-    --boxShaow: rgba(2, 109, 136, 0.555);
+  --bg-colore: rgb(1, 7, 17);
+  --bg-color: #037eb8;
+  --text-colore: #fff;
+  --boxShaow: rgba(2, 109, 136, 0.555);
 }
 ```
 
 ### 🚀 كيفية الاستخدام / How to Use
 
 #### 1. استخدام المساعد الذكي / Using AI Assistant
+
 1. انقر على زر الروبوت في الزاوية السفلية
 2. اكتب سؤالك بأي لغة
 3. أو اضغط على زر الميكروفون للتحدث
 4. استقبل الرد الذكي صوتياً أو كتابياً
 
 #### 2. الأوامر الصوتية / Voice Commands
+
 - "Show me your portfolio" / "اعرض لي أعمالك"
 - "What are your skills?" / "ما هي مهاراتك؟"
 - "How can I contact you?" / "كيف أتواصل معك؟"
 - "Download CV" / "تحميل السيرة الذاتية"
 
 #### 3. الأزرار السريعة / Quick Actions
+
 - Portfolio - الانتقال لصفحة المشاريع
 - Skills - عرض المهارات
 - Contact - نموذج التواصل
@@ -139,6 +151,7 @@ npx live-server
 للحصول على ردود أكثر ذكاءً، يمكنك ربط المساعد بـ:
 
 #### OpenAI API
+
 ```javascript
 // في ملف assets/js/ai-assistant.js
 this.apiKey = 'YOUR_OPENAI_API_KEY';
@@ -158,13 +171,14 @@ async getAIResponse(message) {
             ]
         })
     });
-    
+
     const data = await response.json();
     return data.choices[0].message.content;
 }
 ```
 
 #### Google Gemini API
+
 ```javascript
 // استخدام Gemini API
 this.apiKey = 'YOUR_GEMINI_API_KEY';
@@ -181,7 +195,7 @@ async getAIResponse(message) {
             }]
         })
     });
-    
+
     const data = await response.json();
     return data.candidates[0].content.parts[0].text;
 }
@@ -190,17 +204,19 @@ async getAIResponse(message) {
 ### 🎨 الثيمات / Themes
 
 #### الوضع الداكن / Dark Mode
+
 ```css
 /* تلقائياً بناءً على تفضيلات المتصفح */
 @media (prefers-color-scheme: dark) {
-    /* التصميم الداكن */
+  /* التصميم الداكن */
 }
 ```
 
 #### الوضع الفاتح / Light Mode
+
 ```javascript
 // التبديل اليدوي
-document.body.classList.toggle('light-mode');
+document.body.classList.toggle("light-mode");
 ```
 
 ### 📊 الأداء / Performance
@@ -222,7 +238,7 @@ document.body.classList.toggle('light-mode');
 ### 🌐 المتصفحات المدعومة / Supported Browsers
 
 | Browser | Version |
-|---------|---------|
+| ------- | ------- |
 | Chrome  | 90+     |
 | Firefox | 88+     |
 | Safari  | 14+     |
@@ -232,11 +248,13 @@ document.body.classList.toggle('light-mode');
 ### 🐛 حل المشاكل / Troubleshooting
 
 #### المساعد الذكي لا يعمل
+
 1. تأكد من تفعيل JavaScript
 2. تحقق من دعم المتصفح للميزات الحديثة
 3. افتح Console وتحقق من الأخطاء
 
 #### الصوت لا يعمل
+
 1. تأكد من إعطاء صلاحية الميكروفون
 2. تحقق من إعدادات الصوت في المتصفح
 3. جرب متصفح مختلف
@@ -248,6 +266,7 @@ MIT License - يمكنك استخدام وتعديل المشروع بحرية
 ### 👨‍💻 المطور / Developer
 
 **Ahmed Mohamed**
+
 - Portfolio: [Your Website]
 - Email: [Your Email]
 - LinkedIn: [Your LinkedIn]
@@ -264,6 +283,7 @@ MIT License - يمكنك استخدام وتعديل المشروع بحرية
 ### 📮 التواصل والدعم / Contact & Support
 
 للاستفسارات والدعم الفني:
+
 - 📧 Email: your-email@example.com
 - 💬 Discord: [Your Discord]
 - 🐦 Twitter: [Your Twitter]
