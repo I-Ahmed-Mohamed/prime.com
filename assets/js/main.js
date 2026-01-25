@@ -1,8 +1,6 @@
-
 // document.addEventListener("contextmenu", function (e) {
 //     e.preventDefault();
 // });
-
 
 // document.addEventListener("keydown", function (e) {
 //     // F12
@@ -19,10 +17,7 @@
 //     }
 // });
 
-
-
 // light Moode And dark Moode>>>>>>>>>>>>>>
-
 
 // const teggleButton = document.getElementById('toggle-mode');
 // const body = document.body;
@@ -37,227 +32,222 @@
 //     }
 // });
 
-
-
-
-
-
-
-
-
-
-
 // =======================CV===========================>
-  const cvPath = "assets/img/Ahmed Mohamed frontend CV.pdf";
-  const cvback = "assets/img/Ahmed Mohamed Backend CV.pdf";
-  
+const cvPath = "assets/img/Ahmed Mohamed frontend CV.pdf";
+const cvback = "assets/img/Ahmed Mohamed Backend CV.pdf";
+
 const certificatesFilePath = "assets/img/certificatesPath.pdf"; // عدّلت اسم المتغير لتجنب التعارض
 
 function downloadCVFront() {
-    const link = document.createElement("a");
-    link.href = cvPath;
-    link.download = "assets/img/Ahmed Mohamed frontend CV.pdf"; // اسم الملف عند الحفظ
-    link.click();
+  const link = document.createElement("a");
+  link.href = cvPath;
+  link.download = "assets/img/Ahmed Mohamed frontend CV.pdf"; // اسم الملف عند الحفظ
+  link.click();
 }
-function downloadCVBack(){
-    const link = document.createElement("a");
-    link.href = cvback;
-    link.download = "assets/img/Ahmed Mohamed Backend CV.pdf"; // اسم الملف عند الحفظ
-    link.click();
+function downloadCVBack() {
+  const link = document.createElement("a");
+  link.href = cvback;
+  link.download = "assets/img/Ahmed Mohamed Backend CV.pdf"; // اسم الملف عند الحفظ
+  link.click();
 }
 
 function viewFrontCV() {
-    window.open(cvPath, "_blank");
+  window.open(cvPath, "_blank");
 }
 
 function viewBcakCV() {
-    window.open(cvback, "_blank");
+  window.open(cvback, "_blank");
 }
 
-function viewCertificates() { // عدّلت اسم الدالة
-    window.open(certificatesFilePath, "_blank");
+function viewCertificates() {
+  // عدّلت اسم الدالة
+  window.open(certificatesFilePath, "_blank");
 }
-
-
 
 // ====================seend============================>
 
-const btn = document.getElementById('button');
-const responseMessage = document.getElementById('response-message');
-const errorMessage = document.getElementById('error-message');
+const btn = document.getElementById("button");
+const responseMessage = document.getElementById("response-message");
+const errorMessage = document.getElementById("error-message");
 
-document.getElementById('form').addEventListener('submit', function (event) {
-    event.preventDefault(); // منع إعادة تحميل الصفحة
+document.getElementById("form").addEventListener("submit", function (event) {
+  event.preventDefault(); // منع إعادة تحميل الصفحة
 
-    // تفعيل حالة التحميل
-    btn.innerHTML = 'Sened...';
-    btn.disabled = true;
+  // تفعيل حالة التحميل
+  btn.innerHTML = "Sened...";
+  btn.disabled = true;
 
-    const serviceID = 'default_service';
-    const templateID = 'template_2wmo61o';
+  const serviceID = "default_service";
+  const templateID = "template_2wmo61o";
 
-    emailjs.sendForm(serviceID, templateID, this)
-        .then(() => {
-            // عند النجاح
-            
-            btn.innerHTML = 'Sent ✅';
-            btn.disabled = false;
-            responseMessage.style.display = 'none';
-            errorMessage.style.display = 'none';
+  emailjs
+    .sendForm(serviceID, templateID, this)
+    .then(() => {
+      // عند النجاح
 
-            // إعادة تعيين النموذج
-            this.reset();
+      btn.innerHTML = "Sent ✅";
+      btn.disabled = false;
+      responseMessage.style.display = "none";
+      errorMessage.style.display = "none";
 
-            // إعادة الزر لحالته الأصلية بعد 3 ثوانٍ
-            setTimeout(() => {
-                btn.innerHTML = 'Send Message';
-            }, 3000);
-        })
-        .catch((err) => {
-            // عند الفشل
-            btn.innerHTML = 'Send Message';
-            btn.disabled = false;
-            responseMessage.style.display = 'none';
-            errorMessage.style.display = 'block';
+      // إعادة تعيين النموذج
+      this.reset();
 
-            console.error('Failed to send Message:', err);
-        });
+      // إعادة الزر لحالته الأصلية بعد 3 ثوانٍ
+      setTimeout(() => {
+        btn.innerHTML = "Send Message";
+      }, 3000);
+    })
+    .catch((err) => {
+      // عند الفشل
+      btn.innerHTML = "Send Message";
+      btn.disabled = false;
+      responseMessage.style.display = "none";
+      errorMessage.style.display = "block";
+
+      console.error("Failed to send Message:", err);
+    });
 });
 
-
-
-
-
-(function() {
+(function () {
   "use strict";
 
   /**
    * Easy selector helper function
    */
   const select = (el, all = false) => {
-    el = el.trim()
+    el = el.trim();
     if (all) {
-      return [...document.querySelectorAll(el)]
+      return [...document.querySelectorAll(el)];
     } else {
-      return document.querySelector(el)
+      return document.querySelector(el);
     }
-  }
+  };
 
   /**
    * Easy event listener function
    */
   const on = (type, el, listener, all = false) => {
-    let selectEl = select(el, all)
+    let selectEl = select(el, all);
     if (selectEl) {
       if (all) {
-        selectEl.forEach(e => e.addEventListener(type, listener))
+        selectEl.forEach((e) => e.addEventListener(type, listener));
       } else {
-        selectEl.addEventListener(type, listener)
+        selectEl.addEventListener(type, listener);
       }
     }
-  }
+  };
 
   /**
-   * Easy on scroll event listener 
+   * Easy on scroll event listener
    */
   const onscroll = (el, listener) => {
-    el.addEventListener('scroll', listener)
-  }
+    el.addEventListener("scroll", listener);
+  };
 
   /**
    * Navbar links active state on scroll
    */
-  let navbarlinks = select('#navbar .scrollto', true)
+  let navbarlinks = select("#navbar .scrollto", true);
   const navbarlinksActive = () => {
-    let position = window.scrollY + 200
-    navbarlinks.forEach(navbarlink => {
-      if (!navbarlink.hash) return
-      let section = select(navbarlink.hash)
-      if (!section) return
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-        navbarlink.classList.add('active')
+    let position = window.scrollY + 200;
+    navbarlinks.forEach((navbarlink) => {
+      if (!navbarlink.hash) return;
+      let section = select(navbarlink.hash);
+      if (!section) return;
+      if (
+        position >= section.offsetTop &&
+        position <= section.offsetTop + section.offsetHeight
+      ) {
+        navbarlink.classList.add("active");
       } else {
-        navbarlink.classList.remove('active')
+        navbarlink.classList.remove("active");
       }
-    })
-  }
-  window.addEventListener('load', navbarlinksActive)
-  onscroll(document, navbarlinksActive)
+    });
+  };
+  window.addEventListener("load", navbarlinksActive);
+  onscroll(document, navbarlinksActive);
 
   /**
    * Scrolls to an element with header offset
    */
   const scrollto = (el) => {
-    let elementPos = select(el).offsetTop
+    let elementPos = select(el).offsetTop;
     window.scrollTo({
       top: elementPos,
-      behavior: 'smooth'
-    })
-  }
+      behavior: "smooth",
+    });
+  };
 
   /**
    * Back to top button
    */
-  let backtotop = select('.back-to-top')
+  let backtotop = select(".back-to-top");
   if (backtotop) {
     const toggleBacktotop = () => {
       if (window.scrollY > 100) {
-        backtotop.classList.add('active')
+        backtotop.classList.add("active");
       } else {
-        backtotop.classList.remove('active')
+        backtotop.classList.remove("active");
       }
-    }
-    window.addEventListener('load', toggleBacktotop)
-    onscroll(document, toggleBacktotop)
+    };
+    window.addEventListener("load", toggleBacktotop);
+    onscroll(document, toggleBacktotop);
   }
 
   /**
    * Mobile nav toggle
    */
-  on('click', '.mobile-nav-toggle', function(e) {
-    select('body').classList.toggle('mobile-nav-active')
-    this.classList.toggle('bi-list')
-    this.classList.toggle('bi-x')
-  })
+  on("click", ".mobile-nav-toggle", function (e) {
+    select("body").classList.toggle("mobile-nav-active");
+    this.classList.toggle("bi-list");
+    this.classList.toggle("bi-x");
+  });
 
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
-  on('click', '.scrollto', function(e) {
-    // Check if link points to a different page
-    const href = this.getAttribute('href');
-    const currentFile = window.location.pathname.split('/').pop() || 'index.html';
-    
-    // Check if href is to a different page
-    if (href && !href.startsWith('#')) {
-      const targetFile = href.split('/').pop();
-      if (targetFile && targetFile !== currentFile) {
-        // Allow natural navigation to different page
-        return;
-      }
-    }
-    
-    if (select(this.hash)) {
-      e.preventDefault()
+  on(
+    "click",
+    ".scrollto",
+    function (e) {
+      // Check if link points to a different page
+      const href = this.getAttribute("href");
+      const currentFile =
+        window.location.pathname.split("/").pop() || "index.html";
 
-      let body = select('body')
-      if (body.classList.contains('mobile-nav-active')) {
-        body.classList.remove('mobile-nav-active')
-        let navbarToggle = select('.mobile-nav-toggle')
-        navbarToggle.classList.toggle('bi-list')
-        navbarToggle.classList.toggle('bi-x')
+      // Check if href is to a different page
+      if (href && !href.startsWith("#")) {
+        const targetFile = href.split("/").pop();
+        if (targetFile && targetFile !== currentFile) {
+          // Allow natural navigation to different page
+          return;
+        }
       }
-      scrollto(this.hash)
-    }
-  }, true)
+
+      if (select(this.hash)) {
+        e.preventDefault();
+
+        let body = select("body");
+        if (body.classList.contains("mobile-nav-active")) {
+          body.classList.remove("mobile-nav-active");
+          let navbarToggle = select(".mobile-nav-toggle");
+          navbarToggle.classList.toggle("bi-list");
+          navbarToggle.classList.toggle("bi-x");
+        }
+        scrollto(this.hash);
+      }
+    },
+    true,
+  );
 
   /**
    * Scroll with ofset on page load with hash links in the url
    */
-  window.addEventListener('load', () => {
+  window.addEventListener("load", () => {
     if (window.location.hash) {
       if (select(window.location.hash)) {
-        scrollto(window.location.hash)
+        scrollto(window.location.hash);
       }
     }
   });
@@ -265,11 +255,11 @@ document.getElementById('form').addEventListener('submit', function (event) {
   /**
    * Hero type effect
    */
-  const typed = select('.typed')
+  const typed = select(".typed");
   if (typed) {
-    let typed_strings = typed.getAttribute('data-typed-items')
-    typed_strings = typed_strings.split(',')
-    new Typed('.typed', {
+    let typed_strings = typed.getAttribute("data-typed-items");
+    typed_strings = typed_strings.split(",");
+    new Typed(".typed", {
       strings: typed_strings,
       loop: true,
       typeSpeed: 10,
@@ -281,137 +271,129 @@ document.getElementById('form').addEventListener('submit', function (event) {
   /**
    * Skills animation
    */
-  let skilsContent = select('.skills-content');
+  let skilsContent = select(".skills-content");
   if (skilsContent) {
     new Waypoint({
       element: skilsContent,
-      offset: '80%',
-      handler: function(direction) {
-        let progress = select('.progress .progress-bar', true);
+      offset: "80%",
+      handler: function (direction) {
+        let progress = select(".progress .progress-bar", true);
         progress.forEach((el) => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%'
+          el.style.width = el.getAttribute("aria-valuenow") + "%";
         });
-      }
-    })
+      },
+    });
   }
 
   /**
    * Porfolio isotope and filter
    */
-  window.addEventListener('load', () => {
-    let portfolioContainer = select('.portfolio-container');
+  window.addEventListener("load", () => {
+    let portfolioContainer = select(".portfolio-container");
     if (portfolioContainer) {
       let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.portfolio-item'
+        itemSelector: ".portfolio-item",
       });
 
-      let portfolioFilters = select('#portfolio-flters li', true);
+      let portfolioFilters = select("#portfolio-flters li", true);
 
-      on('click', '#portfolio-flters li', function(e) {
-        e.preventDefault();
-        portfolioFilters.forEach(function(el) {
-          el.classList.remove('filter-active');
-        });
-        this.classList.add('filter-active');
+      on(
+        "click",
+        "#portfolio-flters li",
+        function (e) {
+          e.preventDefault();
+          portfolioFilters.forEach(function (el) {
+            el.classList.remove("filter-active");
+          });
+          this.classList.add("filter-active");
 
-        portfolioIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        portfolioIsotope.on('arrangeComplete', function() {
-          AOS.refresh()
-        });
-      }, true);
+          portfolioIsotope.arrange({
+            filter: this.getAttribute("data-filter"),
+          });
+          portfolioIsotope.on("arrangeComplete", function () {
+            AOS.refresh();
+          });
+        },
+        true,
+      );
     }
-
   });
 
   /**
-   * Initiate portfolio lightbox 
+   * Initiate portfolio lightbox
    */
   const portfolioLightbox = GLightbox({
-    selector: '.portfolio-lightbox'
+    selector: ".portfolio-lightbox",
   });
 
   /**
    * Portfolio details slider
    */
-  new Swiper('.portfolio-details-slider', {
+  new Swiper(".portfolio-details-slider", {
     speed: 400,
     loop: true,
     autoplay: {
       delay: 5000,
-      disableOnInteraction: false
+      disableOnInteraction: false,
     },
     pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
+      el: ".swiper-pagination",
+      type: "bullets",
+      clickable: true,
+    },
   });
 
   /**
    * Testimonials slider
    */
-  new Swiper('.testimonials-slider', {
+  new Swiper(".testimonials-slider", {
     speed: 600,
     loop: true,
     autoplay: {
       delay: 5000,
-      disableOnInteraction: false
+      disableOnInteraction: false,
     },
-    slidesPerView: 'auto',
+    slidesPerView: "auto",
     pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
+      el: ".swiper-pagination",
+      type: "bullets",
+      clickable: true,
     },
     breakpoints: {
       320: {
         slidesPerView: 1,
-        spaceBetween: 20
+        spaceBetween: 20,
       },
 
       1200: {
         slidesPerView: 3,
-        spaceBetween: 20
-      }
-    }
+        spaceBetween: 20,
+      },
+    },
   });
 
   /**
    * Animation on scroll
    */
-  window.addEventListener('load', () => {
+  window.addEventListener("load", () => {
     AOS.init({
       duration: 1000,
-      easing: 'ease-in-out',
+      easing: "ease-in-out",
       once: true,
-      mirror: false
-    })
+      mirror: false,
+    });
   });
 
   /**
-   * Initiate Pure Counter 
+   * Initiate Pure Counter
    */
   new PureCounter();
-
-})()
-
-
+})();
 
 window.onload = () => {
   // يمكنك تعديل هذا الوقت بناءً على التوقيت الذي تريده
   setTimeout(() => {
-      const notification = document.getElementById('notification');
-      notification.style.animation = 'breakEffect 5s forwards';
+    const notification = document.getElementById("notification");
+    notification.style.animation = "breakEffect 5s forwards";
   }, 5000); // تبدأ عملية التكسير بعد 20 ثانية
 };
-
-
-
-
-
-
-
-
-
