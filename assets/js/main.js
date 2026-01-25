@@ -224,6 +224,19 @@ document.getElementById('form').addEventListener('submit', function (event) {
    * Scrool with ofset on links with a class name .scrollto
    */
   on('click', '.scrollto', function(e) {
+    // Check if link points to a different page
+    const href = this.getAttribute('href');
+    const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+    
+    // Check if href is to a different page
+    if (href && !href.startsWith('#')) {
+      const targetFile = href.split('/').pop();
+      if (targetFile && targetFile !== currentFile) {
+        // Allow natural navigation to different page
+        return;
+      }
+    }
+    
     if (select(this.hash)) {
       e.preventDefault()
 
