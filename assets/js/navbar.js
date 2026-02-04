@@ -32,17 +32,17 @@ const navbarHTML = `
 `;
 
 // إدخال الـ Navbar داخل العنصر في الصفحة
-document.getElementById('navbar-container').innerHTML = navbarHTML;
+document.getElementById("navbar-container").innerHTML = navbarHTML;
 
 // تحديد الرابط النشط بناءً على الصفحة الحالية
-const currentPath = window.location.pathname.split('/').pop(); // اسم الملف الحالي
-const links = document.querySelectorAll('.nav-link');
+const currentPath = window.location.pathname.split("/").pop(); // اسم الملف الحالي
+const links = document.querySelectorAll(".nav-link");
 
-links.forEach(link => {
-  const href = link.getAttribute('href');
+links.forEach((link) => {
+  const href = link.getAttribute("href");
   if (href === currentPath) {
-    link.classList.add('active'); // إضافة active للرابط النشط
+    link.classList.add("active"); // إضافة active للرابط النشط
   } else {
-    link.classList.remove('active'); // إزالة active من باقي الروابط
+    link.classList.remove("active"); // إزالة active من باقي الروابط
   }
 });
