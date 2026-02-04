@@ -22,6 +22,7 @@ const navbarHTML = `
         <li><a href="Skills.html" class="nav-link scrollto"><i class="bx bx-rocket"></i> <span>Skills</span></a></li>
         <li><a href="Vedio-chnale.html" class="nav-link scrollto"><i class="bx bx-video"></i> <span>Videos</span></a></li>
         <li><a href="Projects.html" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Projects</span></a></li>
+        <li><a href="Designs.html" class="nav-link scrollto"><i class="bx bx-palette"></i> <span>Designs</span></a></li>
         <li><a href="Services.html" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
         <li><a href="Contact.html" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
       </ul>

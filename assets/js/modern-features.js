@@ -8,25 +8,11 @@
 (function () {
   "use strict";
 
-  // ===== Loading Screen Handler =====
+  // ===== Page Load Handler =====
   window.addEventListener("load", function () {
-    const loadingScreen = document.getElementById("loading-screen");
-
-    // Hide loading screen with smooth transition
-    setTimeout(() => {
-      if (loadingScreen) {
-        loadingScreen.classList.add("hidden");
-
-        // Remove from DOM after animation
-        setTimeout(() => {
-          loadingScreen.style.display = "none";
-        }, 300);
-      }
-
-      // Trigger fade-in animations for page elements
-      document.body.classList.add("loaded");
-      animateOnScroll();
-    }, 1000); // Same as other pages - 1 second delay
+    // Trigger fade-in animations for page elements
+    document.body.classList.add("loaded");
+    animateOnScroll();
   });
 
   // ===== Scroll Progress Bar =====

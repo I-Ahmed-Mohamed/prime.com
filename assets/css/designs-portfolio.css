@@ -1,0 +1,835 @@
+/* ===========================
+   Designs Portfolio Styles - Premium Edition
+   =========================== */
+
+/* Variables */
+:root {
+    --bg-colore: rgb(1, 7, 17);
+    --bg-color: #037eb8;
+    --text-colore: #fff;
+    --boxShaow: rgba(2, 109, 136, 0.555);
+    --text-light: #b0b0b0;
+    --border-color: rgba(3, 126, 184, 0.1);
+    --border-color-accent: rgba(3, 126, 184, 0.15);
+    --shadow-light: 0 4px 15px rgba(3, 126, 184, 0.1);
+    --shadow-medium: 0 8px 30px rgba(3, 126, 184, 0.15);
+    --shadow-dark: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-colore);
+    color: var(--text-colore);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+/* ======= Designs Section ======= */
+.designs-section {
+    padding: 100px 0;
+    background: var(--bg-colore);
+    position: relative;
+    overflow: hidden;
+}
+
+.designs-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    pointer-events: none;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+.gslide-title {
+    .designs-cta h3 {
+        font-size: 32px;
+        font-weight: 800;
+        color: var(--bg-color);
+        margin-bottom: 12px;
+    }
+    .designs-cta p {
+        font-size: 16px;
+        color: var(--text-light);
+        margin-bottom: 24px;
+        line-height: 1.6;
+    }
+
+    .cta-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: var(--bg-color);
+        color: white;
+        padding: 14px 32px;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 15px;
+        text-decoration: none;
+        transition: transform 0.18s ease, box-shadow 0.18s ease;
+        box-shadow: none;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(3,126,184,0.18);
+    }
+
+    .cta-button i {
+        font-size: 18px;
+    }
+.filter-btn.active::before {
+    left: 0;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    color: white;
+    background: var(--bg-color);
+    box-shadow: 0 8px 25px rgba(3, 126, 184, 0.3);
+}
+
+.filter-btn i {
+    font-size: 18px;
+}
+
+/* ======= Company Sections ======= */
+.companies-container {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.company-section {
+    animation: none;
+}
+    padding: 50px;
+    box-shadow: none;
+    transition: all 0.3s ease;
+    backdrop-filter: none;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.company-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background: transparent;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.company-section:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: transparent;
+}
+
+/* ======= Company Header ======= */
+.company-header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 45px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid rgba(3, 126, 184, 0.2);
+    position: relative;
+    z-index: 1;
+    background: transparent;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.company-badge {
+    width: 90px;
+    height: 90px;
+    background: var(--bg-color);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 45px;
+    box-shadow: 0 15px 40px rgba(3, 126, 184, 0.3);
+    flex-shrink: 0;
+    position: relative;
+    animation: none;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.company-badge::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 20px;
+    padding: 2px;
+    background: none;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+}
+
+.company-info h3 {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--text-light);
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.company-category {
+    color: var(--bg-color);
+    font-weight: 600;
+    font-size: 13px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ======= Designs Grid ======= */
+.designs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    position: relative;
+    z-index: 1;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* ======= Design Card ======= */
+.design-card {
+    background: transparent;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: none;
+    transition: box-shadow 0.25s ease, transform 0.2s ease;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    width: 100%;
+    position: relative;
+}
+
+.design-card::before {
+    display: none;
+}
+
+.design-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-light);
+    border-color: rgba(3, 126, 184, 0.12);
+}
+
+.design-image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: rgba(3,126,184,0.03);
+    border-radius: 10px;
+}
+
+.design-image-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: zoom-in;
+    z-index: 2;
+}
+
+.design-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+    filter: brightness(1);
+}
+
+.design-card:hover .design-image {
+    transform: scale(1.05);
+    filter: brightness(0.98);
+}
+
+.design-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(1,7,17,0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.design-card:hover .design-overlay {
+    opacity: 1;
+}
+
+.design-link {
+    width: 65px;
+    height: 65px;
+    background: var(--bg-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+    transition: all 0.2s ease;
+    box-shadow: none;
+    cursor: zoom-in;
+}
+
+.design-link:hover {
+    transform: scale(1.05);
+    background: var(--bg-color);
+    color: white;
+}
+
+/* ======= Design Info ======= */
+.design-info {
+    padding: 30px;
+    background: transparent;
+    position: relative;
+}
+
+.design-info h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-light);
+    margin-bottom: 8px;
+    word-wrap: break-word;
+}
+
+.design-category {
+    color: var(--bg-color);
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    display: inline-block;
+    padding: 5px 12px;
+    background: rgba(3,126,184,0.06);
+    border-radius: 20px;
+}
+
+.design-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tool-badge {
+    background: rgba(3,126,184,0.06);
+    color: var(--bg-color);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    transition: background 0.2s ease, color 0.2s ease;
+    border: 1px solid rgba(3,126,184,0.12);
+    cursor: default;
+}
+
+.tool-badge:hover {
+    background: var(--bg-color);
+    color: white;
+    border-color: var(--bg-color);
+    box-shadow: none;
+    transform: none;
+}
+
+/* ======= Responsive Design ======= */
+@media (max-width: 1024px) {
+    .designs-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 100%;
+    }
+
+    .design-card {
+        max-width: 100%;
+    }
+
+    .company-section {
+        padding: 40px;
+    }
+
+    .company-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .designs-section {
+        padding: 70px 0;
+    }
+
+    .section-title h2 {
+        font-size: 36px;
+    }
+
+    .company-section {
+        padding: 30px;
+    }
+
+    .designs-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        max-width: 100%;
+    }
+
+    .design-card {
+        max-width: 100%;
+    }
+
+    .filter-buttons {
+        gap: 10px;
+    }
+
+    .filter-btn {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    .company-badge {
+        width: 80px;
+        height: 80px;
+        font-size: 36px;
+    }
+
+    .company-info h3 {
+        font-size: 24px;
+    }
+
+    .designs-cta {
+        padding: 40px 25px;
+        margin-top: 60px;
+    }
+
+    .designs-cta h3 {
+        font-size: 28px;
+    }
+
+    .designs-cta p {
+        font-size: 14px;
+    }
+
+    .cta-button {
+        padding: 14px 32px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .designs-section {
+        padding: 50px 15px;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+
+    .section-title h2:after {
+        width: 90%;
+    }
+
+    .company-section {
+        padding: 20px 15px;
+        border-radius: 12px;
+    }
+
+    .designs-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 100%;
+    }
+
+    .design-card {
+        max-width: 100%;
+    }
+
+    .filter-buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .filter-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 12px 20px;
+    }
+
+    .company-header {
+        padding-bottom: 20px;
+    }
+
+    .company-info h3 {
+        font-size: 20px;
+    }
+
+    .design-info h4 {
+        font-size: 15px;
+    }
+
+    .design-link {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+    }
+
+    .designs-cta {
+        padding: 30px 20px;
+        margin-top: 50px;
+        border-radius: 15px;
+    }
+
+    .designs-cta h3 {
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+
+    .designs-cta p {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+
+    .cta-button {
+        padding: 12px 28px;
+        font-size: 12px;
+        width: 100%;
+    }
+
+    .cta-button i {
+        font-size: 18px;
+    }
+}
+
+/* ======= Animations ======= */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(0, 212, 255, 0.8);
+    }
+}
+
+.company-section {
+    animation: slideInUp 0.6s ease forwards;
+}
+
+/* ======= Filter Hide/Show ======= */
+.company-section.hidden {
+    display: none;
+}
+
+.design-card.hidden {
+    display: none;
+}
+
+/* ======= GLightbox Customization ======= */
+.glightbox-container {
+    background: rgba(5, 8, 18, 0.98);
+}
+
+.gslide-image img {
+    max-height: 90vh;
+    border-radius: 10px;
+}
+
+.gslide-title {
+    color: var(--primary-color);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.glightbox-prev,
+.glightbox-next {
+    background: rgba(0, 212, 255, 0.2);
+    border-radius: 50%;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.glightbox-prev:hover,
+.glightbox-next:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* ======= Scrollbar Styling ======= */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bg-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(3,126,184,0.9);
+}
+
+/* ======= Ripple Effect ======= */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    transform: scale(0);
+    animation: ripple-animation 0.6s ease-out;
+    pointer-events: none;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* ======= CTA Section ======= */
+.designs-cta {
+    background: rgba(3,126,184,0.04);
+    border: 1px solid rgba(3,126,184,0.12);
+    border-radius: 20px;
+    padding: 50px 30px;
+    text-align: center;
+    margin-top: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+}
+
+.designs-cta h3 {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--text-light);
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.designs-cta p {
+    font-size: 16px;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    padding: 16px 40px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.5s ease;
+    z-index: -1;
+}
+
+.cta-button:hover::before {
+    left: 100%;
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(0, 212, 255, 0.5);
+}
+
+.cta-button:active {
+    transform: translateY(-2px);
+}
+
+.cta-button i {
+    font-size: 20px;
+    animation: slideInRight 0.6s ease;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* ======= Filter Buttons - Professional Enhancement ======= */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 50px auto;
+    flex-wrap: wrap;
+    max-width: 800px;
+}
+
+.filter-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 40px;
+    background: rgba(3, 126, 184, 0.08);
+    border: 2px solid rgba(3, 126, 184, 0.2);
+    border-radius: 50px;
+    color: var(--text-colore);
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.filter-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background: linear-gradient(135deg, #037eb8, #0c5aa0);
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    z-index: 0;
+}
+
+.filter-btn:hover::before {
+    width: 300%;
+    height: 300%;
+}
+
+.filter-btn:hover {
+    color: white;
+    border-color: #037eb8;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(3, 126, 184, 0.35);
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, #037eb8, #0c5aa0);
+    color: white;
+    border-color: #037eb8;
+    box-shadow: 0 8px 30px rgba(3, 126, 184, 0.4);
+    transform: translateY(-2px);
+}
+
+.filter-btn.active::before {
+    width: 0;
+    height: 0;
+}
+
+.filter-btn i {
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.filter-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+.filter-btn:hover i {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.filter-btn:active {
+    transform: translateY(0px);
+    box-shadow: 0 4px 15px rgba(3, 126, 184, 0.25);
+}
