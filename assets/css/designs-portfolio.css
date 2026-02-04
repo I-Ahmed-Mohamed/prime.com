@@ -166,7 +166,7 @@ body {
 .company-badge {
   width: 90px;
   height: 90px;
-  background: var(--bg-color);
+  background: white;
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -177,6 +177,26 @@ body {
   flex-shrink: 0;
   position: relative;
   animation: none;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.company-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 10px;
+}
+
+.company-badge i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color);
+  border-radius: 10px;
 }
 
 @keyframes float {
@@ -503,14 +523,27 @@ body {
   }
 
   .filter-buttons {
-    flex-direction: column;
-    gap: 8px;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: center;
+    padding: 0 15px;
   }
 
   .filter-btn {
-    width: 100%;
-    justify-content: center;
-    padding: 12px 20px;
+    flex: 0 1 auto;
+    min-width: auto;
+    padding: 14px 20px;
+    font-size: 13px;
+  }
+
+  .filter-btn .btn-logo {
+    width: 24px;
+    height: 24px;
+  }
+
+  .filter-btn span {
+    display: inline;
+    font-size: 13px;
   }
 
   .company-header {
@@ -840,12 +873,26 @@ body {
   transition: transform 0.3s ease;
 }
 
+.filter-btn .btn-logo {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+  background: white;
+  border-radius: 8px;
+  padding: 3px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
 .filter-btn span {
   position: relative;
   z-index: 1;
 }
 
-.filter-btn:hover i {
+.filter-btn:hover i,
+.filter-btn:hover .btn-logo {
   transform: scale(1.1) rotate(5deg);
 }
 
