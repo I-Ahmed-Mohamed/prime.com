@@ -1,0 +1,88 @@
+
+
+.video-container {
+    display: grid;
+    gap: 25px;
+    justify-content: center;
+}
+
+/* الوضع الافتراضي: 3 فيديوهات في الصف */
+@media (min-width: 768px) {
+    .video-container {
+        grid-template-columns: repeat(3, 1fr); /* ثلاثة أعمدة */
+    }
+}
+
+/* للشاشات الصغيرة: 2 فيديو في الصف */
+@media (max-width: 767px) {
+    .video-container {
+        grid-template-columns: repeat(1, 1fr); /* عمودان */
+    }
+}
+
+/* تصميم الفيديو */
+.video-card {
+ 
+    background-color: rgba(178, 218, 245, 0.068); /* لون شفاف */
+    backdrop-filter: blur(90px); /* تأثير الضبابية */   
+     border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    width: 85%; /* عرض كامل داخل الشبكة */
+    left: 30px;
+}
+
+.video-thumbnail {
+    width: 30%; /* تناسب الصورة مع عرض العنصر */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.video-card video {
+    width: 100%;
+    border-radius: 20px;
+    display: none; /* إخفاء الفيديو افتراضيًا */
+}
+
+.video-info {
+    margin-top: 10px;
+}
+
+.video-info h2 {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    background: var(--text-colore);
+    border-radius: 5px;
+    overflow: hidden;
+    height: 5px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.progress-fill {
+    background: var(--bg-color);
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.view-count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 14px;
+    color: #FFF;
+}
+
+.view-count i {
+    color: var(--bg-color);
+}

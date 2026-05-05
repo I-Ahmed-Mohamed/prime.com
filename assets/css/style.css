@@ -1315,3 +1315,9 @@ button {
   0%, 100% { opacity: 0; transform: scale(0); }
   50% { opacity: 1; transform: scale(1.5); }
 } */
+
+/* ===== 2030 OVERRIDE PATCH ===== */
+body::before { display: none !important; }
+body { background-color: #00000f !important; font-family: 'Exo 2', sans-serif !important; }
+a { color: #0ef !important; }
+#spider { display: none !important; }

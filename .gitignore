@@ -1,145 +1,64 @@
-# ===============================================
-# Professional .gitignore for Web Portfolio
-# ===============================================
-
-# ===== Operating System Files =====
-# Windows
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-$RECYCLE.BIN/
-*.lnk
-
-# macOS
-.DS_Store
-.AppleDouble
-.LSOverride
-._*
-
-# Linux
-*~
-.directory
-
-# ===== IDE & Editor Files =====
-# Visual Studio Code
-.vscode/
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-
-# Sublime Text
-*.sublime-project
-*.sublime-workspace
-
-# WebStorm / IntelliJ
-.idea/
-*.iml
-
-# Atom
-.atom/
-
-# ===== Node & Package Managers =====
+# Dependencies and Build
 node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-package-lock.json
-yarn.lock
-.npm
-.yarn
-.pnpm-debug.log*
-
-# ===== Environment & Config =====
-.env
-.env.local
-.env.development
-.env.test
-.env.production
-config.local.js
-secrets.json
-
-# ===== Build & Distribution =====
 dist/
 build/
-out/
-*.min.js
-*.min.css
-# Keep vendor files
-!assets/vendor/**/*.min.js
-!assets/vendor/**/*.min.css
-
-# ===== Logs =====
-logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-lerna-debug.log*
 
-# ===== Cache & Temp Files =====
-.cache/
-.temp/
-.tmp/
-*.tmp
-*.bak
+# IDE and Editor
+.vscode/
+.idea/
 *.swp
 *.swo
+*.sublime-*
+.DS_Store
+Thumbs.db
+
+# Environment and Config
+.env
+.env.local
+.env.*.local
+
+# OS specific
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+desktop.ini
+
+# Source Maps
+*.map
+assets/vendor/**/*.map
+
+# Documentation build
+docs/_build/
+site/
+
+# Temporary files
+*.tmp
+*.temp
 *~
+.#*
 
-# ===== PHP =====
-composer.phar
-vendor/
-composer.lock
+# Video files (large files - use LFS if needed)
+*.mp4
+*.avi
+*.mov
+*.wmv
 
-# ===== Database =====
-*.sql
-*.sqlite
-*.db
+# Backup files
+*.bak
+*.backup
+*-backup
 
-# ===== Sensitive Information =====
-# Email & API Keys
-email-config.js
-api-keys.json
-credentials.json
+# Package manager lock files (optional, uncomment if you want to commit these)
+# package-lock.json
+# yarn.lock
 
-# Personal Information
-personal-notes.txt
-todo.txt
-*.private.*
-
-# ===== Images & Media (optional) =====
-# Uncomment if you want to ignore large media files
-# *.jpg
-# *.jpeg
-# *.png
-# *.gif
-# *.webp
-# *.mp4
-# *.mov
-
-# But keep specific folders
-# !assets/img/**
-# !assets/portfolio/**
-
-# ===== Documentation (optional) =====
-# docs/_build/
-# *.pdf (uncomment if needed)
-
-# ===== Testing =====
-coverage/
-.nyc_output/
-*.test.js
-test-results/
-
-# ===== Miscellaneous =====
-.sass-cache/
-*.css.map
-*.js.map
-.vercel
-.netlify
-
-# Keep important files
-!README.md
-!LICENSE
-!.gitignore
+# PHP related
+.env.php
+*.phtml
