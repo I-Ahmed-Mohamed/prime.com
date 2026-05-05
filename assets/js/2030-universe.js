@@ -5,6 +5,24 @@
     theme: localStorage.getItem('prime-theme') || 'dark',
   };
 
+
+
+  const ahmedPersona = {
+    name: 'Ahmed Mohamed',
+    phone1: '01094547599',
+    phone2: '01044599911',
+    email: 'ahmedcodteng@gmail.com',
+    location: 'Egypt',
+    roleAr: 'مهندس برمجيات ومصمم ومدير صفحات وصانع محتوى بالذكاء الاصطناعي',
+    roleEn: 'software engineer, designer, page manager, and AI content creator',
+    servicesAr: 'تصميم وبرمجة مواقع، داشبوردات وأنظمة إدارة، Angular وFull Stack .NET، تصميم بوستات، إدارة صفحات، فيديوهات AI، وأتمتة ذكية للشغل',
+    servicesEn: 'websites, dashboards, management systems, Angular and Full Stack .NET, post design, page management, AI videos, and smart automation',
+    toneAr: 'اتكلم بلساني كأحمد محمد: مصري، بسيط، واثق، محترم، وتسويقي من غير مبالغة',
+    toneEn: 'Speak as Ahmed Mohamed: confident, friendly, direct, premium, and sales-aware without exaggeration',
+    pricesAr: 'المواقع التعريفية تبدأ من 5000 جنيه حسب التفاصيل، وإدارة الصفحات الشهرية تبدأ من 2000 جنيه حسب المطلوب',
+    pricesEn: 'landing websites start from 5000 EGP depending on scope, and monthly page management starts from 2000 EGP depending on requirements',
+  };
+
   const pages = [
     { titleEn: 'Home', titleAr: 'الرئيسية', url: 'index.html', icon: 'bx bx-home-alt-2', tags: 'home main start hero' },
     { titleEn: 'About Ahmed', titleAr: 'من هو أحمد', url: 'About.html', icon: 'bx bx-user-voice', tags: 'about bio experience personal' },
@@ -18,13 +36,15 @@
   ];
 
   const i18n = {
-    brandSub: { en: 'AI Software Engineer', ar: 'مهندس برمجيات وذكاء اصطناعي' },
-    hireMe: { en: 'Hire Me', ar: 'ابدأ مشروعك' },
-    heroKicker: { en: '2029 AI Portfolio System', ar: 'نظام بورتفوليو ذكي 2029' },
-    heroTitle: { en: 'Software, design, and AI experiences built like a global brand.', ar: 'برمجة وتصميم وتجارب ذكاء اصطناعي بشكل براند عالمي.' },
-    heroText: { en: 'Explore Ahmed Mohamed’s work through a smart bilingual interface, instant AI guide, dark/light mode, and a futuristic 2029 navigation system.', ar: 'اتفرج على شغل أحمد محمد من خلال واجهة ذكية عربي وإنجليزي، مساعد AI فوري، وضع ليلي ونهاري، وناف بار مستقبلي 2029.' },
-    exploreProjects: { en: 'Explore Projects', ar: 'شوف المشاريع' },
-    askAI: { en: 'Ask PRIME AI', ar: 'اسأل المساعد الذكي' },
+    brandSub: { en: 'AI Software Engineer', ar: 'برمجة • تصميم • AI' },
+    hireMe: { en: 'Start', ar: 'ابدأ' },
+    heroKicker: { en: '2029 AI Portfolio', ar: 'بورتفوليو ذكي 2029' },
+    heroTitle: { en: 'Tell me what you want to build.', ar: 'قولّي عاوز تبني إيه.' },
+    heroText: { en: 'A clean AI-style entrance for websites, designs, pages, videos, and smart digital work.', ar: 'واجهة بسيطة بشكل AI للمواقع والتصميمات والصفحات والفيديوهات والشغل الديجيتال الذكي.' },
+    exploreProjects: { en: 'Projects', ar: 'المشاريع' },
+    viewServices: { en: 'Services', ar: 'الخدمات' },
+    contactNow: { en: 'Contact', ar: 'تواصل' },
+    askAI: { en: 'Open AI Studio', ar: 'افتح المساعد' },
     chip1T: { en: 'AI Guide', ar: 'مساعد ذكي' },
     chip1: { en: 'Answers visitors and opens the right section instantly.', ar: 'يرد على الزوار ويفتح القسم المناسب فورًا.' },
     chip2T: { en: 'Bilingual', ar: 'ترجمة فورية' },
@@ -47,9 +67,17 @@
       const span = link.querySelector('span');
       if (span) span.textContent = link.dataset[lang === 'ar' ? 'navAr' : 'navEn'];
     });
+    document.querySelectorAll('.prime-mobile-tab').forEach(link => {
+      const strong = link.querySelector('strong');
+      if (strong) strong.textContent = link.dataset[lang === 'ar' ? 'mobileAr' : 'mobileEn'];
+    });
     const langBtn = document.getElementById('prime-lang-toggle');
     if (langBtn) langBtn.textContent = lang === 'ar' ? 'EN' : 'ع';
     document.querySelectorAll('[data-auto-translate]').forEach(el => translateKnownText(el));
+    document.querySelectorAll('.copilot-typing').forEach(el => {
+      const val = lang === 'ar' ? el.dataset.typedAr : el.dataset.typedEn;
+      if (val) el.textContent = val;
+    });
     refreshSearchResults(document.getElementById('prime-search-input')?.value || '');
   }
 
@@ -89,7 +117,7 @@
 
   function injectHomeHero() {
     const current = window.location.pathname.split('/').pop() || 'index.html';
-    if (current !== 'index.html' || document.querySelector('.prime-smart-hero')) return;
+    if (current !== 'index.html' || document.querySelector('.prime-smart-hero') || document.querySelector('.prime-copilot-hero')) return;
     const nav = document.getElementById('navbar-container');
     const hero = document.createElement('section');
     hero.className = 'prime-smart-hero';
@@ -108,7 +136,7 @@
       </div>
     `;
     nav?.after(hero);
-    hero.querySelector('#open-ai-from-hero')?.addEventListener('click', () => window.PrimeAI?.open());
+    hero.querySelector('#open-ai-from-hero')?.addEventListener('click', () => window.location.href = 'AI-Guide.html');
   }
 
   function initSearch() {
@@ -155,88 +183,68 @@
   }
 
   function initAI() {
-    document.querySelectorAll('#ai-assistant-container, #ai-chat-window, #ai-toggle-btn').forEach(el => el.remove());
-    const ui = document.createElement('div');
-    ui.innerHTML = `
-      <button id="prime-ai-toggle" title="PRIME AI"><i class="bi bi-stars"></i></button>
-      <section id="prime-ai-window" aria-label="PRIME AI Assistant">
-        <div class="prime-ai-head">
-          <div class="prime-ai-avatar"><i class="bi bi-cpu"></i></div>
-          <div><strong>PRIME AI</strong><small>${state.lang === 'ar' ? 'متصل — مساعد داخلي ذكي' : 'Online — smart local assistant'}</small></div>
-          <button class="prime-ai-close" id="prime-ai-close"><i class="bi bi-x"></i></button>
-        </div>
-        <div class="prime-ai-messages" id="prime-ai-messages"></div>
-        <div class="prime-ai-quick">
-          <button data-q="skills">${state.lang === 'ar' ? 'المهارات' : 'Skills'}</button>
-          <button data-q="projects">${state.lang === 'ar' ? 'المشاريع' : 'Projects'}</button>
-          <button data-q="price">${state.lang === 'ar' ? 'تقدير سعر' : 'Price estimate'}</button>
-          <button data-q="contact">${state.lang === 'ar' ? 'التواصل' : 'Contact'}</button>
-        </div>
-        <form class="prime-ai-form" id="prime-ai-form">
-          <textarea id="prime-ai-input" rows="1" placeholder="${state.lang === 'ar' ? 'اسأل عن أحمد أو اطلب فتح قسم...' : 'Ask about Ahmed or open a section...'}"></textarea>
-          <button type="submit"><i class="bi bi-send-fill"></i></button>
-        </form>
-      </section>`;
-    document.body.appendChild(ui);
-    const win = document.getElementById('prime-ai-window');
-    const messages = document.getElementById('prime-ai-messages');
-    const input = document.getElementById('prime-ai-input');
-    function add(text, type = 'bot') {
-      const m = document.createElement('div');
-      m.className = `prime-msg ${type}`;
-      m.innerHTML = text;
-      messages.appendChild(m);
-      messages.scrollTop = messages.scrollHeight;
-    }
-    function open() {
-      win.classList.add('open');
-      if (!messages.children.length) add(greeting());
-      setTimeout(() => input.focus(), 80);
-    }
-    function close() { win.classList.remove('open'); }
-    window.PrimeAI = { open, close, ask: q => answer(q) };
-    document.getElementById('prime-ai-toggle').addEventListener('click', () => win.classList.contains('open') ? close() : open());
-    document.getElementById('prime-ai-close').addEventListener('click', close);
-    document.getElementById('prime-ai-form').addEventListener('submit', e => { e.preventDefault(); answer(input.value); input.value = ''; input.style.height = 'auto'; });
-    input.addEventListener('input', () => { input.style.height = 'auto'; input.style.height = Math.min(input.scrollHeight, 110) + 'px'; });
-    document.querySelectorAll('.prime-ai-quick button').forEach(b => b.addEventListener('click', () => answer(b.dataset.q)));
+    document.querySelectorAll('#prime-ai-toggle, #prime-ai-window, #ai-assistant-container, #ai-chat-window, #ai-toggle-btn').forEach(el => el.remove());
 
-    function answer(q) {
-      const text = (q || '').trim();
-      if (!text) return;
-      open();
-      add(escapeHTML(text), 'user');
-      setTimeout(() => add(buildReply(text), 'bot'), 250);
+    if ((window.location.pathname.split('/').pop() || 'index.html') === 'AI-Guide.html') {
+      window.PrimeAI = { open: () => window.scrollTo({ top: 0, behavior: 'smooth' }), close: () => {}, ask: q => window.AhmedAIPage?.ask(q) };
+      return;
     }
+
+    const aiLink = document.createElement('a');
+    aiLink.id = 'prime-ai-toggle';
+    aiLink.href = 'AI-Guide.html';
+    aiLink.title = state.lang === 'ar' ? 'افتح مساعد أحمد الذكي' : 'Open Ahmed AI assistant';
+    aiLink.setAttribute('aria-label', aiLink.title);
+    aiLink.innerHTML = '<i class="bi bi-stars"></i>';
+    document.body.appendChild(aiLink);
+
+    window.PrimeAI = {
+      open: () => { window.location.href = 'AI-Guide.html'; },
+      close: () => {},
+      ask: q => { window.location.href = 'AI-Guide.html?q=' + encodeURIComponent(q || ''); }
+    };
   }
 
   function escapeHTML(s) { return s.replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c])); }
   function isArabicText(s) { return /[\u0600-\u06FF]/.test(s) || state.lang === 'ar'; }
   function greeting() {
     return state.lang === 'ar'
-      ? 'أهلاً 👋 أنا مساعد PRIME AI. أقدر أعرّفك على مهارات أحمد، مشاريعه، خدماته، أو أفتحلك أي قسم فورًا. جرّب تكتب: افتح المشاريع.'
-      : 'Hi 👋 I’m PRIME AI. I can guide visitors through Ahmed’s skills, projects, services, CV, and contact section. Try: open projects.';
+      ? `أهلاً بيك 👋 أنا أحمد محمد. شغلي مواقع وداتشبوردات وتصميم وإدارة صفحات وفيديوهات AI. اسألني عن أي خدمة أو كلمني مباشر: <b>${ahmedPersona.phone1}</b> - <b>${ahmedPersona.phone2}</b>.`
+      : `Hi 👋 I’m Ahmed Mohamed. I build websites, dashboards, designs, page systems, and AI content workflows. Ask me about any service or call: <b>${ahmedPersona.phone1}</b> - <b>${ahmedPersona.phone2}</b>.`;
   }
   function buildReply(q) {
     const ar = isArabicText(q);
     const t = q.toLowerCase();
+    const contactLinks = ar
+      ? `<br><br><b>تواصل مباشر:</b><br><a href="tel:+2${ahmedPersona.phone1}" style="color:var(--prime-accent);font-weight:900">${ahmedPersona.phone1}</a> - <a href="tel:+2${ahmedPersona.phone2}" style="color:var(--prime-accent);font-weight:900">${ahmedPersona.phone2}</a>`
+      : `<br><br><b>Direct contact:</b><br><a href="tel:+2${ahmedPersona.phone1}" style="color:var(--prime-accent);font-weight:900">${ahmedPersona.phone1}</a> - <a href="tel:+2${ahmedPersona.phone2}" style="color:var(--prime-accent);font-weight:900">${ahmedPersona.phone2}</a>`;
     const go = (url, label) => `${ar ? 'تمام، افتح من هنا:' : 'Sure, open it here:'} <a href="${url}" style="color:var(--prime-accent);font-weight:900">${label}</a>`;
-    if (/project|portfolio|مشاريع|المشاريع|شغل|اعمال/.test(t)) return go('Projects.html', ar ? 'صفحة المشاريع' : 'Projects page');
-    if (/skill|مهارات|لغات|angular|dotnet|\.net|sql|backend|frontend/.test(t)) return ar
-      ? 'أحمد شغال Full Stack .NET وAngular، وعنده خبرة في HTML/CSS/JS/TypeScript/SQL Server/Entity Framework وواجهات حديثة. <a href="Skills.html" style="color:var(--prime-accent);font-weight:900">افتح المهارات</a>'
-      : 'Ahmed works with Full Stack .NET and Angular, plus HTML/CSS/JS/TypeScript/SQL Server/Entity Framework and modern UI systems. <a href="Skills.html" style="color:var(--prime-accent);font-weight:900">Open Skills</a>';
+
+    if (/مين|انت مين|about|bio|profile|من انت|تعرف/.test(t)) return ar
+      ? `أنا أحمد محمد، ${ahmedPersona.roleAr}. بساعدك تطلع شغلك بشكل احترافي من أول الموقع والبراند لحد المحتوى والذكاء الاصطناعي. <a href="About.html" style="color:var(--prime-accent);font-weight:900">افتح البروفايل</a>${contactLinks}`
+      : `I’m Ahmed Mohamed, a ${ahmedPersona.roleEn}. I help brands look professional through websites, systems, design, content, and AI workflows. <a href="About.html" style="color:var(--prime-accent);font-weight:900">Open Profile</a>${contactLinks}`;
+    if (/project|portfolio|مشاريع|المشاريع|شغل|اعمال|أعمال/.test(t)) return go('Projects.html', ar ? 'صفحة المشاريع' : 'Projects page');
+    if (/skill|مهارات|لغات|angular|dotnet|\.net|sql|backend|frontend|برمجة/.test(t)) return ar
+      ? `أنا شغال Full Stack .NET وAngular، وبشتغل HTML/CSS/JS/TypeScript وSQL Server وEntity Framework، وبعرف أبني UI منظم وأنظمة عملية للشركات. <a href="Skills.html" style="color:var(--prime-accent);font-weight:900">افتح المهارات</a>`
+      : `I work with Full Stack .NET and Angular, plus HTML/CSS/JS/TypeScript, SQL Server, Entity Framework, clean UI, and practical business systems. <a href="Skills.html" style="color:var(--prime-accent);font-weight:900">Open Skills</a>`;
     if (/cv|resume|سي ?في|السيرة/.test(t)) return go('CV.html', ar ? 'السي في' : 'CV');
-    if (/design|تصميم|بوست|photoshop|social/.test(t)) return go('Designs.html', ar ? 'التصميمات' : 'Designs');
-    if (/video|فيديو|reel|motion/.test(t)) return go('Videos.html', ar ? 'الفيديوهات' : 'Videos');
-    if (/service|خدمة|خدمات|price|سعر|تكلفة|عرض/.test(t)) return ar
-      ? 'الخدمات الأساسية: تصميم مواقع، تطوير Frontend/Backend، داشبوردات، إدارة صفحات، وتصميم بوستات. تقدير سريع: صفحة تعريفية تبدأ من 5000، وإدارة صفحة شهرية تبدأ من 2000 حسب المطلوب. <a href="Services.html" style="color:var(--prime-accent);font-weight:900">افتح الخدمات</a>'
-      : 'Core services: websites, frontend/backend development, dashboards, page management, and post design. Quick estimate: landing websites from 5000 and monthly page management from 2000 depending on scope. <a href="Services.html" style="color:var(--prime-accent);font-weight:900">Open Services</a>';
-    if (/contact|whatsapp|email|call|تواصل|رقم|واتساب|ايميل/.test(t)) return go('Contact.html', ar ? 'صفحة التواصل' : 'Contact page');
-    if (/dark|light|theme|ليلي|نهاري|الوضع/.test(t)) return ar ? 'تقدر تبدّل بين الوضع الليلي والنهاري من زر الشمس/القمر فوق في الناف بار، واختيارك بيتحفظ تلقائيًا.' : 'Use the sun/moon button in the top navbar to switch dark/light mode. Your choice is saved automatically.';
-    if (/arabic|english|translate|ترجم|عربي|انجليزي/.test(t)) return ar ? 'زر “EN / ع” فوق بيبدّل الواجهة بين العربي والإنجليزي ويحفظ اللغة تلقائيًا.' : 'Use the “EN / ع” button in the navbar to switch Arabic/English. The selected language is saved.';
+    if (/design|تصميم|بوست|photoshop|social|صفحات|سوشيال/.test(t)) return ar
+      ? `بعمل تصميمات سوشيال ميديا وبوستات فوتوشوب وإدارة صفحات وكابشنات وأفكار إعلانات بشكل احترافي يناسب البراند. <a href="Designs.html" style="color:var(--prime-accent);font-weight:900">شوف التصميمات</a>${contactLinks}`
+      : `I create social media designs, Photoshop posts, page management systems, captions, and campaign ideas that fit the brand. <a href="Designs.html" style="color:var(--prime-accent);font-weight:900">View Designs</a>${contactLinks}`;
+    if (/video|فيديو|reel|motion|ai/.test(t)) return ar
+      ? `أقدر أعمل أفكار فيديوهات AI وريels وبرومبتات قوية ومحتوى تسويقي يخلي البراند شكله أحدث وأقوى. <a href="Videos.html" style="color:var(--prime-accent);font-weight:900">افتح الفيديوهات</a>`
+      : `I can create AI video ideas, reels, strong prompts, and marketing content that makes the brand feel modern and premium. <a href="Videos.html" style="color:var(--prime-accent);font-weight:900">Open Videos</a>`;
+    if (/service|خدمة|خدمات|price|سعر|تكلفة|عرض|كام/.test(t)) return ar
+      ? `الخدمات عندي: ${ahmedPersona.servicesAr}. ${ahmedPersona.pricesAr}. <a href="Services.html" style="color:var(--prime-accent);font-weight:900">افتح الخدمات</a>${contactLinks}`
+      : `My services include ${ahmedPersona.servicesEn}. ${ahmedPersona.pricesEn}. <a href="Services.html" style="color:var(--prime-accent);font-weight:900">Open Services</a>${contactLinks}`;
+    if (/contact|whatsapp|email|call|تواصل|رقم|واتساب|ايميل|اتصل/.test(t)) return ar
+      ? `تقدر تتواصل معايا مباشرة على: <br><a href="tel:+2${ahmedPersona.phone1}" style="color:var(--prime-accent);font-weight:900">${ahmedPersona.phone1}</a><br><a href="tel:+2${ahmedPersona.phone2}" style="color:var(--prime-accent);font-weight:900">${ahmedPersona.phone2}</a><br>أو من صفحة التواصل: <a href="Contact.html" style="color:var(--prime-accent);font-weight:900">Contact</a>`
+      : `You can contact me directly:<br><a href="tel:+2${ahmedPersona.phone1}" style="color:var(--prime-accent);font-weight:900">${ahmedPersona.phone1}</a><br><a href="tel:+2${ahmedPersona.phone2}" style="color:var(--prime-accent);font-weight:900">${ahmedPersona.phone2}</a><br>Or use the contact page: <a href="Contact.html" style="color:var(--prime-accent);font-weight:900">Contact</a>`;
+    if (/dark|light|theme|ليلي|نهاري|الوضع/.test(t)) return ar ? 'بدّل الوضع الليلي والنهاري من زر الشمس/القمر فوق، واختيارك بيتحفظ تلقائيًا.' : 'Switch dark/light mode from the sun/moon button at the top. Your choice is saved automatically.';
+    if (/arabic|english|translate|ترجم|عربي|انجليزي/.test(t)) return ar ? 'زر “EN / ع” فوق بيبدّل الواجهة بين العربي والإنجليزي ويحفظ اختيارك.' : 'Use the “EN / ع” button to switch Arabic/English and save your choice.';
     return ar
-      ? 'أقدر أساعدك في: المشاريع، المهارات، الخدمات، التصميمات، الفيديوهات، السي في، أو التواصل. اكتب مثلًا: افتح الخدمات.'
-      : 'I can help with projects, skills, services, designs, videos, CV, or contact. For example, type: open services.';
+      ? `أنا أحمد محمد. أقدر أساعدك في مواقع، داشبوردات، تصميمات، إدارة صفحات، فيديوهات AI، أو أتمتة شغلك. اكتب مثلًا: عاوز موقع، أو شوف الخدمات.${contactLinks}`
+      : `I’m Ahmed Mohamed. I can help with websites, dashboards, designs, page management, AI videos, or automation. Try: I need a website, or show services.${contactLinks}`;
   }
 
   function enhanceTextForTranslation() {

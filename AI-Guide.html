@@ -1,361 +1,123 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
+<html lang="en" data-theme="dark" data-lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>دليل المساعد الذكي - AI Assistant Guide</title>
-    <link
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Ahmed Mohamed AI Assistant</title>
+    <meta name="description" content="Ahmed Mohamed smart assistant for websites, design, page management, AI videos, and digital services." />
+    <meta name="theme-color" content="#037eb8" />
+    <link href="assets/img/me.jpg" rel="icon" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Raleway:400,700,800,900|Poppins:300,400,600,700,800,900" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
     <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/modern-enhancements.css" rel="stylesheet" />
+    <link href="assets/css/view.css" rel="stylesheet" />
     <link href="assets/css/ai-assistant.css" rel="stylesheet" />
+    <link href="assets/css/ai-mobile.css" rel="stylesheet" />
     <link href="assets/css/2026-effects.css" rel="stylesheet" />
     <link href="assets/css/2030-universe.css" rel="stylesheet" />
-    <style>
-      body {
-        background: var(--bg-colore);
-        color: var(--text-colore);
-        padding: 50px 20px;
-      }
-
-      .guide-container {
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-
-      .guide-header {
-        text-align: center;
-        margin-bottom: 60px;
-      }
-
-      .guide-header h1 {
-        font-size: 3rem;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        margin-bottom: 20px;
-      }
-
-      .feature-card {
-        background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(10px);
-        border-radius: 20px;
-        padding: 30px;
-        margin-bottom: 30px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        transition: all 0.3s;
-      }
-
-      .feature-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
-      }
-
-      .feature-icon {
-        font-size: 3rem;
-        margin-bottom: 20px;
-      }
-
-      .code-block {
-        background: rgba(0, 0, 0, 0.3);
-        border-radius: 12px;
-        padding: 20px;
-        margin: 20px 0;
-        overflow-x: auto;
-        direction: ltr;
-        text-align: left;
-      }
-
-      .example-list {
-        list-style: none;
-        padding: 0;
-      }
-
-      .example-list li {
-        padding: 15px;
-        margin: 10px 0;
-        background: rgba(102, 126, 234, 0.1);
-        border-left: 4px solid #667eea;
-        border-radius: 8px;
-      }
-
-      .language-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
-        margin: 30px 0;
-      }
-
-      .language-item {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        padding: 20px;
-        border-radius: 12px;
-        text-align: center;
-        font-weight: bold;
-      }
-
-      .demo-section {
-        background: rgba(255, 255, 255, 0.02);
-        padding: 40px;
-        border-radius: 20px;
-        margin: 40px 0;
-      }
-
-      .btn-demo {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        padding: 15px 30px;
-        border-radius: 30px;
-        border: none;
-        font-weight: bold;
-        cursor: pointer;
-        transition: all 0.3s;
-        margin: 10px;
-      }
-
-      .btn-demo:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
-      }
-    </style>
   </head>
-  <body>
+  <body class="prime-ai-page">
+    <div class="scroll-progress"><div class="progress-bar" id="progressBar"></div></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
     <div id="navbar-container"></div>
-    <div class="guide-container">
-      <!-- Header -->
-      <div class="guide-header">
-        <h1 class="floating">🤖 دليل المساعد الذكي</h1>
-        <p class="lead">تعرف على كيفية استخدام المساعد الذكي متعدد اللغات</p>
-      </div>
 
-      <!-- Main Features -->
-      <div class="row">
-        <div class="col-md-6">
-          <div class="feature-card">
-            <div class="feature-icon">🌍</div>
-            <h3>دعم متعدد اللغات</h3>
-            <p>المساعد يفهم ويتحدث أكثر من 10 لغات مختلفة:</p>
-            <div class="language-grid">
-              <div class="language-item">🇸🇦 العربية</div>
-              <div class="language-item">🇺🇸 English</div>
-              <div class="language-item">🇫🇷 Français</div>
-              <div class="language-item">🇪🇸 Español</div>
-              <div class="language-item">🇩🇪 Deutsch</div>
-              <div class="language-item">🇨🇳 中文</div>
-              <div class="language-item">🇯🇵 日本語</div>
-              <div class="language-item">🇷🇺 Русский</div>
-              <div class="language-item">🇮🇳 हिन्दी</div>
-              <div class="language-item">🇵🇹 Português</div>
+    <main id="main">
+      <section class="ai-page-wrap" aria-label="Ahmed Mohamed AI assistant page">
+        <aside class="ai-page-card">
+          <span class="prime-kicker"><i class="bi bi-stars"></i> Ahmed AI Studio</span>
+          <h1>اسأل المساعد كأنك بتكلم أحمد</h1>
+          <p>
+            الصفحة دي مخصوص للمساعد الذكي، عشان يرد على الزائر من غير ما يغطي محتوى باقي الصفحات. اسأله عن موقع، تصميم، إدارة صفحة، فيديو AI، أو طريقة التواصل.
+          </p>
+          <div class="ai-page-prompts">
+            <button type="button" data-ai-prompt="عاوز موقع لشركتي">عاوز موقع</button>
+            <button type="button" data-ai-prompt="ايه خدمات التصميم وإدارة الصفحات؟">تصميم وصفحات</button>
+            <button type="button" data-ai-prompt="عاوز فيديو بالذكاء الاصطناعي">فيديو AI</button>
+            <button type="button" data-ai-prompt="ازاي أتواصل معاك؟">تواصل</button>
+          </div>
+        </aside>
+
+        <section class="ai-page-chat">
+          <div class="ai-page-head">
+            <div class="ai-page-avatar"><i class="bi bi-cpu"></i></div>
+            <div>
+              <strong>Ahmed AI</strong>
+              <small>بيتكلم بأسلوب أحمد محمد</small>
             </div>
           </div>
-        </div>
+          <div class="ai-page-messages" id="ai-page-messages"></div>
+          <form class="ai-page-form" id="ai-page-form">
+            <textarea id="ai-page-input" rows="1" placeholder="اكتب طلبك هنا... مثال: عاوز موقع لشركتي"></textarea>
+            <button type="submit" aria-label="Send"><i class="bi bi-send-fill"></i></button>
+          </form>
+        </section>
+      </section>
+    </main>
 
-        <div class="col-md-6">
-          <div class="feature-card">
-            <div class="feature-icon">🎤</div>
-            <h3>التحكم الصوتي</h3>
-            <p>تحدث مع المساعد بصوتك:</p>
-            <ul class="example-list">
-              <li>✅ التعرف الصوتي الذكي</li>
-              <li>✅ ردود صوتية طبيعية</li>
-              <li>✅ دعم جميع اللغات</li>
-              <li>✅ سرعة صوت قابلة للتخصيص</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+    <div id="footer-container"></div>
 
-      <!-- Usage Examples -->
-      <div class="demo-section">
-        <h2 class="text-center mb-4">أمثلة الاستخدام</h2>
-
-        <div class="row">
-          <div class="col-md-6">
-            <h4>بالعربية 🇸🇦</h4>
-            <ul class="example-list">
-              <li>مرحباً، كيف يمكنني مساعدتك؟</li>
-              <li>اعرض لي أعمالك</li>
-              <li>ما هي مهاراتك؟</li>
-              <li>كيف أتواصل معك؟</li>
-              <li>أريد تحميل السيرة الذاتية</li>
-            </ul>
-          </div>
-
-          <div class="col-md-6">
-            <h4>In English 🇺🇸</h4>
-            <ul class="example-list">
-              <li>Hello, how can I help you?</li>
-              <li>Show me your portfolio</li>
-              <li>What are your skills?</li>
-              <li>How can I contact you?</li>
-              <li>I want to download your CV</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row mt-4">
-          <div class="col-md-6">
-            <h4>En Français 🇫🇷</h4>
-            <ul class="example-list">
-              <li>Bonjour, comment puis-je vous aider?</li>
-              <li>Montrez-moi votre portfolio</li>
-              <li>Quelles sont vos compétences?</li>
-              <li>Comment puis-je vous contacter?</li>
-            </ul>
-          </div>
-
-          <div class="col-md-6">
-            <h4>En Español 🇪🇸</h4>
-            <ul class="example-list">
-              <li>Hola, ¿cómo puedo ayudarte?</li>
-              <li>Muéstrame tu portafolio</li>
-              <li>¿Cuáles son tus habilidades?</li>
-              <li>¿Cómo puedo contactarte?</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Code Examples -->
-      <div class="feature-card">
-        <h3>مثال برمجي - كيفية التكامل</h3>
-        <p>يمكنك تخصيص المساعد الذكي بسهولة:</p>
-
-        <div class="code-block">
-          <pre><code>// تخصيص إعدادات المساعد
-const aiSettings = {
-    language: 'ar',              // اللغة: ar, en, fr, es, etc.
-    personality: 'professional', // الشخصية: professional, friendly, casual
-    voiceSpeed: 1.0,            // سرعة الصوت: 0.5 - 2.0
-    autoTranslate: true,        // تفعيل الترجمة التلقائية
-    voiceFeedback: true         // تفعيل الردود الصوتية
-};
-
-// إرسال رسالة برمجياً
-window.aiAssistant.sendMessage("مرحباً!");
-
-// الاستماع لرد المساعد
-window.aiAssistant.onResponse((response) => {
-    console.log('AI Response:', response);
-});
-</code></pre>
-        </div>
-      </div>
-
-      <!-- API Integration -->
-      <div class="feature-card">
-        <h3>ربط المساعد بـ AI APIs</h3>
-        <p>للحصول على ردود أكثر ذكاءً، ربط المساعد مع:</p>
-
-        <div class="row">
-          <div class="col-md-6">
-            <h4>OpenAI GPT-4</h4>
-            <div class="code-block">
-              <pre><code>// في ملف ai-assistant.js
-this.apiKey = 'sk-your-api-key';
-this.apiEndpoint = 'https://api.openai.com/v1/chat/completions';
-this.model = 'gpt-4';</code></pre>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <h4>Google Gemini</h4>
-            <div class="code-block">
-              <pre><code>// في ملف ai-assistant.js
-this.apiKey = 'your-gemini-api-key';
-this.apiEndpoint = 'https://generativelanguage.googleapis.com/v1';
-this.model = 'gemini-pro';</code></pre>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Features List -->
-      <div class="row">
-        <div class="col-md-4">
-          <div class="feature-card text-center">
-            <div class="feature-icon">⚡</div>
-            <h4>ردود فورية</h4>
-            <p>استجابة سريعة في أقل من ثانية</p>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="feature-card text-center">
-            <div class="feature-icon">💾</div>
-            <h4>حفظ المحادثات</h4>
-            <p>تُحفظ جميع المحادثات تلقائياً</p>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="feature-card text-center">
-            <div class="feature-icon">🎨</div>
-            <h4>واجهة عصرية</h4>
-            <p>تصميم 2029 بتأثيرات AI Glassmorphism</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Quick Start Buttons -->
-      <div class="text-center mt-5">
-        <h3 class="mb-4">ابدأ الآن!</h3>
-        <button class="btn-demo" onclick="window.location.href = 'index.html'">
-          <i class="bi bi-house-door"></i> العودة للصفحة الرئيسية
-        </button>
-        <button class="btn-demo" onclick="openAI()">
-          <i class="bi bi-robot"></i> فتح المساعد الذكي
-        </button>
-        <button class="btn-demo" onclick="testVoice()">
-          <i class="bi bi-mic"></i> تجربة الصوت
-        </button>
-      </div>
-
-      <!-- Footer -->
-      <div
-        class="text-center mt-5 pt-5"
-        style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
-      >
-        <p>تم التطوير بواسطة Ahmed Mohamed | 2029</p>
-        <p>جميع الحقوق محفوظة ©</p>
-      </div>
-    </div>
-
-    <script>
-      function openAI() {
-        window.location.href = "index.html";
-        setTimeout(() => {
-          window.PrimeAI?.open();
-        }, 1000);
-      }
-
-      function testVoice() {
-        if ("speechSynthesis" in window) {
-          const utterance = new SpeechSynthesisUtterance(
-            "مرحباً! أنا المساعد الذكي. Hello! I am the AI Assistant.",
-          );
-          utterance.lang = "ar-SA";
-          window.speechSynthesis.speak(utterance);
-        } else {
-          alert("متصفحك لا يدعم التعرف الصوتي");
-        }
-      }
-
-      // Add floating animation to cards
-      document.querySelectorAll(".feature-card").forEach((card, index) => {
-        card.style.animationDelay = `${index * 0.1}s`;
-        card.classList.add("floating");
-      });
-    </script>
-
+    <script src="assets/js/backend.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/modern-features.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/view.js"></script>
     <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/ai-config.js"></script>
+    <script src="assets/js/ai-assistant.js"></script>
     <script src="assets/js/2026-features.js"></script>
     <script src="assets/js/2030-universe.js"></script>
+    <script>
+      (function () {
+        const persona = {
+          phone1: '01094547599',
+          phone2: '01044599911',
+          email: 'ahmedcodteng@gmail.com',
+          services: 'مواقع، بورتفوليو، داشبوردات، أنظمة إدارة، تصميم بوستات، إدارة صفحات، كابشنات، أفكار إعلانات، فيديوهات AI، وبرومبتات احترافية',
+          stack: 'Full Stack .NET، Angular، HTML، CSS، JavaScript، TypeScript، SQL Server، Entity Framework، Bootstrap، Photoshop، وأدوات الذكاء الاصطناعي'
+        };
+        const messages = document.getElementById('ai-page-messages');
+        const input = document.getElementById('ai-page-input');
+        const form = document.getElementById('ai-page-form');
+        const add = (html, type='bot') => {
+          const div = document.createElement('div');
+          div.className = 'ai-page-msg ' + type;
+          div.innerHTML = html;
+          messages.appendChild(div);
+          messages.scrollTop = messages.scrollHeight;
+        };
+        const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+        function reply(q) {
+          const t = q.toLowerCase();
+          const contact = `<br><br><b>تواصل مباشر:</b><br><a href="tel:+2${persona.phone1}" style="color:var(--prime-accent);font-weight:900">${persona.phone1}</a> - <a href="tel:+2${persona.phone2}" style="color:var(--prime-accent);font-weight:900">${persona.phone2}</a>`;
+          if (/موقع|ويب|website|site|landing|شركة/.test(t)) return `تمام يا فندم، أقدر أعملك موقع رايق ومنظم لشركتك: واجهة عالمية، موبايل فريندلي، سرعة كويسة، صفحات خدمات وتواصل، ولو محتاج نضيف AI للزوار نعمله بشكل شيك. <a href="Services.html" style="color:var(--prime-accent);font-weight:900">شوف الخدمات</a>${contact}`;
+          if (/تصميم|بوست|صفحات|سوشيال|ادارة|إدارة|photoshop|brand/.test(t)) return `أقدر أظبطلك شكل البراند على السوشيال: بوستات، كابشنات، أفكار إعلانات، تنظيم الصفحة، وهوية بصرية تخلي الشغل يبان محترف. <a href="Designs.html" style="color:var(--prime-accent);font-weight:900">شوف التصميمات</a>${contact}`;
+          if (/فيديو|ريل|reel|ai|ذكاء|برومبت|motion/.test(t)) return `أقدر أطلعلك أفكار فيديوهات AI وبرومبتات قوية ومشاهد منظمة، سواء إعلان، ريل، أو فيديو تعريفي لشغلك. <a href="Videos.html" style="color:var(--prime-accent);font-weight:900">افتح الفيديوهات</a>${contact}`;
+          if (/مهارات|برمجة|angular|dotnet|\.net|sql|backend|frontend/.test(t)) return `أنا شغال بـ ${persona.stack}. أقدر أبني واجهات، باك إند، داشبوردات، وأنظمة عملية للشركات. <a href="Skills.html" style="color:var(--prime-accent);font-weight:900">افتح المهارات</a>`;
+          if (/مشاريع|portfolio|project|اعمال|أعمال|شغل/.test(t)) return `شوف صفحة المشاريع، هتلاقي نماذج شغل ومواقع وأنظمة وتصميمات. <a href="Projects.html" style="color:var(--prime-accent);font-weight:900">افتح المشاريع</a>`;
+          if (/سعر|تكلفة|كام|price|cost/.test(t)) return `الأسعار بتتحدد حسب المطلوب، لكن كبداية: الموقع التعريفي يبدأ من 5000 جنيه حسب التفاصيل، وإدارة الصفحات الشهرية تبدأ من 2000 جنيه حسب حجم الشغل.${contact}`;
+          if (/تواصل|رقم|واتساب|call|phone|contact/.test(t)) return `تقدر تكلمني مباشرة على:<br><a href="tel:+2${persona.phone1}" style="color:var(--prime-accent);font-weight:900">${persona.phone1}</a><br><a href="tel:+2${persona.phone2}" style="color:var(--prime-accent);font-weight:900">${persona.phone2}</a><br>أو افتح صفحة التواصل: <a href="Contact.html" style="color:var(--prime-accent);font-weight:900">Contact</a>`;
+          return `أنا أحمد محمد، أقدر أساعدك في ${persona.services}. اكتبلي محتاج إيه بالظبط وأنا أوجهك لأفضل حل.${contact}`;
+        }
+        function ask(q) {
+          const text = (q || '').trim();
+          if (!text) return;
+          add(esc(text), 'user');
+          setTimeout(() => add(reply(text)), 180);
+        }
+        form.addEventListener('submit', e => { e.preventDefault(); ask(input.value); input.value = ''; input.style.height = 'auto'; });
+        input.addEventListener('input', () => { input.style.height = 'auto'; input.style.height = Math.min(input.scrollHeight, 130) + 'px'; });
+        document.querySelectorAll('[data-ai-prompt]').forEach(btn => btn.addEventListener('click', () => ask(btn.dataset.aiPrompt)));
+        window.AhmedAIPage = { ask };
+        add('أهلاً بيك 👋 أنا مساعد أحمد محمد. اسألني عن موقع، تصميم، إدارة صفحات، فيديو AI، الأسعار، أو التواصل.');
+        const q = new URLSearchParams(location.search).get('q');
+        if (q) setTimeout(() => ask(q), 250);
+      })();
+    </script>
   </body>
 </html>
