@@ -1,0 +1,451 @@
+/* ===== Advanced 3D Animations & Effects ===== */
+
+/* ===== Floating 3D Background Elements ===== */
+@keyframes float-3d-slow {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg);
+  }
+  33% {
+    transform: translate3d(15px, -20px, 10px) rotateX(8deg) rotateY(12deg);
+  }
+  66% {
+    transform: translate3d(-15px, 20px, -10px) rotateX(-8deg) rotateY(-12deg);
+  }
+}
+
+@keyframes float-3d-medium {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg);
+  }
+  25% {
+    transform: translate3d(20px, -15px, 15px) rotateX(-5deg) rotateY(10deg);
+  }
+  50% {
+    transform: translate3d(-20px, -25px, -15px) rotateX(5deg) rotateY(-10deg);
+  }
+  75% {
+    transform: translate3d(10px, 20px, 10px) rotateX(0deg) rotateY(0deg);
+  }
+}
+
+@keyframes float-3d-fast {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotateZ(0deg);
+  }
+  20% {
+    transform: translate3d(-15px, -10px, 20px) rotateZ(5deg);
+  }
+  40% {
+    transform: translate3d(15px, 15px, -20px) rotateZ(-5deg);
+  }
+  60% {
+    transform: translate3d(-10px, -15px, 15px) rotateZ(3deg);
+  }
+  80% {
+    transform: translate3d(10px, 10px, -15px) rotateZ(-3deg);
+  }
+}
+
+/* ===== Glow Pulse Animation ===== */
+@keyframes glow-pulse-intense {
+  0%, 100% {
+    box-shadow: 
+      0 0 30px rgba(110, 231, 255, 0.2),
+      inset 0 0 20px rgba(110, 231, 255, 0.05);
+  }
+  50% {
+    box-shadow: 
+      0 0 60px rgba(110, 231, 255, 0.4),
+      inset 0 0 40px rgba(110, 231, 255, 0.15);
+  }
+}
+
+@keyframes glow-pulse-secondary {
+  0%, 100% {
+    box-shadow: 
+      0 0 25px rgba(124, 130, 255, 0.15),
+      inset 0 0 15px rgba(124, 130, 255, 0.03);
+  }
+  50% {
+    box-shadow: 
+      0 0 50px rgba(124, 130, 255, 0.3),
+      inset 0 0 30px rgba(124, 130, 255, 0.1);
+  }
+}
+
+/* ===== Rotate 3D Animation ===== */
+@keyframes rotate-3d-full {
+  0% {
+    transform: perspective(1200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  25% {
+    transform: perspective(1200px) rotateX(90deg) rotateY(90deg) rotateZ(0deg);
+  }
+  50% {
+    transform: perspective(1200px) rotateX(180deg) rotateY(180deg) rotateZ(0deg);
+  }
+  75% {
+    transform: perspective(1200px) rotateX(270deg) rotateY(270deg) rotateZ(0deg);
+  }
+  100% {
+    transform: perspective(1200px) rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+/* ===== Shimmer 3D Effect ===== */
+@keyframes shimmer-3d {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes shine-3d {
+  0%, 100% {
+    text-shadow: 
+      0 0 20px rgba(110, 231, 255, 0.3),
+      0 0 40px rgba(110, 231, 255, 0.1);
+  }
+  50% {
+    text-shadow: 
+      0 0 40px rgba(110, 231, 255, 0.6),
+      0 0 80px rgba(110, 231, 255, 0.3);
+  }
+}
+
+/* ===== Cards with 3D Depth ===== */
+@keyframes depth-shift {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -5px, 10px);
+  }
+}
+
+/* ===== Magnetic Hover Effect ===== */
+@keyframes magnetic-pull {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(3px, 3px, 5px);
+  }
+}
+
+/* ===== Apply animations to various elements ===== */
+
+/* Hero Card Animations */
+.hero-card {
+  animation: float-3d-slow 8s ease-in-out infinite;
+}
+
+.hero-card:hover {
+  animation: glow-pulse-intense 1.5s ease-in-out infinite;
+}
+
+/* Code Window Animation */
+.code-window {
+  animation: float-3d-medium 10s ease-in-out infinite;
+}
+
+.code-window:hover {
+  animation: glow-pulse-secondary 1.5s ease-in-out infinite;
+}
+
+/* Service Cards Animation */
+.service-card {
+  animation: depth-shift 5s ease-in-out infinite;
+}
+
+.service-card:hover {
+  animation: glow-pulse-intense 1.2s ease-in-out infinite;
+}
+
+/* Info Cards Animation */
+.info-card {
+  animation: depth-shift 6s ease-in-out infinite;
+}
+
+.info-card:hover {
+  animation: glow-pulse-intense 1.2s ease-in-out infinite;
+}
+
+/* Metrics Animation */
+.metric {
+  animation: depth-shift 7s ease-in-out infinite;
+}
+
+.metric:hover {
+  animation: glow-pulse-intense 1s ease-in-out infinite;
+}
+
+/* Avatar Animation */
+.avatar-2070 {
+  animation: float-3d-fast 12s ease-in-out infinite;
+}
+
+.avatar-2070:hover {
+  animation: glow-pulse-intense 1s ease-in-out infinite;
+}
+
+/* Floating AI Button */
+.floating-ai {
+  animation: float-3d-medium 8s ease-in-out infinite;
+}
+
+.floating-ai:hover {
+  animation: glow-pulse-intense 0.8s ease-in-out infinite;
+}
+
+/* Timeline Items */
+.timeline-item {
+  animation: depth-shift 8s ease-in-out infinite;
+}
+
+.timeline-item:hover {
+  animation: glow-pulse-intense 1s ease-in-out infinite;
+}
+
+/* Project Cards */
+.project-card {
+  animation: depth-shift 9s ease-in-out infinite;
+}
+
+.project-card:hover {
+  animation: glow-pulse-intense 1.2s ease-in-out infinite;
+}
+
+/* Terminal Panel */
+.terminal-panel {
+  animation: float-3d-slow 11s ease-in-out infinite;
+}
+
+.terminal-panel:hover {
+  animation: glow-pulse-secondary 1.2s ease-in-out infinite;
+}
+
+/* Page Title with Shimmer */
+.page-title {
+  animation: shine-3d 3s ease-in-out infinite;
+}
+
+/* ===== Advanced Hover States with 3D ===== */
+
+/* Hover effect for all glass elements */
+.glass {
+  position: relative;
+  z-index: 1;
+}
+
+.glass::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.1), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.glass:hover::after {
+  opacity: 1;
+  animation: shimmer-3d 0.6s ease-in-out;
+}
+
+/* ===== Enhanced Button Effects ===== */
+.cta-btn, .ghost-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-btn::before, .ghost-btn::before {
+  animation: none;
+}
+
+.cta-btn:active, .ghost-btn:active {
+  transform: perspective(800px) scale(0.95) translateZ(5px);
+}
+
+/* ===== Staggered Animation for Lists ===== */
+.list-item:nth-child(1) { animation-delay: 0.1s; }
+.list-item:nth-child(2) { animation-delay: 0.2s; }
+.list-item:nth-child(3) { animation-delay: 0.3s; }
+.list-item:nth-child(4) { animation-delay: 0.4s; }
+.list-item:nth-child(5) { animation-delay: 0.5s; }
+.list-item:nth-child(n+6) { animation-delay: 0.6s; }
+
+/* ===== Grid Items Staggered ===== */
+.grid-4 > :nth-child(1) { animation-delay: 0.05s; }
+.grid-4 > :nth-child(2) { animation-delay: 0.1s; }
+.grid-4 > :nth-child(3) { animation-delay: 0.15s; }
+.grid-4 > :nth-child(4) { animation-delay: 0.2s; }
+.grid-4 > :nth-child(n+5) { animation-delay: 0.25s; }
+
+/* ===== Badge Animations ===== */
+.badge-neo {
+  animation: depth-shift 6s ease-in-out infinite;
+}
+
+.badge-neo:hover {
+  animation: glow-pulse-intense 0.8s ease-in-out infinite;
+}
+
+/* ===== Enhanced Icon Animations ===== */
+.bi {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.service-card:hover .bi,
+.info-card:hover .bi,
+.project-card:hover .bi {
+  animation: rotate-3d-full 2s ease-in-out infinite;
+}
+
+/* ===== Contact Card Animations ===== */
+.contact-card {
+  animation: depth-shift 7s ease-in-out infinite;
+}
+
+.contact-card:hover {
+  animation: glow-pulse-secondary 1s ease-in-out infinite;
+}
+
+/* ===== Messages Animation in Chat ===== */
+.msg {
+  animation: depth-shift 8s ease-in-out infinite;
+}
+
+.msg.bot {
+  animation-delay: 0s;
+}
+
+.msg.user {
+  animation-delay: 0.1s;
+}
+
+/* ===== Footer Animations ===== */
+.footer-wrap {
+  animation: depth-shift 10s ease-in-out infinite;
+}
+
+.footer-wrap:hover {
+  animation: glow-pulse-secondary 1.5s ease-in-out infinite;
+}
+
+/* ===== Video Box Animations ===== */
+.video-box {
+  animation: depth-shift 12s ease-in-out infinite;
+}
+
+.video-box:hover {
+  animation: glow-pulse-secondary 1.2s ease-in-out infinite;
+}
+
+/* ===== Embed Box Animations ===== */
+.embed-box {
+  animation: depth-shift 11s ease-in-out infinite;
+}
+
+/* ===== Mobile Dock Items ===== */
+.mobile-dock a {
+  animation: depth-shift 9s ease-in-out infinite;
+}
+
+.mobile-dock a.active {
+  animation: glow-pulse-intense 1.5s ease-in-out infinite;
+}
+
+/* ===== Form Fields Animations ===== */
+.field, .field textarea {
+  animation: depth-shift 13s ease-in-out infinite;
+}
+
+.field:focus, .field textarea:focus, textarea.field:focus {
+  animation: glow-pulse-intense 1s ease-in-out infinite;
+}
+
+/* ===== Advanced Parallax Effect ===== */
+@keyframes parallax-shift {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(8px, -12px, 15px);
+  }
+}
+
+.profile-visual::before {
+  animation: parallax-shift 8s ease-in-out infinite;
+}
+
+/* ===== Color Shift Animation ===== */
+@keyframes color-shift {
+  0%, 100% {
+    border-color: rgba(110, 231, 255, 0.2);
+    box-shadow: 0 0 30px rgba(110, 231, 255, 0.15);
+  }
+  25% {
+    border-color: rgba(124, 130, 255, 0.3);
+    box-shadow: 0 0 30px rgba(124, 130, 255, 0.2);
+  }
+  50% {
+    border-color: rgba(20, 255, 197, 0.25);
+    box-shadow: 0 0 30px rgba(20, 255, 197, 0.15);
+  }
+  75% {
+    border-color: rgba(110, 231, 255, 0.3);
+    box-shadow: 0 0 30px rgba(110, 231, 255, 0.2);
+  }
+}
+
+.terminal-panel {
+  animation: color-shift 6s ease-in-out infinite;
+}
+
+/* ===== Reduce Motion Support ===== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ===== Mobile Optimizations for 3D ===== */
+@media (max-width: 768px) {
+  .hero-card,
+  .code-window,
+  .avatar-2070,
+  .service-card,
+  .info-card,
+  .metric,
+  .project-card,
+  .timeline-item {
+    animation-duration: 12s !important;
+    transform: perspective(600px) !important;
+  }
+
+  .service-card:hover,
+  .info-card:hover,
+  .project-card:hover,
+  .metric:hover {
+    transform: perspective(600px) rotateX(4deg) rotateY(-4deg) translateZ(15px) translateY(-8px) !important;
+  }
+}
+
+/* ===== Focus Visible States ===== */
+:focus-visible {
+  outline: 2px solid rgba(110, 231, 255, 0.5);
+  outline-offset: 4px;
+}
+
+.cta-btn:focus-visible,
+.ghost-btn:focus-visible,
+.field:focus-visible {
+  outline: 2px solid rgba(110, 231, 255, 0.7);
+  outline-offset: 4px;
+}

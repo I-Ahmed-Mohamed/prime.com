@@ -1,16 +1,28 @@
-prime_com_2029_ai/
-├── index.html
-├── About.html
-├── Skills.html
-├── Services.html
-├── Projects.html
-├── Designs.html
-├── Videos.html
-├── AI-Guide.html
-├── Contact.html
-├── CV.html
-└── assets/
-    ├── css/site-2070.css
-    ├── js/site-2070.js
-    ├── img/
-    └── videos/
+PRIME COM 2029 — Clean Build Notes
+
+Main pages:
+- index.html
+- About.html
+- CV.html
+- Skills.html
+- Projects.html
+- Designs.html
+- Services.html
+- Contact.html
+- Videos.html
+- AI-Guide.html
+
+Assets:
+- assets/css/        styles
+- assets/js/         scripts
+- assets/img/        images and PDFs used by the site
+- assets/videos/     video files
+- assets/vendor/     third-party libraries
+- forms/             contact form PHP
+
+Cleanup done:
+- Removed old markdown guide files from production package.
+- Removed unused source-map files to reduce size.
+- Removed duplicated encoded Arabic image folders.
+- Renamed the old video page and folders to clearer names.
+- Fixed local broken links.
