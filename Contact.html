@@ -16,11 +16,21 @@
     <link href="assets/css/2030-universe.css" rel="stylesheet" />
     
     <style>
+      body.prime-contact-body {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        background: var(--prime-bg);
+      }
       .prime-contact-page {
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        padding: 140px 20px 40px;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        padding-bottom: 90px;
+        background: var(--prime-bg);
+        box-sizing: border-box;
       }
       .contact-card-glass {
         padding: 50px 20px;
@@ -113,7 +123,7 @@
       }
     </style>
   </head>
-  <body class="prime-home-page">
+  <body class="prime-contact-body">
     <div id="navbar-container"></div>
 
     <main id="main">

@@ -7,9 +7,9 @@
 :root {
   --prime-bg: #000000;
   --prime-bg-2: #09090b;
-  --prime-surface: rgba(15, 15, 18, 0.72);
-  --prime-card: rgba(20, 20, 24, 0.66);
-  --prime-card-strong: rgba(24, 24, 27, 0.86);
+  --prime-surface: transparent;
+  --prime-card: transparent;
+  --prime-card-strong: transparent;
   --prime-text: #ffffff;
   --prime-muted: #a1a1aa;
   --prime-line: rgba(255, 255, 255, 0.1);
@@ -26,9 +26,9 @@
 :root[data-theme="light"] {
   --prime-bg: #ffffff;
   --prime-bg-2: #f8f9fa;
-  --prime-surface: rgba(255, 255, 255, 0.9);
-  --prime-card: rgba(255, 255, 255, 0.8);
-  --prime-card-strong: rgba(255, 255, 255, 0.96);
+  --prime-surface: transparent;
+  --prime-card: transparent;
+  --prime-card-strong: transparent;
   --prime-text: #09090b;
   --prime-muted: #52525b;
   --prime-line: rgba(0, 0, 0, 0.08);
@@ -257,9 +257,11 @@ strong, b { color: var(--prime-text) !important; }
 
 /* AI Assistant */
 #prime-ai-toggle {
-  position: fixed; right: 24px; bottom: 24px; z-index: 10030; width: 50px; height: 50px; border:0; border-radius:50%;
-  color:#fff; background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
-  box-shadow: 0 0 0 8px color-mix(in srgb, var(--prime-accent) 10%, transparent), 0 28px 70px rgba(0,0,0,.34);
+  position: fixed; right: 24px; bottom: 24px; z-index: 10030; width: 50px; height: 50px; border-radius:50%;
+  color: var(--prime-accent); background: color-mix(in srgb, var(--prime-accent) 15%, transparent);
+  border: 1px solid color-mix(in srgb, var(--prime-accent) 30%, transparent);
+  box-shadow: 0 0 0 8px color-mix(in srgb, var(--prime-accent) 5%, transparent), 0 10px 30px rgba(0,0,0,.15);
+  backdrop-filter: blur(10px);
   display:grid; place-items:center; font-size:28px; animation: primePulse 2.8s ease-in-out infinite;
 }
 @keyframes primePulse { 50% { transform: translateY(-4px) scale(1.04); } }
@@ -636,7 +638,7 @@ img { max-width:100%; }
     bottom: 112px !important;
     width: 45px !important;
     height: 45px !important;
-    background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%) !important;
+    background: color-mix(in srgb, var(--prime-accent) 15%, transparent) !important;
     z-index: 10025 !important;
   }
   #prime-ai-window {
