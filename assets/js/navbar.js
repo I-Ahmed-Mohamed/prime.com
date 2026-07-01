@@ -4,7 +4,6 @@
     { href: 'index.html', icon: 'bx bxs-home', en: 'Home', ar: 'الرئيسية', mobileEn: 'Home', mobileAr: 'الرئيسية' },
     { href: 'Projects.html', icon: 'bx bx-layer', en: 'Projects', ar: 'المشاريع', mobileEn: 'Projects', mobileAr: 'المشاريع' },
     { href: 'AI-Guide.html', icon: 'bx bx-bot', en: 'AI', ar: 'المساعد', mobileEn: 'AI', mobileAr: 'AI' },
-    { href: 'Contact.html', icon: 'bx bx-bell', en: 'Contact', ar: 'تواصل', mobileEn: 'Contact', mobileAr: 'تواصل', badge: '2' },
     { href: 'javascript:void(0)', icon: 'profile', en: 'About', ar: 'من أنا', mobileEn: 'Profile', mobileAr: 'بروفايل', id: 'open-profile-menu' },
   ];
 
@@ -13,7 +12,6 @@
     { href: 'About.html', icon: 'bx bx-user-voice', en: 'About', ar: 'من أنا' },
     { href: 'Projects.html', icon: 'bx bx-layer', en: 'Projects', ar: 'المشاريع' },
     { href: 'AI-Guide.html', icon: 'bx bx-bot', en: 'AI', ar: 'المساعد' },
-    { href: 'Contact.html', icon: 'bx bx-message-dots', en: 'Contact', ar: 'تواصل' },
   ];
 
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
@@ -54,7 +52,6 @@
         <button class="prime-action-btn" id="prime-search-open" title="AI Search"><i class="bi bi-search"></i></button>
         <button class="prime-action-btn" id="prime-lang-toggle" title="Translate">${savedLang === 'ar' ? 'EN' : 'ع'}</button>
         <button class="prime-action-btn" id="prime-theme-toggle" title="Theme"><i class="bi ${savedTheme === 'light' ? 'bi-moon-stars' : 'bi-sun'}"></i></button>
-        <a class="prime-hire-btn" href="Contact.html" data-i18n="hireMe">Start</a>
       </div>
     </header>
 
@@ -100,7 +97,6 @@
         <div class="prime-fs-section">
           <h4 data-i18n="fsConnect">${savedLang === 'ar' ? 'تواصل وإعدادات' : 'Connect & Settings'}</h4>
           <a href="AI-Guide.html"><i class="bx bx-bot"></i> <span data-i18n="fsAI">${savedLang === 'ar' ? 'مساعد الذكاء الاصطناعي' : 'AI Assistant'}</span></a>
-          <a href="Contact.html"><i class="bx bx-message-dots"></i> <span data-i18n="fsContact">${savedLang === 'ar' ? 'تواصل معي' : 'Contact'}</span></a>
           <a href="#" id="fs-theme-toggle"><i class="bx bx-moon"></i> <span data-i18n="fsTheme">${savedLang === 'ar' ? 'الوضع المظلم/المضيء' : 'Toggle Theme'}</span></a>
           <a href="#" id="fs-lang-toggle"><i class="bx bx-globe"></i> <span data-i18n="fsLang">${savedLang === 'ar' ? 'English' : 'عربي'}</span></a>
         </div>
