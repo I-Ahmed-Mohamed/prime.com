@@ -7,9 +7,9 @@
 :root {
   --prime-bg: #000000;
   --prime-bg-2: #09090b;
-  --prime-surface: rgba(15, 15, 18, 0.72);
-  --prime-card: rgba(20, 20, 24, 0.66);
-  --prime-card-strong: rgba(24, 24, 27, 0.86);
+  --prime-surface: var(--prime-bg);
+  --prime-card: var(--prime-bg);
+  --prime-card-strong: var(--prime-bg);
   --prime-text: #ffffff;
   --prime-muted: #a1a1aa;
   --prime-line: rgba(255, 255, 255, 0.1);
@@ -26,9 +26,9 @@
 :root[data-theme="light"] {
   --prime-bg: #ffffff;
   --prime-bg-2: #f8f9fa;
-  --prime-surface: rgba(255, 255, 255, 0.9);
-  --prime-card: rgba(255, 255, 255, 0.8);
-  --prime-card-strong: rgba(255, 255, 255, 0.96);
+  --prime-surface: var(--prime-bg);
+  --prime-card: var(--prime-bg);
+  --prime-card-strong: var(--prime-bg);
   --prime-text: #09090b;
   --prime-muted: #52525b;
   --prime-line: rgba(0, 0, 0, 0.08);
