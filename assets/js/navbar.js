@@ -11,9 +11,11 @@
   const desktopItems = [
     { href: 'index.html', icon: 'bx bx-home-alt-2', en: 'Home', ar: 'الرئيسية' },
     { href: 'About.html', icon: 'bx bx-user-voice', en: 'About', ar: 'من أنا' },
+    { href: 'Skills.html', icon: 'bx bx-code-curly', en: 'Skills', ar: 'المهارات' },
     { href: 'Projects.html', icon: 'bx bx-layer', en: 'Projects', ar: 'المشاريع' },
+    { href: 'Designs.html', icon: 'bx bx-palette', en: 'Designs', ar: 'التصميمات' },
     { href: 'AI-Guide.html', icon: 'bx bx-bot', en: 'AI', ar: 'المساعد' },
-    { href: 'Contact.html', icon: 'bx bx-message-dots', en: 'Contact', ar: 'تواصل' },,
+    { href: 'Contact.html', icon: 'bx bx-message-dots', en: 'Contact', ar: 'تواصل' }
   ];
 
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';

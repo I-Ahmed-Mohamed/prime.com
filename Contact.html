@@ -95,6 +95,26 @@
         font-size: 15px;
         direction: ltr;
       }
+      @media (max-width: 576px) {
+        .contact-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px;
+        }
+        .contact-method {
+          padding: 15px 5px;
+          border-radius: 16px;
+        }
+        .contact-method i {
+          font-size: 28px;
+          margin-bottom: 8px;
+        }
+        .contact-method strong {
+          font-size: 14px;
+        }
+        .contact-method span {
+          font-size: 11px;
+        }
+      }
     </style>
   </head>
   <body class="prime-home-page">
