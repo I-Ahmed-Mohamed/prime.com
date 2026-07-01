@@ -2,23 +2,16 @@
 (function () {
   const navItems = [
     { href: 'index.html', icon: 'bx bxs-home', en: 'Home', ar: 'الرئيسية', mobileEn: 'Home', mobileAr: 'الرئيسية' },
-    { href: 'Videos.html', icon: 'bx bx-movie-play', en: 'Videos', ar: 'الفيديوهات', mobileEn: 'Reels', mobileAr: 'ريلز' },
-    { href: 'AI-Guide.html', icon: 'bx bx-bot', en: 'AI', ar: 'المساعد', mobileEn: 'AI', mobileAr: 'AI' },
     { href: 'Projects.html', icon: 'bx bx-layer', en: 'Projects', ar: 'المشاريع', mobileEn: 'Projects', mobileAr: 'المشاريع' },
-    { href: 'Designs.html', icon: 'bx bx-palette', en: 'Designs', ar: 'التصميمات', mobileEn: 'Designs', mobileAr: 'ديزاين' },
+    { href: 'AI-Guide.html', icon: 'bx bx-bot', en: 'AI', ar: 'المساعد', mobileEn: 'AI', mobileAr: 'AI' },
     { href: 'Contact.html', icon: 'bx bx-bell', en: 'Contact', ar: 'تواصل', mobileEn: 'Contact', mobileAr: 'تواصل', badge: '2' },
-    { href: 'About.html', icon: 'profile', en: 'About', ar: 'من أنا', mobileEn: 'Profile', mobileAr: 'بروفايل' },
+    { href: 'javascript:void(0)', icon: 'profile', en: 'About', ar: 'من أنا', mobileEn: 'Profile', mobileAr: 'بروفايل', id: 'open-profile-menu' },
   ];
 
   const desktopItems = [
     { href: 'index.html', icon: 'bx bx-home-alt-2', en: 'Home', ar: 'الرئيسية' },
     { href: 'About.html', icon: 'bx bx-user-voice', en: 'About', ar: 'من أنا' },
-    { href: 'CV.html', icon: 'bx bx-id-card', en: 'CV', ar: 'السي في' },
-    { href: 'Skills.html', icon: 'bx bx-code-curly', en: 'Skills', ar: 'المهارات' },
     { href: 'Projects.html', icon: 'bx bx-layer', en: 'Projects', ar: 'المشاريع' },
-    { href: 'Designs.html', icon: 'bx bx-palette', en: 'Designs', ar: 'التصميمات' },
-    { href: 'Videos.html', icon: 'bx bx-movie-play', en: 'Videos', ar: 'الفيديوهات' },
-    { href: 'Services.html', icon: 'bx bx-briefcase-alt-2', en: 'Services', ar: 'الخدمات' },
     { href: 'AI-Guide.html', icon: 'bx bx-bot', en: 'AI', ar: 'المساعد' },
     { href: 'Contact.html', icon: 'bx bx-message-dots', en: 'Contact', ar: 'تواصل' },
   ];
@@ -67,7 +60,7 @@
 
     <nav class="prime-mobile-tabs" aria-label="Mobile navigation">
       ${navItems.map(item => `
-        <a href="${item.href}" class="prime-mobile-tab ${item.href === currentPage ? 'active' : ''}" data-mobile-en="${item.mobileEn}" data-mobile-ar="${item.mobileAr}">
+        <a href="${item.href}" ${item.id ? `id="${item.id}"` : ''} class="prime-mobile-tab ${item.href === currentPage ? 'active' : ''}" data-mobile-en="${item.mobileEn}" data-mobile-ar="${item.mobileAr}">
           <span class="tab-icon-wrap">
             ${item.icon === 'profile' ? '<img src="assets/img/me.jpg" alt="Ahmed" />' : `<i class="${item.icon}"></i>`}
             ${item.badge ? `<em>${item.badge}</em>` : ''}
@@ -76,10 +69,87 @@
         </a>
       `).join('')}
     </nav>
+
+    <!-- Fullscreen Profile Menu (WhatsApp Style) -->
+    <div id="prime-fullscreen-menu" class="prime-fullscreen-menu">
+      <div class="prime-fs-header">
+        <div class="fs-header-info">
+          <img src="assets/img/me.jpg" alt="Ahmed" />
+          <div>
+            <h3 data-i18n="fsName">${savedLang === 'ar' ? 'أحمد محمد' : 'Ahmed Mohamed'}</h3>
+            <p data-i18n="fsTitle">${savedLang === 'ar' ? 'مهندس برمجيات ذكاء اصطناعي' : 'AI Software Engineer'}</p>
+          </div>
+        </div>
+        <button id="prime-fs-close" class="prime-fs-close"><i class="bi bi-x-lg"></i></button>
+      </div>
+      <div class="prime-fs-content">
+        <div class="prime-fs-section">
+          <h4 data-i18n="fsMain">${savedLang === 'ar' ? 'الصفحات الرئيسية' : 'Main Pages'}</h4>
+          <a href="index.html"><i class="bx bx-home-alt-2"></i> <span data-i18n="fsHome">${savedLang === 'ar' ? 'الرئيسية' : 'Home'}</span></a>
+          <a href="About.html"><i class="bx bx-user-voice"></i> <span data-i18n="fsAbout">${savedLang === 'ar' ? 'عني' : 'About'}</span></a>
+          <a href="CV.html"><i class="bx bx-id-card"></i> <span data-i18n="fsCV">${savedLang === 'ar' ? 'السيرة الذاتية' : 'CV'}</span></a>
+          <a href="Skills.html"><i class="bx bx-code-curly"></i> <span data-i18n="fsSkills">${savedLang === 'ar' ? 'المهارات' : 'Skills'}</span></a>
+        </div>
+        <div class="prime-fs-section">
+          <h4 data-i18n="fsWork">${savedLang === 'ar' ? 'الأعمال والمشاريع' : 'Work & Portfolio'}</h4>
+          <a href="Projects.html"><i class="bx bx-layer"></i> <span data-i18n="fsProjects">${savedLang === 'ar' ? 'المشاريع' : 'Projects'}</span></a>
+          <a href="Designs.html"><i class="bx bx-palette"></i> <span data-i18n="fsDesigns">${savedLang === 'ar' ? 'التصميمات' : 'Designs'}</span></a>
+          <a href="Videos.html"><i class="bx bx-movie-play"></i> <span data-i18n="fsVideos">${savedLang === 'ar' ? 'الفيديوهات' : 'Videos'}</span></a>
+          <a href="Services.html"><i class="bx bx-briefcase-alt-2"></i> <span data-i18n="fsServices">${savedLang === 'ar' ? 'الخدمات' : 'Services'}</span></a>
+        </div>
+        <div class="prime-fs-section">
+          <h4 data-i18n="fsConnect">${savedLang === 'ar' ? 'تواصل وإعدادات' : 'Connect & Settings'}</h4>
+          <a href="AI-Guide.html"><i class="bx bx-bot"></i> <span data-i18n="fsAI">${savedLang === 'ar' ? 'مساعد الذكاء الاصطناعي' : 'AI Assistant'}</span></a>
+          <a href="Contact.html"><i class="bx bx-message-dots"></i> <span data-i18n="fsContact">${savedLang === 'ar' ? 'تواصل معي' : 'Contact'}</span></a>
+          <a href="#" id="fs-theme-toggle"><i class="bx bx-moon"></i> <span data-i18n="fsTheme">${savedLang === 'ar' ? 'الوضع المظلم/المضيء' : 'Toggle Theme'}</span></a>
+          <a href="#" id="fs-lang-toggle"><i class="bx bx-globe"></i> <span data-i18n="fsLang">${savedLang === 'ar' ? 'English' : 'عربي'}</span></a>
+        </div>
+      </div>
+    </div>
   `;
 
   const holder = document.getElementById('navbar-container');
-  if (holder) holder.innerHTML = navHTML;
+  if (holder) {
+    holder.innerHTML = navHTML;
+
+    // Fullscreen menu logic
+    const profileTab = document.getElementById('open-profile-menu');
+    const profileMenu = document.getElementById('prime-fullscreen-menu');
+    const closeMenuBtn = document.getElementById('prime-fs-close');
+
+    if (profileTab && profileMenu) {
+      profileTab.addEventListener('click', (e) => {
+        e.preventDefault();
+        profileMenu.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    }
+
+    if (closeMenuBtn && profileMenu) {
+      closeMenuBtn.addEventListener('click', () => {
+        profileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    }
+
+    // Toggle logic inside fullscreen menu
+    const fsThemeToggle = document.getElementById('fs-theme-toggle');
+    const fsLangToggle = document.getElementById('fs-lang-toggle');
+    if (fsThemeToggle) {
+      fsThemeToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        const btn = document.getElementById('prime-theme-toggle');
+        if (btn) btn.click();
+      });
+    }
+    if (fsLangToggle) {
+      fsLangToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        const btn = document.getElementById('prime-lang-toggle');
+        if (btn) btn.click();
+      });
+    }
+  }
 
   window.PrimeNav = { navItems, desktopItems };
 })();
