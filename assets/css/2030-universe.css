@@ -164,8 +164,9 @@ body::after {
 .prime-action-btn, .prime-hire-btn, .prime-menu-toggle {
   min-width: 42px;
   height: 42px;
-  display: inline-grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid var(--prime-line);
   border-radius: 999px;
   background: color-mix(in srgb, var(--prime-card) 92%, transparent);
@@ -173,6 +174,14 @@ body::after {
   font-weight: 900;
   text-decoration: none !important;
   transition: .25s ease;
+  line-height: 1 !important;
+  padding: 0;
+}
+.prime-action-btn i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
 }
 .prime-action-btn:hover, .prime-hire-btn:hover, .prime-menu-toggle:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--prime-accent) 70%, transparent); }
 .prime-hire-btn { padding: 0 18px; background: linear-gradient(135deg, var(--prime-accent), var(--prime-accent-2)); color:#fff !important; border:0; }
