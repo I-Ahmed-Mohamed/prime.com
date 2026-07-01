@@ -12,8 +12,6 @@
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
-    <link href="assets/css/style.css" rel="stylesheet" />
-    <link href="assets/css/2030-universe.css" rel="stylesheet" />
     
     <!-- Minimal Base CSS -->
     <style>
@@ -35,10 +33,10 @@
         --claude-bot-bg: transparent;
       }
       
-      body.prime-ai-guide {
+      body {
         margin: 0;
         padding: 0;
-        background-color: var(--prime-bg);
+        background-color: var(--claude-bg);
         color: var(--claude-text);
         font-family: var(--claude-font);
         display: flex;
@@ -235,9 +233,15 @@
       }
     </style>
   </head>
-  <body class="prime-ai-guide">
+  <body>
     
-    <div id="navbar-container"></div>
+    <div class="claude-nav">
+      <a href="index.html" style="flex: 1;"><i class="bi bi-arrow-right"></i> العودة للرئيسية</a>
+      <img src="assets/img/profile/me.jpg" alt="Ahmed Mohamed" style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 2px solid #00e5ff; box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);" />
+      <div style="flex: 1; display: flex; justify-content: flex-end;">
+        <button class="theme-toggle" id="themeToggleBtn"><i class="bi bi-moon-stars"></i></button>
+      </div>
+    </div>
 
     <div class="claude-chat-container" id="chatContainer">
       <div class="claude-messages-wrapper" id="messagesWrapper">
@@ -262,7 +266,26 @@
 
     <script>
       (function () {
-        // AI Chat Logic
+        // Theme toggle logic
+        const themeBtn = document.getElementById('themeToggleBtn');
+        const root = document.documentElement;
+        
+        // Load saved theme
+        const savedTheme = localStorage.getItem('prime-theme') || 'dark';
+        root.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme);
+
+        themeBtn.addEventListener('click', () => {
+          const currentTheme = root.getAttribute('data-theme');
+          const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+          root.setAttribute('data-theme', newTheme);
+          localStorage.setItem('prime-theme', newTheme);
+          updateThemeIcon(newTheme);
+        });
+
+        function updateThemeIcon(theme) {
+          themeBtn.innerHTML = theme === 'dark' ? '<i class="bi bi-sun"></i>' : '<i class="bi bi-moon-stars"></i>';
+        }
 
         // AI Chat Logic
         const persona = {
@@ -357,6 +380,5 @@
 
       })();
     </script>
-    <script src="assets/js/navbar.js"></script>
   </body>
 </html>
