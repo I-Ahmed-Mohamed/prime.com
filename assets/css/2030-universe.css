@@ -5,37 +5,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap');
 
 :root {
-  --prime-bg: #05070f;
-  --prime-bg-2: #0a1020;
-  --prime-surface: rgba(12, 18, 35, .72);
-  --prime-card: rgba(13, 22, 44, .66);
-  --prime-card-strong: rgba(16, 28, 56, .86);
-  --prime-text: #eef6ff;
-  --prime-muted: #93a9c7;
-  --prime-line: rgba(125, 209, 255, .18);
+  --prime-bg: #000000;
+  --prime-bg-2: #09090b;
+  --prime-surface: rgba(15, 15, 18, 0.72);
+  --prime-card: rgba(20, 20, 24, 0.66);
+  --prime-card-strong: rgba(24, 24, 27, 0.86);
+  --prime-text: #ffffff;
+  --prime-muted: #a1a1aa;
+  --prime-line: rgba(255, 255, 255, 0.1);
   --prime-accent: #00e5ff;
   --prime-accent-2: #8a5cff;
   --prime-accent-3: #23f7a8;
   --prime-warn: #ffb86b;
-  --prime-shadow: 0 24px 80px rgba(0,0,0,.38);
+  --prime-shadow: 0 24px 80px rgba(0,0,0,.5);
   --prime-radius: 26px;
   --prime-font: 'Inter', 'Cairo', system-ui, sans-serif;
   --prime-ar-font: 'Cairo', 'Inter', system-ui, sans-serif;
 }
 
 :root[data-theme="light"] {
-  --prime-bg: #f4f8ff;
-  --prime-bg-2: #eaf2ff;
-  --prime-surface: rgba(255, 255, 255, .78);
-  --prime-card: rgba(255, 255, 255, .76);
-  --prime-card-strong: rgba(255, 255, 255, .94);
-  --prime-text: #0a1630;
-  --prime-muted: #52657f;
-  --prime-line: rgba(0, 60, 120, .13);
+  --prime-bg: #ffffff;
+  --prime-bg-2: #f8f9fa;
+  --prime-surface: rgba(255, 255, 255, 0.9);
+  --prime-card: rgba(255, 255, 255, 0.8);
+  --prime-card-strong: rgba(255, 255, 255, 0.96);
+  --prime-text: #09090b;
+  --prime-muted: #52525b;
+  --prime-line: rgba(0, 0, 0, 0.08);
   --prime-accent: #006cff;
   --prime-accent-2: #7c3cff;
   --prime-accent-3: #00a875;
-  --prime-shadow: 0 24px 70px rgba(25, 64, 120, .16);
+  --prime-shadow: 0 20px 60px rgba(0, 0, 0, .06);
 }
 
 * { box-sizing: border-box; }
@@ -46,9 +46,8 @@ body {
   font-family: var(--prime-font) !important;
   color: var(--prime-text) !important;
   background:
-    radial-gradient(circle at 18% 12%, color-mix(in srgb, var(--prime-accent) 22%, transparent) 0 18%, transparent 38%),
-    radial-gradient(circle at 84% 8%, color-mix(in srgb, var(--prime-accent-2) 24%, transparent) 0 14%, transparent 35%),
-    radial-gradient(circle at 55% 92%, color-mix(in srgb, var(--prime-accent-3) 14%, transparent) 0 18%, transparent 40%),
+    radial-gradient(circle at 18% 12%, color-mix(in srgb, var(--prime-accent) 12%, transparent) 0 18%, transparent 38%),
+    radial-gradient(circle at 84% 8%, color-mix(in srgb, var(--prime-accent-2) 12%, transparent) 0 14%, transparent 35%),
     linear-gradient(135deg, var(--prime-bg), var(--prime-bg-2)) !important;
   overflow-x: hidden;
   cursor: auto !important;
