@@ -79,85 +79,50 @@
             <h2>Contact</h2>
           </div>
 
-          <div class="row" data-aos="fade-in">
+          <div class="row justify-content-center" data-aos="fade-in">
             <!-- -----------------------form ------------------------ -->
-            <center>
-              <div class="social-icons">
-                <a
-                  href="https://www.google.com/maps/place/Egypt+Cairo/"
-                  target="_blank"
-                  ><i class="bi bi-geo-alt-fill"></i
-                ></a>
-                <a href="mailto:ahmedcodteng@gmail.com" title="gmail"
-                  ><i class="bi bi-envelope-arrow-down-fill"></i
-                ></a>
+            <div class="col-12 col-md-10 col-lg-8">
+              <div class="social-icons text-center mb-3">
+                <a href="https://www.google.com/maps/place/Egypt+Cairo/" target="_blank"><i class="bi bi-geo-alt-fill"></i></a>
+                <a href="mailto:ahmedcodteng@gmail.com" title="gmail"><i class="bi bi-envelope-arrow-down-fill"></i></a>
                 <a href="tel:+201094547599" title="Call 01094547599"><i class="bi bi-telephone-fill"></i></a>
                 <a href="tel:+201044599911" title="Call 01044599911"><i class="bi bi-phone-fill"></i></a>
               </div>
-              <div class="prime-contact-numbers" style="margin:18px auto 0;display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+              <div class="prime-contact-numbers d-flex flex-wrap justify-content-center gap-3 mb-5">
                 <a class="prime-contact-pill" href="tel:+201094547599"><i class="bi bi-telephone-fill"></i>01094547599</a>
                 <a class="prime-contact-pill" href="tel:+201044599911"><i class="bi bi-phone-fill"></i>01044599911</a>
               </div>
-              <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-                <form
-                  id="form"
-                  action="forms/contact.php"
-                  method="post"
-                  role="form"
-                  class="php-email-form co1 co"
-                >
-                  <center><label for="message"> Enter Phone </label></center>
-                  <div class="input-group mb-3">
-                    <span
-                      class="input-group-text border-info1 p-3"
-                      style="background-color: rgb(1, 7, 17); color: aliceblue"
-                      >📲</span
-                    >
-                    <div class="form-floating text-white">
-                      <input
-                        type="number"
-                        name="Email_id"
-                        class="form-control text-white border-info1 p-3"
-                        style="background-color: rgb(1, 7, 17)"
-                        id="Email_id"
-                        placeholder="Phone"
-                      />
+
+              <div class="contact-form-container p-4 rounded-4" style="background: var(--prime-card); border: 1px solid var(--prime-line);">
+                <form id="form" action="forms/contact.php" method="post" role="form" class="php-email-form">
+                  
+                  <div class="mb-4">
+                    <label for="Email_id" class="form-label text-center d-block mb-2 text-white">Enter Phone</label>
+                    <div class="input-group">
+                      <span class="input-group-text border-0" style="background: var(--prime-card-strong); color: var(--prime-text);">
+                        <i class="bi bi-phone"></i>
+                      </span>
+                      <input type="number" name="Email_id" class="form-control border-0 text-white" style="background: rgba(255,255,255,0.05);" id="Email_id" placeholder="Phone" required />
                     </div>
                   </div>
 
-                  <div class="form-group">
-                    <center>
-                      <label for="message"> Enter Message </label>
-                    </center>
-                    <textarea
-                      class="form-control"
-                      name="message"
-                      rows="10"
-                      required
-                    ></textarea>
+                  <div class="mb-4">
+                    <label for="message" class="form-label text-center d-block mb-2 text-white">Enter Message</label>
+                    <textarea class="form-control border-0 text-white" style="background: rgba(255,255,255,0.05);" name="message" id="message" rows="6" placeholder="Your message..." required></textarea>
                   </div>
-                  <div class="my-3">
-                    <center>
-                      <div
-                        id="response-message"
-                        style="display: none; color: rgb(12, 161, 230)"
-                      >
-                        Your message has been sent. Thank you!
-                      </div>
-                    </center>
-                    <center>
-                      <div id="error-message" style="display: none; color: red">
-                        There was an error, please try again.
-                      </div>
-                    </center>
+
+                  <div class="my-3 text-center">
+                    <div id="response-message" style="display: none; color: var(--prime-accent);">Your message has been sent. Thank you!</div>
+                    <div id="error-message" style="display: none; color: red;">There was an error, please try again.</div>
                   </div>
-                  <div class="text-center">
-                    <button id="button" type="submit">Send Message</button>
+
+                  <div class="text-center mt-4">
+                    <button id="button" type="submit" class="prime-btn-main border-0 w-100" style="padding: 14px; border-radius: 12px;">Send Message</button>
                   </div>
                 </form>
               </div>
-            </center>
-          </div>
+            </div>
+          </div>iv>
         </div>
       </section>
       <!--! ======= Contact Section ============================================================ -->
