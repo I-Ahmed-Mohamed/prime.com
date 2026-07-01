@@ -829,3 +829,7 @@ img { max-width:100%; }
 .prime-fs-content { -webkit-overflow-scrolling: touch !important; overscroll-behavior: contain !important; pointer-events: auto !important; height: 100% !important; }
 .prime-fullscreen-menu { overscroll-behavior: contain !important; touch-action: auto !important; pointer-events: auto !important; }
 
+
+.prime-fullscreen-menu { overflow: hidden !important; }
+.prime-fs-content { overflow-y: scroll !important; -webkit-overflow-scrolling: touch !important; padding-bottom: 120px !important; }
+

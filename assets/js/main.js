@@ -70,44 +70,47 @@ const btn = document.getElementById("button");
 const responseMessage = document.getElementById("response-message");
 const errorMessage = document.getElementById("error-message");
 
-document.getElementById("form").addEventListener("submit", function (event) {
-  event.preventDefault(); // منع إعادة تحميل الصفحة
+const formElement = document.getElementById("form");
+if (formElement) {
+  formElement.addEventListener("submit", function (event) {
+    event.preventDefault(); // منع إعادة تحميل الصفحة
 
-  // تفعيل حالة التحميل
-  btn.innerHTML = "Sened...";
-  btn.disabled = true;
+    // تفعيل حالة التحميل
+    btn.innerHTML = "Sened...";
+    btn.disabled = true;
 
-  const serviceID = "default_service";
-  const templateID = "template_2wmo61o";
+    const serviceID = "default_service";
+    const templateID = "template_2wmo61o";
 
-  emailjs
-    .sendForm(serviceID, templateID, this)
-    .then(() => {
-      // عند النجاح
+    emailjs
+      .sendForm(serviceID, templateID, this)
+      .then(() => {
+        // عند النجاح
 
-      btn.innerHTML = "Sent ✅";
-      btn.disabled = false;
-      responseMessage.style.display = "none";
-      errorMessage.style.display = "none";
+        btn.innerHTML = "Sent ✅";
+        btn.disabled = false;
+        responseMessage.style.display = "none";
+        errorMessage.style.display = "none";
 
-      // إعادة تعيين النموذج
-      this.reset();
+        // إعادة تعيين النموذج
+        this.reset();
 
-      // إعادة الزر لحالته الأصلية بعد 3 ثوانٍ
-      setTimeout(() => {
+        // إعادة الزر لحالته الأصلية بعد 3 ثوانٍ
+        setTimeout(() => {
+          btn.innerHTML = "Send Message";
+        }, 3000);
+      })
+      .catch((err) => {
+        // عند الفشل
         btn.innerHTML = "Send Message";
-      }, 3000);
-    })
-    .catch((err) => {
-      // عند الفشل
-      btn.innerHTML = "Send Message";
-      btn.disabled = false;
-      responseMessage.style.display = "none";
-      errorMessage.style.display = "block";
+        btn.disabled = false;
+        responseMessage.style.display = "none";
+        errorMessage.style.display = "block";
 
-      console.error("Failed to send Message:", err);
-    });
-});
+        console.error("Failed to send Message:", err);
+      });
+  });
+}
 
 (function () {
   "use strict";
