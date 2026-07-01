@@ -394,6 +394,8 @@ window.onload = () => {
   // يمكنك تعديل هذا الوقت بناءً على التوقيت الذي تريده
   setTimeout(() => {
     const notification = document.getElementById("notification");
-    notification.style.animation = "breakEffect 5s forwards";
+    if (notification) {
+      notification.style.animation = "breakEffect 5s forwards";
+    }
   }, 5000); // تبدأ عملية التكسير بعد 20 ثانية
 };

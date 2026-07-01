@@ -113,22 +113,17 @@
     holder.innerHTML = navHTML;
 
     // Fullscreen menu logic
-    const profileTab = document.getElementById('open-profile-menu');
-    const profileMenu = document.getElementById('prime-fullscreen-menu');
-    const closeMenuBtn = document.getElementById('prime-fs-close');
+    const profileBtn = document.getElementById('open-profile-menu');
+    const menu = document.getElementById('prime-fullscreen-menu');
 
-    if (profileTab && profileMenu) {
-      profileTab.addEventListener('click', (e) => {
+    if (profileBtn && menu) {
+      profileBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        profileMenu.classList.add('active');
-        document.body.style.overflow = 'hidden';
+        menu.classList.add('active');
       });
-    }
 
-    if (closeMenuBtn && profileMenu) {
-      closeMenuBtn.addEventListener('click', () => {
-        profileMenu.classList.remove('active');
-        document.body.style.overflow = '';
+      menu.querySelector('.prime-fs-close').addEventListener('click', () => {
+        menu.classList.remove('active');
       });
     }
 
