@@ -1,486 +1,162 @@
 <!doctype html>
-<html lang="en">
+<html lang="ar" dir="rtl" data-lang="ar">
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>Design Portfolio | Ahmed Mohamed - UI/UX Designs</title>
-    <meta
-      name="description"
-      content="Browse Ahmed Mohamed's professional design portfolio organized by companies. UI/UX designs, branding, and visual solutions."
-    />
-    <meta
-      name="keywords"
-      content="Ahmed Mohamed Designs, UI/UX Design, Portfolio, Branding, Design Portfolio"
-    />
+    <title>Design Portfolio | Ahmed Mohamed</title>
+    <meta name="description" content="Browse Ahmed Mohamed's professional design portfolio." />
     <meta name="theme-color" content="#037eb8" />
+    
     <!-- Favicons -->
     <link href="assets/img/profile/me.jpg" rel="icon" />
     <link href="assets/img/profile/me.jpg" rel="apple-touch-icon" />
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-      rel="stylesheet"
-    />
+    
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/glightbox/css/glightbox.min.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
     <link href="assets/css/style.css" rel="stylesheet" />
-    <link href="assets/css/modern-enhancements.css" rel="stylesheet" />
     <link href="assets/css/designs-portfolio.css" rel="stylesheet" />
-
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init("gkIpVYT3CHg7ZgDjn");
-      })();
-    </script>
-  <link href="assets/css/2030-universe.css" rel="stylesheet" />
+    <link href="assets/css/2030-universe.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- ======= Scroll Progress Bar ======= -->
-    <div class="scroll-progress">
-      <div class="progress-bar" id="progressBar"></div>
-    </div>
-
-    <!-- ======= Back to Top Button ======= -->
-    <a
-      href="#"
-      class="back-to-top d-flex align-items-center justify-content-center"
-    >
-      <i class="bi bi-arrow-up-short"></i>
-    </a>
-
-    <!-- Mobile nav toggle button -->
-    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
-
+    <!-- Navbar Container -->
     <div id="navbar-container"></div>
 
     <main id="main">
-      <!-- ======= Designs Section ======= -->
-      <section id="designs" class="designs-section">
+      <section id="designs" class="designs-section" style="margin-top: 80px;">
         <div class="container">
-          <div class="section-title" data-aos="fade-up">
-            <h2>✨ Design Portfolio</h2>
-            <p>🎨 Curated UI/UX designs organized by companies</p>
+          <div class="section-title text-center" data-aos="fade-up">
+            <h2>✨ معرض التصميمات</h2>
+            <p>🎨 تصاميم احترافية لواجهات المستخدم والهويات البصرية</p>
           </div>
 
           <!-- Filter Buttons -->
-          <div class="filter-buttons" data-aos="fade-up" data-aos-delay="100">
+          <div class="filter-buttons text-center mb-5" data-aos="fade-up" data-aos-delay="100">
             <button class="filter-btn active" data-filter="all">
               <i class="bx bx-layout"></i>
-              <span>All Designs</span>
+              <span>الكل</span>
             </button>
             <button class="filter-btn" data-filter="oval-foods">
-              <img
-                src="assets/img/oval/لوجو.jpeg"
-                alt="Oval Foods"
-                class="btn-logo"
-                onerror="
-                  this.style.display = 'none';
-                  this.nextElementSibling.style.display = 'inline-flex';
-                "
-              />
-              <i class="bx bx-building" style="display: none"></i>
+              <i class="bx bx-building"></i>
               <span>Oval Foods</span>
             </button>
             <button class="filter-btn" data-filter="al-sharq">
-              <img
-                src="assets/img/الشرق/لوجو.jpeg"
-                alt="الشرق للأعلاف"
-                class="btn-logo"
-                onerror="
-                  this.style.display = 'none';
-                  this.nextElementSibling.style.display = 'inline-flex';
-                "
-              />
-              <i class="bx bx-building" style="display: none"></i>
+              <i class="bx bx-building"></i>
               <span>الشرق للأعلاف</span>
             </button>
           </div>
 
-          <!-- Designs by Company -->
           <div class="companies-container">
             <!-- Company 1: Oval Foods -->
-            <div
-              class="company-section"
-              data-company="oval-foods"
-              data-aos="fade-up"
-            >
-              <div class="company-header">
-                <div class="company-badge">
-                  <img
-                    src="assets/img/oval/لوجو.jpeg"
-                    alt="Oval Foods Logo"
-                    class="company-logo"
-                    onerror="
-                      this.style.display = 'none';
-                      this.nextElementSibling.style.display = 'flex';
-                    "
-                  />
-                  <i class="bx bxs-leaf" style="display: none"></i>
+            <div class="company-section" data-company="oval-foods" data-aos="fade-up">
+              <div class="company-header d-flex align-items-center mb-4">
+                <div class="company-badge me-3">
+                  <img src="assets/img/oval/logo.jpeg" alt="Oval Foods Logo" class="company-logo rounded-circle" style="width:50px; height:50px; object-fit:cover;" />
                 </div>
-                <div class="company-info">
-                  <h3>Oval Foods</h3>
-                  <p class="company-category">Food & Beverage Branding</p>
+                <div class="company-info ms-3">
+                  <h3 class="m-0">Oval Foods</h3>
+                  <p class="company-category text-muted m-0">تصميم وتطوير العلامة التجارية</p>
                 </div>
               </div>
 
-              <div class="designs-grid">
-                <!-- Design 1 -->
-                <div class="design-card" data-company="oval-foods">
+              <div class="row g-4 designs-grid">
+                <!-- Oval Designs -->
+                <div class="col-lg-4 col-md-6 design-card" data-company="oval-foods">
                   <div class="design-image-wrapper">
-                    <a
-                      href="assets/img/oval/oval 1.jpeg"
-                      class="design-image-link glightbox"
-                      title="Oval Foods - Design 1"
-                    >
-                      <img
-                        src="assets/img/oval/oval 1.jpeg"
-                        alt="Oval Design 1"
-                        class="design-image"
-                      />
+                    <a href="assets/img/oval/oval-1.jpeg" class="glightbox">
+                      <img src="assets/img/oval/oval-1.jpeg" class="img-fluid rounded shadow-sm" alt="Oval Design 1" />
                     </a>
-                    <div class="design-overlay">
-                      <a
-                        href="assets/img/oval/oval 1.jpeg"
-                        class="design-link glightbox"
-                        title="Oval Foods - Design 1"
-                      >
-                        <i class="bx bx-search-alt"></i>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="design-info">
-                    <h4>Oval Foods Design 1</h4>
-                    <p class="design-category">Branding</p>
-                    <div class="design-tools">
-                      <span class="tool-badge">Figma</span>
-                      <span class="tool-badge">Adobe XD</span>
-                    </div>
                   </div>
                 </div>
-
-                <!-- Design 2 -->
-                <div class="design-card" data-company="oval-foods">
+                <div class="col-lg-4 col-md-6 design-card" data-company="oval-foods">
                   <div class="design-image-wrapper">
-                    <a
-                      href="assets/img/oval/oval 2.jpeg"
-                      class="design-image-link glightbox"
-                      title="Oval Foods - Design 2"
-                    >
-                      <img
-                        src="assets/img/oval/oval 2.jpeg"
-                        alt="Oval Design 2"
-                        class="design-image"
-                      />
+                    <a href="assets/img/oval/oval-2.jpeg" class="glightbox">
+                      <img src="assets/img/oval/oval-2.jpeg" class="img-fluid rounded shadow-sm" alt="Oval Design 2" />
                     </a>
-                    <div class="design-overlay">
-                      <a
-                        href="assets/img/oval/oval 2.jpeg"
-                        class="design-link glightbox"
-                        title="Oval Foods - Design 2"
-                      >
-                        <i class="bx bx-search-alt"></i>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="design-info">
-                    <h4>Oval Foods Design 2</h4>
-                    <p class="design-category">Branding</p>
-                    <div class="design-tools">
-                      <span class="tool-badge">Figma</span>
-                      <span class="tool-badge">Prototyping</span>
-                    </div>
                   </div>
                 </div>
-
-                <!-- Design 3 -->
-                <div class="design-card" data-company="oval-foods">
+                <div class="col-lg-4 col-md-6 design-card" data-company="oval-foods">
                   <div class="design-image-wrapper">
-                    <a
-                      href="assets/img/oval/oval 3.jpeg"
-                      class="design-image-link glightbox"
-                      title="Oval Foods - Design 3"
-                    >
-                      <img
-                        src="assets/img/oval/oval 3.jpeg"
-                        alt="Oval Design 3"
-                        class="design-image"
-                      />
+                    <a href="assets/img/oval/oval-3.jpeg" class="glightbox">
+                      <img src="assets/img/oval/oval-3.jpeg" class="img-fluid rounded shadow-sm" alt="Oval Design 3" />
                     </a>
-                    <div class="design-overlay">
-                      <a
-                        href="assets/img/oval/oval 3.jpeg"
-                        class="design-link glightbox"
-                        title="Oval Foods - Design 3"
-                      >
-                        <i class="bx bx-search-alt"></i>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="design-info">
-                    <h4>Oval Foods Design 3</h4>
-                    <p class="design-category">Branding</p>
-                    <div class="design-tools">
-                      <span class="tool-badge">Figma</span>
-                      <span class="tool-badge">Analytics</span>
-                    </div>
                   </div>
                 </div>
-
-                <!-- Design 4 - Oval Foods -->
-                <div class="design-card" data-company="oval-foods">
+                <div class="col-lg-4 col-md-6 design-card" data-company="oval-foods">
                   <div class="design-image-wrapper">
-                    <a
-                      href="assets/img/oval/oval 4.jpeg"
-                      class="design-image-link glightbox"
-                      title="Oval Foods - Design 4"
-                    >
-                      <img
-                        src="assets/img/oval/oval 4.jpeg"
-                        alt="Oval Design 4"
-                        class="design-image"
-                      />
+                    <a href="assets/img/oval/oval-4.jpeg" class="glightbox">
+                      <img src="assets/img/oval/oval-4.jpeg" class="img-fluid rounded shadow-sm" alt="Oval Design 4" />
                     </a>
-                    <div class="design-overlay">
-                      <a
-                        href="assets/img/oval/oval 4.jpeg"
-                        class="design-link glightbox"
-                        title="Oval Foods - Design 4"
-                      >
-                        <i class="bx bx-search-alt"></i>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="design-info">
-                    <h4>Oval Foods Design 4</h4>
-                    <p class="design-category">Branding</p>
-                    <div class="design-tools">
-                      <span class="tool-badge">Figma</span>
-                      <span class="tool-badge">Brand Guide</span>
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- Company 2: الشرق للأعلاف والإنتاج الداجني -->
-            <div
-              class="company-section"
-              data-company="al-sharq"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div class="company-header">
-                <div class="company-badge">
-                  <img
-                    src="assets/img/الشرق/لوجو.jpeg"
-                    alt="الشرق للأعلاف Logo"
-                    class="company-logo"
-                    onerror="
-                      this.style.display = 'none';
-                      this.nextElementSibling.style.display = 'flex';
-                    "
-                  />
-                  <i class="bx bxs-egg" style="display: none"></i>
+            <hr class="my-5" />
+
+            <!-- Company 2: الشرق للأعلاف -->
+            <div class="company-section" data-company="al-sharq" data-aos="fade-up" data-aos-delay="100">
+              <div class="company-header d-flex align-items-center mb-4">
+                <div class="company-badge me-3">
+                  <img src="assets/img/alshark/logo.jpeg" alt="الشرق للأعلاف Logo" class="company-logo rounded-circle" style="width:50px; height:50px; object-fit:cover;" />
                 </div>
-                <div class="company-info">
-                  <h3>الشرق للأعلاف</h3>
-                  <p class="company-category">
-                    صناعة الأعلاف و الإنتاج الداجني
-                  </p>
+                <div class="company-info ms-3">
+                  <h3 class="m-0">الشرق للأعلاف</h3>
+                  <p class="company-category text-muted m-0">صناعة الأعلاف والإنتاج الداجني</p>
                 </div>
               </div>
 
-              <div class="designs-grid">
-                <!-- Design 1 -->
-                <div class="design-card" data-company="al-sharq">
+              <div class="row g-4 designs-grid">
+                <!-- Al-Sharq Designs -->
+                <div class="col-lg-4 col-md-6 design-card" data-company="al-sharq">
                   <div class="design-image-wrapper">
-                    <a
-                      href="assets/img/الشرق/الشرق 1.jpeg"
-                      class="design-image-link glightbox"
-                      title="الشرق للأعلاف - Design 1"
-                    >
-                      <img
-                        src="assets/img/الشرق/الشرق 1.jpeg"
-                        alt="الشرق Design 1"
-                        class="design-image"
-                      />
+                    <a href="assets/img/alshark/alshark-1.jpeg" class="glightbox">
+                      <img src="assets/img/alshark/alshark-1.jpeg" class="img-fluid rounded shadow-sm" alt="Al-Sharq Design 1" />
                     </a>
-                    <div class="design-overlay">
-                      <a
-                        href="assets/img/الشرق/الشرق 1.jpeg"
-                        class="design-link glightbox"
-                        title="الشرق للأعلاف - Design 1"
-                      >
-                        <i class="bx bx-search-alt"></i>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="design-info">
-                    <h4>الشرق للأعلاف Design 1</h4>
-                    <p class="design-category">Branding</p>
-                    <div class="design-tools">
-                      <span class="tool-badge">Figma</span>
-                      <span class="tool-badge">Photoshop</span>
-                    </div>
                   </div>
                 </div>
-
-                <!-- Design 2 -->
-                <div class="design-card" data-company="al-sharq">
+                <div class="col-lg-4 col-md-6 design-card" data-company="al-sharq">
                   <div class="design-image-wrapper">
-                    <a
-                      href="assets/img/الشرق/الشرق 2.jpeg"
-                      class="design-image-link glightbox"
-                      title="الشرق للأعلاف - Design 2"
-                    >
-                      <img
-                        src="assets/img/الشرق/الشرق 2.jpeg"
-                        alt="الشرق Design 2"
-                        class="design-image"
-                      />
+                    <a href="assets/img/alshark/alshark-2.jpeg" class="glightbox">
+                      <img src="assets/img/alshark/alshark-2.jpeg" class="img-fluid rounded shadow-sm" alt="Al-Sharq Design 2" />
                     </a>
-                    <div class="design-overlay">
-                      <a
-                        href="assets/img/الشرق/الشرق 2.jpeg"
-                        class="design-link glightbox"
-                        title="الشرق للأعلاف - Design 2"
-                      >
-                        <i class="bx bx-search-alt"></i>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="design-info">
-                    <h4>الشرق للأعلاف Design 2</h4>
-                    <p class="design-category">Branding</p>
-                    <div class="design-tools">
-                      <span class="tool-badge">Figma</span>
-                      <span class="tool-badge">Illustrator</span>
-                    </div>
                   </div>
                 </div>
-
-                <!-- Design 3 -->
-                <div class="design-card" data-company="al-sharq">
+                <div class="col-lg-4 col-md-6 design-card" data-company="al-sharq">
                   <div class="design-image-wrapper">
-                    <a
-                      href="assets/img/الشرق/الشرق 3.jpeg"
-                      class="design-image-link glightbox"
-                      title="الشرق للأعلاف - Design 3"
-                    >
-                      <img
-                        src="assets/img/الشرق/الشرق 3.jpeg"
-                        alt="الشرق Design 3"
-                        class="design-image"
-                      />
+                    <a href="assets/img/alshark/alshark-3.jpeg" class="glightbox">
+                      <img src="assets/img/alshark/alshark-3.jpeg" class="img-fluid rounded shadow-sm" alt="Al-Sharq Design 3" />
                     </a>
-                    <div class="design-overlay">
-                      <a
-                        href="assets/img/الشرق/الشرق 3.jpeg"
-                        class="design-link glightbox"
-                        title="الشرق للأعلاف - Design 3"
-                      >
-                        <i class="bx bx-search-alt"></i>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="design-info">
-                    <h4>الشرق للأعلاف Design 3</h4>
-                    <p class="design-category">Branding</p>
-                    <div class="design-tools">
-                      <span class="tool-badge">Figma</span>
-                      <span class="tool-badge">Photoshop</span>
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- CTA Section -->
-            <div class="designs-cta" data-aos="fade-up">
-              <div class="cta-content">
-                <h3>مهتم بالمزيد من التصاميم؟</h3>
-                <p>تواصل معي لمناقشة مشروعك والحصول على تصاميم احترافية</p>
-                <div class="col-lg-3 cta-btn-container text-center">
-              </div>
-            </div>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- ======= Footer ======= -->
+    <!-- Footer -->
     <div id="footer-container"></div>
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/typed.js/typed.umd.js"></script>
-    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
     <!-- Main JS File -->
     <script src="assets/js/navbar.js"></script>
-    <script src="assets/js/view.js"></script>
     <script src="assets/js/designs-portfolio.js"></script>
 
     <script>
-      // Initialize lightbox
-      GLightbox({
-        selector: ".glightbox",
-      });
-
-      // Initialize AOS
-      AOS.init({
-        duration: 1000,
-        easing: "ease-in-out",
-        once: true,
-        mirror: false,
-      });
-
-      // Update progress bar
-      window.addEventListener("scroll", function () {
-        const windowHeight =
-          document.documentElement.scrollHeight -
-          document.documentElement.clientHeight;
-        const scrolled = (window.scrollY / windowHeight) * 100;
-        document.getElementById("progressBar").style.width = scrolled + "%";
-      });
-
-      // Back to top button
-      const backToTopBtn = document.querySelector(".back-to-top");
-      window.addEventListener("scroll", () => {
-        if (window.pageYOffset > 100) {
-          backToTopBtn.classList.add("active");
-        } else {
-          backToTopBtn.classList.remove("active");
-        }
-      });
-
-      backToTopBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
+      GLightbox({ selector: ".glightbox" });
+      AOS.init({ duration: 1000, once: true });
     </script>
-  <script src="assets/js/2030-universe.js"></script>
   </body>
 </html>
