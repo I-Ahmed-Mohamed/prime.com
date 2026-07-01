@@ -777,12 +777,22 @@ img { max-width:100%; }
 .ai-page-form textarea { flex:1; min-height: 52px; max-height: 130px; resize:none; border:1px solid var(--prime-line); border-radius:20px; background: color-mix(in srgb, var(--prime-card-strong) 82%, transparent); color:var(--prime-text); padding:13px 15px; outline:0; }
 .ai-page-form button { width:54px; height:54px; border:0; border-radius:18px; color:#fff; background:linear-gradient(135deg, var(--prime-accent), var(--prime-accent-2)); }
 @media (max-width: 900px) {
-  .ai-page-wrap { grid-template-columns: 1fr; margin-top: 76px; margin-bottom: 140px; gap: 16px; }
-  .ai-page-card { padding: 26px 18px; border-radius: 28px; }
-  .ai-page-card h1 { font-size: clamp(26px, 9vw, 36px) !important; margin: 16px 0 12px; }
-  .ai-page-prompts { gap: 8px; margin-top: 20px; }
-  .ai-page-prompts button { font-size: 14px; padding: 9px 14px; }
-  .ai-page-chat { min-height: 600px; border-radius: 28px; }
+  .ai-page-wrap { grid-template-columns: 1fr; margin-top: 10px; margin-bottom: 110px; gap: 10px; width: calc(100% - 16px); }
+  .ai-page-card { padding: 16px 14px; border-radius: 20px; text-align: center; }
+  .ai-page-card h1 { font-size: 22px !important; margin: 0 0 10px; }
+  .ai-page-card p { display: none; }
+  .ai-page-prompts { gap: 6px; margin-top: 10px; }
+  .ai-page-prompts button { font-size: 13px; padding: 6px 12px; }
+  .ai-page-chat { height: calc(100vh - 240px); min-height: auto; border-radius: 20px; }
+}
+
+/* Force disable AOS animations site-wide */
+[data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+  animation: none !important;
+  visibility: visible !important;
 }
 
 /* WhatsApp Style Fullscreen Menu */
@@ -809,17 +819,17 @@ img { max-width:100%; }
 .fs-header-info h3 { margin: 0 0 4px; font-size: 18px; font-weight: 800; }
 .fs-header-info p { margin: 0; font-size: 13px; color: var(--prime-muted) !important; }
 .prime-fs-close { background: transparent; border: 0; color: var(--prime-text); font-size: 28px; padding: 10px; cursor: pointer; }
-.prime-fs-content { flex: 1; overflow-y: auto; padding: 24px; display: flex; flex-direction: column; gap: 24px; }
-.prime-fs-section { background: var(--prime-card); border-radius: 20px; border: 1px solid var(--prime-line); overflow: hidden; }
-.prime-fs-section h4 { margin: 0; padding: 16px 20px 8px; font-size: 14px; color: var(--prime-accent) !important; text-transform: uppercase; letter-spacing: 1px; }
+.prime-fs-content { flex: 1; overflow-y: auto; padding: 12px; display: flex; flex-direction: column; gap: 12px; }
+.prime-fs-section { background: var(--prime-card); border-radius: 16px; border: 1px solid var(--prime-line); overflow: hidden; }
+.prime-fs-section h4 { margin: 0; padding: 10px 16px 4px; font-size: 13px; color: var(--prime-accent) !important; text-transform: uppercase; letter-spacing: 1px; }
 .prime-fs-section a {
-  display: flex; align-items: center; gap: 16px; padding: 16px 20px; color: var(--prime-text) !important;
+  display: flex; align-items: center; gap: 12px; padding: 10px 16px; color: var(--prime-text) !important;
   text-decoration: none !important; font-weight: 700; border-bottom: 1px solid rgba(255,255,255,0.04);
   transition: background 0.2s;
 }
 .prime-fs-section a:hover { background: rgba(255,255,255,0.05); }
 .prime-fs-section a:last-child { border-bottom: 0; }
-.prime-fs-section a i { font-size: 22px; color: var(--prime-muted); }
+.prime-fs-section a i { font-size: 20px; color: var(--prime-muted); }
 
 /* GLOBAL OVERRIDE: DISABLE ALL SCROLL ANIMATIONS */
 [data-aos], .fade-in-up, section, .glass-card, .profile-container, .animated-item, .portfolio-item { opacity: 1 !important; transform: none !important; visibility: visible !important; animation: none !important; transition: none !important; pointer-events: auto !important; }
@@ -831,5 +841,4 @@ img { max-width:100%; }
 
 
 .prime-fullscreen-menu { overflow: hidden !important; }
-.prime-fs-content { overflow-y: scroll !important; -webkit-overflow-scrolling: touch !important; padding-bottom: 120px !important; }
-
+.prime-fs-content { overflow-y: scroll !important; -webkit-overflow-scrolling: touch !important; padding-bottom: 40px !important; }
