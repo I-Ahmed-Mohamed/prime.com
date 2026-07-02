@@ -12,6 +12,7 @@
     { href: 'index.html', icon: 'bx bx-home-alt-2', en: 'Home', ar: 'الرئيسية' },
     { href: 'About.html', icon: 'bx bx-user-voice', en: 'About', ar: 'من أنا' },
     { href: 'Skills.html', icon: 'bx bx-code-curly', en: 'Skills', ar: 'المهارات' },
+    { href: 'Presentation.html', icon: 'bx bx-slideshow', en: 'Presentation', ar: 'عرض تقديمي' },
     { href: 'Projects.html', icon: 'bx bx-layer', en: 'Projects', ar: 'المشاريع' },
     { href: 'Designs.html', icon: 'bx bx-palette', en: 'Designs', ar: 'التصميمات' },
     { href: 'AI-Guide.html', icon: 'bx bx-bot', en: 'AI', ar: 'المساعد' },
@@ -97,6 +98,7 @@
         </div>
         <div class="prime-fs-section">
           <h4 data-i18n="fsWork">${savedLang === 'ar' ? 'الأعمال والمشاريع' : 'Work & Portfolio'}</h4>
+          <a href="Presentation.html"><i class="bx bx-slideshow"></i> <span data-i18n="fsPresentation">${savedLang === 'ar' ? 'عرض تقديمي' : 'Presentation'}</span></a>
           <a href="Projects.html"><i class="bx bx-layer"></i> <span data-i18n="fsProjects">${savedLang === 'ar' ? 'المشاريع' : 'Projects'}</span></a>
           <a href="Designs.html"><i class="bx bx-palette"></i> <span data-i18n="fsDesigns">${savedLang === 'ar' ? 'التصميمات' : 'Designs'}</span></a>
           <a href="Services.html"><i class="bx bx-briefcase-alt-2"></i> <span data-i18n="fsServices">${savedLang === 'ar' ? 'الخدمات' : 'Services'}</span></a>
@@ -171,4 +173,5 @@ if (preloader) {
     });
   }
 }
+
 
