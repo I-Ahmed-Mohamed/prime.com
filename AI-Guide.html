@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ar" dir="rtl" data-theme="dark" data-lang="ar">
   <head>
     <meta charset="utf-8" />
@@ -324,6 +324,7 @@
           
           messagesWrapper.appendChild(div);
           chatContainer.scrollTop = chatContainer.scrollHeight;
+          return div.querySelector('.msg-content');
         };
         
         const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -410,3 +411,4 @@
     </script>
   </body>
 </html>
+
