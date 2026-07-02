@@ -871,3 +871,59 @@ img { max-width:100%; }
 
 .prime-fullscreen-menu { overflow: hidden !important; }
 .prime-fs-content { overflow-y: scroll !important; -webkit-overflow-scrolling: touch !important; padding-bottom: 40px !important; }
+/* 2030 Skills Grid Override */
+.prime-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  justify-content: center;
+}
+@media (min-width: 576px) {
+  .prime-skills-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .prime-skills-grid {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+/* Override legacy style.css skill-item */
+#skills .skill-item {
+  width: 100% !important;
+  margin: 0 !important;
+  aspect-ratio: 1;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--prime-card-strong) !important;
+  border: 1px solid rgba(255,255,255,0.06) !important;
+  border-radius: 18px !important;
+  transition: all 0.3s ease !important;
+  padding: 8px !important;
+  box-shadow: none !important;
+}
+#skills .skill-item:hover {
+  transform: translateY(-5px) !important;
+  border-color: var(--prime-accent) !important;
+  background: rgba(0, 210, 255, 0.08) !important;
+  box-shadow: 0 10px 20px rgba(0, 210, 255, 0.15) !important;
+}
+#skills .skill-item img, 
+#skills .skill-item svg {
+  width: 28px !important;
+  height: 28px !important;
+  margin-bottom: 6px !important;
+  padding: 0 !important;
+  object-fit: contain;
+}
+#skills .skill-item p {
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  color: var(--prime-text) !important;
+  margin: 0 !important;
+  text-align: center;
+  word-break: break-word;
+}
