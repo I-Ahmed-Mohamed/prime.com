@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ar" dir="rtl" data-theme="dark" data-lang="ar">
   <head>
     <meta charset="utf-8" />
@@ -301,18 +301,8 @@
         const form = document.getElementById('chatForm');
         const welcomeScreen = document.getElementById('welcomeScreen');
         const chatContainer = document.getElementById('chatContainer');
-        const API_KEY = 'AQ.Ab8RN6KV' + 'ok_cELdr0HRJPGQ9ZTkRJiZfA2WKWUzwkjh0ZZelsw'; // 🔥 ضع مفتاح الـ API هنا 🔥
-        let chatHistory = [];
-        let isFirstMessage = true;
         
-        const systemPrompt = `أنت مساعد ذكي خاص بالمهندس ومطور الويب (Ahmed Mohamed).
-أنت تتحدث نيابة عنه لعملائه باللغة العربية بأسلوب ودود واحترافي، ومهمتك الرد على استفسارات الزوار، الترحيب بهم، وإقناعهم بمهارات أحمد وتوجيههم لصفحات الخدمات والمشاريع.
-معلومات عن أحمد:
-- مبرمج ومطور مواقع وتطبيقات ويب (Frontend و Backend).
-- يصمم مواقع تعريفية، متاجر إلكترونية، أنظمة إدارة.
-- التقنيات التي يتقنها: ` + persona.stack + `
-- أرقام التواصل: ` + persona.phone1 + ` و ` + persona.phone2 + `
-تذكر دائماً أنك مساعد ذكي، ولست أحمد نفسه، لكنك تمثله. قدم ردوداً مختصرة ومفيدة.`;
+        let isFirstMessage = true;
 
         const addMessage = (html, type='bot') => {
           if (isFirstMessage) {
@@ -334,58 +324,60 @@
           
           messagesWrapper.appendChild(div);
           chatContainer.scrollTop = chatContainer.scrollHeight;
-          return div.querySelector('.msg-content');
         };
         
         const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
         
-        const parseMD = (text) => {
-            let html = text.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');
-            html = html.replace(/\*(.*?)\*/g, '<i>$1</i>');
-            html = html.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" style="color: var(--prime-accent); text-decoration: underline;">$1</a>');
-            html = html.replace(/\n/g, '<br>');
-            return html;
-        };
+        function reply(q) {
+          const t = q.toLowerCase();
+          const contact = `<br><br><b>للتواصل المباشر:</b><br><a href="tel:+2${persona.phone1}">${persona.phone1}</a> - <a href="tel:+2${persona.phone2}">${persona.phone2}</a>`;
+          
+          // التحيات
+          if (/أهلا|مرحبا|سلام|عامل ايه|ازيك|hi|hello|hey/.test(t)) return `أهلاً بك يا فندم! 😊 أنا المساعد الذكي الخاص بالمهندس أحمد محمد. إزاي أقدر أساعدك النهاردة؟`;
+          if (/صباح|مساء/.test(t)) return `يا هلا بيك! أتمنى لك يوم سعيد. إزاي أقدر أساعدك في مشاريعك أو تصاميمك؟`;
+          
+          // الهوية
+          if (/مين انت|اسمك ايه|مين احمد|عن احمد|who are you/.test(t)) return `أنا المساعد الذكي الخاص بالمهندس أحمد محمد. أحمد هو مهندس برمجيات ومطور ويب (Frontend & Backend) ومصمم محترف بيقدم حلول تقنية متكاملة.`;
+          
+          // الخدمات الأساسية
+          if (/موقع|ويب|website|site|landing|تعريفي|متجر/.test(t)) return `أحمد خبير في تصميم وبرمجة المواقع والمتاجر الإلكترونية لتكون سريعة، جذابة، ومتجاوبة مع كل الشاشات باستخدام أحدث التقنيات. <a href="Services.html">تصفح الخدمات</a>${contact}`;
+          if (/تصميم|سوشيال|صفحات|سوشيال ميديا|إدارة صفحات|لوجو|هوية|photoshop|brand/.test(t)) return `بنقدم خدمة إدارة كاملة للسوشيال ميديا: تصاميم احترافية (بوستات، لوجو، هوية بصرية)، وكتابة محتوى، لزيادة تفاعل عملائك. <a href="Designs.html">تصفح التصميمات</a>${contact}`;
+          if (/فيديو|ريلز|reel|ai|ذكاء|مونتاج|موشن|motion/.test(t)) return `نقدر نصمم فيديوهات ريلز وإعلانات احترافية جداً بالموشن جرافيك والذكاء الاصطناعي عشان تلفت انتباه أي عميل! <a href="Videos.html">شاهد الفيديوهات</a>${contact}`;
+          
+          // المهارات التقنية
+          if (/مهارات|تقنيات|برمجة|لغات|angular|dotnet|\.net|sql|backend|frontend|react|node|javascript/.test(t)) return `أحمد بيشتغل بـتقنيات قوية جداً زي: ${persona.stack}. يقدر يبني واجهات أمامية (Frontend) وأنظمة إدارة خلفية (Backend) متكاملة. <a href="Skills.html">تصفح المهارات كاملة</a>`;
+          
+          // الأعمال السابقة
+          if (/مشاريع|portfolio|project|اعمال|أعمال|شغل|سابقة/.test(t)) return `أكيد! تقدر تشوف مجموعة من أقوى المواقع والأنظمة اللي أحمد برمجها من هنا: <a href="Projects.html">تصفح المشاريع</a>`;
+          
+          // الأسعار
+          if (/سعر|تكلفة|كام|بكام|price|cost|فلوس/.test(t)) return `الأسعار ممتازة وبتتحدد حسب تفاصيل طلبك. كمثال مبدئي: الموقع التعريفي يبدأ من 5000 جنيه، وباقات إدارة السوشيال ميديا تبدأ من 2000 جنيه. كلمنا عشان نظبطلك عرض سعر مخصوص! ${contact}`;
+          
+          // التواصل
+          if (/تواصل|رقم|واتساب|واتس|تليفون|call|phone|contact|whatsapp/.test(t)) return `تقدر تتواصل مع أحمد مباشرة في أي وقت (مكالمة أو واتساب) على الأرقام دي:<br><a href="tel:+2${persona.phone1}">${persona.phone1}</a><br><a href="tel:+2${persona.phone2}">${persona.phone2}</a>`;
+          
+          // المحادثة العامة
+          if (/شكرا|تسلم|حبيبي|باي|مع السلامة|thanks/.test(t)) return `العفو يا فندم! أنا موجود هنا في أي وقت تحتاجني فيه. يومك جميل! 🌟`;
+          if (/بتحب|رأيك|كيف|ازاي/.test(t)) return `أنا مجرد مساعد ذكي مبرمج لمساعدتك للوصول لأفضل خدمات الويب والتصميم من المهندس أحمد. سيبك مني وخلينا نتكلم عن مشروعك! 😉`;
+          
+          // الرد الافتراضي الذكي
+          return `سؤال ممتاز! عشان أقدر أفيدك أكتر بخصوص "${esc(t.substring(0, 30))}..." ياريت تتواصل مع المهندس أحمد مباشرة عشان يدرس فكرتك ويديلك الحل التقني المظبوط.${contact}`;
+        }
         
-        async function ask(q) {
+        function ask(q) {
           const text = (q || '').trim();
           if (!text) return;
           addMessage(esc(text), 'user');
           
-          if (API_KEY === 'YOUR_GEMINI_API_KEY') {
-             setTimeout(() => addMessage('عذراً، لم يتم تفعيل مفتاح الذكاء الاصطناعي (API Key) بعد. يرجى إضافته في الكود لكي أتمكن من التفكير والرد عليك بذكاء. 🧠', 'bot'), 600);
-             return;
-          }
-
-          const msgContent = addMessage('<span style="opacity: 0.7;">جاري التفكير... ⏳</span>', 'bot');
+          // Typing Indicator
+          const msgContent = addMessage('<span style="opacity: 0.7;">جاري الكتابة... ⏳</span>', 'bot');
           
-          try {
-             chatHistory.push({"role": "user", "parts": [{"text": text}]});
-             
-             const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=` + API_KEY, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    "system_instruction": { "parts": [{ "text": systemPrompt }] },
-                    "contents": chatHistory,
-                    "generationConfig": { "temperature": 0.7 }
-                })
-             });
-             
-             const data = await response.json();
-             let botText = data.candidates?.[0]?.content?.parts?.[0]?.text;
-             
-             if(botText) {
-                 msgContent.innerHTML = parseMD(botText);
-                 chatHistory.push({"role": "model", "parts": [{"text": botText}]});
-                 chatContainer.scrollTop = chatContainer.scrollHeight;
-             } else {
-                 msgContent.innerHTML = 'حدث خطأ غير متوقع. حاول مرة أخرى.';
-             }
-          } catch(e) {
-             console.error(e);
-             msgContent.innerHTML = 'عذراً، هناك مشكلة في الاتصال بالخادم الآن.';
-          }
+          // Simulated Delay based on text length for realism
+          setTimeout(() => {
+             const answer = reply(text);
+             msgContent.innerHTML = answer;
+             chatContainer.scrollTop = chatContainer.scrollHeight;
+          }, 800 + Math.random() * 500);
         }
         
         form.addEventListener('submit', e => { 
@@ -418,5 +410,3 @@
     </script>
   </body>
 </html>
-
-
