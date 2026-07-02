@@ -155,12 +155,20 @@
 })();
 
 /* Ultimate Preloader Logic */
-window.addEventListener('load', () => {
-  const preloader = document.getElementById('prime-preloader');
-  if(preloader) {
-    setTimeout(() => {
-      preloader.classList.add('loaded');
-      setTimeout(() => preloader.remove(), 800);
-    }, 400); // Wait for the bar to finish visually
+const preloader = document.getElementById('prime-preloader');
+if (preloader) {
+  if (sessionStorage.getItem('primePreloaderShown')) {
+    // Hide instantly if already shown in this session
+    preloader.style.display = 'none';
+    preloader.remove();
+  } else {
+    // First time visit in this session: Wait for load and animate
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        preloader.classList.add('loaded');
+        setTimeout(() => preloader.remove(), 800);
+      }, 400); // Wait for the bar to finish visually
+      sessionStorage.setItem('primePreloaderShown', 'true');
+    });
   }
-});
+}
