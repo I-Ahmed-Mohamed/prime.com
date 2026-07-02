@@ -4,7 +4,7 @@
     { href: 'index.html', icon: 'bx bxs-home', en: 'Home', ar: 'الرئيسية', mobileEn: 'Home', mobileAr: 'الرئيسية' },
     { href: 'Projects.html', icon: 'bx bx-layer', en: 'Projects', ar: 'المشاريع', mobileEn: 'Projects', mobileAr: 'المشاريع' },
     { href: 'AI-Guide.html', icon: 'bx bx-bot', en: 'AI', ar: 'المساعد', mobileEn: 'AI', mobileAr: 'AI' },
-    { href: 'Contact.html', icon: 'bx bx-message-dots', en: 'Contact', ar: 'تواصل', mobileEn: 'Contact', mobileAr: 'تواصل', badge: '2' },
+    { href: 'Presentation.html', icon: 'bx bx-slideshow', en: 'Presentation', ar: 'عرض تقديمي', mobileEn: 'Presentation', mobileAr: 'بريزنتيشن' },
     { href: 'javascript:void(0)', icon: 'profile', en: 'About', ar: 'من أنا', mobileEn: 'Profile', mobileAr: 'بروفايل', id: 'open-profile-menu' },
   ];
 
@@ -173,5 +173,8 @@ if (preloader) {
     });
   }
 }
+
+
+
 
 
