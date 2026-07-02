@@ -153,3 +153,14 @@
 
   window.PrimeNav = { navItems, desktopItems };
 })();
+
+/* Ultimate Preloader Logic */
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('prime-preloader');
+  if(preloader) {
+    setTimeout(() => {
+      preloader.classList.add('loaded');
+      setTimeout(() => preloader.remove(), 800);
+    }, 400); // Wait for the bar to finish visually
+  }
+});
