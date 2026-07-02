@@ -1192,3 +1192,41 @@ img { max-width:100%; }
   opacity: 1;
   transform: translateY(0);
 }
+/* Fix About layout cutoff */
+.prime-about-grid {
+  padding: 0 20px;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.about-content {
+  padding: 0 15px;
+}
+/* Ultimate Mobile Fix for About Page */
+@media (max-width: 576px) {
+  #about .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    overflow-x: hidden;
+  }
+  .prime-about-grid {
+    padding: 0 !important;
+    gap: 20px !important;
+  }
+  .about-content {
+    padding: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .about-bio {
+    font-size: 14px !important;
+    padding: 0 10px !important;
+  }
+  .about-stats {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .stat-item {
+    flex: 1 1 40%;
+    min-width: 0;
+  }
+}
