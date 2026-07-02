@@ -167,21 +167,99 @@
         transform: translateY(0);
         opacity: 1;
       }
-      .design-company {
-        display: flex;
-        align-items: center;
-        gap: 10px;
+
+      /* New Client Profiles View */
+      .clients-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 30px;
+        padding: 0 20px 100px;
+        max-width: 1200px;
+        margin: 0 auto;
       }
-      .company-mini-logo {
-        width: 20px;
-        height: 20px;
+      .client-card {
+        background: var(--prime-card);
+        border: 1px solid var(--prime-line);
+        border-radius: 24px;
+        padding: 30px;
+        text-align: center;
+        cursor: pointer;
+        transition: 0.4s ease;
+        text-decoration: none !important;
+        color: var(--prime-text) !important;
+        display: block;
+      }
+      .client-card:hover {
+        transform: translateY(-10px);
+        border-color: var(--prime-accent);
+        box-shadow: 0 15px 30px rgba(0, 210, 255, 0.15);
+      }
+      .client-logo-wrapper {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 20px;
         border-radius: 50%;
+        padding: 5px;
+        background: linear-gradient(135deg, var(--prime-accent), var(--prime-accent-2));
       }
-      .company-name {
-        color: #fff;
+      .client-logo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid var(--prime-bg);
+      }
+      .client-name {
+        font-size: 24px;
+        font-weight: 800;
+        margin-bottom: 5px;
+      }
+      .client-desc {
+        color: var(--prime-muted);
         font-size: 14px;
+      }
+
+      /* Gallery View */
+      #gallery-view {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+      .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.1);
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 99px;
+        cursor: pointer;
+        margin-bottom: 30px;
         font-weight: 600;
-        margin: 0;
+        transition: 0.3s;
+      }
+      .back-btn:hover {
+        background: rgba(255,255,255,0.1);
+        transform: translateX(-5px);
+      }
+      .client-gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 0 20px 100px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      @media (max-width: 992px) {
+        .client-gallery-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 576px) {
+        .client-gallery-grid {
+          grid-template-columns: 1fr;
+        }
       }
 
     </style>
@@ -196,143 +274,39 @@
         <p class="designs-subtitle">تشكيلة من أفضل أعمالي في مجال تصميم واجهات المستخدم والهويات البصرية</p>
       </div>
 
-      <!-- Filters -->
-      <div class="filters-container" data-aos="fade-up" data-aos-delay="100">
-        <button class="filter-btn active" data-filter="all">
-          <i class="bx bx-grid-alt"></i> الكل
-        </button>
-        <button class="filter-btn" data-filter="oval-foods">
-          <img src="assets/img/oval/logo.jpeg" class="filter-icon" alt="Oval" /> Oval Foods
-        </button>
-        <button class="filter-btn" data-filter="al-sharq">
-          <img src="assets/img/alshark/logo.jpeg" class="filter-icon" alt="Al Sharq" /> الشرق للأعلاف
-        </button>
+      <!-- Clients View -->
+      <div id="clients-view">
+        <div class="clients-grid" data-aos="fade-up" data-aos-delay="100">
+          
+          <div class="client-card" onclick="openClient('oval-foods')">
+            <div class="client-logo-wrapper">
+              <img src="assets/img/oval/logo.jpeg" class="client-logo" alt="Oval Foods" />
+            </div>
+            <h3 class="client-name">Oval Foods</h3>
+            <p class="client-desc">أعمال تصميم الهوية والتعبئة</p>
+          </div>
+
+          <div class="client-card" onclick="openClient('al-sharq')">
+            <div class="client-logo-wrapper">
+              <img src="assets/img/alshark/logo.jpeg" class="client-logo" alt="الشرق للأعلاف" />
+            </div>
+            <h3 class="client-name">الشرق للأعلاف</h3>
+            <p class="client-desc">تصاميم السوشيال ميديا والإعلانات</p>
+          </div>
+
+        </div>
       </div>
 
-      <!-- Grid -->
-      <div class="premium-grid" id="designs-grid">
+      <!-- Gallery View -->
+      <div id="gallery-view">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+          <button class="back-btn" onclick="closeClient()"><i class="bx bx-arrow-back"></i> رجوع للعملاء</button>
+          <h2 id="gallery-title" style="margin-bottom: 30px; font-weight: 800;">اسم العميل</h2>
+        </div>
         
-        <!-- Oval Foods Designs -->
-        <div class="design-item oval-foods" data-aos="fade-up" data-aos-delay="100">
-          <a href="assets/img/oval/oval-1.jpeg" class="glightbox">
-            <div class="design-img-wrapper">
-              <img src="assets/img/oval/oval-1.jpeg" class="design-img" alt="Oval Design 1" />
-              <div class="design-overlay">
-                <div class="view-icon"><i class="bx bx-search"></i></div>
-                <div class="design-info">
-                  <div class="design-company">
-                    <img src="assets/img/oval/logo.jpeg" class="company-mini-logo" />
-                    <p class="company-name">Oval Foods</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
+        <div class="client-gallery-grid" id="designs-grid">
+          <!-- Images will be injected here via JS -->
         </div>
-
-        <div class="design-item oval-foods" data-aos="fade-up" data-aos-delay="200">
-          <a href="assets/img/oval/oval-2.jpeg" class="glightbox">
-            <div class="design-img-wrapper">
-              <img src="assets/img/oval/oval-2.jpeg" class="design-img" alt="Oval Design 2" />
-              <div class="design-overlay">
-                <div class="view-icon"><i class="bx bx-search"></i></div>
-                <div class="design-info">
-                  <div class="design-company">
-                    <img src="assets/img/oval/logo.jpeg" class="company-mini-logo" />
-                    <p class="company-name">Oval Foods</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="design-item oval-foods" data-aos="fade-up" data-aos-delay="300">
-          <a href="assets/img/oval/oval-3.jpeg" class="glightbox">
-            <div class="design-img-wrapper">
-              <img src="assets/img/oval/oval-3.jpeg" class="design-img" alt="Oval Design 3" />
-              <div class="design-overlay">
-                <div class="view-icon"><i class="bx bx-search"></i></div>
-                <div class="design-info">
-                  <div class="design-company">
-                    <img src="assets/img/oval/logo.jpeg" class="company-mini-logo" />
-                    <p class="company-name">Oval Foods</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="design-item oval-foods" data-aos="fade-up" data-aos-delay="400">
-          <a href="assets/img/oval/oval-4.jpeg" class="glightbox">
-            <div class="design-img-wrapper">
-              <img src="assets/img/oval/oval-4.jpeg" class="design-img" alt="Oval Design 4" />
-              <div class="design-overlay">
-                <div class="view-icon"><i class="bx bx-search"></i></div>
-                <div class="design-info">
-                  <div class="design-company">
-                    <img src="assets/img/oval/logo.jpeg" class="company-mini-logo" />
-                    <p class="company-name">Oval Foods</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Al-Sharq Designs -->
-        <div class="design-item al-sharq" data-aos="fade-up" data-aos-delay="100">
-          <a href="assets/img/alshark/alshark-1.jpeg" class="glightbox">
-            <div class="design-img-wrapper">
-              <img src="assets/img/alshark/alshark-1.jpeg" class="design-img" alt="Al-Sharq Design 1" />
-              <div class="design-overlay">
-                <div class="view-icon"><i class="bx bx-search"></i></div>
-                <div class="design-info">
-                  <div class="design-company">
-                    <img src="assets/img/alshark/logo.jpeg" class="company-mini-logo" />
-                    <p class="company-name">الشرق للأعلاف</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="design-item al-sharq" data-aos="fade-up" data-aos-delay="200">
-          <a href="assets/img/alshark/alshark-2.jpeg" class="glightbox">
-            <div class="design-img-wrapper">
-              <img src="assets/img/alshark/alshark-2.jpeg" class="design-img" alt="Al-Sharq Design 2" />
-              <div class="design-overlay">
-                <div class="view-icon"><i class="bx bx-search"></i></div>
-                <div class="design-info">
-                  <div class="design-company">
-                    <img src="assets/img/alshark/logo.jpeg" class="company-mini-logo" />
-                    <p class="company-name">الشرق للأعلاف</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="design-item al-sharq" data-aos="fade-up" data-aos-delay="300">
-          <a href="assets/img/alshark/alshark-3.jpeg" class="glightbox">
-            <div class="design-img-wrapper">
-              <img src="assets/img/alshark/alshark-3.jpeg" class="design-img" alt="Al-Sharq Design 3" />
-              <div class="design-overlay">
-                <div class="view-icon"><i class="bx bx-search"></i></div>
-                <div class="design-info">
-                  <div class="design-company">
-                    <img src="assets/img/alshark/logo.jpeg" class="company-mini-logo" />
-                    <p class="company-name">الشرق للأعلاف</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-
       </div>
 
     </main>
@@ -349,38 +323,81 @@
     <script src="assets/js/navbar.js"></script>
 
     <script>
-      GLightbox({ selector: ".glightbox" });
       AOS.init({ duration: 800, once: true });
+      let lightbox = GLightbox({ selector: '.glightbox' });
 
-      // Filter Logic
-      const filterBtns = document.querySelectorAll('.filter-btn');
-      const designItems = document.querySelectorAll('.design-item');
+      const clientsData = {
+        'oval-foods': {
+          name: 'Oval Foods',
+          images: [
+            'assets/img/oval/oval-1.jpeg',
+            'assets/img/oval/oval-2.jpeg',
+            'assets/img/oval/oval-3.jpeg',
+            'assets/img/oval/oval-4.jpeg'
+          ]
+        },
+        'al-sharq': {
+          name: 'الشرق للأعلاف',
+          images: [
+            'assets/img/alshark/alshark-1.jpeg',
+            'assets/img/alshark/alshark-2.jpeg',
+            'assets/img/alshark/alshark-3.jpeg'
+          ]
+        }
+      };
 
-      filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          // Remove active class
-          filterBtns.forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
+      function openClient(clientId) {
+        const client = clientsData[clientId];
+        if(!client) return;
 
-          const filterValue = btn.getAttribute('data-filter');
-
-          designItems.forEach(item => {
-            if (filterValue === 'all' || item.classList.contains(filterValue)) {
-              item.style.display = 'block';
-              setTimeout(() => {
-                item.style.opacity = '1';
-                item.style.transform = 'scale(1)';
-              }, 50);
-            } else {
-              item.style.opacity = '0';
-              item.style.transform = 'scale(0.8)';
-              setTimeout(() => {
-                item.style.display = 'none';
-              }, 300);
-            }
-          });
+        document.getElementById('gallery-title').innerText = client.name;
+        
+        const grid = document.getElementById('designs-grid');
+        grid.innerHTML = '';
+        
+        client.images.forEach((imgSrc, index) => {
+          const delay = (index % 3) * 100; // staggered animation
+          const html = `
+            <div class="design-item" data-aos="fade-up" data-aos-delay="${delay}">
+              <a href="${imgSrc}" class="glightbox">
+                <div class="design-img-wrapper">
+                  <img src="${imgSrc}" class="design-img" alt="${client.name} Design" />
+                  <div class="design-overlay">
+                    <div class="view-icon"><i class="bx bx-search"></i></div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          `;
+          grid.innerHTML += html;
         });
-      });
+
+        // Re-initialize GLightbox for new elements
+        lightbox.destroy();
+        lightbox = GLightbox({ selector: '.glightbox' });
+
+        // Transition views
+        document.getElementById('clients-view').style.display = 'none';
+        document.getElementById('gallery-view').style.display = 'block';
+        
+        // Slight delay to allow display:block to apply before opacity transition
+        setTimeout(() => {
+          document.getElementById('gallery-view').style.opacity = '1';
+          AOS.refresh(); // Refresh animations for newly added elements
+        }, 50);
+        
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      function closeClient() {
+        document.getElementById('gallery-view').style.opacity = '0';
+        
+        setTimeout(() => {
+          document.getElementById('gallery-view').style.display = 'none';
+          document.getElementById('clients-view').style.display = 'block';
+          AOS.refresh();
+        }, 500); // match CSS transition duration
+      }
     </script>
   </body>
 </html>

@@ -113,25 +113,58 @@ body::after {
   box-shadow: var(--prime-shadow), inset 0 1px 0 rgba(255,255,255,.12);
 }
 .prime-brand {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  direction: ltr;
   gap: 12px;
-  min-width: 210px;
-  color: var(--prime-text) !important;
   text-decoration: none !important;
 }
 .brand-orb {
-  width: 46px;
-  height: 46px;
-  display: grid;
-  place-items: center;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
-  color: #fff;
-  background: conic-gradient(from 180deg, var(--prime-accent), var(--prime-accent-2), var(--prime-accent-3), var(--prime-accent));
-  box-shadow: 0 0 28px color-mix(in srgb, var(--prime-accent) 45%, transparent);
 }
-.brand-copy strong { display:block; font-weight: 900; line-height:1; letter-spacing: -.04em; }
-.brand-copy small { display:block; margin-top: 5px; color: var(--prime-muted); font-size: 11px; letter-spacing:.08em; text-transform: uppercase; }
+.brand-orb img {
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  border-radius: 50%;
+  z-index: 2;
+}
+.orb-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00d2ff, #a252ff);
+  z-index: 1;
+}
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+}
+.brand-copy strong { 
+  display:block; 
+  font-weight: 900; 
+  font-size: 20px; 
+  line-height: 1; 
+  letter-spacing: -.03em; 
+  color: #ffffff; 
+}
+.brand-copy small { 
+  display:block; 
+  margin-top: 4px; 
+  color: #8892b0; 
+  font-size: 11px; 
+  font-weight: 600; 
+  letter-spacing: .08em; 
+  text-transform: uppercase; 
+}
 .prime-links {
   display: flex;
   align-items: center;
@@ -497,13 +530,7 @@ img { max-width:100%; }
 /* =========================
    V3 FIX — iPhone mobile navbar + assistant safe placement
    ========================= */
-.brand-orb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid rgba(255,255,255,.65);
-}
+
 .prime-mobile-tabs { display: none; }
 .prime-contact-pill {
   display: inline-flex;

@@ -32,10 +32,13 @@
   const navHTML = `
     <header id="prime-nav-2029" class="prime-nav-2029" aria-label="Primary navigation">
       <a class="prime-brand" href="index.html" aria-label="Ahmed Mohamed Home">
-        <span class="brand-orb"><img src="assets/img/profile/me.jpg" alt="Ahmed Mohamed" /></span>
         <span class="brand-copy">
           <strong>Ahmed Mohamed</strong>
           <small data-i18n="brandSub">AI Software Engineer</small>
+        </span>
+        <span class="brand-orb">
+          <img src="assets/img/profile/me.jpg" alt="Ahmed Mohamed" />
+          <div class="orb-ring"></div>
         </span>
       </a>
 
