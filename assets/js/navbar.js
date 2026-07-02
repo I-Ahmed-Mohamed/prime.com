@@ -167,7 +167,7 @@ if (preloader) {
       setTimeout(() => {
         preloader.classList.add('loaded');
         setTimeout(() => preloader.remove(), 800);
-      }, 400); // Wait for the bar to finish visually
+      }, 2000); // Wait 2 seconds so the loading bar animation fully finishes
       sessionStorage.setItem('primePreloaderShown', 'true');
     });
   }
