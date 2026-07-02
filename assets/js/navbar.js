@@ -1,4 +1,4 @@
-/* PRIME NAV 2029 — desktop glass nav + iPhone-style mobile tab bar */
+﻿/* PRIME NAV 2029 — desktop glass nav + iPhone-style mobile tab bar */
 (function () {
   const navItems = [
     { href: 'index.html', icon: 'bx bxs-home', en: 'Home', ar: 'الرئيسية', mobileEn: 'Home', mobileAr: 'الرئيسية' },
@@ -99,7 +99,6 @@
           <h4 data-i18n="fsWork">${savedLang === 'ar' ? 'الأعمال والمشاريع' : 'Work & Portfolio'}</h4>
           <a href="Projects.html"><i class="bx bx-layer"></i> <span data-i18n="fsProjects">${savedLang === 'ar' ? 'المشاريع' : 'Projects'}</span></a>
           <a href="Designs.html"><i class="bx bx-palette"></i> <span data-i18n="fsDesigns">${savedLang === 'ar' ? 'التصميمات' : 'Designs'}</span></a>
-          <a href="Videos.html"><i class="bx bx-movie-play"></i> <span data-i18n="fsVideos">${savedLang === 'ar' ? 'الفيديوهات' : 'Videos'}</span></a>
           <a href="Services.html"><i class="bx bx-briefcase-alt-2"></i> <span data-i18n="fsServices">${savedLang === 'ar' ? 'الخدمات' : 'Services'}</span></a>
         </div>
         <div class="prime-fs-section">
@@ -172,3 +171,4 @@ if (preloader) {
     });
   }
 }
+
