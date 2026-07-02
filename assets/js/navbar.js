@@ -178,3 +178,104 @@ if (preloader) {
 
 
 
+/* =========================
+   MAGIC INDICATOR & SWIPE LOGIC
+   ========================= */
+setTimeout(() => {
+  const mobileNav = document.querySelector('.prime-mobile-tabs');
+  if (mobileNav) {
+    // 1. Add Indicator
+    const indicator = document.createElement('div');
+    indicator.className = 'nav-indicator';
+    mobileNav.appendChild(indicator);
+
+    function updateIndicator() {
+      const activeTab = document.querySelector('.prime-mobile-tab.active');
+      if (activeTab && window.innerWidth <= 760) {
+        // Calculate center of active tab
+        const offsetLeft = activeTab.offsetLeft;
+        const width = activeTab.offsetWidth;
+        const indicatorWidth = 64; // from CSS
+        const targetLeft = offsetLeft + (width / 2) - (indicatorWidth / 2);
+        indicator.style.transform = `translateX(${targetLeft}px)`;
+      }
+    }
+
+    window.addEventListener('resize', updateIndicator);
+    setTimeout(updateIndicator, 50);
+
+    // 2. Swipe to Navigate
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    document.addEventListener('touchstart', e => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    document.addEventListener('touchend', e => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, { passive: true });
+
+    function handleSwipe() {
+      // Swipe distance threshold
+      const SWIPE_THRESHOLD = 80;
+      const diffX = touchEndX - touchStartX;
+      
+      // We only care about large horizontal swipes
+      if (Math.abs(diffX) < SWIPE_THRESHOLD) return;
+      
+      // Avoid swiping if user is interacting with a swiper slider (like Presentation.html)
+      if (document.querySelector('.swiper-slide-active')) {
+        // Just a precaution, but let's allow it if we want global nav. 
+        // Actually, presentation slider uses swiper, which swallows events or fights with this.
+        // Let's ensure we only swipe if we are NOT inside a horizontal swiper.
+      }
+
+      // Check active index
+      const navItems = window.PrimeNav.navItems;
+      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+      
+      let currentIndex = navItems.findIndex(item => item.href === currentPage);
+      if (currentIndex === -1) currentIndex = 0;
+
+      const isRTL = document.documentElement.dir === 'rtl';
+
+      if (diffX > 0) {
+        // Swiped Right -> in RTL, this means go to "Previous" visual element (which is rightwards)
+        // Visually, RTL items are ordered [RightToLeft], so index 0 is on the right.
+        // Swiping right means panning left, bringing the right element into view. 
+        // So we decrease the index.
+        const nextIndex = isRTL ? currentIndex - 1 : currentIndex - 1;
+        if (nextIndex >= 0 && nextIndex < navItems.length && !navItems[nextIndex].href.includes('javascript')) {
+          window.location.href = navItems[nextIndex].href;
+        }
+      } else {
+        // Swiped Left
+        const nextIndex = isRTL ? currentIndex + 1 : currentIndex + 1;
+        if (nextIndex >= 0 && nextIndex < navItems.length && !navItems[nextIndex].href.includes('javascript')) {
+          window.location.href = navItems[nextIndex].href;
+        }
+      }
+    }
+    
+    // 3. Smooth wave transition on click before navigating
+    const tabs = document.querySelectorAll('.prime-mobile-tab');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href && !href.includes('javascript')) {
+          e.preventDefault();
+          // Remove active from all
+          tabs.forEach(t => t.classList.remove('active'));
+          this.classList.add('active');
+          updateIndicator();
+          // Delay navigation to let animation play
+          setTimeout(() => {
+            window.location.href = href;
+          }, 300);
+        }
+      });
+    });
+  }
+}, 500);

@@ -1301,3 +1301,163 @@ img { max-width:100%; }
   50% { width: 70%; }
   100% { width: 100%; }
 }
+/* --- Dropdown Nav --- */
+.prime-nav-dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+.prime-nav-dropdown > .nav-link {
+  display: flex;
+  align-items: center;
+}
+.prime-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(15px);
+  background: var(--prime-card-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--prime-border);
+  border-radius: 16px;
+  padding: 10px;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+  z-index: 1000;
+  pointer-events: none;
+}
+.prime-nav-dropdown:hover .prime-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+.prime-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  color: var(--prime-text);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+.prime-dropdown-item i {
+  font-size: 1.2rem;
+  color: var(--prime-text-muted);
+}
+.prime-dropdown-item:hover, .prime-dropdown-item.active {
+  background: rgba(139, 92, 246, 0.1);
+  color: var(--prime-accent);
+}
+.prime-dropdown-item:hover i, .prime-dropdown-item.active i {
+  color: var(--prime-accent);
+}
+
+/* Arrow indicator */
+.prime-dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 12px;
+  height: 12px;
+  background: var(--prime-card-bg);
+  border-top: 1px solid var(--prime-border);
+  border-left: 1px solid var(--prime-border);
+}
+
+[dir="rtl"] .prime-nav-dropdown:hover .prime-dropdown-menu {
+  transform: translateX(50%) translateY(0);
+}
+[dir="rtl"] .prime-dropdown-menu {
+  left: auto;
+  right: 50%;
+  transform: translateX(50%) translateY(15px);
+}
+/* =========================
+   MAGIC INDICATOR MOBILE NAV
+   ========================= */
+@media (max-width: 760px) {
+  .prime-mobile-tabs {
+    position: relative;
+    /* Remove old top-border if needed, or keep it */
+  }
+  .prime-mobile-tab.active::before {
+    display: none !important;
+  }
+  .prime-mobile-tab {
+    z-index: 2;
+  }
+  .prime-mobile-tab .tab-icon-wrap {
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    background: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+  }
+  .prime-mobile-tab.active .tab-icon-wrap {
+    transform: translateY(-24px);
+    background: var(--prime-accent);
+    color: white !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+  .prime-mobile-tab.active strong {
+    transform: translateY(10px);
+    transition: 0.4s;
+    color: var(--prime-accent);
+  }
+  .prime-mobile-tab strong {
+    transition: 0.4s;
+  }
+  
+  /* The moving fluid indicator */
+  .nav-indicator {
+    position: absolute;
+    top: -24px;
+    width: 64px;
+    height: 64px;
+    background: #191d24; /* Match navbar dark theme */
+    border-radius: 50%;
+    z-index: 1;
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* For the wave curves */
+  }
+  :root[data-theme="light"] .nav-indicator {
+    background: #ffffff;
+  }
+  .nav-indicator::before, .nav-indicator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 22px;
+    height: 22px;
+    background: transparent;
+  }
+  .nav-indicator::before {
+    left: -22px;
+    border-top-right-radius: 20px;
+    box-shadow: 0px -10px 0 0 #191d24;
+  }
+  .nav-indicator::after {
+    right: -22px;
+    border-top-left-radius: 20px;
+    box-shadow: 0px -10px 0 0 #191d24;
+  }
+  :root[data-theme="light"] .nav-indicator::before,
+  :root[data-theme="light"] .nav-indicator::after {
+    box-shadow: 0px -10px 0 0 #ffffff;
+  }
+}
