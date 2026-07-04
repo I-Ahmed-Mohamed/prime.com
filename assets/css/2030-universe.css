@@ -14,10 +14,10 @@
   --prime-muted: #a1a1aa;
   --prime-line: rgba(255, 255, 255, 0.1);
   --prime-accent: #00e5ff;
-  --prime-accent-2: #8a5cff;
-  --prime-accent-3: #23f7a8;
-  --prime-warn: #ffb86b;
-  --prime-shadow: 0 24px 80px rgba(0,0,0,.5);
+  --prime-accent-2: #00e5ff;
+  --prime-accent-3: #00e5ff;
+  --prime-warn: #00e5ff;
+  --prime-shadow: 0 24px 80px rgba(0, 229, 255, 0.15);
   --prime-radius: 26px;
   --prime-font: 'Inter', 'Cairo', system-ui, sans-serif;
   --prime-ar-font: 'Cairo', 'Inter', system-ui, sans-serif;
@@ -32,10 +32,10 @@
   --prime-text: #09090b;
   --prime-muted: #52525b;
   --prime-line: rgba(0, 0, 0, 0.08);
-  --prime-accent: #006cff;
-  --prime-accent-2: #7c3cff;
-  --prime-accent-3: #00a875;
-  --prime-shadow: 0 20px 60px rgba(0, 0, 0, .06);
+  --prime-accent: #00e5ff;
+  --prime-accent-2: #00e5ff;
+  --prime-accent-3: #00e5ff;
+  --prime-shadow: 0 20px 60px rgba(0, 229, 255, 0.1);
 }
 
 * { box-sizing: border-box; }
@@ -785,7 +785,7 @@ img { max-width:100%; }
 
 @media (max-width: 760px) {
   .prime-copilot-home { align-items: center; }
-  .prime-copilot-hero { width: 100% !important; height: fit-content; min-height: auto; margin: 0 auto !important; border-radius: 30px !important; padding: 28px 18px !important; overflow: visible; }
+  .prime-copilot-hero { width: 100% !important; height: fit-content; min-height: auto; margin: 0 auto 70px !important; border-radius: 30px !important; padding: 28px 18px !important; overflow: visible; }
   .prime-copilot-hero h1 { font-size: clamp(28px, 9vw, 42px) !important; }
   .copilot-input { min-height: 68px; border-radius: 24px; padding: 14px; grid-template-columns: auto 1fr auto; }
   .copilot-typing { font-size: 14px; white-space: normal; }
