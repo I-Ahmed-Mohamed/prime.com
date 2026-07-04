@@ -1425,3 +1425,102 @@ img { max-width:100%; }
 [dir="rtl"] .prime-nav-dropdown:hover .prime-dropdown-panel {
   transform: translateX(50%) translateY(0);
 }
+
+/* =========================
+   MARQUEE SECTIONS STRIP
+   ========================= */
+.marquee-sections {
+  width: 100vw;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+  z-index: 10;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+}
+
+.marquee-left {
+  animation: scroll-left 35s linear infinite;
+}
+
+.marquee-right {
+  animation: scroll-right 40s linear infinite;
+  transform: translateX(-50%);
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.marquee-slide {
+  display: flex;
+  gap: 12px;
+  padding: 0 6px;
+}
+
+.marquee-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: color-mix(in srgb, var(--prime-surface) 60%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid color-mix(in srgb, var(--prime-line) 50%, transparent);
+  border-radius: 99px;
+  color: var(--prime-text) !important;
+  text-decoration: none !important;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.marquee-card i {
+  font-size: 18px;
+  color: var(--prime-accent);
+}
+
+.marquee-card:hover {
+  background: color-mix(in srgb, var(--prime-accent) 20%, transparent);
+  border-color: var(--prime-accent);
+  transform: translateY(-2px);
+}
+
+.marquee-card.glass {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--prime-card) 40%, transparent), color-mix(in srgb, var(--prime-card-strong) 40%, transparent));
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scroll-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+@media (max-width: 768px) {
+  .marquee-sections {
+    bottom: 85px;
+    gap: 8px;
+  }
+  .marquee-card {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+  .marquee-card i {
+    font-size: 16px;
+  }
+}
