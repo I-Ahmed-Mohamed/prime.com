@@ -33,3 +33,21 @@
 
   // // إنشاء اللمحات كل 200 مللي ثانية
   // setInterval(createSparkle, 200);
+
+/* ==================================================
+   Bento Grid Mouse-Tracking Glow Effect
+   ================================================== */
+document.addEventListener('DOMContentLoaded', () => {
+  const bentoGrid = document.getElementById('bento-grid');
+  if (bentoGrid) {
+    bentoGrid.addEventListener('mousemove', (e) => {
+      for (const card of bentoGrid.querySelectorAll('.bento-card')) {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--mouse-x', ${x}px);
+        card.style.setProperty('--mouse-y', ${y}px);
+      }
+    });
+  }
+});
