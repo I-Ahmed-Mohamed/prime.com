@@ -1,4 +1,4 @@
-﻿/* PRIME NAV 2029 — desktop glass nav + iPhone-style mobile tab bar */
+/* PRIME NAV 2029 — desktop glass nav + iPhone-style mobile tab bar */
 (function () {
   const navItems = [
     { href: 'index.html', icon: 'bx bxs-home', en: 'Home', ar: 'الرئيسية', mobileEn: 'Home', mobileAr: 'الرئيسية' },
@@ -11,12 +11,17 @@
   const desktopItems = [
     { href: 'index.html', icon: 'bx bx-home-alt-2', en: 'Home', ar: 'الرئيسية' },
     { href: 'About.html', icon: 'bx bx-user-voice', en: 'About', ar: 'من أنا' },
-    { href: 'Skills.html', icon: 'bx bx-code-curly', en: 'Skills', ar: 'المهارات' },
-    { href: 'Presentation.html', icon: 'bx bx-slideshow', en: 'Presentation', ar: 'عرض تقديمي' },
     { href: 'Projects.html', icon: 'bx bx-layer', en: 'Projects', ar: 'المشاريع' },
-    { href: 'Designs.html', icon: 'bx bx-palette', en: 'Designs', ar: 'التصميمات' },
-    { href: 'AI-Guide.html', icon: 'bx bx-bot', en: 'AI', ar: 'المساعد' },
-    { href: 'Contact.html', icon: 'bx bx-message-dots', en: 'Contact', ar: 'تواصل' }
+    { href: 'Skills.html', icon: 'bx bx-code-curly', en: 'Skills', ar: 'المهارات' },
+    {
+      dropdown: true, icon: 'bx bx-dots-horizontal-rounded', en: 'More', ar: 'المزيد',
+      items: [
+        { href: 'Presentation.html', icon: 'bx bx-slideshow', en: 'Presentation', ar: 'عرض تقديمي' },
+        { href: 'Designs.html', icon: 'bx bx-palette', en: 'Designs', ar: 'التصميمات' },
+        { href: 'AI-Guide.html', icon: 'bx bx-bot', en: 'AI Assistant', ar: 'المساعد الذكي' },
+        { href: 'Contact.html', icon: 'bx bx-message-dots', en: 'Contact', ar: 'تواصل' }
+      ]
+    }
   ];
 
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
@@ -48,12 +53,34 @@
       </button>
 
       <nav id="navbar" class="prime-links">
-        ${desktopItems.map(item => `
-          <a href="${item.href}" class="nav-link ${item.href === currentPage ? 'active' : ''}" data-nav-en="${item.en}" data-nav-ar="${item.ar}">
-            <i class="${item.icon}"></i>
-            <span>${label(item)}</span>
-          </a>
-        `).join('')}
+        ${desktopItems.map(item => {
+          if (item.dropdown) {
+            const activeInDrop = item.items.some(sub => sub.href === currentPage);
+            return `
+              <div class="prime-nav-dropdown ${activeInDrop ? 'has-active' : ''}">
+                <button class="nav-link dropdown-trigger ${activeInDrop ? 'active' : ''}" data-nav-en="${item.en}" data-nav-ar="${item.ar}">
+                  <i class="${item.icon}"></i>
+                  <span>${label(item)}</span>
+                  <i class="bx bx-chevron-down drop-arrow"></i>
+                </button>
+                <div class="prime-dropdown-panel">
+                  ${item.items.map(sub => `
+                    <a href="${sub.href}" class="dropdown-link ${sub.href === currentPage ? 'active' : ''}" data-nav-en="${sub.en}" data-nav-ar="${sub.ar}">
+                      <i class="${sub.icon}"></i>
+                      <span>${label(sub)}</span>
+                    </a>
+                  `).join('')}
+                </div>
+              </div>
+            `;
+          }
+          return `
+            <a href="${item.href}" class="nav-link ${item.href === currentPage ? 'active' : ''}" data-nav-en="${item.en}" data-nav-ar="${item.ar}">
+              <i class="${item.icon}"></i>
+              <span>${label(item)}</span>
+            </a>
+          `;
+        }).join('')}
       </nav>
 
       <div class="prime-actions">
