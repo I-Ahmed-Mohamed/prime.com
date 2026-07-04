@@ -724,12 +724,13 @@ img { max-width:100%; }
 .prime-copilot-home { height: 100vh; max-height: 100vh; display: grid; align-items: center; overflow: hidden; }
 .prime-copilot-hero {
   width: min(1040px, calc(100% - 28px));
-  margin: 40px auto 40px !important;
-  min-height: min(680px, calc(100vh - 150px));
+  margin: 0 auto 40px !important;
+  height: fit-content;
+  min-height: auto;
   display: grid;
   place-items: center;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   border-radius: 42px !important;
   padding: clamp(24px, 5vw, 70px) !important;
   background:
@@ -784,7 +785,7 @@ img { max-width:100%; }
 
 @media (max-width: 760px) {
   .prime-copilot-home { align-items: start; }
-  .prime-copilot-hero { width: 100% !important; min-height: calc(100vh - 225px); margin: 0 auto 18px !important; border-radius: 30px !important; padding: 28px 18px !important; }
+  .prime-copilot-hero { width: 100% !important; height: fit-content; min-height: auto; margin: -10px auto 18px !important; border-radius: 30px !important; padding: 28px 18px !important; overflow: visible; }
   .prime-copilot-hero h1 { font-size: clamp(28px, 9vw, 42px) !important; }
   .copilot-input { min-height: 68px; border-radius: 24px; padding: 14px; grid-template-columns: auto 1fr auto; }
   .copilot-typing { font-size: 14px; white-space: normal; }
@@ -1424,4 +1425,59 @@ img { max-width:100%; }
 }
 [dir="rtl"] .prime-nav-dropdown:hover .prime-dropdown-panel {
   transform: translateX(50%) translateY(0);
+}
+
+/* =========================
+   FLOATING BOUNCY ICONS
+   ========================= */
+.floating-icons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(15px, 4vw, 30px);
+  margin-top: 30px;
+  width: 100%;
+}
+
+.icon-bounce {
+  font-size: clamp(24px, 5vw, 36px);
+  color: color-mix(in srgb, var(--prime-accent) 60%, transparent);
+  background: color-mix(in srgb, var(--prime-surface) 50%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 12px;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--prime-line) 40%, transparent);
+  animation: bounce-float 3s infinite ease-in-out alternate;
+  box-shadow: 0 4px 15px rgba(0, 210, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.icon-bounce:hover {
+  color: var(--prime-accent-2);
+  background: color-mix(in srgb, var(--prime-card-strong) 80%, transparent);
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 4px 20px rgba(162, 82, 255, 0.4);
+}
+
+.icon-1 { animation-delay: 0s; }
+.icon-2 { animation-delay: 0.4s; }
+.icon-3 { animation-delay: 0.8s; }
+.icon-4 { animation-delay: 1.2s; }
+.icon-5 { animation-delay: 1.6s; }
+
+@keyframes bounce-float {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-15px); }
+}
+
+@media (max-width: 760px) {
+  .floating-icons-container {
+    margin-top: 25px;
+    gap: 15px;
+  }
+  .icon-bounce {
+    padding: 10px;
+    font-size: 22px;
+  }
 }
