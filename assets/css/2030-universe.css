@@ -668,8 +668,8 @@ img { max-width:100%; }
 
   #prime-ai-toggle {
     left: auto !important;
-    right: 16px !important;
-    bottom: 112px !important; /* Above mobile nav */
+    right: 24px !important;
+    bottom: 120px !important; /* Above mobile nav and clear of corners */
     width: 45px !important;
     height: 45px !important;
     background: linear-gradient(135deg, rgba(0, 210, 255, 0.4) 0%, rgba(58, 123, 213, 0.4) 100%) !important;
@@ -684,9 +684,9 @@ img { max-width:100%; }
     border-radius: 28px !important;
   }
   .back-to-top {
-    left: auto !important;
-    right: 70px !important; /* Placed horizontally next to spark button */
-    bottom: 112px !important; 
+    right: auto !important;
+    left: 24px !important;
+    bottom: 120px !important; 
     width: 48px !important;
     height: 48px !important;
     z-index: 10024 !important;
@@ -715,9 +715,9 @@ img { max-width:100%; }
 
 /* Desktop assistant moved away from back-to-top arrow */
 @media (min-width: 761px) {
-  #prime-ai-toggle { left: auto !important; right: 24px !important; bottom: 30px !important; }
-  #prime-ai-window { left: auto !important; right: 24px !important; bottom: 90px !important; }
-  .back-to-top { left: auto !important; right: 80px !important; bottom: 30px !important; }
+  #prime-ai-toggle { left: auto !important; right: 30px !important; bottom: 30px !important; }
+  #prime-ai-window { left: auto !important; right: 30px !important; bottom: 90px !important; }
+  .back-to-top { right: auto !important; left: 30px !important; bottom: 30px !important; }
 }
 
 /* =========================
