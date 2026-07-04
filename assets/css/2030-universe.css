@@ -175,8 +175,8 @@ body::after {
 .prime-links .nav-link {
   display: inline-flex !important;
   align-items: center;
-  gap: 8px;
-  padding: 10px 12px !important;
+  gap: 10px;
+  padding: 10px 18px !important;
   border-radius: 999px;
   color: var(--prime-muted) !important;
   text-decoration: none !important;
@@ -184,7 +184,9 @@ body::after {
   font-size: 13px !important;
   white-space: nowrap;
   transition: .25s ease;
+  letter-spacing: 0.02em;
 }
+
 .prime-links .nav-link i { font-size: 18px; }
 .prime-links .nav-link:hover,
 .prime-links .nav-link.active {
