@@ -685,8 +685,8 @@ img { max-width:100%; }
   }
   .back-to-top {
     left: auto !important;
-    right: 16px !important;
-    bottom: 170px !important; /* Stacked above the spark button */
+    right: 70px !important; /* Placed horizontally next to spark button */
+    bottom: 112px !important; 
     width: 48px !important;
     height: 48px !important;
     z-index: 10024 !important;
@@ -715,9 +715,9 @@ img { max-width:100%; }
 
 /* Desktop assistant moved away from back-to-top arrow */
 @media (min-width: 761px) {
-  #prime-ai-toggle { left: auto !important; right: 24px !important; bottom: 24px !important; }
-  #prime-ai-window { left: auto !important; right: 24px !important; bottom: 102px !important; }
-  .back-to-top { left: auto !important; right: 24px !important; bottom: 86px !important; }
+  #prime-ai-toggle { left: auto !important; right: 24px !important; bottom: 30px !important; }
+  #prime-ai-window { left: auto !important; right: 24px !important; bottom: 90px !important; }
+  .back-to-top { left: auto !important; right: 80px !important; bottom: 30px !important; }
 }
 
 /* =========================
