@@ -572,7 +572,7 @@ img { max-width:100%; }
   .prime-brand { max-width: none !important; gap: 10px !important; flex-shrink: 0 !important; }
   .brand-orb { width: 42px !important; height: 42px !important; flex-basis: 42px !important; }
   .brand-copy strong { font-size: 15px !important; }
-  .brand-copy small { display: block !important; font-size: 10px !important; max-width: 130px !important; }
+  .brand-copy small { display: none !important; }
   .prime-menu-toggle, .prime-links { display: none !important; }
   .prime-actions { grid-column: auto !important; justify-content: flex-end !important; width: auto !important; gap: 6px !important; }
   .prime-action-btn { min-width: 38px !important; width: 38px !important; height: 38px !important; }
@@ -710,7 +710,7 @@ img { max-width:100%; }
   .tab-icon-wrap img { width: 30px; height: 30px; }
   .prime-mobile-tab strong { font-size: 10px; }
   .prime-brand { max-width: 165px !important; }
-  .brand-copy small { max-width: 100px !important; }
+  .brand-copy small { display: none !important; }
 }
 
 /* Desktop assistant moved away from back-to-top arrow */

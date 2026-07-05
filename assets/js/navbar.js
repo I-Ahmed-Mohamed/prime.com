@@ -3,7 +3,7 @@
   const navItems = [
     { href: 'index.html', icon: 'bx bxs-home', en: 'Home', ar: 'الرئيسية', mobileEn: 'Home', mobileAr: 'الرئيسية' },
     { href: 'Projects.html', icon: 'bx bx-layer', en: 'Projects', ar: 'المشاريع', mobileEn: 'Projects', mobileAr: 'المشاريع' },
-    { href: 'AI-Guide.html', icon: 'bx bx-bot', en: 'AI', ar: 'المساعد', mobileEn: 'AI', mobileAr: 'AI' },
+    { href: 'Presentation.html', icon: 'bx bx-slideshow', en: 'Presentation', ar: 'البريزنتيشن', mobileEn: 'Presentation', mobileAr: 'بريزنتيشن' },
     { href: 'Designs.html', icon: 'bx bx-palette', en: 'Designs', ar: 'التصميمات', mobileEn: 'Designs', mobileAr: 'التصميمات' },
     { href: 'javascript:void(0)', icon: 'profile', en: 'About', ar: 'من أنا', mobileEn: 'Profile', mobileAr: 'بروفايل', id: 'open-profile-menu' },
   ];
@@ -84,6 +84,7 @@
       </nav>
 
       <div class="prime-actions">
+        <a class="prime-action-btn" href="AI-Guide.html" title="AI Chat"><i class="bx bx-bot"></i></a>
         <button class="prime-action-btn" id="prime-search-open" title="AI Search"><i class="bi bi-search"></i></button>
         <button class="prime-action-btn" id="prime-lang-toggle" title="Translate">${savedLang === 'ar' ? 'EN' : 'ع'}</button>
         <button class="prime-action-btn" id="prime-theme-toggle" title="Theme"><i class="bi ${savedTheme === 'light' ? 'bi-moon-stars' : 'bi-sun'}"></i></button>
