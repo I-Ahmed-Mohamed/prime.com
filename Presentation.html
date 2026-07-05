@@ -62,27 +62,27 @@
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(0, 210, 255, 0.3);
+        background: color-mix(in srgb, var(--prime-text) 3%, transparent);
+        border: 1px solid color-mix(in srgb, var(--prime-accent, #00d2ff) 30%, transparent);
         padding: 8px 20px;
         border-radius: 50px;
         font-size: 14px;
-        color: #00d2ff;
+        color: var(--prime-accent, #00d2ff);
         margin-bottom: 20px;
         backdrop-filter: blur(10px);
-        box-shadow: 0 0 20px rgba(0, 210, 255, 0.1);
+        box-shadow: 0 0 20px color-mix(in srgb, var(--prime-accent, #00d2ff) 10%, transparent);
       }
       .marquee-title {
         font-size: 3.5rem;
         font-weight: 900;
-        background: linear-gradient(to right, #ffffff 20%, #00d2ff 100%);
+        background: linear-gradient(to right, var(--prime-text) 20%, var(--prime-accent, #00d2ff) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin-bottom: 20px;
         letter-spacing: -1px;
       }
       .marquee-subtitle {
-        color: #a0a0a0;
+        color: var(--prime-muted);
         font-size: 1.2rem;
         max-width: 600px;
         margin: 0 auto;
@@ -147,9 +147,9 @@
         overflow: hidden;
         flex-shrink: 0;
         position: relative;
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        background: var(--prime-card);
+        border: 1px solid var(--prime-line);
+        box-shadow: var(--prime-shadow);
         transition: transform 0.4s ease, border-color 0.4s ease;
         cursor: pointer;
       }
@@ -217,10 +217,10 @@
     <main id="main">
       <div class="marquee-header" data-aos="fade-down">
         <div class="badge-premium">
-          <i class='bx bx-slideshow'></i> رحلة بصرية لا نهائية
+          <i class='bx bx-slideshow'></i> <span data-i18n="marqueeBadge">رحلة بصرية لا نهائية</span>
         </div>
-        <h1 class="marquee-title">شريط الإبداعات 🚀</h1>
-        <p class="marquee-subtitle">شاهد جميع تصميماتي في عرض مستمر يجسد الشغف والإبداع اللامحدود.</p>
+        <h1 class="marquee-title" data-i18n="marqueeTitle">شريط الإبداعات 🚀</h1>
+        <p class="marquee-subtitle" data-i18n="marqueeSubtitle">شاهد جميع تصميماتي في عرض مستمر يجسد الشغف والإبداع اللامحدود.</p>
       </div>
 
       <div class="marquee-container" id="marquee-container">

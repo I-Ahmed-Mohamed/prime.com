@@ -51,6 +51,9 @@
     chip2: { en: 'Arabic / English interface saved automatically.', ar: 'واجهة عربي وإنجليزي وتتحفظ تلقائيًا.' },
     chip3T: { en: 'Adaptive Theme', ar: 'وضع متغير' },
     chip3: { en: 'Dark and light modes with premium glass styling.', ar: 'وضع ليلي ونهاري بتصميم زجاجي فاخر.' },
+    marqueeBadge: { en: 'Endless Visual Journey', ar: 'رحلة بصرية لا نهائية' },
+    marqueeTitle: { en: 'Creative Marquee 🚀', ar: 'شريط الإبداعات 🚀' },
+    marqueeSubtitle: { en: 'Watch all my designs in a continuous stream of passion and limitless creativity.', ar: 'شاهد جميع تصميماتي في عرض مستمر يجسد الشغف والإبداع اللامحدود.' }
   };
 
   function setLang(lang) {
