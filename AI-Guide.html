@@ -136,7 +136,7 @@
       
       .claude-input-wrapper textarea {
         flex: 1;
-        background: transparent;
+        background: transparent !important;
         border: none;
         color: var(--claude-text);
         font-family: inherit;
@@ -147,8 +147,7 @@
         padding: 8px 0;
         margin: 0;
         line-height: 1.5;
-        display: flex;
-        align-items: center;
+        overflow: hidden;
       }
       
       .claude-input-wrapper button {
@@ -305,9 +304,6 @@
     </div>
 
     <div class="claude-input-container">
-      <!-- Home Button (Mobile Only) -->
-      <a href="index.html" class="mobile-chat-nav-btn" title="الرئيسية"><i class="bx bxs-home"></i></a>
-      
       <form class="claude-input-wrapper" id="chatForm">
         <textarea id="chatInput" rows="1" placeholder="اكتب رسالتك هنا..."></textarea>
         <button type="submit" aria-label="Send"><i class="bi bi-arrow-up"></i></button>
