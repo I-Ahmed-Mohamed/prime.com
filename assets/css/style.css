@@ -206,7 +206,6 @@ h6 {
 .nav-link.active {
   font-weight: bold;
   color: var(--bg-colore);
-  border-bottom: 2px solid var(--bg-color);
 }
 
 #main {

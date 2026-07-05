@@ -116,6 +116,7 @@ body::after {
   display: flex;
   align-items: center;
   direction: ltr;
+  justify-content: flex-end;
   gap: 12px;
   text-decoration: none !important;
 }
@@ -364,10 +365,10 @@ img { max-width:100%; }
   min-height: 68px !important;
   grid-template-columns: minmax(188px, 230px) minmax(0, 1fr) auto !important;
   gap: 10px !important;
-  padding: 9px 12px !important;
+  padding: 9px 20px !important;
   overflow: visible !important;
 }
-.prime-brand { min-width: 0 !important; max-width: 230px !important; overflow: hidden !important; }
+.prime-brand { min-width: 0 !important; max-width: 230px !important; overflow: hidden !important; justify-content: flex-end !important; }
 .brand-copy { min-width: 0 !important; overflow: hidden !important; }
 .brand-copy strong,
 .brand-copy small { overflow: hidden !important; text-overflow: ellipsis !important; white-space: nowrap !important; }
