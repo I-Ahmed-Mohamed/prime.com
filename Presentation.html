@@ -82,9 +82,9 @@
         gap: 30px;
         padding: 0 0 120px 0;
         transform: rotate(-3deg) scale(1.05); /* Slight tilt for dramatic effect */
-        width: 110vw;
-        margin-left: -5vw;
+        width: 100%;
         overflow: hidden;
+        direction: ltr; /* Force LTR to fix translateX and flex flow bugs */
       }
       
       .marquee-row {
@@ -95,6 +95,7 @@
       
       .marquee-track {
         display: flex;
+        flex-direction: row;
         gap: 30px;
         width: max-content;
         animation-timing-function: linear;
@@ -194,7 +195,7 @@
           <i class='bx bx-slideshow'></i> رحلة بصرية لا نهائية
         </div>
         <h1 class="marquee-title">شريط الإبداعات 🚀</h1>
-        <p class="marquee-subtitle">شاهد جميع تصميماتي ومشاريعي في عرض مستمر يجسد الشغف والإبداع اللامحدود.</p>
+        <p class="marquee-subtitle">شاهد جميع تصميماتي في عرض مستمر يجسد الشغف والإبداع اللامحدود.</p>
       </div>
 
       <div class="marquee-container" id="marquee-container">
@@ -216,8 +217,6 @@
       AOS.init({ duration: 800, once: true });
       
       const allImages = [
-        'assets/img/portfolio/1.png', 'assets/img/portfolio/2.png', 'assets/img/portfolio/3.png', 'assets/img/portfolio/4.png', 'assets/img/portfolio/5.png', 'assets/img/portfolio/6.png', 'assets/img/portfolio/7.png', 'assets/img/portfolio/8.png', 'assets/img/portfolio/9.png', 'assets/img/portfolio/10.png', 'assets/img/portfolio/11.png', 'assets/img/portfolio/12.png',
-        'assets/img/portfolio/Cmpilr.png', 'assets/img/portfolio/cofe.png', 'assets/img/portfolio/Ecomerce.png', 'assets/img/portfolio/Qr code.png', 'assets/img/portfolio/Save Link.png', 'assets/img/portfolio/System.png',
         'assets/img/oval/oval-1.jpeg', 'assets/img/oval/oval-2.jpeg', 'assets/img/oval/oval-3.jpeg', 'assets/img/oval/oval-4.jpeg', 'assets/img/oval/oval-5.png', 'assets/img/oval/oval-6.png', 'assets/img/oval/oval-7.png', 'assets/img/oval/oval-8.png', 'assets/img/oval/oval-9.png', 'assets/img/oval/oval-10.png', 'assets/img/oval/oval-11.png', 'assets/img/oval/oval-12.png', 'assets/img/oval/oval-13.png', 'assets/img/oval/oval-14.png', 'assets/img/oval/oval-15.png', 'assets/img/oval/oval-16.jpeg', 'assets/img/oval/oval-17.jpeg', 'assets/img/oval/oval-18.jpeg', 'assets/img/oval/oval-19.jpeg', 'assets/img/oval/oval-20.jpeg',
         'assets/img/alshark/alshark-1.jpeg', 'assets/img/alshark/alshark-2.jpeg', 'assets/img/alshark/alshark-3.jpeg', 'assets/img/alshark/logo.jpeg'
       ];
