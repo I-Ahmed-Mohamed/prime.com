@@ -25,22 +25,66 @@
         font-family: 'Inter', system-ui, -apple-system, sans-serif;
       }
       .designs-header {
+        position: relative;
         text-align: center;
-        padding: 120px 20px 60px;
+        padding: 160px 20px 80px;
+        background: radial-gradient(circle at center, rgba(0, 210, 255, 0.05) 0%, transparent 70%);
+        overflow: hidden;
+      }
+      .designs-header::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        height: 300px;
+        background: #00d2ff;
+        filter: blur(150px);
+        opacity: 0.15;
+        z-index: -1;
+        border-radius: 50%;
+      }
+      .badge-premium {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(0, 210, 255, 0.3);
+        padding: 8px 20px;
+        border-radius: 50px;
+        font-size: 14px;
+        color: #00d2ff;
+        margin-bottom: 20px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 20px rgba(0, 210, 255, 0.1);
       }
       .designs-title {
-        font-size: 2.5rem;
-        font-weight: 800;
-        background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+        font-size: 3.5rem;
+        font-weight: 900;
+        background: linear-gradient(to right, #ffffff 20%, #00d2ff 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
+        letter-spacing: -1px;
       }
       .designs-subtitle {
-        color: #888;
-        font-size: 1.1rem;
+        color: #a0a0a0;
+        font-size: 1.2rem;
         max-width: 600px;
         margin: 0 auto;
+        line-height: 1.6;
+      }
+      @media (max-width: 768px) {
+        .designs-header {
+          padding: 120px 20px 60px;
+        }
+        .designs-title {
+          font-size: 2.5rem;
+        }
+        .designs-subtitle {
+          font-size: 1rem;
+        }
       }
 
       /* Premium Filters */
@@ -284,8 +328,11 @@
 
     <main id="main">
       <div class="designs-header" data-aos="fade-down">
+        <div class="badge-premium">
+          <i class='bx bxs-magic-wand'></i> أفكار إبداعية، تصميمات ذكية
+        </div>
         <h1 class="designs-title">معرض التصميمات ✨</h1>
-        <p class="designs-subtitle">تشكيلة من أفضل أعمالي في مجال تصميم واجهات المستخدم والهويات البصرية</p>
+        <p class="designs-subtitle">تشكيلة من أفضل أعمالي في مجال تصميم واجهات المستخدم والهويات البصرية، مصممة بعناية لتناسب هويتك وتلفت الأنظار.</p>
       </div>
 
       <!-- Clients View -->
