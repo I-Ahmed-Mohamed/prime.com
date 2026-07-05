@@ -511,26 +511,7 @@
   border-color: rgba(3, 126, 184, 0.4);
 }
 
-/* ===== Hover Effects for Links ===== */
-a {
-  position: relative;
-  transition: var(--transition-smooth);
-}
-
-a::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #037eb8, #00d9ff);
-  transition: width 0.3s ease;
-}
-
-a:hover::after {
-  width: 100%;
-}
+/* ===== Hover Effects for Links Removed ===== */
 
 .light-mode .profile-header img {
   border-color: rgba(3, 126, 184, 0.4);
