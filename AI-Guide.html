@@ -122,12 +122,12 @@
         position: relative;
         background: var(--claude-surface);
         border: 1px solid var(--claude-border);
-        border-radius: 16px;
-        padding: 12px 16px;
+        border-radius: 30px;
+        padding: 8px 16px;
         box-shadow: 0 4px 16px rgba(0,0,0,.05);
         display: flex;
-        align-items: flex-end;
-        gap: 10px;
+        align-items: center;
+        gap: 12px;
       }
       
       .claude-input-wrapper textarea {
@@ -140,25 +140,35 @@
         resize: none;
         outline: none;
         max-height: 200px;
-        padding: 4px 0;
+        padding: 8px 0;
+        margin: 0;
         line-height: 1.5;
+        display: flex;
+        align-items: center;
       }
       
       .claude-input-wrapper button {
-        background: var(--claude-text);
-        color: var(--claude-bg);
+        margin: 0 !important;
+        padding: 0 !important;
+        background: linear-gradient(135deg, #00e5ff, #0077ff);
+        color: #fff;
         border: none;
-        width: 32px;
-        height: 32px;
-        border-radius: 8px;
-        display: grid;
-        place-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         cursor: pointer;
         transition: 0.2s;
         flex-shrink: 0;
       }
+      .claude-input-wrapper button i {
+        font-size: 20px;
+      }
       .claude-input-wrapper button:hover {
-        opacity: 0.8;
+        opacity: 0.9;
+        transform: scale(1.05);
       }
       
       /* Welcome Screen */
@@ -198,6 +208,68 @@
         background: var(--claude-border);
       }
       
+      .mobile-chat-nav-btn {
+        display: none;
+      }
+      
+      @media (max-width: 680px) {
+        /* Hide standard mobile navbar on AI page */
+        .prime-mobile-tabs {
+          display: none !important;
+        }
+        
+        /* Make the input container act as the bottom bar */
+        .claude-input-container {
+          position: fixed !important;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          background: rgba(10, 20, 35, 0.85) !important;
+          backdrop-filter: blur(20px);
+          -webkit-backdrop-filter: blur(20px);
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+          padding: 10px 15px !important;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          z-index: 1000;
+        }
+        
+        .claude-input-wrapper {
+          flex: 1;
+          margin: 0;
+          box-shadow: none !important;
+          padding: 6px 12px !important;
+          background: rgba(0,0,0,0.4) !important;
+        }
+        
+        /* Show the nav buttons */
+        .mobile-chat-nav-btn {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          color: var(--claude-text);
+          text-decoration: none;
+          flex-shrink: 0;
+        }
+        .mobile-chat-nav-btn i {
+          font-size: 26px;
+          color: rgba(255, 255, 255, 0.7);
+          transition: 0.2s;
+        }
+        .mobile-chat-nav-btn:hover i {
+          color: #00e5ff;
+        }
+        .mobile-chat-nav-btn img {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          border: 2px solid #00e5ff;
+          object-fit: cover;
+        }
+      }
+
       /* Global links inside messages */
       .msg-content a {
         color: #818cf8;
@@ -228,15 +300,34 @@
     </div>
 
     <div class="claude-input-container">
+      <!-- Home Button (Mobile Only) -->
+      <a href="index.html" class="mobile-chat-nav-btn" title="الرئيسية"><i class="bx bxs-home"></i></a>
+      
       <form class="claude-input-wrapper" id="chatForm">
         <textarea id="chatInput" rows="1" placeholder="اكتب رسالتك هنا..."></textarea>
         <button type="submit" aria-label="Send"><i class="bi bi-arrow-up"></i></button>
       </form>
+      
+      <!-- Profile Button (Mobile Only) -->
+      <a href="javascript:void(0)" class="mobile-chat-nav-btn" id="open-profile-menu-ai" title="البروفايل">
+        <img src="assets/img/profile/me.jpg" alt="Profile" />
+      </a>
     </div>
 
     <script src="assets/js/navbar.js"></script>
     <script src="assets/js/2030-universe.js"></script>
     <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const aiProfileBtn = document.getElementById('open-profile-menu-ai');
+        if (aiProfileBtn) {
+          aiProfileBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const originalProfileBtn = document.querySelector('.prime-mobile-tabs #open-profile-menu') || document.querySelector('#open-profile-menu');
+            if (originalProfileBtn) originalProfileBtn.click();
+          });
+        }
+      });
+      
       (function () {
         // AI Chat Logic
         const persona = {
