@@ -94,12 +94,16 @@
         width: 32px;
         height: 32px;
         border-radius: 6px;
-        background: linear-gradient(135deg, #d8b4fe, #818cf8);
+        background: transparent;
         display: grid;
         place-items: center;
-        color: #fff;
-        font-size: 18px;
         flex-shrink: 0;
+      }
+      .claude-msg.bot .msg-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 6px;
       }
 
       .claude-msg.bot .msg-content {
@@ -120,7 +124,7 @@
         width: 100%;
         max-width: 768px;
         position: relative;
-        background: var(--claude-surface);
+        background: transparent;
         border: 1px solid var(--claude-border);
         border-radius: 30px;
         padding: 8px 16px;
@@ -358,7 +362,7 @@
           
           if (type === 'bot') {
             div.innerHTML = `
-              <div class="msg-avatar"><i class="bi bi-stars"></i></div>
+              <div class="msg-avatar"><img src="assets/img/profile/me.jpg" alt="AI"></div>
               <div class="msg-content">${html}</div>
             `;
           } else {
