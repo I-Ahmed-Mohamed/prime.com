@@ -1355,9 +1355,9 @@ img { max-width:100%; }
   top: calc(100% + 10px);
   left: 50%;
   transform: translateX(-50%) translateY(8px);
-  background: color-mix(in srgb, var(--prime-surface) 95%, transparent);
-  backdrop-filter: blur(24px) saturate(150%);
-  -webkit-backdrop-filter: blur(24px) saturate(150%);
+  background: var(--prime-card-strong);
+  backdrop-filter: blur(40px) saturate(200%);
+  -webkit-backdrop-filter: blur(40px) saturate(200%);
   border: 1px solid var(--prime-line);
   border-radius: 18px;
   padding: 8px;
@@ -1388,7 +1388,7 @@ img { max-width:100%; }
   transform: translateX(-50%) rotate(45deg);
   width: 12px;
   height: 12px;
-  background: color-mix(in srgb, var(--prime-surface) 95%, transparent);
+  background: var(--prime-card-strong);
   border-top: 1px solid var(--prime-line);
   border-left: 1px solid var(--prime-line);
 }
