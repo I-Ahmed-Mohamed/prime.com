@@ -1,74 +1,79 @@
-
-
 .video-container {
     display: grid;
     gap: 25px;
-    justify-content: center;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 30px;
 }
 
-/* الوضع الافتراضي: 3 فيديوهات في الصف */
 @media (min-width: 768px) {
     .video-container {
-        grid-template-columns: repeat(3, 1fr); /* ثلاثة أعمدة */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
-
-/* للشاشات الصغيرة: 2 فيديو في الصف */
-@media (max-width: 767px) {
+@media (min-width: 1024px) {
     .video-container {
-        grid-template-columns: repeat(1, 1fr); /* عمودان */
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-/* تصميم الفيديو */
 .video-card {
- 
-    background-color: rgba(178, 218, 245, 0.068); /* لون شفاف */
-    backdrop-filter: blur(90px); /* تأثير الضبابية */   
-     border-radius: 20px;
+    background: var(--prime-card-strong) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    backdrop-filter: blur(18px) saturate(150%);
+    border-radius: var(--prime-radius);
     overflow: hidden;
     text-align: center;
     padding: 20px;
     position: relative;
-    width: 85%; /* عرض كامل داخل الشبكة */
-    left: 30px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--prime-accent) !important;
 }
 
 .video-thumbnail {
-    width: 30%; /* تناسب الصورة مع عرض العنصر */
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
     cursor: pointer;
+    transition: opacity 0.3s ease;
 }
 
 .video-card video {
     width: 100%;
-    border-radius: 20px;
-    display: none; /* إخفاء الفيديو افتراضيًا */
+    border-radius: 12px;
+    margin-bottom: 15px;
+    display: none;
+    outline: none;
 }
 
 .video-info {
     margin-top: 10px;
+    text-align: left;
 }
 
-.video-info h2 {
-    font-size: 18px;
-    color: #fff;
-    margin-bottom: 5px;
+.video-info p {
+    font-size: 14px;
+    color: var(--prime-text);
+    margin-bottom: 15px;
+    line-height: 1.5;
 }
 
 .progress-bar {
-    background: var(--text-colore);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
     overflow: hidden;
-    height: 5px;
+    height: 6px;
     width: 100%;
-    margin: 10px 0;
+    margin: 15px 0 10px;
 }
 
 .progress-fill {
-    background: var(--bg-color);
+    background: var(--prime-accent);
     height: 100%;
     width: 0%;
     transition: width 0.3s ease;
@@ -77,12 +82,12 @@
 .view-count {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 5px;
-    font-size: 14px;
-    color: #FFF;
+    justify-content: flex-start;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--prime-muted);
 }
 
 .view-count i {
-    color: var(--bg-color);
+    color: var(--prime-accent);
 }
