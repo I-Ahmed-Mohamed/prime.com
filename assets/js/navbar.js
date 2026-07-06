@@ -40,7 +40,7 @@
       <a class="prime-brand" href="index.html" aria-label="Ahmed Mohamed Home">
         <span class="brand-copy">
           <strong>Ahmed Mohamed</strong>
-          <small data-i18n="brandSub">AI Software Engineer</small>
+          <small data-i18n="brandSub">AI + برمجة + تصميم</small>
         </span>
         <span class="brand-orb">
           <img src="assets/img/profile/me.jpg" alt="Ahmed Mohamed" />
@@ -111,7 +111,7 @@
           <img src="assets/img/profile/me.jpg" alt="Ahmed" />
           <div>
             <h3 data-i18n="fsName">${savedLang === 'ar' ? 'أحمد محمد' : 'Ahmed Mohamed'}</h3>
-            <p data-i18n="fsTitle">${savedLang === 'ar' ? 'مهندس برمجيات ذكاء اصطناعي' : 'AI Software Engineer'}</p>
+            <p data-i18n="fsTitle">AI + برمجة + تصميم</p>
           </div>
         </div>
         <button id="prime-fs-close" class="prime-fs-close"><i class="bi bi-x-lg"></i></button>

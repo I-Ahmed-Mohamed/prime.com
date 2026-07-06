@@ -163,8 +163,9 @@ body::after {
   color: #8892b0; 
   font-size: 11px; 
   font-weight: 600; 
-  letter-spacing: .08em; 
-  text-transform: uppercase; 
+  text-transform: uppercase;
+  text-align-last: justify;
+  width: 100%;
 }
 .prime-links {
   display: flex;
@@ -344,7 +345,7 @@ img { max-width:100%; }
   .prime-links.open { display:flex; }
   .prime-links .nav-link { justify-content:flex-start; width:100%; }
   .prime-brand { min-width: auto; }
-  .brand-copy small { display:none; }
+  .brand-copy small { display: block !important; font-size: 9px !important; margin-top: 1px; text-align-last: justify !important; width: 100% !important; }
 }
 @media (max-width: 680px) {
   #main, .profile-container { padding-top: 92px !important; }
@@ -573,9 +574,9 @@ img { max-width:100%; }
   .prime-brand { max-width: none !important; gap: 10px !important; flex-shrink: 0 !important; }
   .brand-orb { width: 42px !important; height: 42px !important; flex-basis: 42px !important; }
   .brand-copy strong { font-size: 15px !important; }
-  .brand-copy small { display: none !important; }
+  .brand-copy small { display: block !important; font-size: 9px !important; margin-top: 1px; text-align-last: justify !important; width: 100% !important; }
   .prime-menu-toggle, .prime-links { display: none !important; }
-  .prime-actions { grid-column: auto !important; justify-content: flex-end !important; width: auto !important; gap: 6px !important; }
+  .prime-actions { grid-column: auto !important; justify-content: flex-end !important; width: auto !important; gap: 2px !important; }
   .prime-action-btn { min-width: 38px !important; width: 38px !important; height: 38px !important; }
   .prime-hire-btn { display: none !important; }
 
@@ -711,7 +712,7 @@ img { max-width:100%; }
   .tab-icon-wrap img { width: 30px; height: 30px; }
   .prime-mobile-tab strong { font-size: 10px; }
   .prime-brand { max-width: 165px !important; }
-  .brand-copy small { display: none !important; }
+  .brand-copy small { display: block !important; font-size: 9px !important; margin-top: 1px; text-align-last: justify !important; width: 100% !important; }
 }
 
 /* Desktop assistant moved away from back-to-top arrow */
@@ -906,7 +907,7 @@ img { max-width:100%; }
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: var(--prime-card-strong) !important;
+  background: transparent !important;
   border: 1px solid rgba(255,255,255,0.06) !important;
   border-radius: 18px !important;
   transition: all 0.3s ease !important;
