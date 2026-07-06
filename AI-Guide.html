@@ -20,11 +20,11 @@
     <!-- Minimal Base CSS -->
     <style>
       :root {
-        --claude-bg: var(--bg-colore, #09090b);
-        --claude-text: var(--text-colore, #ececf1);
-        --claude-surface: var(--prime-surface, #18181b);
-        --claude-border: var(--prime-line, #27272a);
-        --claude-user-bg: var(--prime-card-strong, #27272a);
+        --claude-bg: var(--prime-bg, #000000);
+        --claude-text: var(--prime-text, #ffffff);
+        --claude-surface: var(--prime-surface, rgba(15, 15, 18, 0.72));
+        --claude-border: var(--prime-line, rgba(255, 255, 255, 0.1));
+        --claude-user-bg: var(--prime-card-strong, rgba(24, 24, 27, 0.86));
         --claude-bot-bg: transparent;
         --claude-font: var(--prime-font, 'Cairo', 'Inter', system-ui, sans-serif);
       }
@@ -125,7 +125,7 @@
         max-width: 768px;
         position: relative;
         background: transparent;
-        border: 1px solid var(--claude-border);
+        border: none;
         border-radius: 30px;
         padding: 8px 16px;
         box-shadow: 0 4px 16px rgba(0,0,0,.05);
@@ -227,10 +227,10 @@
           bottom: 0;
           left: 0;
           width: 100%;
-          background: rgba(10, 20, 35, 0.85) !important;
+          background: var(--prime-surface) !important;
           backdrop-filter: blur(20px);
           -webkit-backdrop-filter: blur(20px);
-          border-top: 1px solid rgba(255, 255, 255, 0.1);
+          border-top: 1px solid var(--prime-line);
           padding: 10px 15px !important;
           display: flex;
           align-items: center;
@@ -244,7 +244,7 @@
           box-shadow: none !important;
           padding: 6px 12px !important;
           background: transparent !important;
-          border: 1px solid rgba(255, 255, 255, 0.1) !important;
+          border: none !important;
         }
         
         /* Show the nav buttons */
