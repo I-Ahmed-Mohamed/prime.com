@@ -124,8 +124,8 @@
         width: 100%;
         max-width: 768px;
         position: relative;
-        background: transparent;
-        border: none;
+        background: var(--claude-surface);
+        border: 1px solid var(--claude-border);
         border-radius: 30px;
         padding: 8px 16px;
         box-shadow: 0 4px 16px rgba(0,0,0,.05);
@@ -137,14 +137,15 @@
       .claude-input-wrapper textarea {
         flex: 1;
         background: transparent !important;
-        border: none;
+        border: none !important;
+        box-shadow: none !important;
         color: var(--claude-text);
         font-family: inherit;
         font-size: 16px;
         resize: none;
         outline: none;
         max-height: 200px;
-        padding: 8px 0;
+        padding: 8px 12px !important;
         margin: 0;
         line-height: 1.5;
         overflow: hidden;
@@ -244,7 +245,7 @@
           box-shadow: none !important;
           padding: 6px 12px !important;
           background: transparent !important;
-          border: none !important;
+          border: 1px solid var(--prime-line) !important;
         }
         
         /* Show the nav buttons */
