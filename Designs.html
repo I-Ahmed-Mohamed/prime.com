@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>معرض التصميمات | Ahmed Mohamed</title>
+    <title>العملاء | Ahmed Mohamed</title>
     <meta name="theme-color" content="#1a1a1a" />
     
     <!-- Favicons -->
@@ -287,6 +287,30 @@
         background: rgba(255,255,255,0.1);
         transform: translateX(-5px);
       }
+      .client-ext-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: linear-gradient(135deg, var(--prime-accent), var(--prime-accent-2));
+        color: #000 !important;
+        padding: 9px 20px;
+        border-radius: 99px;
+        font-weight: 700;
+        font-size: 14px;
+        text-decoration: none !important;
+        transition: 0.3s ease;
+      }
+      .client-ext-btn.fb {
+        background: #1877F2;
+        color: #fff !important;
+      }
+      .client-ext-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 229, 255, 0.4);
+      }
+      .client-ext-btn.fb:hover {
+        box-shadow: 0 6px 20px rgba(24, 119, 242, 0.5);
+      }
       .client-gallery-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -329,16 +353,24 @@
     <main id="main">
       <div class="designs-header" data-aos="fade-down">
         <div class="badge-premium">
-          <i class='bx bxs-magic-wand'></i> أفكار إبداعية، تصميمات ذكية
+          <i class='bx bxs-badge-check'></i> شركاء النجاح
         </div>
-        <h1 class="designs-title">معرض التصميمات</h1>
-        <p class="designs-subtitle">تشكيلة من أفضل أعمالي في مجال تصميم واجهات المستخدم والهويات البصرية، مصممة بعناية لتناسب هويتك وتلفت الأنظار.</p>
+        <h1 class="designs-title">عملاؤنا وشركاء النجاح</h1>
+        <p class="designs-subtitle">الشركات والعملاء الذين تشرفت بالعمل معهم وتطوير مواقعهم الإلكترونية وهوياتهم وتصاميمهم الإعلانية.</p>
       </div>
 
       <!-- Clients View -->
       <div id="clients-view">
         <div class="clients-grid" data-aos="fade-up" data-aos-delay="100">
           
+          <div class="client-card" onclick="openClient('olympic')">
+            <div class="client-logo-wrapper">
+              <img src="assets/img/olympic/logo.jpeg" class="client-logo" alt="أوليمبيك للطباعة" />
+            </div>
+            <h3 class="client-name">أوليمبيك للطباعة</h3>
+            <p class="client-desc">تصميم وبرمجة الموقع وهوية المطبوعات</p>
+          </div>
+
           <div class="client-card" onclick="openClient('oval-foods')">
             <div class="client-logo-wrapper">
               <img src="assets/img/oval/logo.jpeg" class="client-logo" alt="Oval Foods" />
@@ -361,7 +393,10 @@
       <!-- Gallery View -->
       <div id="gallery-view">
         <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-          <button class="back-btn" onclick="closeClient()"><i class="bx bx-arrow-back"></i> رجوع للعملاء</button>
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; margin-bottom: 25px;">
+            <button class="back-btn" onclick="closeClient()" style="margin-bottom: 0;"><i class="bx bx-arrow-back"></i> رجوع للعملاء</button>
+            <div id="client-links-container" style="display: flex; gap: 10px; flex-wrap: wrap;"></div>
+          </div>
           <h2 id="gallery-title" style="margin-bottom: 30px; font-weight: 800;">اسم العميل</h2>
         </div>
         
@@ -388,8 +423,17 @@
       let lightbox = GLightbox({ selector: '.glightbox' });
 
       const clientsData = {
+        'olympic': {
+          name: 'أوليمبيك للطباعة | Olympic For Printing',
+          website: 'https://olympic-nine.vercel.app/',
+          images: [
+            'assets/img/olympic/site-preview.png',
+            'assets/img/olympic/logo.jpeg'
+          ]
+        },
         'oval-foods': {
           name: 'Oval Foods',
+          facebook: 'https://www.facebook.com/share/1Dks5Rufu9/?mibextid=wwXIfr',
           images: [
             'assets/img/oval/oval-1.jpeg',
             'assets/img/oval/oval-2.jpeg',
@@ -415,6 +459,7 @@
         },
         'al-sharq': {
           name: 'الشرق للأعلاف',
+          facebook: 'https://www.facebook.com/share/1BzWHAQ1jn/?mibextid=wwXIfr',
           images: [
             'assets/img/alshark/alshark-1.jpeg',
             'assets/img/alshark/alshark-2.jpeg',
@@ -429,6 +474,17 @@
 
         document.getElementById('gallery-title').innerText = client.name;
         
+        const linksContainer = document.getElementById('client-links-container');
+        if (linksContainer) {
+          linksContainer.innerHTML = '';
+          if (client.website) {
+            linksContainer.innerHTML += `<a href="${client.website}" target="_blank" class="client-ext-btn"><i class="bx bx-globe"></i> زيارة الموقع الرسمي</a>`;
+          }
+          if (client.facebook) {
+            linksContainer.innerHTML += `<a href="${client.facebook}" target="_blank" class="client-ext-btn fb"><i class="bx bxl-facebook-circle"></i> صفحة فيسبوك</a>`;
+          }
+        }
+
         const grid = document.getElementById('designs-grid');
         grid.innerHTML = '';
         

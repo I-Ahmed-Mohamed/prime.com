@@ -1,7 +1,7 @@
 /* AHMED MOHAMED — PRIME 2029 AI ENGINE */
 (function () {
   const state = {
-    lang: localStorage.getItem('prime-lang') || 'en',
+    lang: localStorage.getItem('prime-lang') || 'ar',
     theme: localStorage.getItem('prime-theme') || 'dark',
   };
 
@@ -12,6 +12,8 @@
     phone1: '01094547599',
     phone2: '01044599911',
     email: 'ahmedcodteng@gmail.com',
+    facebook: 'https://www.facebook.com/share/1HmBiCLjYj/?mibextid=wwXIfr',
+    tiktok: 'https://www.tiktok.com/@ahmadmoamedw.s?_r=1&_t=ZS-9AdH4YFiKKS',
     location: 'Egypt',
     roleAr: 'مهندس برمجيات ومصمم ومدير صفحات وصانع محتوى بالذكاء الاصطناعي',
     roleEn: 'software engineer, designer, page manager, and AI content creator',
@@ -28,11 +30,10 @@
     { titleEn: 'About Ahmed', titleAr: 'من هو أحمد', url: 'About.html', icon: 'bx bx-user-voice', tags: 'about bio experience personal' },
     { titleEn: 'CV', titleAr: 'السي في', url: 'CV.html', icon: 'bx bx-id-card', tags: 'cv resume pdf work' },
     { titleEn: 'Skills', titleAr: 'المهارات', url: 'Skills.html', icon: 'bx bx-code-curly', tags: 'skills angular dotnet sql backend frontend' },
-    { titleEn: 'Projects', titleAr: 'المشاريع', url: 'Projects.html', icon: 'bx bx-layer', tags: 'projects portfolio ecommerce dashboard website' },
-    { titleEn: 'Designs', titleAr: 'التصميمات', url: 'Designs.html', icon: 'bx bx-palette', tags: 'designs photoshop posts social media' },
-    { titleEn: 'Videos', titleAr: 'الفيديوهات', url: 'Videos.html', icon: 'bx bx-movie-play', tags: 'video reels ai motion' },
+    { titleEn: 'Projects', titleAr: 'المشاريع', url: 'Projects.html', icon: 'bx bx-layer', tags: 'projects portfolio ecommerce dashboard website olympic' },
+    { titleEn: 'Clients', titleAr: 'العملاء', url: 'Designs.html', icon: 'bx bx-group', tags: 'clients brands oval alshark olympic customers' },
     { titleEn: 'Services', titleAr: 'الخدمات', url: 'Services.html', icon: 'bx bx-briefcase-alt-2', tags: 'services price web design management' },
-    { titleEn: 'Contact', titleAr: 'التواصل', url: 'Contact.html', icon: 'bx bx-message-dots', tags: 'contact phone email whatsapp hire' },
+    { titleEn: 'Contact', titleAr: 'التواصل', url: 'Contact.html', icon: 'bx bx-message-dots', tags: 'contact phone email whatsapp hire facebook tiktok' },
   ];
 
   const i18n = {

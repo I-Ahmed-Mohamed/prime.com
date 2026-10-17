@@ -336,6 +336,8 @@
           phone1: '01094547599',
           phone2: '01044599911',
           email: 'ahmedcodteng@gmail.com',
+          facebook: 'https://www.facebook.com/share/1HmBiCLjYj/?mibextid=wwXIfr',
+          tiktok: 'https://www.tiktok.com/@ahmadmoamedw.s?_r=1&_t=ZS-9AdH4YFiKKS',
           services: 'تصميم وبناء مواقع للشركات، إدارة صفحات السوشيال ميديا، فيديوهات AI، وبرمجة تطبيقات خاصة',
           stack: 'Full Stack .NET, Angular, HTML, CSS, JavaScript, TypeScript, SQL Server, Entity Framework, Bootstrap'
         };
@@ -399,6 +401,7 @@
           if (/سعر|تكلفة|كام|بكام|price|cost|فلوس/.test(t)) return `الأسعار ممتازة وبتتحدد حسب تفاصيل طلبك. كمثال مبدئي: الموقع التعريفي يبدأ من 5000 جنيه، وباقات إدارة السوشيال ميديا تبدأ من 2000 جنيه. كلمنا عشان نظبطلك عرض سعر مخصوص! ${contact}`;
           
           // التواصل
+          if (/فيس|فيسبوك|facebook|تيك|تيكتوك|تيك توك|tiktok|سوشيال/.test(t)) return `تقدر تتابع المهندس أحمد على حساباته الرسمية:<br>🔹 <a href="${persona.facebook}" target="_blank">صفحة Facebook</a><br>🔹 <a href="${persona.tiktok}" target="_blank">حساب TikTok</a><br>🔹 واتساب: <a href="https://wa.me/2${persona.phone1}">${persona.phone1}</a>`;
           if (/تواصل|رقم|واتساب|واتس|تليفون|call|phone|contact|whatsapp/.test(t)) return `تقدر تتواصل مع أحمد مباشرة في أي وقت (مكالمة أو واتساب) على الأرقام دي:<br><a href="tel:+2${persona.phone1}">${persona.phone1}</a><br><a href="tel:+2${persona.phone2}">${persona.phone2}</a>`;
           
           // المحادثة العامة

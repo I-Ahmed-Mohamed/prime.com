@@ -4,7 +4,7 @@
     { href: 'index.html', icon: 'bx bxs-home', en: 'Home', ar: 'الرئيسية', mobileEn: 'Home', mobileAr: 'الرئيسية' },
     { href: 'Projects.html', icon: 'bx bx-layer', en: 'Projects', ar: 'المشاريع', mobileEn: 'Projects', mobileAr: 'المشاريع' },
     { href: 'Presentation.html', icon: 'bx bx-slideshow', en: 'Presentation', ar: 'البريزنتيشن', mobileEn: 'Presentation', mobileAr: 'بريزنتيشن' },
-    { href: 'Designs.html', icon: 'bx bx-palette', en: 'Designs', ar: 'التصميمات', mobileEn: 'Designs', mobileAr: 'التصميمات' },
+    { href: 'Designs.html', icon: 'bx bx-group', en: 'Clients', ar: 'العملاء', mobileEn: 'Clients', mobileAr: 'العملاء' },
     { href: 'javascript:void(0)', icon: 'profile', en: 'About', ar: 'من أنا', mobileEn: 'Profile', mobileAr: 'بروفايل', id: 'open-profile-menu' },
   ];
 
@@ -18,7 +18,7 @@
       dropdown: true, icon: 'bx bx-dots-horizontal-rounded', en: 'More', ar: 'المزيد',
       items: [
         { href: 'Presentation.html', icon: 'bx bx-slideshow', en: 'Presentation', ar: 'عرض تقديمي' },
-        { href: 'Designs.html', icon: 'bx bx-palette', en: 'Designs', ar: 'التصميمات' },
+        { href: 'Designs.html', icon: 'bx bx-group', en: 'Clients', ar: 'العملاء' },
         { href: 'AI-Guide.html', icon: 'bx bx-bot', en: 'AI Assistant', ar: 'المساعد الذكي' },
         { href: 'Contact.html', icon: 'bx bx-message-dots', en: 'Contact', ar: 'تواصل' }
       ]
@@ -27,7 +27,7 @@
 
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   const savedTheme = localStorage.getItem('prime-theme') || 'dark';
-  const savedLang = localStorage.getItem('prime-lang') || 'en';
+  const savedLang = localStorage.getItem('prime-lang') || 'ar';
   document.documentElement.dataset.theme = savedTheme;
   document.documentElement.dataset.lang = savedLang;
   document.documentElement.dir = savedLang === 'ar' ? 'rtl' : 'ltr';
@@ -130,7 +130,7 @@
           <a href="Presentation.html"><i class="bx bx-slideshow"></i> <span data-i18n="fsPresentation">${savedLang === 'ar' ? 'عرض تقديمي' : 'Presentation'}</span></a>
           <a href="Projects.html"><i class="bx bx-layer"></i> <span data-i18n="fsProjects">${savedLang === 'ar' ? 'المشاريع' : 'Projects'}</span></a>
 
-          <a href="Designs.html"><i class="bx bx-palette"></i> <span data-i18n="fsDesigns">${savedLang === 'ar' ? 'التصميمات' : 'Designs'}</span></a>
+          <a href="Designs.html"><i class="bx bx-group"></i> <span data-i18n="fsDesigns">${savedLang === 'ar' ? 'العملاء' : 'Clients'}</span></a>
           <a href="Services.html"><i class="bx bx-briefcase-alt-2"></i> <span data-i18n="fsServices">${savedLang === 'ar' ? 'الخدمات' : 'Services'}</span></a>
         </div>
         <div class="prime-fs-section">
