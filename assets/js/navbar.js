@@ -26,7 +26,11 @@
   ];
 
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  const savedTheme = localStorage.getItem('prime-theme') || 'dark';
+  let savedTheme = localStorage.getItem('prime-theme');
+  if (!savedTheme || savedTheme === 'light') {
+    savedTheme = 'dark';
+    localStorage.setItem('prime-theme', 'dark');
+  }
   const savedLang = localStorage.getItem('prime-lang') || 'ar';
   document.documentElement.dataset.theme = savedTheme;
   document.documentElement.dataset.lang = savedLang;

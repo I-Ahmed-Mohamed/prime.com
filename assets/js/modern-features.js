@@ -100,8 +100,7 @@
 
   // ===== Enhanced Particle Background =====
   const initParticles = () => {
-    const canvas = document.getElementById("spider");
-    if (!canvas) return;
+    return; // Background particles disabled by request
 
     // Check if it's already a canvas
     if (canvas.tagName !== "CANVAS") {

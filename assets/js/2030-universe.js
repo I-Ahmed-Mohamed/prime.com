@@ -1,8 +1,13 @@
 /* AHMED MOHAMED — PRIME 2029 AI ENGINE */
 (function () {
+  let savedTheme = localStorage.getItem('prime-theme');
+  if (!savedTheme || savedTheme === 'light') {
+    savedTheme = 'dark';
+    localStorage.setItem('prime-theme', 'dark');
+  }
   const state = {
     lang: localStorage.getItem('prime-lang') || 'ar',
-    theme: localStorage.getItem('prime-theme') || 'dark',
+    theme: savedTheme,
   };
 
 
@@ -54,7 +59,17 @@
     chip3: { en: 'Dark and light modes with premium glass styling.', ar: 'وضع ليلي ونهاري بتصميم زجاجي فاخر.' },
     marqueeBadge: { en: 'Endless Visual Journey', ar: 'رحلة بصرية لا نهائية' },
     marqueeTitle: { en: 'Creative Marquee', ar: 'شريط الإبداعات' },
-    marqueeSubtitle: { en: 'Watch all my designs in a continuous stream of passion and limitless creativity.', ar: 'شاهد جميع تصميماتي في عرض مستمر يجسد الشغف والإبداع اللامحدود.' }
+    marqueeSubtitle: { en: 'Watch all my designs in a continuous stream of passion and limitless creativity.', ar: 'شاهد جميع تصميماتي في عرض مستمر يجسد الشغف والإبداع اللامحدود.' },
+    aboutTitle: { en: 'About Me', ar: 'من أنا' },
+    aboutHeading: { en: 'AI Software Engineer & Full-Stack Developer', ar: 'مهندس برمجيات ذكاء اصطناعي ومطور ويب متكامل' },
+    aboutBio: { 
+      en: 'Passionate about creating intelligent systems and robust applications. I specialize in bridging the gap between cutting-edge Artificial Intelligence and scalable web/mobile technologies to solve real-world problems.', 
+      ar: 'شغوف بابتكار وتطوير الأنظمة الذكية والتطبيقات البرمجية المتقدمة. متخصص في الربط بين أحدث تقنيات الذكاء الاصطناعي وبناء حلول ويب وموبايل قوية وقابلة للتوسع لحل المشكلات الواقعية.' 
+    },
+    aboutExp: { en: 'Years Experience', ar: 'سنوات خبرة' },
+    aboutProjects: { en: 'Projects Done', ar: 'مشروع مكتمل' },
+    aboutCommitment: { en: 'Commitment', ar: 'التزام بالجودة' },
+    aboutDownloadCV: { en: 'Download CV', ar: 'تحميل السيرة الذاتية' }
   };
 
   function setLang(lang) {
