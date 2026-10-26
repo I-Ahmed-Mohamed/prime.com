@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#30cfd0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#330867;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#grad5)"/>
+  <text x="50%" y="45%" text-anchor="middle" font-family="Arial, sans-serif" font-size="60" fill="white" font-weight="bold">مونتاج فيديو</text>
+  <text x="50%" y="55%" text-anchor="middle" font-family="Arial, sans-serif" font-size="40" fill="rgba(255,255,255,0.8)">Video Editing</text>
+  <polygon points="550,300 550,450 680,375" fill="white" opacity="0.8"/>
+  <rect x="480" y="250" width="240" height="250" rx="10" fill="none" stroke="white" stroke-width="4"/>
+</svg>
