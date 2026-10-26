@@ -1,13 +1,8 @@
 /* AHMED MOHAMED — PRIME 2029 AI ENGINE */
 (function () {
-  let savedTheme = localStorage.getItem('prime-theme');
-  if (!savedTheme || savedTheme === 'light') {
-    savedTheme = 'dark';
-    localStorage.setItem('prime-theme', 'dark');
-  }
   const state = {
     lang: localStorage.getItem('prime-lang') || 'ar',
-    theme: savedTheme,
+    theme: localStorage.getItem('prime-theme') || 'dark',
   };
 
 
@@ -119,6 +114,7 @@
     state.theme = theme;
     localStorage.setItem('prime-theme', theme);
     document.documentElement.dataset.theme = theme;
+    document.body.classList.toggle('light-mode', theme === 'light');
     const icon = document.querySelector('#prime-theme-toggle i');
     if (icon) icon.className = `bi ${theme === 'light' ? 'bi-moon-stars' : 'bi-sun'}`;
   }

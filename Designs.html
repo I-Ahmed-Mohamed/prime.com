@@ -49,12 +49,12 @@
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(0, 210, 255, 0.3);
+        background: color-mix(in srgb, var(--prime-accent) 10%, transparent);
+        border: 1px solid var(--prime-line);
         padding: 8px 20px;
         border-radius: 50px;
         font-size: 14px;
-        color: #00d2ff;
+        color: var(--prime-accent);
         margin-bottom: 20px;
         backdrop-filter: blur(10px);
         box-shadow: 0 0 20px rgba(0, 210, 255, 0.1);
@@ -62,14 +62,14 @@
       .designs-title {
         font-size: 3.5rem;
         font-weight: 900;
-        background: linear-gradient(to right, #ffffff 20%, #00d2ff 100%);
+        background: linear-gradient(to right, var(--prime-text) 20%, var(--prime-accent) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin-bottom: 20px;
         letter-spacing: -1px;
       }
       .designs-subtitle {
-        color: #a0a0a0;
+        color: var(--prime-muted);
         font-size: 1.2rem;
         max-width: 600px;
         margin: 0 auto;
@@ -96,13 +96,13 @@
         flex-wrap: wrap;
       }
       .filter-btn {
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: var(--prime-card);
+        border: 1px solid var(--prime-line);
         border-radius: 30px;
         padding: 12px 25px;
-        color: #ccc;
+        color: var(--prime-text);
         font-size: 15px;
-        font-weight: 500;
+        font-weight: 600;
         cursor: pointer;
         transition: all 0.3s ease;
         display: flex;
@@ -111,12 +111,13 @@
         backdrop-filter: blur(10px);
       }
       .filter-btn:hover {
-        background: rgba(255, 255, 255, 0.08);
-        color: #fff;
+        background: var(--prime-surface);
+        border-color: var(--prime-accent);
+        color: var(--prime-accent);
         transform: translateY(-2px);
       }
       .filter-btn.active {
-        background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+        background: linear-gradient(135deg, var(--prime-accent) 0%, var(--prime-accent-2) 100%);
         border-color: transparent;
         color: #fff;
         box-shadow: 0 5px 15px rgba(0, 210, 255, 0.3);

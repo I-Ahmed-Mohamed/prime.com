@@ -24,18 +24,19 @@
 }
 
 :root[data-theme="light"] {
-  --prime-bg: #ffffff;
-  --prime-bg-2: #f8f9fa;
-  --prime-surface: rgba(255, 255, 255, 0.9);
-  --prime-card: rgba(255, 255, 255, 0.8);
-  --prime-card-strong: rgba(255, 255, 255, 0.96);
-  --prime-text: #09090b;
-  --prime-muted: #52525b;
-  --prime-line: rgba(0, 0, 0, 0.08);
-  --prime-accent: #0070f3;
-  --prime-accent-2: #0070f3;
-  --prime-accent-3: #0070f3;
-  --prime-shadow: 0 20px 60px rgba(0, 112, 243, 0.1);
+  --prime-bg: #f8fafc;
+  --prime-bg-2: #f1f5f9;
+  --prime-surface: rgba(255, 255, 255, 0.95);
+  --prime-card: #ffffff;
+  --prime-card-strong: #ffffff;
+  --prime-text: #0f172a;
+  --prime-muted: #475569;
+  --prime-line: rgba(15, 23, 42, 0.12);
+  --prime-accent: #0066cc;
+  --prime-accent-2: #0284c7;
+  --prime-accent-3: #0066cc;
+  --prime-warn: #e11d48;
+  --prime-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 * { box-sizing: border-box; }
@@ -136,12 +137,12 @@ body::after {
   font-size: 20px; 
   line-height: 1; 
   letter-spacing: -.03em; 
-  color: #ffffff; 
+  color: var(--prime-text); 
 }
 .brand-copy small { 
   display:block; 
   margin-top: 4px; 
-  color: #8892b0; 
+  color: var(--prime-muted); 
   font-size: 11px; 
   font-weight: 600; 
   text-transform: uppercase;
@@ -744,9 +745,9 @@ img { max-width:100%; }
   line-height: 1.15 !important;
   margin: 20px auto 14px !important;
   max-width: 900px;
-  color: #ffffff !important;
+  color: var(--prime-text) !important;
   background: none !important;
-  -webkit-text-fill-color: #ffffff !important;
+  -webkit-text-fill-color: var(--prime-text) !important;
 }
 .copilot-subtitle { max-width: 680px; margin: 0 auto !important; font-size: clamp(15px, 2vw, 20px) !important; line-height: 1.8 !important; }
 .copilot-input {
@@ -762,9 +763,9 @@ img { max-width:100%; }
   text-align: start;
   color: var(--prime-text) !important;
   text-decoration: none !important;
-  border: 1px solid rgba(0, 242, 254, 0.35);
-  background: rgba(16, 25, 46, 0.88);
-  box-shadow: 0 24px 80px rgba(0,0,0,.5), 0 0 30px rgba(0, 242, 254, 0.12), inset 0 1px 0 rgba(255,255,255,.15);
+  border: 1px solid var(--prime-line);
+  background: var(--prime-card-strong);
+  box-shadow: var(--prime-shadow);
   backdrop-filter: blur(24px) saturate(160%);
   transition: all 0.35s ease;
 }
@@ -1580,4 +1581,421 @@ img { max-width:100%; }
 }
 .portfolio-links a i {
   color: inherit !important;
+}
+
+/* =========================================================
+   PRIME 2030 LIGHT THEME COMPREHENSIVE HIGH-CONTRAST ENGINE
+   ========================================================= */
+:root[data-theme="light"] body {
+  background-color: var(--prime-bg) !important;
+  color: var(--prime-text) !important;
+}
+
+:root[data-theme="light"] section,
+:root[data-theme="light"] .prime-home-section,
+:root[data-theme="light"] .portfolio-wrap,
+:root[data-theme="light"] .service-card,
+:root[data-theme="light"] .service-card-v2,
+:root[data-theme="light"] .contact-card-glass,
+:root[data-theme="light"] .client-card,
+:root[data-theme="light"] .ai-page-card,
+:root[data-theme="light"] .ai-page-chat,
+:root[data-theme="light"] #prime-ai-window,
+:root[data-theme="light"] .prime-fullscreen-menu,
+:root[data-theme="light"] .prime-search-modal {
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.1) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03) !important;
+}
+
+:root[data-theme="light"] .prime-nav-2029 {
+  background: rgba(255, 255, 255, 0.94) !important;
+  border: 1px solid rgba(15, 23, 42, 0.1) !important;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.03) !important;
+}
+
+:root[data-theme="light"] .prime-links .nav-link {
+  color: #334155 !important;
+}
+
+:root[data-theme="light"] .prime-links .nav-link:hover,
+:root[data-theme="light"] .prime-links .nav-link.active {
+  color: #0066cc !important;
+  background: rgba(0, 102, 204, 0.08) !important;
+  box-shadow: inset 0 0 0 1px rgba(0, 102, 204, 0.2) !important;
+}
+
+:root[data-theme="light"] .prime-action-btn,
+:root[data-theme="light"] .prime-menu-toggle {
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.12) !important;
+  color: #0f172a !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+}
+
+:root[data-theme="light"] .prime-action-btn:hover {
+  background: #f1f5f9 !important;
+  color: #0066cc !important;
+  border-color: #0066cc !important;
+}
+
+:root[data-theme="light"] .prime-hire-btn {
+  background: linear-gradient(135deg, #0066cc, #0284c7) !important;
+  color: #ffffff !important;
+}
+
+:root[data-theme="light"] .section-title h2 {
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 102, 204, 0.25) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
+  color: #0f172a !important;
+}
+
+:root[data-theme="light"] p,
+:root[data-theme="light"] li,
+:root[data-theme="light"] label,
+:root[data-theme="light"] span,
+:root[data-theme="light"] small,
+:root[data-theme="light"] .text-info {
+  color: #334155 !important;
+}
+
+:root[data-theme="light"] h1,
+:root[data-theme="light"] h2,
+:root[data-theme="light"] h3,
+:root[data-theme="light"] h4,
+:root[data-theme="light"] h5,
+:root[data-theme="light"] h6,
+:root[data-theme="light"] strong,
+:root[data-theme="light"] b {
+  color: #0f172a !important;
+}
+
+:root[data-theme="light"] a {
+  color: #0066cc !important;
+}
+
+/* Home Page */
+:root[data-theme="light"] .prime-copilot-hero h1 {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+}
+
+:root[data-theme="light"] .copilot-input {
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 102, 204, 0.25) !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06) !important;
+}
+
+:root[data-theme="light"] .copilot-typing {
+  color: #0f172a !important;
+}
+
+:root[data-theme="light"] .copilot-mini-actions a {
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.12) !important;
+  color: #0f172a !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+}
+
+:root[data-theme="light"] .copilot-mini-actions a:hover {
+  background: #f8fafc !important;
+  color: #0066cc !important;
+  border-color: #0066cc !important;
+}
+
+:root[data-theme="light"] .icon-bounce {
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.12) !important;
+  color: #0066cc !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+}
+
+:root[data-theme="light"] .icon-bounce:hover {
+  background: #f1f5f9 !important;
+  border-color: #0066cc !important;
+}
+
+/* About Page */
+:root[data-theme="light"] .about-heading {
+  color: #0f172a !important;
+}
+
+:root[data-theme="light"] .about-bio {
+  color: #334155 !important;
+}
+
+:root[data-theme="light"] .stat-item {
+  background: #f8fafc !important;
+  border: 1px solid rgba(15, 23, 42, 0.1) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03) !important;
+}
+
+:root[data-theme="light"] .stat-item h4 {
+  color: #0066cc !important;
+}
+
+:root[data-theme="light"] .stat-item p {
+  color: #475569 !important;
+  font-weight: 700 !important;
+}
+
+:root[data-theme="light"] .prime-btn-primary {
+  background: linear-gradient(135deg, #0066cc, #0284c7) !important;
+  color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(0, 102, 204, 0.25) !important;
+}
+
+:root[data-theme="light"] .prime-social-links a {
+  background: #f1f5f9 !important;
+  border: 1px solid rgba(15, 23, 42, 0.12) !important;
+  color: #0f172a !important;
+}
+
+:root[data-theme="light"] .prime-social-links a:hover {
+  background: #0066cc !important;
+  color: #ffffff !important;
+  border-color: #0066cc !important;
+}
+
+:root[data-theme="light"] .about-photo {
+  background: rgba(0, 102, 204, 0.1) !important;
+  border: 2px solid #0066cc !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+}
+
+:root[data-theme="light"] .about-photo img {
+  border-color: #ffffff !important;
+}
+
+/* Projects Page */
+:root[data-theme="light"] .tech-stack h6 {
+  color: #0f172a !important;
+}
+
+:root[data-theme="light"] .tech-stack .text-info1 {
+  color: #0066cc !important;
+  font-weight: 800 !important;
+}
+
+:root[data-theme="light"] .tech-stack hr {
+  border-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+:root[data-theme="light"] .tech-stack i {
+  color: #0066cc !important;
+}
+
+:root[data-theme="light"] .portfolio-wrap {
+  border-color: rgba(15, 23, 42, 0.1) !important;
+}
+
+:root[data-theme="light"] .portfolio-wrap:hover {
+  border-color: #0066cc !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
+}
+
+:root[data-theme="light"] .portfolio-links a {
+  background: #f1f5f9 !important;
+  border: 1px solid rgba(15, 23, 42, 0.12) !important;
+  color: #0f172a !important;
+}
+
+:root[data-theme="light"] .portfolio-links a:hover {
+  background: #0066cc !important;
+  color: #ffffff !important;
+  border-color: #0066cc !important;
+}
+
+/* Services Page */
+:root[data-theme="light"] .service-card h4,
+:root[data-theme="light"] .service-card-v2 h4,
+:root[data-theme="light"] .service-card-v2 .title {
+  color: #0f172a !important;
+}
+
+:root[data-theme="light"] .service-card p,
+:root[data-theme="light"] .service-card-v2 p,
+:root[data-theme="light"] .service-card-v2 .description {
+  color: #334155 !important;
+}
+
+:root[data-theme="light"] .service-icon {
+  background: #f1f5f9 !important;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+  color: #0066cc !important;
+}
+
+:root[data-theme="light"] .service-card:hover .service-icon,
+:root[data-theme="light"] .service-card-v2:hover .service-icon {
+  background: #0066cc !important;
+  color: #ffffff !important;
+}
+
+:root[data-theme="light"] .service-btn {
+  background: rgba(0, 102, 204, 0.08) !important;
+  border: 1px solid rgba(0, 102, 204, 0.25) !important;
+  color: #0066cc !important;
+}
+
+:root[data-theme="light"] .service-btn:hover {
+  background: #0066cc !important;
+  color: #ffffff !important;
+}
+
+/* Skills Page */
+:root[data-theme="light"] .skill-item {
+  background: #f8fafc !important;
+  border: 1px solid rgba(15, 23, 42, 0.1) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03) !important;
+}
+
+:root[data-theme="light"] .skill-item p {
+  color: #0f172a !important;
+  font-weight: 700 !important;
+}
+
+:root[data-theme="light"] .skill-item:hover {
+  background: #ffffff !important;
+  border-color: #0066cc !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Contact Page */
+:root[data-theme="light"] .contact-card-glass h1 {
+  background: linear-gradient(135deg, #0f172a, #334155) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+:root[data-theme="light"] .contact-card-glass p {
+  color: #334155 !important;
+}
+
+:root[data-theme="light"] .contact-method {
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.12) !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04) !important;
+  color: #0f172a !important;
+}
+
+:root[data-theme="light"] .contact-method:hover {
+  background: #f8fafc !important;
+  border-color: #0066cc !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08) !important;
+}
+
+:root[data-theme="light"] .contact-method strong {
+  color: #0f172a !important;
+}
+
+:root[data-theme="light"] .contact-method span {
+  color: #475569 !important;
+}
+
+/* Clients / Designs Page */
+:root[data-theme="light"] .designs-title {
+  background: linear-gradient(to right, #0f172a 20%, #0066cc 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+:root[data-theme="light"] .designs-subtitle {
+  color: #334155 !important;
+}
+
+:root[data-theme="light"] .filter-btn {
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.15) !important;
+  color: #0f172a !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+}
+
+:root[data-theme="light"] .filter-btn:hover {
+  background: #f1f5f9 !important;
+  color: #0066cc !important;
+  border-color: #0066cc !important;
+}
+
+:root[data-theme="light"] .filter-btn.active {
+  background: linear-gradient(135deg, #0066cc, #0284c7) !important;
+  color: #ffffff !important;
+  border-color: transparent !important;
+}
+
+:root[data-theme="light"] .client-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.12) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04) !important;
+  color: #0f172a !important;
+}
+
+:root[data-theme="light"] .client-card:hover {
+  border-color: #0066cc !important;
+  box-shadow: 0 12px 30px rgba(0, 102, 204, 0.12) !important;
+}
+
+:root[data-theme="light"] .client-card h3 {
+  color: #0f172a !important;
+}
+
+:root[data-theme="light"] .client-card p {
+  color: #334155 !important;
+}
+
+/* AI Assistant & Search Modal */
+:root[data-theme="light"] #prime-ai-toggle {
+  background: linear-gradient(135deg, #0066cc, #0284c7) !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 25px rgba(0, 102, 204, 0.3) !important;
+}
+
+:root[data-theme="light"] .prime-ai-head {
+  border-bottom: 1px solid rgba(15, 23, 42, 0.1) !important;
+  background: #f8fafc !important;
+}
+
+:root[data-theme="light"] .prime-ai-head strong {
+  color: #0f172a !important;
+}
+
+:root[data-theme="light"] .prime-msg.bot {
+  background: #f1f5f9 !important;
+  border: 1px solid rgba(15, 23, 42, 0.1) !important;
+  color: #0f172a !important;
+}
+
+:root[data-theme="light"] .prime-msg.user {
+  background: linear-gradient(135deg, #0066cc, #0284c7) !important;
+  color: #ffffff !important;
+}
+
+:root[data-theme="light"] .prime-ai-form textarea {
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.15) !important;
+  color: #0f172a !important;
+}
+
+:root[data-theme="light"] .prime-ai-quick button {
+  background: #f1f5f9 !important;
+  border: 1px solid rgba(15, 23, 42, 0.12) !important;
+  color: #0f172a !important;
+}
+
+:root[data-theme="light"] .prime-ai-quick button:hover {
+  background: rgba(0, 102, 204, 0.08) !important;
+  color: #0066cc !important;
+  border-color: #0066cc !important;
+}
+
+:root[data-theme="light"] .prime-search-head input {
+  color: #0f172a !important;
+}
+
+:root[data-theme="light"] .prime-result {
+  color: #0f172a !important;
+}
+
+:root[data-theme="light"] .prime-result:hover {
+  background: #f1f5f9 !important;
 }

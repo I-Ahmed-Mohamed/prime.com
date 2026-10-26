@@ -26,13 +26,12 @@
   ];
 
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  let savedTheme = localStorage.getItem('prime-theme');
-  if (!savedTheme || savedTheme === 'light') {
-    savedTheme = 'dark';
-    localStorage.setItem('prime-theme', 'dark');
-  }
+  const savedTheme = localStorage.getItem('prime-theme') || 'dark';
   const savedLang = localStorage.getItem('prime-lang') || 'ar';
   document.documentElement.dataset.theme = savedTheme;
+  if (savedTheme === 'light') {
+    document.body.classList.add('light-mode');
+  }
   document.documentElement.dataset.lang = savedLang;
   document.documentElement.dir = savedLang === 'ar' ? 'rtl' : 'ltr';
   document.documentElement.lang = savedLang;
