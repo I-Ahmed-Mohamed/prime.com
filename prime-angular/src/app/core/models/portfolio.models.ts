@@ -63,6 +63,26 @@ export interface SkillCategory {
   }[];
 }
 
+export interface AiSkillPillar {
+  id: string;
+  category: string;
+  categoryAr: string;
+  icon: string;
+  badge: string;
+  badgeAr: string;
+  summary: string;
+  summaryAr: string;
+  technologies: {
+    name: string;
+    proficiency: number;
+    experience: string;
+    tag: string;
+    highlight?: boolean;
+    useCaseAr: string;
+    useCaseEn: string;
+  }[];
+}
+
 export interface PricingTier {
   id: string;
   name: string;

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Project, ClientPartner, ServiceItem, SkillCategory, PricingTier, PaymentChannel } from '../models/portfolio.models';
+import { Project, ClientPartner, ServiceItem, SkillCategory, PricingTier, PaymentChannel, AiSkillPillar } from '../models/portfolio.models';
 
 @Injectable({
   providedIn: 'root'
@@ -461,6 +461,22 @@ export class PortfolioDataService {
 
   readonly skillCategories: SkillCategory[] = [
     {
+      title: 'Artificial Intelligence & Generative AI',
+      titleAr: 'هندسة الذكاء الاصطناعي والنماذج اللغوية (AI & LLMs)',
+      icon: 'bi-robot',
+      badge: 'ابتكارات 2030 المتقدمة',
+      skills: [
+        { name: 'OpenAI GPT-4o & API Integration', level: 96, experience: '3+ Years', icon: 'bi-stars', popular: true },
+        { name: 'Semantic Kernel (.NET AI Native)', level: 95, experience: '2+ Years', icon: 'bi-cpu', popular: true },
+        { name: 'RAG Architecture & pgvector', level: 94, experience: '3+ Years', icon: 'bi-database-gear', popular: true },
+        { name: 'Autonomous Multi-Agent Swarms', level: 92, experience: '2+ Years', icon: 'bi-diagram-3', popular: true },
+        { name: 'Claude 3.5 & Google Gemini APIs', level: 94, experience: '2+ Years', icon: 'bi-lightning', popular: true },
+        { name: 'Local Models (Ollama & Llama 3)', level: 91, experience: '2+ Years', icon: 'bi-hdd-stack' },
+        { name: 'OCR & Document Intelligence', level: 95, experience: '4+ Years', icon: 'bi-file-earmark-text', popular: true },
+        { name: 'ONNX Runtime C# In-Process AI', level: 92, experience: '2+ Years', icon: 'bi-speedometer2' }
+      ]
+    },
+    {
       title: 'Enterprise Backend Engineering',
       titleAr: 'هندسة الأنظمة الخلفية (.NET & Architecture)',
       icon: 'bi-hdd-network-fill',
@@ -503,6 +519,74 @@ export class PortfolioDataService {
         { name: 'CI/CD Pipelines & Hosting', level: 85, experience: '3+ Years', icon: 'bi-cloud-upload' },
         { name: 'RESTful API & Swagger Docs', level: 96, experience: '5+ Years', icon: 'bi-file-earmark-code' },
         { name: 'Performance & SQL Optimization', level: 91, experience: '4+ Years', icon: 'bi-speedometer2' }
+      ]
+    }
+  ];
+
+  readonly aiSkillPillars: AiSkillPillar[] = [
+    {
+      id: 'llm-foundation',
+      category: 'Foundation LLMs & Cognitive AI',
+      categoryAr: 'النماذج اللغوية الضخمة وهندسة الأوامر (LLMs & Prompts)',
+      icon: 'bi-cpu-fill',
+      badge: 'Advanced AI Core',
+      badgeAr: 'خبرة متقدمة في الذكاء الاصطناعي',
+      summary: 'Integration, fine-tuning, and prompt engineering across top foundation models with strict token optimization.',
+      summaryAr: 'ربط وبرمجة كبرى النماذج اللغوية، صياغة الأوامر المعقدة وهندسة التفكير (Chain of Thought) مع تقليل التكلفة والـ Latency.',
+      technologies: [
+        { name: 'OpenAI API (GPT-4o & Embeddings)', proficiency: 96, experience: '3+ Years', tag: 'LLM Leader', highlight: true, useCaseAr: 'استخراج البيانات المهيكلة، البث الحي (Streaming)، والتحليل المعقد', useCaseEn: 'Structured Outputs, JSON Schema, SSE Streaming' },
+        { name: 'Anthropic Claude 3.5 Sonnet', proficiency: 94, experience: '2+ Years', tag: 'Deep Reasoning', highlight: true, useCaseAr: 'كتابة الأكواد عالية الدقة، والتحليل المنطقي العميق للمستندات', useCaseEn: 'Precision code synthesis and extended reasoning' },
+        { name: 'Google Gemini 1.5 Pro / Flash', proficiency: 93, experience: '2+ Years', tag: 'Massive Context', useCaseAr: 'معالجة السياقات المليونية (1M+ Tokens)، وتحليل الفيديو والملفات الضخمة', useCaseEn: 'Long-context document analysis and multimodal inputs' },
+        { name: 'Microsoft Semantic Kernel (.NET 9)', proficiency: 95, experience: '2+ Years', tag: '.NET AI Native', highlight: true, useCaseAr: 'دمج الذكاء الاصطناعي داخل تطبيقات C# والـ Clean Architecture', useCaseEn: 'Enterprise .NET AI plugin orchestration and native memory' },
+        { name: 'LangChain & LlamaIndex', proficiency: 90, experience: '3+ Years', tag: 'Chains & Loaders', useCaseAr: 'بناء سلاسل المهام المعقدة وربط مصادر البيانات المتعددة', useCaseEn: 'Data ingestion pipelines and modular agent chains' }
+      ]
+    },
+    {
+      id: 'rag-vector',
+      category: 'RAG Systems & Vector Databases',
+      categoryAr: 'أنظمة استرجاع المعرفة وقواعد البيانات الشعاعية (RAG & Vectors)',
+      icon: 'bi-database-fill-gear',
+      badge: 'Zero Hallucinations',
+      badgeAr: 'دقة استرجاع 98% بدون هلاوس',
+      summary: 'Production enterprise RAG architecture combining semantic vector search with relational databases and re-ranking.',
+      summaryAr: 'بناء محركات بحث دلالي سحابية تتيح للمؤسسات والشركات التحدث مع ملفاتها وقواعد بياناتها الضخمة بدقة قياسية.',
+      technologies: [
+        { name: 'PostgreSQL + pgvector', proficiency: 95, experience: '3+ Years', tag: 'Relational + Vector', highlight: true, useCaseAr: 'دمج البيانات الشعاعية والعلائقية مع فهرسة HNSW فائقة السرعة', useCaseEn: 'HNSW vector indexes and ACID transactional metadata' },
+        { name: 'Qdrant & Pinecone', proficiency: 92, experience: '2+ Years', tag: 'Vector Store', useCaseAr: 'مستودعات شعاعية للملايين من المستندات مع فلترة سريعة', useCaseEn: 'High-throughput vector indexing and payload filtering' },
+        { name: 'Hybrid Search (Dense + Sparse BM25)', proficiency: 94, experience: '2+ Years', tag: 'Precision Search', highlight: true, useCaseAr: 'الدمج بين الكلمات المفتاحية والمعنى الدلالي لأعلى دقة بحث', useCaseEn: 'Reciprocal Rank Fusion (RRF) for enterprise document retrieval' },
+        { name: 'Cohere Rerank & Embedding Models', proficiency: 91, experience: '2+ Years', tag: 'Re-ranking', useCaseAr: 'إعادة ترتيب نتائج البحث لضمان تقديم الإجابة الأكثر صلة للنموذج', useCaseEn: 'Cross-encoder reranking to maximize context relevance' }
+      ]
+    },
+    {
+      id: 'autonomous-agents',
+      category: 'Autonomous Multi-Agent Systems',
+      categoryAr: 'العملاء الأذكياء وأتمتة دورات العمل (Autonomous Agents)',
+      icon: 'bi-robot',
+      badge: 'Full Automation',
+      badgeAr: 'أتمتة ذاتية كاملة',
+      summary: 'Orchestrating teams of autonomous AI agents with tools, memory, function calling, and human-in-the-loop validation.',
+      summaryAr: 'تصميم فرق عمل من العملاء الأذكياء (Agents) يتعاونون لإنجاز مهام معقدة مثل كتابة التقارير، تحليل العقود، والتحقق من الحسابات.',
+      technologies: [
+        { name: 'Microsoft AutoGen & CrewAI', proficiency: 92, experience: '2+ Years', tag: 'Multi-Agent', highlight: true, useCaseAr: 'تنسيق محادثات تفاعلية بين وكلاء متخصصين لحل المشكلات المعقدة', useCaseEn: 'Hierarchical agent teams with role-based collaboration' },
+        { name: 'Function Calling & Tool Execution', proficiency: 96, experience: '3+ Years', tag: 'Structured I/O', highlight: true, useCaseAr: 'تمكين النماذج من تشغيل دوال الـ .NET API وإرسال إيميلات وفواتير', useCaseEn: 'Dynamic API invocation, SQL querying, and external tool execution' },
+        { name: 'AI Guardrails & Security Filtering', proficiency: 90, experience: '2+ Years', tag: 'Safety & Trust', useCaseAr: 'حماية الأنظمة من هجمات Prompt Injection وتأمين البيانات الحساسة', useCaseEn: 'NeMo Guardrails, toxicity filtering, and PII anonymization' },
+        { name: 'Event-Driven Workflow Automation', proficiency: 94, experience: '4+ Years', tag: 'Workflow Engines', useCaseAr: 'ربط أحداث النظام (Webhooks) بمحركات الذكاء الاصطناعي لحظياً', useCaseEn: 'Triggering background agents on payment, orders, or IoT events' }
+      ]
+    },
+    {
+      id: 'edge-vision',
+      category: 'Local Edge AI, OCR & Computer Vision',
+      categoryAr: 'الذكاء الاصطناعي المحلي ومعالجة المستندات (Edge AI & OCR)',
+      icon: 'bi-eye-fill',
+      badge: 'Privacy & Speed',
+      badgeAr: 'خصوصية وسرعة بدون سحابة',
+      summary: 'Running private models on premise with sub-second optical character recognition for printing and document businesses.',
+      summaryAr: 'تشغيل النماذج داخل الخوادم الخاصة لضمان سرية البيانات، مع قراءة آلية فورية لفواتير ومطبوعات الشركات (مثل مطابع أوليمبيك).',
+      technologies: [
+        { name: 'Ollama & Local Llama 3 / DeepSeek', proficiency: 93, experience: '2+ Years', tag: 'Private On-Prem', highlight: true, useCaseAr: 'تشغيل نماذج ذكاء اصطناعي محلياً بدون إرسال البيانات لأي جهة خارجية', useCaseEn: 'Self-hosted inference on local GPUs with zero cloud exposure' },
+        { name: 'ONNX Runtime in .NET C#', proficiency: 94, experience: '3+ Years', tag: 'High-Speed C#', highlight: true, useCaseAr: 'تنفيذ نماذج الذكاء الاصطناعي مباشرة داخل كود C# بسرعة فائقة', useCaseEn: 'Sub-millisecond embedding and model inference inside .NET Core' },
+        { name: 'OCR & Document Intelligence (Invoice Extraction)', proficiency: 95, experience: '4+ Years', tag: 'Olympic Printing Stack', highlight: true, useCaseAr: 'استخراج تلقائي لبيانات أوامر الطباعة، الفواتير، ومقايسات الورق بدقة', useCaseEn: 'Digitizing physical receipts, printing jobs, and technical specs' },
+        { name: 'Whisper Audio Speech-to-Text', proficiency: 90, experience: '2+ Years', tag: 'Voice AI', useCaseAr: 'تحويل الأوامر الصوتية باللغة العربية والإنجليزية إلى نصوص وأوامر نظام', useCaseEn: 'Arabic & English voice input transcription and command parsing' }
       ]
     }
   ];

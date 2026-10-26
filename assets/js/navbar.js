@@ -188,27 +188,116 @@
   window.PrimeNav = { navItems, desktopItems };
 })();
 
-/* Ultimate Preloader Logic */
+/* Instant Preloader */
 const preloader = document.getElementById('prime-preloader');
 if (preloader) {
-  if (sessionStorage.getItem('primePreloaderShown')) {
-    // Hide instantly if already shown in this session
-    preloader.style.display = 'none';
-    preloader.remove();
-  } else {
-    // First time visit in this session: Wait for load and animate
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        preloader.classList.add('loaded');
-        setTimeout(() => preloader.remove(), 800);
-      }, 2000); // Wait 2 seconds so the loading bar animation fully finishes
-      sessionStorage.setItem('primePreloaderShown', 'true');
-    });
-  }
+  preloader.classList.add('loaded');
+  setTimeout(() => preloader.remove(), 150);
 }
 
 
+/* ==========================================================================
+   PRIME 2030 ZERO-REFRESH SPA CLIENT ROUTER
+   ========================================================================== */
+(function() {
+  const pageCache = new Map();
 
+  async function loadPage(url, pushState = true) {
+    const mainEl = document.querySelector('main#main') || document.querySelector('main') || document.querySelector('#main-content');
+    if (!mainEl) {
+      window.location.href = url;
+      return;
+    }
 
+    // Micro-fade out
+    mainEl.style.transition = 'opacity 0.12s ease, transform 0.12s ease';
+    mainEl.style.opacity = '0';
+    mainEl.style.transform = 'translateY(6px)';
 
+    try {
+      let htmlText = pageCache.get(url);
+      if (!htmlText) {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error('Fetch failed');
+        htmlText = await res.text();
+        pageCache.set(url, htmlText);
+      }
+
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(htmlText, 'text/html');
+      const newMain = doc.querySelector('main#main') || doc.querySelector('main') || doc.querySelector('#main-content');
+
+      if (!newMain) {
+        window.location.href = url;
+        return;
+      }
+
+      if (doc.title) {
+        document.title = doc.title;
+      }
+
+      // Swap content
+      mainEl.innerHTML = newMain.innerHTML;
+
+      if (pushState) {
+        history.pushState({ url }, '', url);
+      }
+
+      // Update active links
+      const targetPage = url.split('/').pop() || 'index.html';
+      document.querySelectorAll('#prime-nav-2029 .nav-link, #prime-nav-2029 .dropdown-link, .prime-mobile-tab').forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === targetPage || (targetPage === 'index.html' && href === '/')) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+
+      // Smooth scroll to top
+      window.scrollTo({ top: 0, behavior: 'instant' });
+
+      // Close fullscreen menu if open
+      const menu = document.getElementById('prime-fullscreen-menu');
+      if (menu) menu.classList.remove('active');
+
+      // Refresh AOS
+      if (window.AOS && typeof window.AOS.refresh === 'function') {
+        window.AOS.refresh();
+      }
+
+      // Micro-fade in
+      setTimeout(() => {
+        mainEl.style.opacity = '1';
+        mainEl.style.transform = 'translateY(0)';
+      }, 30);
+
+    } catch (err) {
+      // Fallback
+      window.location.href = url;
+    }
+  }
+
+  // Intercept all internal navigation clicks
+  document.addEventListener('click', function (e) {
+    const a = e.target.closest('a');
+    if (!a) return;
+    const href = a.getAttribute('href');
+    if (!href) return;
+
+    if (href.startsWith('#') || href.startsWith('javascript:') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('http://') || href.startsWith('https://')) {
+      return;
+    }
+
+    if (href.endsWith('.html') || href === '/' || !href.includes(':')) {
+      e.preventDefault();
+      loadPage(href, true);
+    }
+  });
+
+  window.addEventListener('popstate', function () {
+    const targetUrl = window.location.pathname.split('/').pop() || 'index.html';
+    loadPage(targetUrl, false);
+  });
+})();
 

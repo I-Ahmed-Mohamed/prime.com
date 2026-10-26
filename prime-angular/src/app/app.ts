@@ -5,6 +5,7 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { CopilotWidgetComponent } from './shared/components/copilot-widget/copilot-widget.component';
 import { HeroSectionComponent } from './features/home/hero-section.component';
 import { AboutSectionComponent } from './features/about/about-section.component';
+import { AiSectionComponent } from './features/ai-skills/ai-section.component';
 import { ArchitectureSectionComponent } from './features/architecture/architecture-section.component';
 import { ProjectsSectionComponent } from './features/projects/projects-section.component';
 import { ClientsSectionComponent } from './features/clients/clients-section.component';
@@ -21,6 +22,7 @@ import { ContactSectionComponent } from './features/contact/contact-section.comp
     NavbarComponent,
     HeroSectionComponent,
     AboutSectionComponent,
+    AiSectionComponent,
     ArchitectureSectionComponent,
     ProjectsSectionComponent,
     ClientsSectionComponent,
